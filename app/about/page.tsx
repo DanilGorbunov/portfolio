@@ -1,13 +1,24 @@
-import Link from "next/link"
-import { ArrowLeft, Download, Mail, Linkedin, Phone, Globe } from "lucide-react"
-import { Button } from "@/components/ui/button"
+import Link from "next/link";
+import {
+  ArrowLeft,
+  Download,
+  Mail,
+  Linkedin,
+  Phone,
+  Globe,
+} from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 export default function AboutPage() {
   return (
     <div className="container px-4 py-12 md:px-6 md:py-24 bg-black">
       <div className="mb-8 flex items-center">
         <Link href="/">
-          <Button variant="ghost" size="sm" className="text-zinc-400 hover:text-white">
+          <Button
+            variant="ghost"
+            size="sm"
+            className="text-zinc-400 hover:text-white"
+          >
             <ArrowLeft className="mr-2 h-4 w-4" />
             Back to Home
           </Button>
@@ -82,30 +93,40 @@ export default function AboutPage() {
         </div>
         <div className="space-y-8">
           <div className="space-y-4">
-            <h1 className="text-4xl font-bold tracking-tight text-white">About Me</h1>
+            <h1 className="text-4xl font-bold tracking-tight text-white">
+              About Me
+            </h1>
             <p className="text-xl text-zinc-400">
-              Product designer with 12 years of experience in UX/UI design and frontend development, specializing in
-              AI-driven and data-based solutions across SaaS, B2B, B2C, eCommerce.
+              Product designer with 12 years of experience in UX/UI design and
+              frontend development, specializing in AI-driven and data-based
+              solutions across SaaS, B2B, B2C, eCommerce.
             </p>
           </div>
           <div className="space-y-4">
             <p className="leading-relaxed text-zinc-400">
-              I'm a product designer based in Bratislava, Slovakia with a focus on creating intuitive user experiences,
-              AI automation, and scalable digital products. My approach combines user-centered design principles with
-              technical expertise in frontend development to deliver solutions that are both beautiful and functional.
+              I'm a product designer based in Bratislava, Slovakia with a focus
+              on creating intuitive user experiences, AI automation, and
+              scalable digital products. My approach combines user-centered
+              design principles with technical expertise in frontend development
+              to deliver solutions that are both beautiful and functional.
             </p>
             <p className="leading-relaxed text-zinc-400">
-              Throughout my career, I've worked with a diverse range of clients and industries, from startups to Fortune
-              500 companies. This experience has given me a unique perspective on how to adapt design solutions to
-              different business contexts and user needs.
+              Throughout my career, I've worked with a diverse range of clients
+              and industries, from startups to Fortune 500 companies. This
+              experience has given me a unique perspective on how to adapt
+              design solutions to different business contexts and user needs.
             </p>
             <p className="leading-relaxed text-zinc-400">
-              I believe that great design goes beyond aesthetics—it's about understanding user needs, business goals,
-              and technological constraints to create solutions that work for everyone involved. My process emphasizes
-              collaboration, iteration, and data-informed decision making.
+              I believe that great design goes beyond aesthetics—it's about
+              understanding user needs, business goals, and technological
+              constraints to create solutions that work for everyone involved.
+              My process emphasizes collaboration, iteration, and data-informed
+              decision making.
             </p>
           </div>
           <div className="space-y-4">
+            <h2 className="text-2xl font-bold text-white">My Superpower</h2>
+            <p className="leading-relaxed text-zinc-400">I'm ukrainian!</p>
             <h2 className="text-2xl font-bold text-white">Skills</h2>
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
               <div className="space-y-2 bg-zinc-900 p-4 rounded-lg">
@@ -154,60 +175,84 @@ export default function AboutPage() {
             <div className="space-y-6">
               <div className="space-y-2 bg-zinc-900 p-4 rounded-lg">
                 <div className="flex items-center justify-between">
-                  <h3 className="font-medium text-white">UX/UI Designer, Product Designer</h3>
-                  <span className="text-sm text-zinc-500">November 2022 - Present</span>
+                  <h3 className="font-medium text-white">
+                    UX/UI Designer, Product Designer
+                  </h3>
+                  <span className="text-sm text-zinc-500">
+                    November 2022 - Present
+                  </span>
                 </div>
                 <p className="text-primary">B2Stack, Bratislava, Slovakia</p>
                 <p className="text-sm text-zinc-400">
-                  Created a SAAS project with an AI e-commerce chatbot, automating business processes and engagement.
-                  Designed AI-driven checkout flows and interfaces, increasing conversions by 15% and retention. Built
-                  smart navigation, cutting support requests.
+                  Created a SAAS project with an AI e-commerce chatbot,
+                  automating business processes and engagement. Designed
+                  AI-driven checkout flows and interfaces, increasing
+                  conversions by 15% and retention. Built smart navigation,
+                  cutting support requests.
                 </p>
               </div>
               <div className="space-y-2 bg-zinc-900 p-4 rounded-lg">
                 <div className="flex items-center justify-between">
-                  <h3 className="font-medium text-white">Frontend Developer (Flutter), UX/UI Designer</h3>
-                  <span className="text-sm text-zinc-500">May 2022 - September 2022</span>
+                  <h3 className="font-medium text-white">
+                    Frontend Developer (Flutter), UX/UI Designer
+                  </h3>
+                  <span className="text-sm text-zinc-500">
+                    May 2022 - September 2022
+                  </span>
                 </div>
                 <p className="text-primary">Twinzo 3D, Bratislava, Slovakia</p>
                 <p className="text-sm text-zinc-400">
-                  Developed a SaaS-based warehouse inventory management app for Fortune 500 clients, integrating 3D data
-                  visualization. Applied user-centric design, enhancing usability and adoption rates.
+                  Developed a SaaS-based warehouse inventory management app for
+                  Fortune 500 clients, integrating 3D data visualization.
+                  Applied user-centric design, enhancing usability and adoption
+                  rates.
                 </p>
               </div>
               <div className="space-y-2 bg-zinc-900 p-4 rounded-lg">
                 <div className="flex items-center justify-between">
-                  <h3 className="font-medium text-white">Lead Product Designer, Frontend Engineer (React)</h3>
-                  <span className="text-sm text-zinc-500">May 2013 - February 2022</span>
+                  <h3 className="font-medium text-white">
+                    Lead Product Designer, Frontend Engineer (React)
+                  </h3>
+                  <span className="text-sm text-zinc-500">
+                    May 2013 - February 2022
+                  </span>
                 </div>
                 <p className="text-primary">Decodexin (Krasiva), Ukraine</p>
                 <p className="text-sm text-zinc-400">
-                  Created user-centric designs and developed an MVP for a SAAS system as a React developer, enabling
-                  shop owners to efficiently add and update products from the app directly to their WordPress website.
-                  This solution improved workflow automation and simplified product management.
+                  Created user-centric designs and developed an MVP for a SAAS
+                  system as a React developer, enabling shop owners to
+                  efficiently add and update products from the app directly to
+                  their WordPress website. This solution improved workflow
+                  automation and simplified product management.
                 </p>
               </div>
               <div className="space-y-2 bg-zinc-900 p-4 rounded-lg">
                 <div className="flex items-center justify-between">
                   <h3 className="font-medium text-white">UX/UI Designer</h3>
-                  <span className="text-sm text-zinc-500">May 2013 - February 2022</span>
+                  <span className="text-sm text-zinc-500">
+                    May 2013 - February 2022
+                  </span>
                 </div>
                 <p className="text-primary">Decodexin (Krasiva), Ukraine</p>
                 <p className="text-sm text-zinc-400">
-                  Developed a robust Marketplace platform with seamless API integration, connecting multiple shops for
-                  real-time product synchronization, order management, and sales tracking, ensuring a smooth and
-                  scalable operation across the network.
+                  Developed a robust Marketplace platform with seamless API
+                  integration, connecting multiple shops for real-time product
+                  synchronization, order management, and sales tracking,
+                  ensuring a smooth and scalable operation across the network.
                 </p>
               </div>
               <div className="space-y-2 bg-zinc-900 p-4 rounded-lg">
                 <div className="flex items-center justify-between">
                   <h3 className="font-medium text-white">UX Designer</h3>
-                  <span className="text-sm text-zinc-500">October 2010 - March 2013</span>
+                  <span className="text-sm text-zinc-500">
+                    October 2010 - March 2013
+                  </span>
                 </div>
                 <p className="text-primary">Delen Studio, Ukraine</p>
                 <p className="text-sm text-zinc-400">
-                  Conducted e-commerce user research, optimizing WordPress interfaces based on feedback. Communicated UX
-                  solutions to stakeholders, ensuring alignment with business needs.
+                  Conducted e-commerce user research, optimizing WordPress
+                  interfaces based on feedback. Communicated UX solutions to
+                  stakeholders, ensuring alignment with business needs.
                 </p>
               </div>
             </div>
@@ -217,21 +262,27 @@ export default function AboutPage() {
             <div className="space-y-6">
               <div className="space-y-2 bg-zinc-900 p-4 rounded-lg">
                 <div className="flex items-center justify-between">
-                  <h3 className="font-medium text-white">MSc in User Experience Design</h3>
+                  <h3 className="font-medium text-white">
+                    MSc in User Experience Design
+                  </h3>
                   <span className="text-sm text-zinc-500">2022 - 2023</span>
                 </div>
                 <p className="text-primary">Caledonian University, Glasgow</p>
               </div>
               <div className="space-y-2 bg-zinc-900 p-4 rounded-lg">
                 <div className="flex items-center justify-between">
-                  <h3 className="font-medium text-white">Javascript, HTML, CSS, React, PHP BackEnd</h3>
+                  <h3 className="font-medium text-white">
+                    Javascript, HTML, CSS, React, PHP BackEnd
+                  </h3>
                   <span className="text-sm text-zinc-500">2015 - 2018</span>
                 </div>
                 <p className="text-primary">BeetRoot | IT STEP Academy, UA</p>
               </div>
               <div className="space-y-2 bg-zinc-900 p-4 rounded-lg">
                 <div className="flex items-center justify-between">
-                  <h3 className="font-medium text-white">BA Computer Science</h3>
+                  <h3 className="font-medium text-white">
+                    BA Computer Science
+                  </h3>
                   <span className="text-sm text-zinc-500">2005 - 2010</span>
                 </div>
                 <p className="text-primary">University of Shipbuilding, UA</p>
@@ -243,14 +294,20 @@ export default function AboutPage() {
             <div className="space-y-6">
               <div className="space-y-2 bg-zinc-900 p-4 rounded-lg">
                 <div className="flex items-center justify-between">
-                  <h3 className="font-medium text-white">QA OPEN CONFERENCE, Globallogic</h3>
+                  <h3 className="font-medium text-white">
+                    QA OPEN CONFERENCE, Globallogic
+                  </h3>
                   <span className="text-sm text-zinc-500">2022</span>
                 </div>
-                <p className="text-zinc-400">1st place in PM in team work, qaopen.org</p>
+                <p className="text-zinc-400">
+                  1st place in PM in team work, qaopen.org
+                </p>
               </div>
               <div className="space-y-2 bg-zinc-900 p-4 rounded-lg">
                 <div className="flex items-center justify-between">
-                  <h3 className="font-medium text-white">Golden Byte — Startup battle</h3>
+                  <h3 className="font-medium text-white">
+                    Golden Byte — Startup battle
+                  </h3>
                   <span className="text-sm text-zinc-500">2018</span>
                 </div>
                 <p className="text-zinc-400">Premium participant</p>
@@ -260,6 +317,5 @@ export default function AboutPage() {
         </div>
       </div>
     </div>
-  )
+  );
 }
-

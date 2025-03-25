@@ -57,13 +57,15 @@
     @apply bg-background text-foreground;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
   }
 }
 
 /* Performance optimizations */
 .hero-section {
-  contain: content;
+  contain: layout style paint;
   content-visibility: auto;
+  contain-intrinsic-size: 0 500px;
 }
 
 .blur-gradient {
@@ -71,6 +73,11 @@
   backface-visibility: hidden;
   perspective: 1000;
   will-change: transform, opacity;
+  background-image: radial-gradient(
+    circle at center,
+    var(--tw-gradient-from) 0%,
+    var(--tw-gradient-to) 100%
+  );
 }
 
 .hero-image {
@@ -80,12 +87,77 @@
   will-change: transform;
 }
 
+/* Optimized animations */
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 20px, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-out forwards;
+}
+
+.animate-fade-in-delay-1 {
+  opacity: 0;
+  animation: fadeIn 0.3s ease-out 0.1s forwards;
+}
+
+.animate-fade-in-delay-2 {
+  opacity: 0;
+  animation: fadeIn 0.3s ease-out 0.2s forwards;
+}
+
+.animate-fade-in-delay-3 {
+  opacity: 0;
+  animation: fadeIn 0.3s ease-out 0.3s forwards;
+}
+
+.animate-fade-in-up {
+  opacity: 0;
+  animation: fadeInUp 0.4s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+  transform: translate3d(0, 0, 0);
+}
+
+/* View Transitions API */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}
+
+::view-transition-old(project-*),
+::view-transition-new(project-*) {
+  animation: none;
+}
+
+/* Reduce motion */
 @media (prefers-reduced-motion: reduce) {
   * {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
+  }
+  
+  .animate-fade-in,
+  .animate-fade-in-delay-1,
+  .animate-fade-in-delay-2,
+  .animate-fade-in-delay-3,
+  .animate-fade-in-up {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
   }
 }
 
