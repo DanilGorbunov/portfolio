@@ -65,7 +65,7 @@ export default function Home() {
       <section className="py-24">
         <div className="container px-6 md:px-12 max-w-7xl">
           <div className="space-y-16">
-            {projects.slice(0, 3).map((project) => (
+            {projects.map((project) => (
               <div
                 key={project.id}
                 className="grid gap-6 md:gap-10 md:grid-cols-[1fr_2fr]"
@@ -77,10 +77,20 @@ export default function Home() {
                   <p className="text-zinc-400 text-sm md:text-base">
                     {project.description}
                   </p>
+                  <div className="flex flex-wrap gap-2">
+                    {project.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className="px-2 py-1 text-xs bg-zinc-800 text-zinc-300 rounded-full"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
                   <Link href={`/portfolio/${project.slug}`}>
                     <Button
                       variant="outline"
-                      className="border-zinc-700 text-white hover:bg-zinc-800"
+                      className="mt-2.5 border-zinc-700 text-white hover:bg-zinc-800"
                     >
                       View Project <ArrowRight className="ml-2 h-4 w-4" />
                     </Button>

@@ -3,10 +3,12 @@ import "@/app/globals.css"
 import { Inter } from "next/font/google"
 import { ThemeProvider } from "@/components/theme-provider"
 import { SiteHeader } from "@/components/site-header"
+import { Footer } from "@/components/footer"
+import type { Metadata } from "next"
 
 const inter = Inter({ subsets: ["latin"] })
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Danil Gorbunov - Product Designer",
   description:
     "Portfolio of Danil Gorbunov, a product designer with 12 years of experience in UX/UI design and frontend development.",
@@ -30,7 +32,8 @@ export default function RootLayout({
         >
           <div className="relative flex min-h-screen flex-col bg-black">
             <SiteHeader />
-            {children}
+            <main className="flex-1">{children}</main>
+            <Footer />
           </div>
         </ThemeProvider>
       </body>
