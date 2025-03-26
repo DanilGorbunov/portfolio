@@ -73,13 +73,6 @@ export default function AboutPage() {
                 <Linkedin className="h-4 w-4 text-primary" />
                 linkedin.com/in/danilgorbunov
               </a>
-              <a
-                href="https://dangorbunov.vercel.app"
-                className="flex items-center gap-2 text-zinc-400 hover:text-white transition-colors"
-              >
-                <Globe className="h-4 w-4 text-primary" />
-                dangorbunov.vercel.app
-              </a>
             </div>
           </div>
           <div>
