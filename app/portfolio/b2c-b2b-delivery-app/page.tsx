@@ -348,7 +348,7 @@ export default function DeliveryAppProject() {
 
         <motion.div
           variants={fadeInUp}
-          className="relative mb-12 overflow-hidden rounded-[45px] rounded-lg max-w-[18%] sm:max-w-[20%] mx-auto h-[450px] sm:h-[565px]"
+          className="relative mb-12 overflow-hidden rounded-[42px] max-w-[18%] sm:max-w-[20%] mx-auto h-[450px] sm:h-[565px]"
         >
           <div className="overflow-hidden w-full h-full">
             <video

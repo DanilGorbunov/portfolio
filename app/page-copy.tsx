@@ -1,22 +1,22 @@
-"use client"
+"use client";
 
-import { useRef } from "react"
-import Link from "next/link"
-import { motion, useScroll, useTransform } from "framer-motion"
-import { Mail, ArrowRight } from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { Badge } from "@/components/ui/badge"
-import { projects } from "@/lib/projects"
+import { useRef } from "react";
+import Link from "next/link";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { Mail, ArrowRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import { projects } from "@/lib/projects";
 
 export default function Home() {
-  const containerRef = useRef<HTMLDivElement>(null)
+  const containerRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ["start start", "end start"],
-  })
+  });
 
-  const opacity = useTransform(scrollYProgress, [0, 0.2], [1, 0])
-  const scale = useTransform(scrollYProgress, [0, 0.2], [1, 0.95])
+  const opacity = useTransform(scrollYProgress, [0, 0.2], [1, 0]);
+  const scale = useTransform(scrollYProgress, [0, 0.2], [1, 0.95]);
 
   const fadeInVariants = {
     hidden: { opacity: 0, y: 20 },
@@ -28,7 +28,7 @@ export default function Home() {
         duration: 0.5,
       },
     }),
-  }
+  };
 
   return (
     <div className="min-h-screen bg-black" ref={containerRef}>
@@ -65,7 +65,7 @@ export default function Home() {
                   transition={{ duration: 0.5, delay: 0.3 }}
                   className="text-xl md:text-2xl text-primary"
                 >
-                  Product Designer, Code Crafter & AI Innovator
+                  Product Designer (UX/UI), Code Crafter & AI Innovator
                 </motion.p>
                 <motion.p
                   initial={{ opacity: 0, y: 20 }}
@@ -73,8 +73,9 @@ export default function Home() {
                   transition={{ duration: 0.5, delay: 0.4 }}
                   className="max-w-[600px] text-zinc-400 text-lg md:text-xl"
                 >
-                  I create intuitive user experiences, AI automation, and scalable digital products across SaaS, B2B,
-                  B2C, and eCommerce.
+                  I create intuitive user experiences, AI automation, and
+                  scalable digital products across SaaS, B2B, B2C, and
+                  eCommerce.
                 </motion.p>
               </div>
               <motion.div
@@ -89,7 +90,10 @@ export default function Home() {
                   </Button>
                 </Link>
                 <Link href="/contact">
-                  <Button className="w-full min-[400px]:w-auto" variant="outline">
+                  <Button
+                    className="w-full min-[400px]:w-auto"
+                    variant="outline"
+                  >
                     <Mail className="mr-2 h-4 w-4" />
                     Contact
                   </Button>
@@ -119,8 +123,6 @@ export default function Home() {
 
       <section className="py-24 md:py-32">
         <div className="container px-6 md:px-12 max-w-7xl">
-     
-
           <div className="space-y-32">
             {projects.map((project, index) => (
               <motion.div
@@ -136,12 +138,18 @@ export default function Home() {
                   <div className="space-y-2">
                     <div className="flex flex-wrap gap-2 mb-3">
                       {project.tags.map((tag) => (
-                        <Badge key={tag} variant="secondary" className="bg-zinc-800 text-zinc-200">
+                        <Badge
+                          key={tag}
+                          variant="secondary"
+                          className="bg-zinc-800 text-zinc-200"
+                        >
                           {tag}
                         </Badge>
                       ))}
                     </div>
-                    <h3 className="text-2xl md:text-3xl font-bold text-white">{project.title}</h3>
+                    <h3 className="text-2xl md:text-3xl font-bold text-white">
+                      {project.title}
+                    </h3>
                     <p className="text-zinc-400">{project.description}</p>
                   </div>
                   <div className="space-y-2">
@@ -159,7 +167,10 @@ export default function Home() {
                     </div>
                   </div>
                   <Link href={`/portfolio/${project.slug}`}>
-                    <Button variant="outline" className="border-zinc-700 text-white hover:bg-zinc-800">
+                    <Button
+                      variant="outline"
+                      className="border-zinc-700 text-white hover:bg-zinc-800"
+                    >
                       View Project
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </Button>
@@ -180,22 +191,20 @@ export default function Home() {
         </div>
       </section>
 
-     <section className="py-12 md:py-16 bg-zinc-900/50">
-  <div className="flex flex-col sm:flex-row gap-4 justify-center pt-2">
-    <Link href="/contact">
-      <Button className="w-full sm:w-auto bg-primary hover:bg-primary/90 text-black">
-        Get in touch
-      </Button>
-    </Link>
-    <a href="mailto:danilgorbunov@gmail.com">
-      <Button variant="outline" className="w-full sm:w-auto">
-        danilgorbunov@gmail.com
-      </Button>
-    </a>
-  </div>
-</section>
-
+      <section className="py-12 md:py-16 bg-zinc-900/50">
+        <div className="flex flex-col sm:flex-row gap-4 justify-center pt-2">
+          <Link href="/contact">
+            <Button className="w-full sm:w-auto bg-primary hover:bg-primary/90 text-black">
+              Get in touch
+            </Button>
+          </Link>
+          <a href="mailto:danilgorbunov@gmail.com">
+            <Button variant="outline" className="w-full sm:w-auto">
+              danilgorbunov@gmail.com
+            </Button>
+          </a>
+        </div>
+      </section>
     </div>
-  )
+  );
 }
-

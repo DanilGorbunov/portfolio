@@ -6,8 +6,9 @@ import { projects } from "@/lib/projects";
 
 // Static metadata
 export const metadata = {
-  title: 'Danil Gorbunov - Product Designer & Developer',
-  description: 'Portfolio of Danil Gorbunov - Product Designer, Code Crafter & AI Innovator'
+  title: "Danil Gorbunov - Product Designer & Developer",
+  description:
+    "Portfolio of Danil Gorbunov - Product Designer, Code Crafter & AI Innovator",
 };
 
 export default function Home() {
@@ -22,7 +23,7 @@ export default function Home() {
                   Danil Gorbunov
                 </h1>
                 <p className="text-xl md:text-2xl text-primary">
-                  Product Designer, Code Crafter & AI Innovator
+                  Product Designer (UX/UI), Code Crafter & AI Innovator
                 </p>
                 <p className="max-w-[600px] text-zinc-400 text-lg md:text-xl">
                   Intuitive user experiences, AI automation, and scalable

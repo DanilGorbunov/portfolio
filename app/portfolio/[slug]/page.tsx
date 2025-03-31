@@ -104,6 +104,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
             {project.content.outcome}
           </p>
         </div>
+        
         {project.slug === "invoicing-app-improving" && (
           <div className="space-y-4">
             <div className="overflow-hidden rounded-lg border border-zinc-800">

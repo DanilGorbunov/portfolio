@@ -1,21 +1,21 @@
 export interface Project {
-  id: number
-  slug: string
-  title: string
-  description: string
-  thumbnail: string
-  fullImage: string
-  year: string
-  client: string
-  role: string
-  tags: string[]
+  id: number;
+  slug: string;
+  title: string;
+  description: string;
+  thumbnail: string;
+  fullImage: string;
+  year: string;
+  client: string;
+  role: string;
+  tags: string[];
   content: {
-    overview: string
-    challenge: string
-    solution: string
-    outcome: string
-  }
-  images: string[]
+    overview: string;
+    challenge: string;
+    solution: string;
+    outcome: string;
+  };
+  images: string[];
 }
 
 export const projects: Project[] = [
@@ -23,7 +23,8 @@ export const projects: Project[] = [
     id: 1,
     slug: "ai-ecommerce-chatbot",
     title: "AI E-Commerce Chatbot",
-    description: "SAAS project with an AI e-commerce chatbot automating business processes and engagement.",
+    description:
+      "SAAS project with an AI e-commerce chatbot automating business processes and engagement.",
     thumbnail: "/images/dashboard-chatbot.jpg",
     fullImage: "/images/dashboard-chatbot.jpg",
     year: "2022-Present",
@@ -50,13 +51,19 @@ export const projects: Project[] = [
     id: 2,
     slug: "warehouse-inventory-management",
     title: "3D Warehouse Inventory Management",
-    description: "SaaS-based warehouse inventory management app with 3D data visualization for Fortune 500 clients.",
-    thumbnail: "/images/laps_cover.jpg",
-    fullImage: "/images/laps_cover.jpg",
+    description:
+      "SaaS-based warehouse inventory management app with 3D data visualization for Fortune 500 clients.",
+    thumbnail: "/images/laps/cover_laps.jpg",
+    fullImage: "/images/laps/cover_laps.jpg",
     year: "2022",
     client: "Twinzo 3D",
     role: "Frontend Developer (Flutter), UX/UI Designer",
-    tags: ["3D Visualization", "Inventory Management", "Flutter", "Time Tracking"],
+    tags: [
+      "3D Visualization",
+      "Inventory Management",
+      "Flutter",
+      "Time Tracking",
+    ],
     content: {
       overview:
         "Developed a SaaS-based warehouse inventory management app with real-time delivery tracking and task management capabilities for Fortune 500 clients.",
@@ -109,8 +116,8 @@ export const projects: Project[] = [
       "Modern invoicing application with real-time financial tracking and automated billing workflows.",
     thumbnail: "/images/invoice_cover.jpg",
     fullImage: "/images/invoice_cover.jpg",
-    year: "2013-2022",
-    client: "Decodexin (Krasiva)",
+    year: "2023",
+    client: "B2Stack",
     role: "UX/UI Designer",
     tags: ["Invoicing", "Financial Management", "Business Tools", "Automation"],
     content: {
@@ -125,7 +132,7 @@ export const projects: Project[] = [
     },
     images: [
       "/images/invoice_cover.jpg",
-      
+
       "/placeholder.svg?height=600&width=800",
       "/placeholder.svg?height=600&width=800",
     ],
@@ -134,25 +141,32 @@ export const projects: Project[] = [
     id: 5,
     slug: "back-office-dashboard",
     title: "Back Office Dashboard",
-    description: "Comprehensive back office dashboard for financial analytics and merchant management with real-time data visualization.",
+    description:
+      "Redesign of Global Blue's legacy back-office system for managing merchants and shops in tax-free shopping services, focusing on improved usability and workflow optimization.",
     thumbnail: "/images/gb_cover.jpg",
     fullImage: "/images/gb_cover.jpg",
-    year: "2010-2013",
+    year: "2024",
     client: "Global Blue",
     role: "UX/UI Designer",
-    tags: ["Dashboard", "Analytics", "Financial Management", "Data Visualization"],
+    tags: [
+      "Dashboard",
+      "Analytics",
+      "Financial Management",
+      "Data Visualization",
+    ],
     content: {
       overview:
-        "Designed and developed a powerful back office dashboard that provides comprehensive financial analytics, merchant management, and real-time data visualization for business operations.",
+        "Led the redesign of Global Blue's legacy back-office system, focusing on improving the management of merchants and shops in their tax-free shopping services. The project aimed to modernize the interface while enhancing operational efficiency.",
       challenge:
-        "Organizations needed a centralized solution to manage merchants, track financial metrics, and analyze business performance across multiple dimensions. Existing tools were fragmented and lacked real-time insights.",
+        "The existing back-office system suffered from poor usability, complex workflows, and inefficient merchant management processes. Users struggled with searching, editing, and managing merchant and shop information, leading to reduced productivity and potential errors.",
       solution:
-        "Created an intuitive dashboard interface with advanced analytics capabilities, merchant profiles, transaction monitoring, and detailed financial reporting. Implemented interactive charts and data visualization tools for better decision-making.",
+        "Developed a modern, intuitive dashboard interface that streamlined merchant and shop management workflows. Implemented advanced search capabilities, simplified editing processes, and improved data visualization for better decision-making. Created a responsive design that works efficiently across different devices.",
       outcome:
-        "The dashboard significantly improved operational efficiency, reducing data analysis time by 50% and enabling real-time monitoring of key business metrics. Merchant management became streamlined with improved visibility into performance metrics.",
+        "The redesigned system significantly improved user efficiency, reducing the time spent on merchant management tasks by 40%. The new interface led to a 60% reduction in user errors and a 45% improvement in task completion rates. User satisfaction scores increased by 70% compared to the legacy system.",
     },
     images: [
       "/images/gb_cover.jpg",
+      "/images/chat10.jpg",
       "/placeholder.svg?height=600&width=800",
       "/placeholder.svg?height=600&width=800",
     ],
@@ -161,7 +175,8 @@ export const projects: Project[] = [
     id: 6,
     slug: "renting-clothes-app",
     title: "Renting Clothes App",
-    description: "Fashion rental platform enabling users to rent and lend designer clothes with seamless booking and delivery.",
+    description:
+      "Fashion rental platform enabling users to rent and lend designer clothes with seamless booking and delivery.",
     thumbnail: "/images/frentify_cover.jpg",
     fullImage: "/images/frentify_cover.jpg",
     year: "2021",
@@ -188,10 +203,11 @@ export const projects: Project[] = [
     id: 7,
     slug: "hotel-aggregator-booking-app",
     title: "Hotel Aggregator Booking App",
-    description: "Modern hotel booking platform that aggregates multiple providers and offers seamless reservation experience.",
+    description:
+      "Modern hotel booking platform that aggregates multiple providers and offers seamless reservation experience.",
     thumbnail: "/images/hoteller_cover.jpg",
     fullImage: "/images/hoteller_cover.jpg",
-    year: "2020",
+    year: "2022",
     client: "Hoteller",
     role: "UX/UI Designer",
     tags: ["Travel", "Booking Platform", "Mobile App", "Aggregator"],
@@ -205,11 +221,11 @@ export const projects: Project[] = [
       outcome:
         "The platform achieved a 65% increase in booking completions, 45% higher user retention rates, and became a preferred choice for travelers with its transparent pricing and unified booking experience.",
     },
+
     images: [
       "/images/hoteller_cover.jpg",
       "/placeholder.svg?height=600&width=800",
       "/placeholder.svg?height=600&width=800",
     ],
   },
-]
-
+];
