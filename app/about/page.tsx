@@ -10,9 +10,6 @@ import {
   Download,
   Calendar, 
   MapPin, 
-  Award, 
-  Users, 
-  Briefcase,
   Code,
   Palette,
   MessageCircle
@@ -84,12 +81,6 @@ const skillCategories = [
   }
 ];
 
-const stats = [
-  { icon: Briefcase, value: "50+", label: "Projects Completed" },
-  { icon: Users, value: "25+", label: "Happy Clients" },
-  { icon: Calendar, value: "12+", label: "Years Experience" },
-  { icon: Award, value: "100%", label: "Client Satisfaction" }
-];
 
 export default function AboutPage() {
   return (
@@ -187,29 +178,6 @@ export default function AboutPage() {
           </motion.div>
           </div>
 
-        {/* Stats */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-20"
-        >
-          {stats.map((stat, index) => (
-            <motion.div
-              key={stat.label}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              viewport={{ once: true }}
-              className="text-center bg-zinc-900 rounded-2xl p-6"
-            >
-              <stat.icon className="h-8 w-8 text-primary mx-auto mb-4" />
-              <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
-              <div className="text-zinc-400 text-sm">{stat.label}</div>
-            </motion.div>
-          ))}
-        </motion.div>
 
         {/* Experience Timeline */}
         <motion.div
