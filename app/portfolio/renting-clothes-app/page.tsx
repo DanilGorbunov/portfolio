@@ -48,7 +48,17 @@ export default function RentingClothesAppProject() {
   };
 
   return (
-    <ProjectHeader />
+    <div className="min-h-screen bg-black text-white">
+      {/* Sticky Back Button */}
+      <div className="sticky top-0 z-50 bg-black/80 backdrop-blur-sm border-b border-zinc-800">
+        <div className="container mx-auto px-6 py-4">
+          <Link href="/portfolio">
+            <button className="text-white hover:bg-zinc-800 px-4 py-2 rounded-lg transition-colors">
+              ← Back to Portfolio
+            </button>
+          </Link>
+        </div>
+      </div>
 
       <motion.div
         initial="hidden"
