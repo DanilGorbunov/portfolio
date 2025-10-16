@@ -23,7 +23,7 @@ export default function Home() {
                   Danil Gorbunov
                 </h1>
                 <p className="text-xl md:text-2xl text-primary">
-                  Product Designer (UX/UI), Code Crafter & AI Innovator
+                  Product Designer, UX/UI + AI Design, Classic & AI Prototyping and Development
                 </p>
                 <p className="max-w-[600px] text-zinc-400 text-lg md:text-xl">
                   Intuitive user experiences, AI automation, and scalable
