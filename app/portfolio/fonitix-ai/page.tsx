@@ -5,7 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { motion } from "framer-motion";
-import { ArrowLeft, ExternalLink, Github, Calendar, User, Building2, Target, Zap, DollarSign, Users, Phone, Brain, Database, Globe, Code } from "lucide-react";
+import { ArrowLeft, ExternalLink, Calendar, User, Building2, Target, Zap, DollarSign, Users, Phone, Brain, Database, Globe, Code } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -89,7 +89,7 @@ export default function FonitixAIProjectPage() {
           >
             <div className="relative rounded-2xl overflow-hidden">
               <Image
-                src="/placeholder.svg?height=800&width=1200&text=Fonitix+AI+Dashboard"
+                src="/images/fonitix_cover.jpg"
                 alt="Fonitix AI Dashboard"
                 width={1200}
                 height={800}
@@ -614,13 +614,13 @@ export default function FonitixAIProjectPage() {
             </div>
 
             <div className="flex flex-wrap justify-center gap-4">
-              <Button variant="outline" className="border-zinc-600 text-white hover:bg-zinc-800">
+              <Button 
+                variant="outline" 
+                className="border-zinc-600 text-white hover:bg-zinc-800"
+                onClick={() => window.open('https://fonitix.ai', '_blank')}
+              >
                 <ExternalLink className="w-4 h-4 mr-2" />
                 View Live Demo
-              </Button>
-              <Button variant="outline" className="border-zinc-600 text-white hover:bg-zinc-800">
-                <Github className="w-4 h-4 mr-2" />
-                GitHub Repository
               </Button>
             </div>
           </motion.div>

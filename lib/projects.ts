@@ -25,8 +25,8 @@ export const projects: Project[] = [
     title: "Fonitix AI (SaaS Voice Platform)",
     description:
       "AI-powered voice agent platform for restaurants - automated phone ordering system with real-time menu management and POS integration",
-    thumbnail: "/placeholder.svg?height=600&width=800&text=Fonitix+AI",
-    fullImage: "/placeholder.svg?height=600&width=800&text=Fonitix+AI",
+    thumbnail: "/images/fonitix_cover.jpg",
+    fullImage: "/images/fonitix_cover.jpg",
     year: "2025",
     client: "Fonitix AI",
     role: "Full-Stack Developer & Product Designer",
@@ -42,7 +42,7 @@ export const projects: Project[] = [
         "Built full-stack MVP in 4 weeks with 87% cost reduction vs competitors. Created scalable architecture supporting 1000+ restaurants with projected $125K MRR by year-end. Delivered intuitive dark-theme dashboard, real-time order processing, and comprehensive menu management system. Successfully demonstrated modern SaaS development with AI integration and cost optimization.",
     },
     images: [
-      "/placeholder.svg?height=600&width=800&text=Fonitix+AI+Dashboard",
+      "/images/fonitix_cover.jpg",
       "/placeholder.svg?height=600&width=800&text=Menu+Management+System",
       "/placeholder.svg?height=600&width=800&text=Order+Processing+Interface",
       "/placeholder.svg?height=600&width=800&text=AI+Voice+Configuration",
