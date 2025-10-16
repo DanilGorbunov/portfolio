@@ -39,7 +39,7 @@ export default function AIEcommerceProject() {
   const projectImages = [
     {
       src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1_2.jpg-UdnazrNTHeJdDpxCEnAkDBwHXpWlgE.jpeg",
-      alt: "NeroType AI Dashboard Interface",
+      alt: "NeroType AI Dashboard Interface - AI Prototyping",
       caption:
         "NeroType AI Dashboard showing sales metrics and chatbot configuration",
     },
