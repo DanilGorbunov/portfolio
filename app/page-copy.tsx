@@ -65,7 +65,7 @@ export default function Home() {
                   transition={{ duration: 0.5, delay: 0.3 }}
                   className="text-xl md:text-2xl text-primary"
                 >
-                  Product Designer (UX/UI), Code Crafter & AI Innovator
+                  Product Designer, UX/UI design, Code Crafter & AI Prototoping and development
                 </motion.p>
                 <motion.p
                   initial={{ opacity: 0, y: 20 }}
@@ -73,7 +73,7 @@ export default function Home() {
                   transition={{ duration: 0.5, delay: 0.4 }}
                   className="max-w-[600px] text-zinc-400 text-lg md:text-xl"
                 >
-                  I create intuitive user experiences, AI automation, and
+                  I created intuitive user experiences, AI automation, and
                   scalable digital products across SaaS, B2B, B2C, and
                   eCommerce.
                 </motion.p>
