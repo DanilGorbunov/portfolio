@@ -21,7 +21,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
   return (
     <div className="container px-4 py-12 md:px-6 md:py-24 bg-black">
       <div className="mb-8 flex items-center">
-        <Link href="/portfolio">
+        <Link href="/portfolio" prefetch={false}>
           <Button
             variant="ghost"
             size="sm"

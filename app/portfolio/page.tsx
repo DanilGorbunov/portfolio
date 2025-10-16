@@ -192,7 +192,7 @@ export default function PortfolioPage() {
                     ))}
                   </div>
                   
-                  <Link href={`/portfolio/${project.slug}`}>
+                  <Link href={`/portfolio/${project.slug}`} prefetch={false}>
                     <Button
                       variant="ghost"
                       className="w-full text-primary hover:text-white hover:bg-primary/10"
@@ -234,7 +234,7 @@ export default function PortfolioPage() {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="text-center mt-16"
         >
-          <Link href="/">
+          <Link href="/" prefetch={false}>
             <Button
               variant="outline"
               className="border-zinc-700 text-zinc-300 hover:bg-zinc-800"

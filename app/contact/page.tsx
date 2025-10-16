@@ -23,8 +23,20 @@ const contactInfo = [
   {
     icon: Mail,
     label: "Email",
-    value: "danil@example.com",
-    href: "mailto:danil@example.com"
+    value: "danilgorbunov@gmail.com",
+    href: "mailto:danilgorbunov@gmail.com"
+  },
+  {
+    icon: Phone,
+    label: "Slovak WhatsApp",
+    value: "+421 90 70 77 202",
+    href: "https://wa.me/421907077202"
+  },
+  {
+    icon: MessageCircle,
+    label: "Ukrainian WhatsApp/Telegram",
+    value: "+38 093 448 659",
+    href: "https://wa.me/38093448659"
   },
   {
     icon: Linkedin,
@@ -108,7 +120,7 @@ export default function ContactPage() {
 
   const copyEmail = async () => {
     try {
-      await navigator.clipboard.writeText("danil@example.com");
+      await navigator.clipboard.writeText("danilgorbunov@gmail.com");
       setCopiedEmail(true);
       setTimeout(() => setCopiedEmail(false), 2000);
     } catch (err) {

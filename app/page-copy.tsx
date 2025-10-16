@@ -84,12 +84,12 @@ export default function Home() {
                 transition={{ duration: 0.5, delay: 0.5 }}
                 className="flex flex-col gap-2 min-[400px]:flex-row"
               >
-                <Link href="/about">
+                <Link href="/about" prefetch={false}>
                   <Button className="w-full min-[400px]:w-auto bg-primary hover:bg-primary/90 text-black">
                     About Me
                   </Button>
                 </Link>
-                <Link href="/contact">
+                <Link href="/contact" prefetch={false}>
                   <Button
                     className="w-full min-[400px]:w-auto"
                     variant="outline"
@@ -166,7 +166,7 @@ export default function Home() {
                       <span className="text-zinc-300">{project.year}</span>
                     </div>
                   </div>
-                  <Link href={`/portfolio/${project.slug}`}>
+                  <Link href={`/portfolio/${project.slug}`} prefetch={false}>
                     <Button
                       variant="outline"
                       className="border-zinc-700 text-white hover:bg-zinc-800"
@@ -177,7 +177,7 @@ export default function Home() {
                   </Link>
                 </div>
                 <div className="overflow-hidden rounded-lg group">
-                  <Link href={`/portfolio/${project.slug}`}>
+                  <Link href={`/portfolio/${project.slug}`} prefetch={false}>
                     <img
                       src={project.thumbnail || "/placeholder.svg"}
                       alt={project.title}
@@ -193,7 +193,7 @@ export default function Home() {
 
       <section className="py-12 md:py-16 bg-zinc-900/50">
         <div className="flex flex-col sm:flex-row gap-4 justify-center pt-2">
-          <Link href="/contact">
+          <Link href="/contact" prefetch={false}>
             <Button className="w-full sm:w-auto bg-primary hover:bg-primary/90 text-black">
               Get in touch
             </Button>

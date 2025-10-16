@@ -21,6 +21,10 @@ const nextConfig = {
     parallelServerBuildTraces: true,
     parallelServerCompiles: true,
   },
+  // Disable automatic prefetching to prevent routing issues
+  compiler: {
+    removeConsole: false,
+  },
 };
 
 mergeConfig(nextConfig, userConfig);

@@ -147,7 +147,7 @@ export default function WarehouseInventoryProject() {
       ref={containerRef}
     >
       <div className="mb-8 flex items-center">
-        <Link href="/portfolio">
+        <Link href="/portfolio" prefetch={false}>
           <Button
             variant="ghost"
             size="sm"

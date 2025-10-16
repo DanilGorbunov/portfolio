@@ -154,7 +154,7 @@ export default function AboutPage() {
                 <Download className="mr-2 h-5 w-5" />
                 Download CV
               </Button>
-              <Link href="/contact">
+              <Link href="/contact" prefetch={false}>
                 <Button
                   size="lg"
                   variant="outline"
@@ -343,7 +343,7 @@ export default function AboutPage() {
             Ready to bring your ideas to life? Let's discuss your next project and create something amazing together.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contact">
+            <Link href="/contact" prefetch={false}>
               <Button
                 size="lg"
                 className="bg-primary hover:bg-primary/90 text-black px-8 py-4"
@@ -351,7 +351,7 @@ export default function AboutPage() {
                 Get in Touch
               </Button>
             </Link>
-            <Link href="/portfolio">
+            <Link href="/portfolio" prefetch={false}>
               <Button
                 size="lg"
                 variant="outline"

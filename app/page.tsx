@@ -72,7 +72,7 @@ export default function Home() {
                 viewport={{ once: true }}
                 className="group"
               >
-                <Link href={`/portfolio/${project.slug}`}>
+                <Link href={`/portfolio/${project.slug}`} prefetch={false}>
                   <div className="relative aspect-[16/10] overflow-hidden mb-6">
                     <Image
                       src={project.thumbnail || "/placeholder.svg"}
@@ -214,10 +214,10 @@ export default function Home() {
             <div className="space-y-2 text-base leading-relaxed">
               <div>
                 <a 
-                  href="mailto:danil@example.com"
+                  href="mailto:danilgorbunov@gmail.com"
                   className="underline underline-offset-4 decoration-1 hover:opacity-60 transition-opacity duration-300"
                 >
-                  danil@example.com
+                  danilgorbunov@gmail.com
                 </a>
                   </div>
               <div>
