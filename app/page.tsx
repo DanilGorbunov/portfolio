@@ -51,7 +51,7 @@ export default function Home() {
               <div className="relative">
                 <Image
                   alt="Danil Gorbunov portrait"
-                  className="relative aspect-square overflow-hidden rounded-full object-cover object-center border-4 border-zinc-800 grayscale hover:grayscale-0 transition-all duration-300"
+                  className="relative aspect-square overflow-hidden rounded-full object-cover object-center border-4 border-zinc-800"
                   height={400}
                   width={400}
                   src="/images/my_photo.jpg"
