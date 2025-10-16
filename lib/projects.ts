@@ -20,14 +20,72 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    id: 9,
+    slug: "linkshop-ai",
+    title: "LinkShop AI",
+    description:
+      "AI-powered platform 'from Linktree to E-commerce' - integrated SAAS combining personal link pages with full online store and AI assistant for business automation",
+    thumbnail: "/images/linkshop_cover.jpg",
+    fullImage: "/images/linkshop_cover.jpg",
+    year: "2025",
+    client: "LinkShop",
+    role: "Lead Product Designer, UX/UI Designer, Full-Stack Developer",
+    tags: ["AI", "E-Commerce", "SaaS", "Linktree Alternative", "Ukrainian Market", "Creator Economy"],
+    content: {
+      overview:
+        "LinkShop is an integrated SAAS platform that revolutionarily combines the creation of personal link pages (similar to Linktree) with a full-fledged online store and an AI assistant for business process automation. The platform targets content creators, influencers, and Ukrainian entrepreneurs who lost their physical stores due to war or economic difficulties but still have product inventories to quickly move online.",
+      challenge:
+        "Fragmentation of tools: content creators use Linktree for links, Shopify for the store, and various chatbots for support. High fees and complexity: Shopify + payment processing + separate AI tools = $100+ per month + complicated setup. Critical problem for Ukraine: thousands of entrepreneurs lost their physical points of sale due to war but kept product inventories, needing urgent migration online without technical knowledge or large investments.",
+      solution:
+        "Created an AI-first platform that transforms a simple link page into an AI-supported automated business tool allowing anyone to create a full online store in just 10 minutes. Features include: 'Clearance Mode' for fast bulk upload of discounted products, UAH payments with local banks and MonoBank API, Express setup with 5-minute onboarding, AI translator for automatic Ukrainian translation, and extended 6-month free trial for businesses affected by war.",
+      outcome:
+        "Delivered a fully functional MVP with real product data (Nike sneakers, pricing, inventory), AI Business Intelligence with Claude API integration for pricing analysis and automated insights, real-time architecture with Convex database, and professional Instagram-style UI. The platform successfully addresses the critical need for Ukrainian businesses to quickly move online while providing content creators with monetization tools.",
+    },
+    images: [
+      "/images/linkshop_cover.jpg",
+      "/images/linkshop1.jpg",
+      "/images/linkshop2.jpg",
+      "/images/linkshop3.jpg",
+    ],
+  },
+  {
+    id: 8,
+    slug: "mriacrm-crm-system",
+    title: "MRIACRM SYSTEM",
+    description:
+      "Comprehensive CRM platform streamlining business operations and customer management",
+    thumbnail: "/images/mriacrm_cover.jpg",
+    fullImage: "/images/mriacrm_cover.jpg",
+    year: "2025",
+    client: "MRIACRM",
+    role: "Lead Product Designer, UX/UI Designer",
+    tags: ["CRM", "Business Management", "SaaS", "Dashboard", "E-Commerce"],
+    content: {
+      overview:
+        "Mria CRM is a comprehensive customer relationship management solution built exclusively for Jira Cloud using Atlassian's Forge technology. It seamlessly integrates with Jira to simplify sales pipelines, enhance collaboration, and align teams by unifying customer and project management workflows.",
+      challenge:
+        "Sales teams needed a CRM that works natively within Jira Cloud, eliminating the need for external tools and data silos. The challenge was creating a solution that provides full CRM functionality while maintaining seamless integration with existing Jira workflows and ensuring top-tier security and scalability.",
+      solution:
+        "Built a complete CRM solution using Atlassian's Forge platform featuring contact & company management, lead & deal tracking, activity logging, Gmail & calendar integration, role-based access control, and comprehensive reporting. The system includes product modules, sales dashboards, and real-time collaboration tools all within the Jira environment.",
+      outcome:
+        "Delivered the first fully-featured CRM built exclusively for Jira Cloud, providing teams with native integration, enhanced security through Forge technology, and scalable architecture. The solution eliminates external tool dependencies while offering comprehensive sales management capabilities directly within Jira workflows.",
+    },
+    images: [
+      "/images/mriacrm_cover.jpg",
+      "/images/mriacrm1.jpg",
+      "/images/mriacrm2.jpg",
+      "/images/mriacrm3.jpg",
+    ],
+  },
+  {
     id: 1,
     slug: "ai-ecommerce-chatbot",
-    title: "AI E-Commerce Chatbot",
+    title: "E-Commerce AI Chatbot",
     description:
-      "SAAS project with an AI e-commerce chatbot automating business processes and engagement.",
+      "SaaS chatbot automating customer engagement and increasing conversions by 15%",
     thumbnail: "/images/dashboard-chatbot.jpg",
     fullImage: "/images/dashboard-chatbot.jpg",
-    year: "2022-Present",
+    year: "2024-2025",
     client: "B2Stack",
     role: "UX/UI Designer, Product Designer",
     tags: ["AI", "E-Commerce", "SAAS", "Dashboard"],
@@ -52,7 +110,7 @@ export const projects: Project[] = [
     slug: "warehouse-inventory-management",
     title: "3D Warehouse Inventory Management",
     description:
-      "SaaS-based warehouse inventory management app with 3D data visualization for Fortune 500 clients.",
+      "Enterprise inventory management platform with real-time 3D visualization",
     thumbnail: "/images/laps/cover_laps.jpg",
     fullImage: "/images/laps/cover_laps.jpg",
     year: "2022",
@@ -85,7 +143,7 @@ export const projects: Project[] = [
     slug: "b2c-b2b-delivery-app",
     title: "B2C/B2B Delivery App",
     description:
-      "Comprehensive food and goods delivery platform connecting businesses and consumers with real-time tracking.",
+      "B2B/B2C delivery platform connecting businesses with real-time tracking",
     thumbnail: "/images/foodcore.jpg",
     fullImage: "/images/foodcore.jpg",
     year: "2020-2022",
@@ -113,7 +171,7 @@ export const projects: Project[] = [
     slug: "invoicing-app-improving",
     title: "Invoicing App Improving",
     description:
-      "Modern invoicing application with real-time financial tracking and automated billing workflows.",
+      "Financial management tool with automated workflows and real-time tracking",
     thumbnail: "/images/invoice_cover.jpg",
     fullImage: "/images/invoice_cover.jpg",
     year: "2023",
@@ -142,7 +200,7 @@ export const projects: Project[] = [
     slug: "back-office-dashboard",
     title: "Back Office Dashboard",
     description:
-      "Redesign of Global Blue's legacy back-office system for managing merchants and shops in tax-free shopping services, focusing on improved usability and workflow optimization.",
+      "Redesigned Global Blue's legacy system for improved merchant management",
     thumbnail: "/images/gb_cover.jpg",
     fullImage: "/images/gb_cover.jpg",
     year: "2024",
@@ -176,7 +234,7 @@ export const projects: Project[] = [
     slug: "renting-clothes-app",
     title: "Renting Clothes App",
     description:
-      "Fashion rental platform enabling users to rent and lend designer clothes with seamless booking and delivery.",
+      "Fashion rental marketplace with seamless booking and delivery",
     thumbnail: "/images/frentify_cover.jpg",
     fullImage: "/images/frentify_cover.jpg",
     year: "2021",

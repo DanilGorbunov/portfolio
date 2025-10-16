@@ -4,7 +4,6 @@ import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import {
-  ArrowLeft,
   Calendar,
   User,
   Briefcase,
@@ -21,6 +20,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { cn } from "@/lib/utils";
+import ProjectHeader from "@/components/project-header";
 
 export default function DeliveryAppProject() {
   const [activeSlide, setActiveSlide] = useState(0);
@@ -115,22 +115,7 @@ export default function DeliveryAppProject() {
   };
 
   return (
-    <div
-      className="container px-4 py-12 md:px-6 md:py-24 bg-black"
-      ref={containerRef}
-    >
-      <div className="mb-8 flex items-center">
-        <Link href="/portfolio">
-          <Button
-            variant="ghost"
-            size="sm"
-            className="text-zinc-400 hover:text-white"
-          >
-            <ArrowLeft className="mr-2 h-4 w-4" />
-            Back to Portfolio
-          </Button>
-        </Link>
-      </div>
+    <ProjectHeader />
 
       <motion.div
         initial="hidden"
