@@ -20,6 +20,35 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    id: 11,
+    slug: "fonitix-ai",
+    title: "Fonitix AI (SaaS Voice Platform)",
+    description:
+      "AI-powered voice agent platform for restaurants - automated phone ordering system with real-time menu management and POS integration",
+    thumbnail: "/placeholder.svg?height=600&width=800&text=Fonitix+AI",
+    fullImage: "/placeholder.svg?height=600&width=800&text=Fonitix+AI",
+    year: "2025",
+    client: "Fonitix AI",
+    role: "Full-Stack Developer & Product Designer",
+    tags: ["AI", "Voice Technology", "SaaS", "Restaurant Tech", "Next.js", "OpenAI", "Telnyx", "Convex"],
+    content: {
+      overview:
+        "Fonitix AI is an intelligent voice agent platform that allows restaurants to create AI-powered phone assistants for automated order taking. Built as a SaaS solution with dark theme dashboard, real-time menu management, and seamless POS integration using modern tech stack including Next.js, Convex, and OpenAI GPT-4.",
+      challenge:
+        "Restaurants lose thousands monthly due to missed calls (30-40% go unanswered), high staff costs ($15-20/hour), human errors, limited hours, and language barriers. Average restaurant loses $50,000-100,000 annually in missed orders and labor costs. Existing solutions like Retell AI cost $450/month vs our $60/month target.",
+      solution:
+        "Developed comprehensive SaaS platform with 5-minute setup, real-time menu management system, AI-powered conversation flow using GPT-4, Telnyx telephony integration (87% cost savings vs Twilio), ElevenLabs voice synthesis, and Convex real-time database. Features include dark theme dashboard, order tracking, analytics, and multi-restaurant support.",
+      outcome:
+        "Built full-stack MVP in 4 weeks with 87% cost reduction vs competitors. Created scalable architecture supporting 1000+ restaurants with projected $125K MRR by year-end. Delivered intuitive dark-theme dashboard, real-time order processing, and comprehensive menu management system. Successfully demonstrated modern SaaS development with AI integration and cost optimization.",
+    },
+    images: [
+      "/placeholder.svg?height=600&width=800&text=Fonitix+AI+Dashboard",
+      "/placeholder.svg?height=600&width=800&text=Menu+Management+System",
+      "/placeholder.svg?height=600&width=800&text=Order+Processing+Interface",
+      "/placeholder.svg?height=600&width=800&text=AI+Voice+Configuration",
+    ],
+  },
+  {
     id: 10,
     slug: "tesla-vip-trip",
     title: "Tesla VIP Trip (AI FullStack)",
@@ -80,7 +109,7 @@ export const projects: Project[] = [
   {
     id: 8,
     slug: "mriacrm-crm-system",
-    title: "MRIACRM SYSTEM",
+    title: "MRIACRM SYSTEM (AI + Classic Figma Design)",
     description:
       "Comprehensive CRM platform streamlining business operations and customer management",
     thumbnail: "/images/mriacrm_cover.jpg",
