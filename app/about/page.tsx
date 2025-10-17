@@ -9,10 +9,7 @@ import { Badge } from "@/components/ui/badge";
 import {
   Download,
   Calendar, 
-  MapPin, 
-  Code,
-  Palette,
-  MessageCircle
+  MapPin
 } from "lucide-react";
 
 const experience = [
@@ -42,44 +39,6 @@ const experience = [
   }
 ];
 
-const skillCategories = [
-  {
-    title: "Design",
-    icon: Palette,
-    skills: [
-      { name: "UX/UI Design", level: 95 },
-      { name: "User Research", level: 90 },
-      { name: "Prototyping", level: 88 },
-      { name: "Design Systems", level: 85 },
-      { name: "Figma", level: 95 },
-      { name: "Adobe Creative Suite", level: 80 }
-    ]
-  },
-  {
-    title: "Development",
-    icon: Code,
-    skills: [
-      { name: "React", level: 85 },
-      { name: "TypeScript", level: 80 },
-      { name: "Next.js", level: 82 },
-      { name: "Node.js", level: 75 },
-      { name: "Python", level: 70 },
-      { name: "Git", level: 90 }
-    ]
-  },
-  {
-    title: "Collaboration",
-    icon: MessageCircle,
-    skills: [
-      { name: "Product Strategy", level: 88 },
-      { name: "Team Leadership", level: 85 },
-      { name: "Client Communication", level: 92 },
-      { name: "Agile Methodologies", level: 90 },
-      { name: "Mentoring", level: 80 },
-      { name: "Stakeholder Management", level: 87 }
-    ]
-  }
-];
 
 
 export default function AboutPage() {
@@ -238,63 +197,6 @@ export default function AboutPage() {
           </div>
         </motion.div>
 
-        {/* Skills */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="mb-20"
-        >
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">
-            Skills & <span className="text-primary">Expertise</span>
-          </h2>
-          
-          <div className="grid md:grid-cols-3 gap-8">
-            {skillCategories.map((category, categoryIndex) => (
-              <motion.div
-                key={category.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: categoryIndex * 0.2 }}
-                viewport={{ once: true }}
-                className="bg-zinc-900 rounded-2xl p-8"
-              >
-                <div className="flex items-center space-x-3 mb-6">
-                  <category.icon className="h-6 w-6 text-primary" />
-                  <h3 className="text-xl font-bold text-white">{category.title}</h3>
-                </div>
-                
-                <div className="space-y-4">
-                  {category.skills.map((skill, skillIndex) => (
-                    <motion.div
-                      key={skill.name}
-                      initial={{ opacity: 0, x: -20 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      transition={{ duration: 0.5, delay: categoryIndex * 0.2 + skillIndex * 0.05 }}
-                      viewport={{ once: true }}
-                      className="space-y-2"
-                    >
-                      <div className="flex justify-between items-center">
-                        <span className="text-sm font-medium text-zinc-300">{skill.name}</span>
-                        <span className="text-sm text-zinc-500">{skill.level}%</span>
-              </div>
-                      <div className="w-full bg-zinc-800 rounded-full h-2">
-                        <motion.div
-                          className="bg-primary h-2 rounded-full"
-                          initial={{ width: 0 }}
-                          whileInView={{ width: `${skill.level}%` }}
-                          transition={{ duration: 1, delay: categoryIndex * 0.2 + skillIndex * 0.05 + 0.3 }}
-                          viewport={{ once: true }}
-                        />
-                </div>
-                    </motion.div>
-                  ))}
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
 
         {/* CTA Section */}
         <motion.div
