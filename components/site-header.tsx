@@ -3,9 +3,16 @@
 import Link from "next/link"
 import { Frame, Menu } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
+import { Sheet, SheetContent, SheetTrigger, SheetClose } from "@/components/ui/sheet"
+import { useState } from "react"
 
 export function SiteHeader() {
+  const [isOpen, setIsOpen] = useState(false)
+
+  const handleLinkClick = () => {
+    setIsOpen(false)
+  }
+
   return (
     <header className="sticky top-0 z-50 w-full border-b border-zinc-800 bg-black/95 backdrop-blur supports-[backdrop-filter]:bg-black/60">
       <div className="container flex h-16 items-center">
@@ -15,27 +22,51 @@ export function SiteHeader() {
         </Link>
         {/* Mobile Menu - Only visible on small screens */}
         <div className="md:hidden ml-auto">
-          <Sheet>
+          <Sheet open={isOpen} onOpenChange={setIsOpen}>
             <SheetTrigger asChild>
               <Button variant="ghost" size="icon" className="text-white">
                 <Menu className="h-6 w-6" />
                 <span className="sr-only">Toggle menu</span>
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="bg-zinc-900 border-zinc-800">
+            <SheetContent side="right" className="bg-zinc-900 border-zinc-800 [&>button]:hidden">
+              {/* Custom close button without green border */}
+              <button
+                onClick={() => setIsOpen(false)}
+                className="absolute right-4 top-4 rounded-sm opacity-70 transition-opacity hover:opacity-100 focus:outline-none disabled:pointer-events-none"
+              >
+                <svg
+                  className="h-4 w-4 text-white"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+                <span className="sr-only">Close</span>
+              </button>
+              
               <nav className="flex flex-col gap-4 mt-8">
-                <Link href="/" className="text-lg font-medium text-white hover:text-primary transition-colors">
-                  Home
-                </Link>
-                <Link href="/portfolio" className="text-lg font-medium text-white hover:text-primary transition-colors">
-                  Portfolio
-                </Link>
-                <Link href="/about" className="text-lg font-medium text-white hover:text-primary transition-colors">
-                  About
-                </Link>
-                <Link href="/contact" className="text-lg font-medium text-white hover:text-primary transition-colors">
-                  Contact
-                </Link>
+                <SheetClose asChild>
+                  <Link href="/" className="text-lg font-medium text-white hover:text-primary transition-colors" onClick={handleLinkClick}>
+                    Home
+                  </Link>
+                </SheetClose>
+                <SheetClose asChild>
+                  <Link href="/portfolio" className="text-lg font-medium text-white hover:text-primary transition-colors" onClick={handleLinkClick}>
+                    Portfolio
+                  </Link>
+                </SheetClose>
+                <SheetClose asChild>
+                  <Link href="/about" className="text-lg font-medium text-white hover:text-primary transition-colors" onClick={handleLinkClick}>
+                    About
+                  </Link>
+                </SheetClose>
+                <SheetClose asChild>
+                  <Link href="/contact" className="text-lg font-medium text-white hover:text-primary transition-colors" onClick={handleLinkClick}>
+                    Contact
+                  </Link>
+                </SheetClose>
               </nav>
             </SheetContent>
           </Sheet>
