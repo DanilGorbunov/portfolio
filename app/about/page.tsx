@@ -155,54 +155,139 @@ export default function AboutPage() {
           viewport={{ once: true }}
           className="mb-20"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-16 text-center">
             Professional <span className="text-primary">Experience</span>
           </h2>
           
-          <div className="space-y-8">
-            {experience.map((job, index) => (
-              <motion.div
-                key={job.title}
-                initial={{ opacity: 0, x: -30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.2 }}
-                viewport={{ once: true }}
-                className="relative bg-zinc-900 rounded-2xl p-8 hover:bg-zinc-800 transition-colors duration-300"
-              >
-                <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-4">
-                  <div>
-                    <h3 className="text-xl font-bold text-white mb-2">{job.title}</h3>
-                    <div className="text-primary font-medium mb-1">{job.company}</div>
-                    <div className="flex items-center space-x-4 text-zinc-400 text-sm">
-                      <div className="flex items-center space-x-1">
-                        <Calendar className="h-4 w-4" />
-                        <span>{job.year}</span>
-                </div>
-                      <div className="flex items-center space-x-1">
-                        <MapPin className="h-4 w-4" />
+          <div className="relative">
+            {/* Timeline Line */}
+            <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary via-zinc-600 to-zinc-800"></div>
+            
+            <div className="space-y-12">
+              {experience.map((job, index) => (
+                <motion.div
+                  key={job.title}
+                  initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.2, type: "spring", stiffness: 100 }}
+                  viewport={{ once: true }}
+                  className={`relative flex items-start ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'} gap-8`}
+                >
+                  {/* Timeline Dot */}
+                  <motion.div
+                    initial={{ scale: 0 }}
+                    whileInView={{ scale: 1 }}
+                    transition={{ duration: 0.6, delay: index * 0.2 + 0.3, type: "spring", stiffness: 200 }}
+                    viewport={{ once: true }}
+                    className="relative z-10 flex-shrink-0 w-16 h-16 bg-gradient-to-br from-primary to-primary/80 rounded-full flex items-center justify-center shadow-lg shadow-primary/25"
+                  >
+                    <motion.div
+                      whileHover={{ scale: 1.1, rotate: 5 }}
+                      className="w-8 h-8 bg-white rounded-full flex items-center justify-center"
+                    >
+                      <span className="text-xs font-bold text-black">{index + 1}</span>
+                    </motion.div>
+                    
+                    {/* Pulse Animation */}
+                    <motion.div
+                      animate={{ scale: [1, 1.3, 1], opacity: [0.5, 0, 0.5] }}
+                      transition={{ duration: 2, repeat: Infinity, delay: index * 0.5 }}
+                      className="absolute inset-0 bg-primary rounded-full"
+                    />
+                  </motion.div>
+
+                  {/* Content Card */}
+                  <motion.div
+                    whileHover={{ 
+                      scale: 1.02, 
+                      y: -5,
+                      boxShadow: "0 20px 40px rgba(0, 0, 0, 0.3)"
+                    }}
+                    transition={{ duration: 0.3, type: "spring", stiffness: 300 }}
+                    className={`flex-1 max-w-lg bg-gradient-to-br from-zinc-900 to-zinc-800 rounded-2xl p-8 border border-zinc-700/50 hover:border-primary/30 transition-all duration-300 ${
+                      index % 2 === 0 ? 'ml-8' : 'mr-8'
+                    }`}
+                  >
+                    {/* Year Badge */}
+                    <motion.div
+                      initial={{ opacity: 0, y: -10 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.5, delay: index * 0.2 + 0.4 }}
+                      viewport={{ once: true }}
+                      className="inline-flex items-center px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4"
+                    >
+                      <Calendar className="h-3 w-3 mr-1" />
+                      {job.year}
+                    </motion.div>
+
+                    {/* Title and Company */}
+                    <motion.div
+                      initial={{ opacity: 0, y: 10 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.5, delay: index * 0.2 + 0.5 }}
+                      viewport={{ once: true }}
+                    >
+                      <h3 className="text-xl font-bold text-white mb-2 group-hover:text-primary transition-colors">
+                        {job.title}
+                      </h3>
+                      <div className="text-primary font-medium mb-3">{job.company}</div>
+                      
+                      <div className="flex items-center text-zinc-400 text-sm mb-4">
+                        <MapPin className="h-4 w-4 mr-1" />
                         <span>{job.location}</span>
-              </div>
-                </div>
-              </div>
-                </div>
-                
-                <p className="text-zinc-300 mb-4 leading-relaxed">
-                  {job.description}
-                </p>
-                
-                <div>
-                  <h4 className="text-sm font-semibold text-white mb-2">Key Achievements:</h4>
-                  <ul className="space-y-1">
-                    {job.achievements.map((achievement, achievementIndex) => (
-                      <li key={achievementIndex} className="text-zinc-400 text-sm flex items-start space-x-2">
-                        <span className="text-primary mt-1">•</span>
-                        <span>{achievement}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </motion.div>
-            ))}
+                      </div>
+                    </motion.div>
+
+                    {/* Description */}
+                    <motion.p
+                      initial={{ opacity: 0 }}
+                      whileInView={{ opacity: 1 }}
+                      transition={{ duration: 0.5, delay: index * 0.2 + 0.6 }}
+                      viewport={{ once: true }}
+                      className="text-zinc-300 mb-6 leading-relaxed"
+                    >
+                      {job.description}
+                    </motion.p>
+
+                    {/* Achievements */}
+                    <motion.div
+                      initial={{ opacity: 0, y: 10 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.5, delay: index * 0.2 + 0.7 }}
+                      viewport={{ once: true }}
+                    >
+                      <h4 className="text-sm font-semibold text-white mb-3 flex items-center">
+                        <span className="w-2 h-2 bg-primary rounded-full mr-2"></span>
+                        Key Achievements
+                      </h4>
+                      <ul className="space-y-2">
+                        {job.achievements.map((achievement, achievementIndex) => (
+                          <motion.li
+                            key={achievementIndex}
+                            initial={{ opacity: 0, x: -10 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 0.4, delay: index * 0.2 + 0.8 + achievementIndex * 0.1 }}
+                            viewport={{ once: true }}
+                            whileHover={{ x: 5 }}
+                            className="text-zinc-400 text-sm flex items-start space-x-3 group/achievement"
+                          >
+                            <motion.span
+                              whileHover={{ scale: 1.2, rotate: 90 }}
+                              className="text-primary mt-1 text-lg group-hover/achievement:text-white transition-colors"
+                            >
+                              →
+                            </motion.span>
+                            <span className="group-hover/achievement:text-zinc-300 transition-colors">
+                              {achievement}
+                            </span>
+                          </motion.li>
+                        ))}
+                      </ul>
+                    </motion.div>
+                  </motion.div>
+                </motion.div>
+              ))}
+            </div>
           </div>
         </motion.div>
 
