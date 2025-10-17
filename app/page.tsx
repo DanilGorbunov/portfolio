@@ -26,7 +26,7 @@ export default function Home() {
                   Danil Gorbunov
                 </h1>
             <p className="text-xl md:text-2xl font-light opacity-50 mt-4">
-              Product Designer
+              Product Designer / Developer +AI
             </p>
             <p className="text-lg md:text-xl font-light opacity-70 max-w-2xl mx-auto leading-relaxed mt-12">
               Creating digital experiences that merge<br />
@@ -180,7 +180,7 @@ export default function Home() {
               <div className="relative">
                 <Image
                   src="/images/my_photo.jpg"
-                  alt="Danil Gorbunov - Product Designer"
+                  alt="Danil Gorbunov - Product Designer / Developer +AI"
                   width={500}
                   height={600}
                   className="w-full h-auto object-cover"
