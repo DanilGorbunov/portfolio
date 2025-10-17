@@ -125,13 +125,13 @@ export default function ContactPage() {
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-16 items-start">
+        <div className="grid lg:grid-cols-2 gap-16 items-stretch">
           {/* Contact Form */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
-            className="bg-zinc-900 rounded-2xl p-8 h-fit"
+            className="bg-zinc-900 rounded-2xl p-8 flex flex-col"
           >
             <h2 className="text-2xl font-bold text-white mb-6">Send me a message</h2>
             
@@ -148,7 +148,7 @@ export default function ContactPage() {
                 </p>
               </motion.div>
             ) : (
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form onSubmit={handleSubmit} className="space-y-6 flex-1 flex flex-col">
                 <div>
                   <Label htmlFor="name" className="text-zinc-300 mb-2 block">
                     Name *
@@ -197,7 +197,7 @@ export default function ContactPage() {
                   </Select>
                 </div>
 
-                <div>
+                <div className="flex-1 flex flex-col">
                   <Label htmlFor="message" className="text-zinc-300 mb-2 block">
                     Message *
                   </Label>
@@ -205,7 +205,7 @@ export default function ContactPage() {
                     id="message"
                     value={formData.message}
                     onChange={(e) => handleInputChange("message", e.target.value)}
-                    className="bg-zinc-800 border-zinc-700 text-white focus:border-primary min-h-[120px]"
+                    className="bg-zinc-800 border-zinc-700 text-white focus:border-primary flex-1 min-h-[120px]"
                     placeholder="Tell me about your project, goals, and how I can help..."
                     required
                   />
@@ -237,11 +237,11 @@ export default function ContactPage() {
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="bg-zinc-900 rounded-2xl p-8 h-fit"
+            className="bg-zinc-900 rounded-2xl p-8 flex flex-col"
           >
               <h2 className="text-2xl font-bold text-white mb-6">Contact Information</h2>
               
-              <div className="space-y-6">
+              <div className="space-y-6 flex-1">
                 {contactInfo.map((contact, index) => (
                   <motion.div
                     key={contact.label}
