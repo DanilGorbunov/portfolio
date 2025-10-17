@@ -52,28 +52,6 @@ const contactInfo = [
   }
 ];
 
-const faqItems = [
-  {
-    question: "What types of projects do you work on?",
-    answer: "I specialize in AI-powered applications, SaaS platforms, mobile apps, and data-driven dashboards. I work with startups, scale-ups, and enterprise clients across various industries."
-  },
-  {
-    question: "What's your typical project timeline?",
-    answer: "Project timelines vary based on scope and complexity. A typical design project takes 2-8 weeks, while full product development can take 3-6 months. I always provide detailed timelines during our initial consultation."
-  },
-  {
-    question: "Do you work with international clients?",
-    answer: "Yes! I work with clients worldwide. I'm based in Bratislava, Slovakia (CET timezone) but I'm flexible with meeting times to accommodate different time zones."
-  },
-  {
-    question: "What's included in your design process?",
-    answer: "My process includes research, user personas, wireframing, prototyping, visual design, and handoff to development. I also provide design systems, user testing, and ongoing support."
-  },
-  {
-    question: "Do you offer ongoing support after project completion?",
-    answer: "Yes, I offer post-launch support including design iterations, user feedback analysis, and optimization recommendations. I also provide training for your team on design systems and best practices."
-  }
-];
 
 const projectTypes = [
   "AI/ML Application",
@@ -147,13 +125,13 @@ export default function ContactPage() {
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-16">
+        <div className="grid lg:grid-cols-2 gap-16 items-start">
           {/* Contact Form */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
-            className="bg-zinc-900 rounded-2xl p-8"
+            className="bg-zinc-900 rounded-2xl p-8 h-fit"
           >
             <h2 className="text-2xl font-bold text-white mb-6">Send me a message</h2>
             
@@ -254,15 +232,13 @@ export default function ContactPage() {
             )}
           </motion.div>
 
-          {/* Contact Info & FAQ */}
-          <div className="space-y-12">
-            {/* Contact Information */}
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="bg-zinc-900 rounded-2xl p-8"
-            >
+          {/* Contact Information */}
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="bg-zinc-900 rounded-2xl p-8 h-fit"
+          >
               <h2 className="text-2xl font-bold text-white mb-6">Contact Information</h2>
               
               <div className="space-y-6">
@@ -324,36 +300,6 @@ export default function ContactPage() {
                 </p>
               </div>
             </motion.div>
-
-            {/* FAQ */}
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              className="bg-zinc-900 rounded-2xl p-8"
-            >
-              <h2 className="text-2xl font-bold text-white mb-6">Frequently Asked Questions</h2>
-              
-              <div className="space-y-6">
-                {faqItems.map((faq, index) => (
-                  <motion.div
-                    key={faq.question}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: 0.5 + index * 0.1 }}
-                    className="border-b border-zinc-800 pb-4 last:border-b-0 last:pb-0"
-                  >
-                    <h3 className="text-lg font-semibold text-white mb-2">
-                      {faq.question}
-                    </h3>
-                    <p className="text-zinc-400 leading-relaxed">
-                      {faq.answer}
-                    </p>
-                  </motion.div>
-                ))}
-              </div>
-            </motion.div>
-          </div>
         </div>
 
         {/* Back to Home */}
