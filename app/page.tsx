@@ -238,9 +238,7 @@ export default function Home() {
       {/* Footer - MINIMAL */}
       <footer className="py-15 px-6">
         <div className="max-w-6xl mx-auto text-center">
-          <p className="text-xs opacity-30">
-            © 2025
-          </p>
+         
         </div>
       </footer>
     </div>

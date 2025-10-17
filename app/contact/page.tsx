@@ -12,12 +12,14 @@ import {
   MapPin,
   Phone,
   Linkedin,
-  MessageCircle, 
+  MessageCircle,
   Send,
   CheckCircle,
   Copy,
-  ExternalLink
+  ExternalLink,
+  AlertCircle
 } from "lucide-react";
+import emailjs from '@emailjs/browser';
 
 const contactInfo = [
   {
@@ -73,7 +75,13 @@ export default function ContactPage() {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [error, setError] = useState("");
   const [copiedEmail, setCopiedEmail] = useState(false);
+
+  // Initialize EmailJS (you'll need to replace these with your actual EmailJS credentials)
+  const EMAILJS_SERVICE_ID = 'service_portfolio'; // Replace with your service ID
+  const EMAILJS_TEMPLATE_ID = 'template_contact'; // Replace with your template ID
+  const EMAILJS_PUBLIC_KEY = 'your_public_key'; // Replace with your public key
 
   const handleInputChange = (field: string, value: string) => {
     setFormData(prev => ({ ...prev, [field]: value }));
@@ -82,18 +90,41 @@ export default function ContactPage() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    
-    setIsSubmitting(false);
-    setIsSubmitted(true);
-    
-    // Reset form after 3 seconds
-    setTimeout(() => {
-      setIsSubmitted(false);
-      setFormData({ name: "", email: "", projectType: "", message: "" });
-    }, 3000);
+    setError("");
+
+    try {
+      // Prepare template parameters for EmailJS
+      const templateParams = {
+        from_name: formData.name,
+        from_email: formData.email,
+        project_type: formData.projectType,
+        message: formData.message,
+        to_email: 'danilgorbunov@gmail.com',
+        reply_to: formData.email
+      };
+
+      // Send email using EmailJS
+      await emailjs.send(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        templateParams,
+        EMAILJS_PUBLIC_KEY
+      );
+
+      setIsSubmitted(true);
+      
+      // Reset form after 5 seconds
+      setTimeout(() => {
+        setIsSubmitted(false);
+        setFormData({ name: "", email: "", projectType: "", message: "" });
+      }, 5000);
+
+    } catch (error) {
+      console.error('EmailJS Error:', error);
+      setError('Failed to send message. Please try again or contact me directly at danilgorbunov@gmail.com');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const copyEmail = async () => {
@@ -135,19 +166,36 @@ export default function ContactPage() {
           >
             <h2 className="text-2xl font-bold text-white mb-6">Send me a message</h2>
             
-            {isSubmitted ? (
-              <motion.div
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                className="text-center py-12"
-              >
-                <CheckCircle className="h-16 w-16 text-primary mx-auto mb-4" />
-                <h3 className="text-xl font-bold text-white mb-2">Message sent!</h3>
-                <p className="text-zinc-400">
-                  Thank you for reaching out. I'll get back to you within 24 hours.
-                </p>
-              </motion.div>
-            ) : (
+                  {isSubmitted ? (
+                    <motion.div
+                      initial={{ opacity: 0, scale: 0.9 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      className="text-center py-12"
+                    >
+                      <CheckCircle className="h-16 w-16 text-primary mx-auto mb-4" />
+                      <h3 className="text-xl font-bold text-white mb-2">Message sent!</h3>
+                      <p className="text-zinc-400">
+                        Thank you for reaching out. I'll get back to you within 24 hours.
+                      </p>
+                    </motion.div>
+                  ) : error ? (
+                    <motion.div
+                      initial={{ opacity: 0, scale: 0.9 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      className="text-center py-12"
+                    >
+                      <AlertCircle className="h-16 w-16 text-red-500 mx-auto mb-4" />
+                      <h3 className="text-xl font-bold text-white mb-2">Failed to send message</h3>
+                      <p className="text-zinc-400 mb-4">{error}</p>
+                      <Button
+                        onClick={() => setError("")}
+                        variant="outline"
+                        className="border-zinc-700 text-white hover:bg-zinc-800"
+                      >
+                        Try Again
+                      </Button>
+                    </motion.div>
+                  ) : (
               <form onSubmit={handleSubmit} className="space-y-6 flex-1 flex flex-col">
                 <div>
                   <Label htmlFor="name" className="text-zinc-300 mb-2 block">
