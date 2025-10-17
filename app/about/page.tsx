@@ -89,7 +89,7 @@ export default function AboutPage() {
 
             <div className="space-y-4 text-zinc-300 leading-relaxed">
               <p>
-                I'm a passionate Product Designer with over 14 years of experience creating 
+                I'm a passionate Product Designer with over 10 years of experience creating 
                 digital experiences that users love. My journey combines design thinking, 
                 technical expertise, and AI innovation to solve complex problems across SaaS, e-commerce, and enterprise solutions.
               </p>
