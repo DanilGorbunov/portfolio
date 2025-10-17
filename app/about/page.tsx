@@ -14,28 +14,36 @@ import {
 
 const experience = [
   {
-    year: "2023 - Present",
-    title: "Senior Product Designer",
-    company: "AI Innovation Lab",
+    year: "2022 - Present",
+    title: "Senior/Lead Product Designer",
+    company: "B2Stack",
     location: "Bratislava, Slovakia",
-    description: "Leading design for AI-powered SaaS platforms, focusing on user experience for complex data interfaces and machine learning workflows.",
-    achievements: ["Increased user engagement by 40%", "Reduced support tickets by 60%", "Led design system implementation"]
+    description: "Leading design for AI-powered SaaS platforms and e-commerce solutions, focusing on user experience for complex data interfaces and machine learning workflows.",
+    achievements: ["Designed E-Commerce AI Chatbot increasing checkout conversion by ~15%", "Created LinkShop AI hybrid platform combining link-in-bio with full eCommerce", "Designed Fonitix AI voice-based SaaS for restaurants", "Developed MRIACRM System with integrated AI analytics", "Launched Tesla VIP Trip premium service within 5 days"]
   },
   {
-    year: "2021 - 2023",
-    title: "Product Designer",
-    company: "TechStart Solutions",
-    location: "Remote",
-    description: "Designed mobile and web applications for B2B clients, specializing in dashboard interfaces and data visualization.",
-    achievements: ["Designed 15+ successful products", "Improved conversion rates by 25%", "Mentored junior designers"]
+    year: "2022",
+    title: "Frontend Developer (Flutter)",
+    company: "Twinzo 3D",
+    location: "Bratislava, Slovakia",
+    description: "Developed SaaS-based warehouse inventory management app for Fortune 500 clients, integrating 3D data visualization with user-centric design approach.",
+    achievements: ["Enhanced usability and adoption rates through user-centric design", "Integrated 3D data visualization for warehouse management", "Developed for Fortune 500 clients"]
   },
   {
-    year: "2019 - 2021",
+    year: "2013 - 2022",
+    title: "Product Designer & Frontend Developer",
+    company: "Decodexin",
+    location: "Ukraine",
+    description: "Created user-centric designs and developed MVPs for SaaS systems, enabling shop owners to efficiently manage products and developed robust marketplace platforms.",
+    achievements: ["Created MVP for SaaS system as React developer", "Improved workflow automation and simplified product management", "Developed robust Marketplace platform with seamless API integration", "Enabled real-time product synchronization across network"]
+  },
+  {
+    year: "2010 - 2013",
     title: "UX Designer",
-    company: "Digital Agency Pro",
-    location: "Bratislava, Slovakia",
-    description: "Created user-centered designs for e-commerce and corporate websites, focusing on conversion optimization.",
-    achievements: ["Increased conversion rates by 35%", "Reduced bounce rate by 50%", "Established UX processes"]
+    company: "Delen Web Studio",
+    location: "Ukraine",
+    description: "Conducted e-commerce user research and optimized WordPress interfaces based on feedback, communicating UX solutions to stakeholders.",
+    achievements: ["Conducted comprehensive e-commerce user research", "Optimized WordPress interfaces based on user feedback", "Communicated UX solutions to stakeholders ensuring business alignment"]
   }
 ];
 
@@ -81,18 +89,19 @@ export default function AboutPage() {
 
             <div className="space-y-4 text-zinc-300 leading-relaxed">
               <p>
-                I'm a passionate Product Designer with over 12 years of experience creating 
+                I'm a passionate Product Designer with over 14 years of experience creating 
                 digital experiences that users love. My journey combines design thinking, 
-                technical expertise, and AI innovation to solve complex problems.
+                technical expertise, and AI innovation to solve complex problems across SaaS, e-commerce, and enterprise solutions.
               </p>
               <p>
                 I specialize in creating intuitive interfaces for AI-powered applications, 
-                data-driven dashboards, and scalable SaaS platforms. My approach focuses 
-                on understanding user needs and translating them into elegant solutions.
+                data-driven dashboards, and scalable SaaS platforms. My recent work includes 
+                designing AI chatbots that increase conversion rates by 15%, voice-based restaurant solutions, and warehouse management systems for Fortune 500 clients.
               </p>
               <p>
-                When I'm not designing, you can find me exploring new AI tools, contributing 
-                to open-source projects, or sharing knowledge with the design community.
+                Based in Bratislava, I work with international clients and have experience 
+                from Ukraine to Slovakia, bringing diverse perspectives to every project. 
+                When I'm not designing, you can find me exploring new AI tools or contributing to the design community.
               </p>
           </div>
 
