@@ -126,6 +126,14 @@ export default function AboutPage() {
               <Button
                 size="lg"
                 className="bg-primary hover:bg-primary/90 text-black px-8 py-4"
+                onClick={() => {
+                  const link = document.createElement('a');
+                  link.href = '/Resume_Product_Designer.pdf';
+                  link.download = 'Danil_Gorbunov_Resume.pdf';
+                  document.body.appendChild(link);
+                  link.click();
+                  document.body.removeChild(link);
+                }}
               >
                 <Download className="mr-2 h-5 w-5" />
                 Download CV
