@@ -52,6 +52,8 @@ export default function PortfolioPage() {
           ))}
         </motion.div>
 
+        {/* Add spacing between portfolio and footer */}
+        <div className="py-16"></div>
       </div>
     </div>
   );
