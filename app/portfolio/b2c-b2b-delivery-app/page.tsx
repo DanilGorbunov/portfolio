@@ -127,12 +127,14 @@ export default function DeliveryAppProject() {
         </div>
       </div>
 
-      <motion.div
-        initial="hidden"
-        animate={isInView ? "visible" : "hidden"}
-        variants={staggerContainer}
-        className="mb-12"
-      >
+      {/* Main Content */}
+      <div className="container mx-auto px-6 max-w-6xl">
+        <motion.div
+          initial="hidden"
+          animate={isInView ? "visible" : "hidden"}
+          variants={staggerContainer}
+          className="mb-12"
+        >
         <motion.div variants={fadeInUp} className="mb-8 space-y-4">
           <h1 className="text-4xl font-bold tracking-tight text-white">
             FoodCore: B2C/B2B Delivery Platform
@@ -674,6 +676,7 @@ export default function DeliveryAppProject() {
           </div>
         </motion.div>
       </motion.div>
+      </div>
     </div>
   );
 }
