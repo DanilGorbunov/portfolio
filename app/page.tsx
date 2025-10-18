@@ -26,17 +26,17 @@ export default function Home() {
             <h1 className="text-5xl md:text-6xl font-normal tracking-tight leading-tight">
                   Danil Gorbunov
                 </h1>
-            <p className="text-xl md:text-2xl font-light opacity-50 mt-2 md:mt-4">
+            <p className="text-xl md:text-2xl font-light opacity-50 mt-1 md:mt-4">
               Product Designer / Developer +AI
             </p>
-            <p className="text-lg md:text-xl font-light opacity-70 max-w-2xl mx-auto leading-relaxed mt-6 md:mt-12">
+            <p className="text-lg md:text-xl font-light opacity-70 max-w-2xl mx-auto leading-relaxed mt-3 md:mt-12">
               Creating digital experiences that merge<br />
               intuitive design with real business impact
             </p>
-            <p className="text-sm font-light opacity-30 mt-3 md:mt-10">
+            <p className="text-sm font-light opacity-30 mt-2 md:mt-10">
               Bratislava, Slovakia
             </p>
-            <div className="mt-2 md:mt-16">
+            <div className="mt-1 md:mt-16">
               <Link 
                 href="/portfolio"
                 className="text-base font-normal underline underline-offset-4 decoration-1 hover:opacity-60 transition-opacity duration-300"
