@@ -93,22 +93,25 @@ export default function AIEcommerceProject() {
   };
 
   return (
-    <div
-      className="container px-4 py-12 md:px-6 md:py-24 bg-black"
-      ref={containerRef}
-    >
-      <div className="mb-8 flex items-center">
-        <Link href="/portfolio" prefetch={false}>
-          <Button
-            variant="ghost"
-            size="sm"
-            className="text-zinc-400 hover:text-white"
-          >
-            <ArrowLeft className="mr-2 h-4 w-4" />
-            Back to Portfolio
-          </Button>
-        </Link>
+    <div className="min-h-screen bg-black text-white">
+      {/* Sticky Back Button */}
+      <div className="sticky top-0 z-50 bg-black/80 backdrop-blur-sm border-b border-zinc-800">
+        <div className="container mx-auto px-6 py-4">
+          <Link href="/portfolio" prefetch={false}>
+            <Button
+              variant="ghost"
+              className="text-white hover:bg-zinc-800"
+            >
+              ← Back to Portfolio
+            </Button>
+          </Link>
+        </div>
       </div>
+
+      <div
+        className="container px-4 py-12 md:px-6 md:py-24 bg-black"
+        ref={containerRef}
+      >
 
       <motion.div
         initial="hidden"
