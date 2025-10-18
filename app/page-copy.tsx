@@ -107,10 +107,9 @@ export default function Home() {
               className="flex items-center justify-center"
             >
               <div className="relative">
-                <div className="absolute -inset-0.5 bg-gradient-to-r from-primary/50 to-primary/30 rounded-full blur-sm"></div>
                 <img
                   alt="Danil Gorbunov portrait"
-                  className="relative aspect-square overflow-hidden rounded-full object-cover object-center border-4 border-zinc-800"
+                  className="aspect-square overflow-hidden rounded-full object-cover object-center border-4 border-zinc-800"
                   height="300"
                   src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/dan.jpg-IchGTMVQHQUWYf3UoQsDntbh9GhYcB.jpeg"
                   width="300"

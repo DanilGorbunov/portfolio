@@ -140,7 +140,6 @@ export default function AboutPage() {
             className="relative"
           >
             <div className="relative w-full max-w-sm mx-auto">
-              <div className="absolute -inset-0.5 bg-gradient-to-r from-primary/50 to-primary/30 rounded-full blur-sm"></div>
               <div className="relative bg-zinc-800 rounded-full shadow-2xl overflow-hidden">
                 <Image
                   src="/images/my_photo.jpg"
