@@ -120,7 +120,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* About Section - WITH PHOTO */}
+      {/* About Section - ENHANCED DESIGN */}
       <section className="py-40 px-6 bg-zinc-900/30">
         <div className="max-w-6xl mx-auto">
           <div className="grid lg:grid-cols-[60%_40%] gap-25">
@@ -129,46 +129,69 @@ export default function Home() {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-              className="space-y-12"
+              className="space-y-8"
             >
-              <div className="text-base opacity-20">—</div>
-              
-              <div className="space-y-6 text-base font-light leading-relaxed opacity-80">
-                <p>
-                  With 30+ commercial projects delivered, I create digital experiences 
-                  that merge intuitive design with real business impact across SaaS, B2B, B2C, and eCommerce.
-                </p>
-                <p>
-                  My approach combines user research, psychology-driven UI design, and modern 
-                  AI-powered workflows to help teams move from concept to launch faster.
-                </p>
-                <p>
-                  Based in Bratislava, working with clients globally.
-                </p>
-              </div>
-
-              <div className="text-base opacity-20">—</div>
-
-              <div>
-                <h3 className="text-sm opacity-40 mb-6">Expertise</h3>
-                <div className="space-y-2 text-base font-light opacity-70">
-                  <div>User Research & Testing</div>
-                  <div>Psychology-driven UI Design</div>
-                  <div>Interactive Prototyping</div>
-                  <div>Design Systems</div>
-                  <div>Frontend Development</div>
-                  <div>AI-workflow Integration</div>
+              {/* Introduction Card */}
+              <div className="bg-zinc-800/50 rounded-2xl p-8 border border-zinc-700/50">
+                <div className="space-y-6">
+                  <div className="flex items-center space-x-3 mb-4">
+                    <div className="w-2 h-2 bg-primary rounded-full"></div>
+                    <h2 className="text-xl font-semibold text-white">About Me</h2>
+                  </div>
+                  
+                  <div className="space-y-4 text-base font-light leading-relaxed text-zinc-300">
+                    <p>
+                      With <span className="text-primary font-medium">30+ commercial projects</span> delivered, I create digital experiences 
+                      that merge intuitive design with real business impact across SaaS, B2B, B2C, and eCommerce.
+                    </p>
+                    <p>
+                      My approach combines user research, psychology-driven UI design, and modern 
+                      AI-powered workflows to help teams move from concept to launch faster.
+                    </p>
+                    <p className="text-zinc-400">
+                      Based in Bratislava, working with clients globally.
+                    </p>
+                  </div>
                 </div>
               </div>
 
-              <div className="text-base opacity-20">—</div>
+              {/* Expertise Card */}
+              <div className="bg-zinc-800/50 rounded-2xl p-8 border border-zinc-700/50">
+                <div className="flex items-center space-x-3 mb-6">
+                  <div className="w-2 h-2 bg-primary rounded-full"></div>
+                  <h3 className="text-lg font-semibold text-white">Expertise</h3>
+                </div>
+                
+                <div className="grid grid-cols-2 gap-3">
+                  {[
+                    "User Research & Testing",
+                    "Psychology-driven UI Design", 
+                    "Interactive Prototyping",
+                    "Design Systems",
+                    "Frontend Development",
+                    "AI-workflow Integration"
+                  ].map((skill, index) => (
+                    <div key={index} className="flex items-center space-x-2 text-sm text-zinc-300">
+                      <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
+                      <span>{skill}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
 
-              <Link 
-                href="/about"
-                className="text-base font-normal underline underline-offset-4 decoration-1 hover:opacity-60 transition-opacity duration-300"
-              >
-                Full story →
-              </Link>
+              {/* Call to Action */}
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Link href="/about" className="flex-1">
+                  <div className="bg-primary hover:bg-primary/90 text-black px-6 py-3 rounded-lg font-medium text-center transition-colors">
+                    Full Story →
+                  </div>
+                </Link>
+                <Link href="/contact" className="flex-1">
+                  <div className="border border-zinc-700 text-white hover:bg-zinc-800 px-6 py-3 rounded-lg font-medium text-center transition-colors">
+                    Get in Touch
+                  </div>
+                </Link>
+              </div>
             </motion.div>
 
             <motion.div
@@ -178,16 +201,19 @@ export default function Home() {
               viewport={{ once: true }}
               className="lg:sticky lg:top-30 flex items-center justify-center lg:justify-start mt-8 lg:mt-0"
             >
-              <div className="relative flex items-center justify-center">
-                <Image
-                  src="/images/my_photo.jpg"
-                  alt="Portrait of Danil Gorbunov, a product designer and developer with expertise in AI integration, wearing glasses and a thoughtful expression"
-                  width={300}
-                  height={300}
-                  className="aspect-square overflow-hidden rounded-full object-cover object-center border-4 border-zinc-800 grayscale"
-                  priority
-                  quality={100}
-                />
+              <div className="relative">
+                <div className="absolute -inset-4 bg-gradient-to-r from-primary/20 to-zinc-600/20 rounded-full blur-xl"></div>
+                <div className="relative bg-zinc-800 rounded-full shadow-2xl overflow-hidden p-2">
+                  <Image
+                    src="/images/my_photo.jpg"
+                    alt="Portrait of Danil Gorbunov, a product designer and developer with expertise in AI integration, wearing glasses and a thoughtful expression"
+                    width={300}
+                    height={300}
+                    className="aspect-square overflow-hidden rounded-full object-cover object-center grayscale"
+                    priority
+                    quality={100}
+                  />
+                </div>
               </div>
             </motion.div>
           </div>
