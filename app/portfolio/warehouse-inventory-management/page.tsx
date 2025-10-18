@@ -161,8 +161,7 @@ export default function WarehouseInventoryProject() {
         className="container px-4 py-12 md:px-6 md:py-24 bg-black"
         ref={containerRef}
       >
-
-      <motion.div
+        <motion.div
         initial="hidden"
         animate={isInView ? "visible" : "hidden"}
         variants={staggerContainer}
@@ -825,7 +824,8 @@ export default function WarehouseInventoryProject() {
             className="w-full object-cover"
           />
         </div>
-      </motion.div>
+        </motion.div>
+      </div>
     </div>
   );
 }
