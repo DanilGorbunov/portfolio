@@ -178,12 +178,13 @@ export default function Home() {
               className="lg:sticky lg:top-30"
             >
               <div className="relative">
+                <div className="absolute -inset-0.5 bg-gradient-to-r from-primary/50 to-primary/30 rounded-full blur-sm"></div>
                 <Image
                   src="/images/my_photo.jpg"
                   alt="Danil Gorbunov - Product Designer / Developer +AI"
-                  width={500}
-                  height={600}
-                  className="w-full h-auto object-cover"
+                  width={300}
+                  height={300}
+                  className="relative aspect-square overflow-hidden rounded-full object-cover object-center border-4 border-zinc-800"
                   priority
                   quality={100}
                 />

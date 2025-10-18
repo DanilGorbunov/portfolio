@@ -139,15 +139,15 @@ export default function AboutPage() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="relative"
           >
-            <div className="relative w-full max-w-md mx-auto">
-              <div className="absolute -inset-4 bg-gradient-to-r from-primary/20 to-zinc-600/20 rounded-full blur-xl"></div>
-              <div className="relative bg-zinc-800 rounded-2xl shadow-2xl overflow-hidden">
+            <div className="relative w-full max-w-sm mx-auto">
+              <div className="absolute -inset-0.5 bg-gradient-to-r from-primary/50 to-primary/30 rounded-full blur-sm"></div>
+              <div className="relative bg-zinc-800 rounded-full shadow-2xl overflow-hidden">
                 <Image
                   src="/images/my_photo.jpg"
                   alt="Danil Gorbunov - Product Designer"
-                  width={400}
-                  height={500}
-                  className="w-full h-auto object-cover"
+                  width={300}
+                  height={300}
+                  className="w-full h-auto object-cover aspect-square"
                 />
               </div>
             </div>

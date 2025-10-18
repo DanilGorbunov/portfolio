@@ -111,9 +111,9 @@ export default function Home() {
                 <img
                   alt="Danil Gorbunov portrait"
                   className="relative aspect-square overflow-hidden rounded-full object-cover object-center border-4 border-zinc-800"
-                  height="400"
+                  height="300"
                   src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/dan.jpg-IchGTMVQHQUWYf3UoQsDntbh9GhYcB.jpeg"
-                  width="400"
+                  width="300"
                 />
               </div>
             </motion.div>
