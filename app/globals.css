@@ -206,8 +206,16 @@
   }
   
   /* Remove any borders on mobile */
-  main, section, div {
+  main, section, div, header {
     border: none !important;
+  }
+  
+  /* Remove green line under header specifically */
+  header::after,
+  header::before,
+  .sticky::after,
+  .sticky::before {
+    display: none !important;
   }
   
   /* Hero typography - reduced by 15% on mobile */
