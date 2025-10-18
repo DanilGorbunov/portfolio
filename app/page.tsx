@@ -33,10 +33,10 @@ export default function Home() {
               Creating digital experiences that merge<br />
               intuitive design with real business impact
             </p>
-            <p className="text-sm font-light opacity-30 mt-10">
+            <p className="text-sm font-light opacity-30 mt-6 md:mt-10">
               Bratislava, Slovakia
             </p>
-            <div className="mt-16">
+            <div className="mt-8 md:mt-16">
               <Link 
                 href="/portfolio"
                 className="text-base font-normal underline underline-offset-4 decoration-1 hover:opacity-60 transition-opacity duration-300"
