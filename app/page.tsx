@@ -12,7 +12,12 @@ const featuredProjects = projects.slice(0, 4);
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-black text-white">
+    <div className="min-h-screen bg-black text-white" style={{ position: 'relative', zIndex: 10 }}>
+      {/* Debug: Test if content is rendering */}
+      <div style={{ position: 'fixed', top: '10px', left: '10px', background: 'red', color: 'white', padding: '10px', zIndex: 9999 }}>
+        DEBUG: Content is rendering
+      </div>
+      
       {/* Hero Section - ULTRA MINIMAL */}
       <section className="min-h-screen flex items-center justify-center px-6">
         <div className="max-w-4xl mx-auto text-center">
