@@ -52,22 +52,6 @@ export default function PortfolioPage() {
           ))}
         </motion.div>
 
-        {/* Back to Home */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="text-center mt-16"
-        >
-          <Link href="/" prefetch={false}>
-            <Button
-              variant="outline"
-              className="border-zinc-700 text-zinc-300 hover:bg-zinc-800"
-            >
-              ← Back to Home
-            </Button>
-          </Link>
-        </motion.div>
       </div>
     </div>
   );
