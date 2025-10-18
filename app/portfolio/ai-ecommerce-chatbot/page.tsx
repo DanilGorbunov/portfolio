@@ -93,29 +93,10 @@ export default function AIEcommerceProject() {
   };
 
   return (
-    <>
-      {/* Sticky Back Button - Always visible above header */}
-      <div className="fixed top-0 left-0 right-0 z-60 bg-black/95 backdrop-blur supports-[backdrop-filter]:bg-black/60 border-b border-zinc-800/50">
-        <div className="container mx-auto px-6">
-          <div className="flex h-12 items-center">
-            <Link href="/portfolio" prefetch={false}>
-              <Button
-                variant="ghost"
-                size="sm"
-                className="text-zinc-400 hover:text-white transition-colors"
-              >
-                <ArrowLeft className="mr-2 h-4 w-4" />
-                Back to Portfolio
-              </Button>
-            </Link>
-          </div>
-        </div>
-      </div>
-
-      <div
-        className="container px-4 py-12 md:px-6 md:py-24 bg-black pt-12"
-        ref={containerRef}
-      >
+    <div
+      className="container px-4 py-12 md:px-6 md:py-24 bg-black"
+      ref={containerRef}
+    >
       <div className="mb-8 flex items-center">
         <Link href="/portfolio" prefetch={false}>
           <Button
@@ -717,6 +698,5 @@ export default function AIEcommerceProject() {
         </div>
       </motion.div>
     </div>
-    </>
   );
 }

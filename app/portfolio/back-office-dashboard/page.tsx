@@ -55,24 +55,21 @@ export default function BackOfficeDashboardProject() {
 
   return (
     <div className="min-h-screen bg-black text-white">
-      {/* Sticky Back Button */}
-      <div className="sticky top-0 z-50 bg-black/80 backdrop-blur-sm border-b border-zinc-800">
-        <div className="container mx-auto px-6 py-4">
+      {/* Main Content */}
+      <div className="container mx-auto px-6 max-w-6xl">
+        <div className="mb-8 flex items-center">
           <Link href="/portfolio" prefetch={false}>
             <button className="text-white hover:bg-zinc-800 px-4 py-2 rounded-lg transition-colors">
               ← Back to Portfolio
             </button>
           </Link>
         </div>
-      </div>
-
-      {/* Main Content */}
-      <div className="container mx-auto px-6 max-w-6xl">
         <motion.div
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
           variants={staggerContainer}
           className="mb-12"
+          ref={containerRef}
         >
         <motion.div variants={fadeInUp} className="mb-8 space-y-4">
           <h1 className="text-4xl font-bold tracking-tight text-white">
