@@ -211,23 +211,19 @@
   }
   
   /* Remove green line under header specifically */
+  header,
   header::after,
   header::before,
   .sticky::after,
-  .sticky::before,
-  *::after,
-  *::before {
+  .sticky::before {
     border: none !important;
     box-shadow: none !important;
     outline: none !important;
   }
   
-  /* Ultra compact mobile layout */
-  h1, h2, h3, p, div {
-    margin-top: 0 !important;
-    margin-bottom: 0 !important;
-    padding-top: 0 !important;
-    padding-bottom: 0 !important;
+  /* Compact mobile layout */
+  .space-y-1 > * + * {
+    margin-top: 0.25rem !important;
   }
   
   /* Hero typography - reduced by 15% on mobile */
