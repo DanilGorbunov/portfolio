@@ -17,44 +17,48 @@ export function Footer() {
       <div className="container px-4 py-8 md:px-6">
         <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
           {/* Navigation Menu */}
-          <nav className="flex flex-wrap gap-6 text-sm">
+          <nav className="flex flex-wrap gap-6 text-sm" role="navigation" aria-label="Footer navigation">
             <Link
               href="/"
-              className={`transition-colors ${
+              className={`transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-black rounded px-2 py-1 ${
                 isActive("/") 
                   ? "text-primary" 
                   : "text-zinc-400 hover:text-white"
               }`}
+              aria-current={isActive("/") ? "page" : undefined}
             >
               Home
             </Link>
             <Link
               href="/portfolio"
-              className={`transition-colors ${
+              className={`transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-black rounded px-2 py-1 ${
                 isActive("/portfolio") 
                   ? "text-primary" 
                   : "text-zinc-400 hover:text-white"
               }`}
+              aria-current={isActive("/portfolio") ? "page" : undefined}
             >
               Portfolio
             </Link>
             <Link
               href="/about"
-              className={`transition-colors ${
+              className={`transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-black rounded px-2 py-1 ${
                 isActive("/about") 
                   ? "text-primary" 
                   : "text-zinc-400 hover:text-white"
               }`}
+              aria-current={isActive("/about") ? "page" : undefined}
             >
               About
             </Link>
             <Link
               href="/contact"
-              className={`transition-colors ${
+              className={`transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-black rounded px-2 py-1 ${
                 isActive("/contact") 
                   ? "text-primary" 
                   : "text-zinc-400 hover:text-white"
               }`}
+              aria-current={isActive("/contact") ? "page" : undefined}
             >
               Contact
             </Link>

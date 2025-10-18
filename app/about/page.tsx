@@ -143,7 +143,7 @@ export default function AboutPage() {
               <div className="relative bg-zinc-800 rounded-full shadow-2xl overflow-hidden">
                 <Image
                   src="/images/my_photo.jpg"
-                  alt="Danil Gorbunov - Product Designer"
+                  alt="Professional portrait of Danil Gorbunov, a senior product designer and developer specializing in AI-powered SaaS solutions, based in Bratislava, Slovakia"
                   width={300}
                   height={300}
                   className="w-full h-auto object-cover aspect-square grayscale"

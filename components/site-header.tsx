@@ -113,44 +113,48 @@ export function SiteHeader() {
           </Sheet>
         </div>
         {/* Desktop Menu - Only visible on medium screens and up */}
-        <nav className="hidden md:flex items-center gap-6 ml-6">
+        <nav className="hidden md:flex items-center gap-6 ml-6" role="navigation" aria-label="Main navigation">
           <Link 
             href="/" 
-            className={`text-sm font-medium transition-colors ${
+            className={`text-sm font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-black rounded px-2 py-1 ${
               isActive("/") 
                 ? "text-primary" 
                 : "text-zinc-400 hover:text-white"
             }`}
+            aria-current={isActive("/") ? "page" : undefined}
           >
             Home
           </Link>
           <Link 
             href="/portfolio" 
-            className={`text-sm font-medium transition-colors ${
+            className={`text-sm font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-black rounded px-2 py-1 ${
               isActive("/portfolio") 
                 ? "text-primary" 
                 : "text-zinc-400 hover:text-white"
             }`}
+            aria-current={isActive("/portfolio") ? "page" : undefined}
           >
             Portfolio
           </Link>
           <Link 
             href="/about" 
-            className={`text-sm font-medium transition-colors ${
+            className={`text-sm font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-black rounded px-2 py-1 ${
               isActive("/about") 
                 ? "text-primary" 
                 : "text-zinc-400 hover:text-white"
             }`}
+            aria-current={isActive("/about") ? "page" : undefined}
           >
             About
           </Link>
           <Link 
             href="/contact" 
-            className={`text-sm font-medium transition-colors ${
+            className={`text-sm font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-black rounded px-2 py-1 ${
               isActive("/contact") 
                 ? "text-primary" 
                 : "text-zinc-400 hover:text-white"
             }`}
+            aria-current={isActive("/contact") ? "page" : undefined}
           >
             Contact
           </Link>

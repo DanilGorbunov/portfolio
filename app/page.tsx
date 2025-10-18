@@ -180,7 +180,7 @@ export default function Home() {
               <div className="relative flex items-center justify-center">
                 <Image
                   src="/images/my_photo.jpg"
-                  alt="Danil Gorbunov - Product Designer / Developer +AI"
+                  alt="Portrait of Danil Gorbunov, a product designer and developer with expertise in AI integration, wearing glasses and a thoughtful expression"
                   width={300}
                   height={300}
                   className="aspect-square overflow-hidden rounded-full object-cover object-center border-4 border-zinc-800 grayscale"

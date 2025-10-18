@@ -3,6 +3,9 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Label } from "@/components/ui/label";
 import {
   Mail,
   MapPin,
@@ -11,7 +14,10 @@ import {
   MessageCircle,
   Copy,
   ExternalLink,
-  CheckCircle
+  CheckCircle,
+  Send,
+  Loader2,
+  X
 } from "lucide-react";
 
 const contactInfo = [
@@ -48,8 +54,31 @@ const contactInfo = [
 ];
 
 
+interface FormData {
+  name: string;
+  email: string;
+  subject: string;
+  message: string;
+}
+
+interface FormErrors {
+  name?: string;
+  email?: string;
+  subject?: string;
+  message?: string;
+}
+
 export default function ContactPage() {
   const [copiedEmail, setCopiedEmail] = useState(false);
+  const [formData, setFormData] = useState<FormData>({
+    name: '',
+    email: '',
+    subject: '',
+    message: ''
+  });
+  const [errors, setErrors] = useState<FormErrors>({});
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
   const copyEmail = async () => {
     try {
@@ -58,6 +87,68 @@ export default function ContactPage() {
       setTimeout(() => setCopiedEmail(false), 2000);
     } catch (err) {
       console.error('Failed to copy email:', err);
+    }
+  };
+
+  const validateForm = (): boolean => {
+    const newErrors: FormErrors = {};
+    
+    if (!formData.name.trim()) {
+      newErrors.name = 'Name is required';
+    }
+    
+    if (!formData.email.trim()) {
+      newErrors.email = 'Email is required';
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+      newErrors.email = 'Please enter a valid email address';
+    }
+    
+    if (!formData.subject.trim()) {
+      newErrors.subject = 'Subject is required';
+    }
+    
+    if (!formData.message.trim()) {
+      newErrors.message = 'Message is required';
+    } else if (formData.message.trim().length < 10) {
+      newErrors.message = 'Message must be at least 10 characters long';
+    }
+    
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    if (!validateForm()) {
+      return;
+    }
+    
+    setIsSubmitting(true);
+    setSubmitStatus('idle');
+    
+    try {
+      // Simulate form submission
+      await new Promise(resolve => setTimeout(resolve, 2000));
+      
+      // In a real implementation, you would send the data to your backend
+      console.log('Form submitted:', formData);
+      
+      setSubmitStatus('success');
+      setFormData({ name: '', email: '', subject: '', message: '' });
+      setErrors({});
+    } catch (error) {
+      setSubmitStatus('error');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+  const handleInputChange = (field: keyof FormData, value: string) => {
+    setFormData(prev => ({ ...prev, [field]: value }));
+    // Clear error when user starts typing
+    if (errors[field]) {
+      setErrors(prev => ({ ...prev, [field]: undefined }));
     }
   };
 
@@ -148,6 +239,144 @@ export default function ContactPage() {
                   please mention it in your message.
                 </p>
               </div>
+            </motion.div>
+
+            {/* Contact Form */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              className="bg-zinc-900 rounded-2xl p-8 mt-8"
+            >
+              <h2 className="text-2xl font-bold text-white mb-6">Send a Message</h2>
+              
+              {submitStatus === 'success' && (
+                <div className="mb-6 p-4 bg-green-900/20 border border-green-500/30 rounded-lg">
+                  <div className="flex items-center space-x-2 text-green-400">
+                    <CheckCircle className="h-5 w-5" />
+                    <span className="font-medium">Message sent successfully!</span>
+                  </div>
+                  <p className="text-sm text-green-300 mt-1">
+                    Thank you for your message. I'll get back to you within 24 hours.
+                  </p>
+                </div>
+              )}
+
+              {submitStatus === 'error' && (
+                <div className="mb-6 p-4 bg-red-900/20 border border-red-500/30 rounded-lg">
+                  <div className="flex items-center space-x-2 text-red-400">
+                    <X className="h-5 w-5" />
+                    <span className="font-medium">Failed to send message</span>
+                  </div>
+                  <p className="text-sm text-red-300 mt-1">
+                    Please try again or contact me directly via email.
+                  </p>
+                </div>
+              )}
+
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div>
+                    <Label htmlFor="name" className="text-white mb-2 block">
+                      Name *
+                    </Label>
+                    <Input
+                      id="name"
+                      type="text"
+                      value={formData.name}
+                      onChange={(e) => handleInputChange('name', e.target.value)}
+                      className={`bg-zinc-800 border-zinc-700 text-white placeholder-zinc-400 focus:border-primary ${
+                        errors.name ? 'border-red-500' : ''
+                      }`}
+                      placeholder="Your full name"
+                      required
+                    />
+                    {errors.name && (
+                      <p className="text-red-400 text-sm mt-1">{errors.name}</p>
+                    )}
+                  </div>
+
+                  <div>
+                    <Label htmlFor="email" className="text-white mb-2 block">
+                      Email *
+                    </Label>
+                    <Input
+                      id="email"
+                      type="email"
+                      value={formData.email}
+                      onChange={(e) => handleInputChange('email', e.target.value)}
+                      className={`bg-zinc-800 border-zinc-700 text-white placeholder-zinc-400 focus:border-primary ${
+                        errors.email ? 'border-red-500' : ''
+                      }`}
+                      placeholder="your.email@example.com"
+                      required
+                    />
+                    {errors.email && (
+                      <p className="text-red-400 text-sm mt-1">{errors.email}</p>
+                    )}
+                  </div>
+                </div>
+
+                <div>
+                  <Label htmlFor="subject" className="text-white mb-2 block">
+                    Subject *
+                  </Label>
+                  <Input
+                    id="subject"
+                    type="text"
+                    value={formData.subject}
+                    onChange={(e) => handleInputChange('subject', e.target.value)}
+                    className={`bg-zinc-800 border-zinc-700 text-white placeholder-zinc-400 focus:border-primary ${
+                      errors.subject ? 'border-red-500' : ''
+                    }`}
+                    placeholder="What's this about?"
+                    required
+                  />
+                  {errors.subject && (
+                    <p className="text-red-400 text-sm mt-1">{errors.subject}</p>
+                  )}
+                </div>
+
+                <div>
+                  <Label htmlFor="message" className="text-white mb-2 block">
+                    Message *
+                  </Label>
+                  <Textarea
+                    id="message"
+                    value={formData.message}
+                    onChange={(e) => handleInputChange('message', e.target.value)}
+                    className={`bg-zinc-800 border-zinc-700 text-white placeholder-zinc-400 focus:border-primary min-h-[120px] ${
+                      errors.message ? 'border-red-500' : ''
+                    }`}
+                    placeholder="Tell me about your project, goals, timeline, and any specific requirements..."
+                    required
+                  />
+                  {errors.message && (
+                    <p className="text-red-400 text-sm mt-1">{errors.message}</p>
+                  )}
+                  <p className="text-zinc-400 text-sm mt-1">
+                    {formData.message.length}/500 characters
+                  </p>
+                </div>
+
+                <Button
+                  type="submit"
+                  disabled={isSubmitting}
+                  className="w-full bg-primary hover:bg-primary/90 text-black font-medium"
+                >
+                  {isSubmitting ? (
+                    <>
+                      <Loader2 className="h-4 w-4 mr-2 animate-spin" />
+                      Sending...
+                    </>
+                  ) : (
+                    <>
+                      <Send className="h-4 w-4 mr-2" />
+                      Send Message
+                    </>
+                  )}
+                </Button>
+              </form>
             </motion.div>
         </div>
 

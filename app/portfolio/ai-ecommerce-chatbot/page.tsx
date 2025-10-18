@@ -18,6 +18,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { cn } from "@/lib/utils";
+import { Breadcrumb } from "@/components/breadcrumb";
 
 export default function AIEcommerceProject() {
   const [activeSlide, setActiveSlide] = useState(0);
@@ -97,6 +98,7 @@ export default function AIEcommerceProject() {
       className="container px-4 py-12 md:px-6 md:py-24 bg-black"
       ref={containerRef}
     >
+      <Breadcrumb />
       <div className="mb-8 flex items-center">
         <Link href="/portfolio" prefetch={false}>
           <Button
