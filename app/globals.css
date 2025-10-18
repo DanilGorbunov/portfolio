@@ -66,6 +66,13 @@
   main {
     position: relative;
     z-index: 1;
+    min-height: calc(100vh - 4rem); /* Account for header height */
+  }
+  
+  /* Ensure content sections are visible */
+  section {
+    position: relative;
+    z-index: 1;
   }
   
   /* Accessibility improvements */
