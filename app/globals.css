@@ -205,6 +205,11 @@
     padding-right: 1.5rem;
   }
   
+  /* Remove any borders on mobile */
+  main, section, div {
+    border: none !important;
+  }
+  
   /* Hero typography - reduced by 15% on mobile */
   .hero-title {
     font-size: 2.5rem !important;
