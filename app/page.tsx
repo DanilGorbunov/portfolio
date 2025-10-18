@@ -120,77 +120,55 @@ export default function Home() {
         </div>
       </section>
 
-      {/* About Section - CLEAN MINIMALIST DESIGN */}
+      {/* About Section - CENTERED CONTENT */}
       <section className="py-40 px-6 bg-zinc-900/30">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid lg:grid-cols-[60%_40%] gap-25">
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="space-y-12"
+        <div className="max-w-4xl mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="space-y-12"
+          >
+            <div className="text-base opacity-20">—</div>
+            
+            <div className="space-y-6 text-base font-light leading-relaxed opacity-80">
+              <p>
+                With 30+ commercial projects delivered, I create digital experiences 
+                that merge intuitive design with real business impact across SaaS, B2B, B2C, and eCommerce.
+              </p>
+              <p>
+                My approach combines user research, psychology-driven UI design, and modern 
+                AI-powered workflows to help teams move from concept to launch faster.
+              </p>
+              <p>
+                Based in Bratislava, working with clients globally.
+              </p>
+            </div>
+
+            <div className="text-base opacity-20">—</div>
+
+            <div>
+              <h3 className="text-sm opacity-40 mb-6">Expertise</h3>
+              <div className="space-y-2 text-base font-light opacity-70">
+                <div>User Research & Testing</div>
+                <div>Psychology-driven UI Design</div>
+                <div>Interactive Prototyping</div>
+                <div>Design Systems</div>
+                <div>Frontend Development</div>
+                <div>AI-workflow Integration</div>
+              </div>
+            </div>
+
+            <div className="text-base opacity-20">—</div>
+
+            <Link 
+              href="/about"
+              className="text-base font-normal underline underline-offset-4 decoration-1 hover:opacity-60 transition-opacity duration-300"
             >
-              <div className="text-base opacity-20">—</div>
-              
-              <div className="space-y-6 text-base font-light leading-relaxed opacity-80">
-                <p>
-                  With 30+ commercial projects delivered, I create digital experiences 
-                  that merge intuitive design with real business impact across SaaS, B2B, B2C, and eCommerce.
-                </p>
-                <p>
-                  My approach combines user research, psychology-driven UI design, and modern 
-                  AI-powered workflows to help teams move from concept to launch faster.
-                </p>
-                <p>
-                  Based in Bratislava, working with clients globally.
-                </p>
-              </div>
-
-              <div className="text-base opacity-20">—</div>
-
-              <div>
-                <h3 className="text-sm opacity-40 mb-6">Expertise</h3>
-                <div className="space-y-2 text-base font-light opacity-70">
-                  <div>User Research & Testing</div>
-                  <div>Psychology-driven UI Design</div>
-                  <div>Interactive Prototyping</div>
-                  <div>Design Systems</div>
-                  <div>Frontend Development</div>
-                  <div>AI-workflow Integration</div>
-                </div>
-              </div>
-
-              <div className="text-base opacity-20">—</div>
-
-              <Link 
-                href="/about"
-                className="text-base font-normal underline underline-offset-4 decoration-1 hover:opacity-60 transition-opacity duration-300"
-              >
-                Full story →
-              </Link>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              viewport={{ once: true }}
-              className="lg:sticky lg:top-30 flex items-center justify-center lg:justify-start mt-8 lg:mt-0"
-            >
-              <div className="relative flex items-center justify-center">
-                <Image
-                  src="/images/my_photo.jpg"
-                  alt="Portrait of Danil Gorbunov, a product designer and developer with expertise in AI integration, wearing glasses and a thoughtful expression"
-                  width={300}
-                  height={300}
-                  className="aspect-square overflow-hidden rounded-full object-cover object-center border-4 border-zinc-800 grayscale"
-                  priority
-                  quality={100}
-                />
-              </div>
-            </motion.div>
-          </div>
+              Full story →
+            </Link>
+          </motion.div>
         </div>
       </section>
 
