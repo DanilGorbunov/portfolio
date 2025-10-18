@@ -122,7 +122,7 @@ export default function Home() {
       {/* About Section - WITH PHOTO */}
       <section className="py-40 px-6 bg-zinc-900/30">
         <div className="max-w-6xl mx-auto">
-          <div className="grid lg:grid-cols-[55%_45%] gap-25">
+          <div className="grid lg:grid-cols-[60%_40%] gap-25">
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -175,9 +175,9 @@ export default function Home() {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
-              className="lg:sticky lg:top-30"
+              className="lg:sticky lg:top-30 flex items-center justify-center lg:justify-start mt-8 lg:mt-0"
             >
-              <div className="relative">
+              <div className="relative flex items-center justify-center">
                 <Image
                   src="/images/my_photo.jpg"
                   alt="Danil Gorbunov - Product Designer / Developer +AI"
