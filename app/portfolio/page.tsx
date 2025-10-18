@@ -8,7 +8,6 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ArrowRight, Calendar } from "lucide-react";
 import { projects } from "@/lib/projects";
-import { Breadcrumb } from "@/components/breadcrumb";
 import { ProjectCard } from "@/components/project-card";
 
 export default function PortfolioPage() {
@@ -18,9 +17,6 @@ export default function PortfolioPage() {
   return (
     <div className="min-h-screen bg-black pt-20">
       <div className="container mx-auto px-6 max-w-7xl">
-        {/* Breadcrumb */}
-        <Breadcrumb />
-        
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
