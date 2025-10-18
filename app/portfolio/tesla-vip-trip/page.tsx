@@ -6,7 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { ExternalLink, Calendar, User, Building, Clock, Zap } from "lucide-react";
+import { ExternalLink, Calendar, User, Building, Clock, Zap, Download } from "lucide-react";
 
 export default function TeslaVIPTripProjectPage() {
   return (
@@ -139,11 +139,18 @@ export default function TeslaVIPTripProjectPage() {
               </div>
             </div>
 
-            <p className="text-lg text-zinc-300 leading-relaxed">
+            <p className="text-lg text-zinc-300 leading-relaxed mb-4">
               Tesla VIP Trip is a premium electric vehicle transfer service operating in Vienna and Bratislava. 
               The project showcases innovative AI-assisted development using Lovable.dev for rapid prototyping, 
               followed by conversion to a production-ready WordPress site with custom PHP booking system.
             </p>
+            
+            <div className="bg-yellow-500/10 border border-yellow-500/30 p-4 rounded-lg">
+              <p className="text-yellow-300 text-sm">
+                <strong>📋 Trip Guide Available:</strong> Download our comprehensive Tesla Trip Guide PDF 
+                for detailed information about services, pricing, and booking procedures.
+              </p>
+            </div>
           </motion.div>
         </div>
       </section>
@@ -668,6 +675,22 @@ export default function TeslaVIPTripProjectPage() {
               >
                 <ExternalLink className="mr-2 h-4 w-4" />
                 View Lovable Prototype
+              </Button>
+              <Button
+                variant="outline"
+                size="lg"
+                className="border-yellow-500/50 text-yellow-300 hover:bg-yellow-500/10"
+                onClick={() => {
+                  const link = document.createElement('a');
+                  link.href = '/Tesla_Trip_Guide.pdf';
+                  link.download = 'Tesla_Trip_Guide.pdf';
+                  document.body.appendChild(link);
+                  link.click();
+                  document.body.removeChild(link);
+                }}
+              >
+                <Download className="mr-2 h-4 w-4" />
+                Download Trip Guide
               </Button>
             </div>
           </motion.div>

@@ -37,7 +37,7 @@ export default function MRIACRMProjectPage() {
           >
             <div className="space-y-4">
               <h1 className="text-4xl md:text-5xl font-normal leading-tight">
-                MRIACRM SYSTEM (AI + Classic Figma Design
+                MRIACRM SYSTEM (AI + Classic Figma Design)
               </h1>
               <p className="text-xl text-zinc-300 max-w-3xl leading-relaxed">
                 First fully-featured CRM built exclusively for Jira Cloud using Atlassian's Forge technology
