@@ -214,8 +214,20 @@
   header::after,
   header::before,
   .sticky::after,
-  .sticky::before {
-    display: none !important;
+  .sticky::before,
+  *::after,
+  *::before {
+    border: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+  }
+  
+  /* Ultra compact mobile layout */
+  h1, h2, h3, p, div {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
   }
   
   /* Hero typography - reduced by 15% on mobile */

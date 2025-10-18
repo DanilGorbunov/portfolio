@@ -20,20 +20,20 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="space-y-1 md:space-y-4"
+            className="space-y-0 md:space-y-4"
             style={{ position: 'relative', zIndex: 10 }}
           >
-            <h1 className="text-5xl md:text-6xl font-normal tracking-tight leading-tight">
+            <h1 className="text-4xl md:text-6xl font-normal tracking-tight leading-tight">
                   Danil Gorbunov
                 </h1>
-            <p className="text-xl md:text-2xl font-light opacity-50 mt-0 md:mt-4">
+            <p className="text-lg md:text-2xl font-light opacity-50 mt-0 md:mt-4">
               Product Designer / Developer +AI
             </p>
-            <p className="text-lg md:text-xl font-light opacity-70 max-w-2xl mx-auto leading-relaxed mt-1 md:mt-12">
+            <p className="text-base md:text-xl font-light opacity-70 max-w-2xl mx-auto leading-relaxed mt-0 md:mt-12">
               Creating digital experiences that merge<br />
               intuitive design with real business impact
             </p>
-            <p className="text-sm font-light opacity-30 mt-0 md:mt-10">
+            <p className="text-xs md:text-sm font-light opacity-30 mt-0 md:mt-10">
               Bratislava, Slovakia
             </p>
             <div className="mt-0 md:mt-16">
