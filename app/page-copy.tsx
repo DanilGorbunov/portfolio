@@ -109,7 +109,7 @@ export default function Home() {
               <div className="relative">
                 <img
                   alt="Danil Gorbunov portrait"
-                  className="aspect-square overflow-hidden rounded-full object-cover object-center border-4 border-zinc-800"
+                  className="aspect-square overflow-hidden rounded-full object-cover object-center border-4 border-zinc-800 grayscale"
                   height="300"
                   src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/dan.jpg-IchGTMVQHQUWYf3UoQsDntbh9GhYcB.jpeg"
                   width="300"

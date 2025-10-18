@@ -146,7 +146,7 @@ export default function AboutPage() {
                   alt="Danil Gorbunov - Product Designer"
                   width={300}
                   height={300}
-                  className="w-full h-auto object-cover aspect-square"
+                  className="w-full h-auto object-cover aspect-square grayscale"
                 />
               </div>
             </div>

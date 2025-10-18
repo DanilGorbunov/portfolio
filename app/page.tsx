@@ -183,7 +183,7 @@ export default function Home() {
                   alt="Danil Gorbunov - Product Designer / Developer +AI"
                   width={300}
                   height={300}
-                  className="aspect-square overflow-hidden rounded-full object-cover object-center border-4 border-zinc-800"
+                  className="aspect-square overflow-hidden rounded-full object-cover object-center border-4 border-zinc-800 grayscale"
                   priority
                   quality={100}
                 />
