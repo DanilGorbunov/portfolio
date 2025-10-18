@@ -19,7 +19,13 @@ const experience = [
     company: "B2Stack",
     location: "Bratislava, Slovakia",
     description: "Leading design for AI-powered SaaS platforms and e-commerce solutions, focusing on user experience for complex data interfaces and machine learning workflows.",
-    achievements: ["Designed E-Commerce AI Chatbot increasing checkout conversion by ~15%", "Created LinkShop AI hybrid platform combining link-in-bio with full eCommerce", "Designed Fonitix AI voice-based SaaS for restaurants", "Developed MRIACRM System with integrated AI analytics", "Launched Tesla VIP Trip premium service within 5 days"]
+    achievements: [
+      "Designed E-Commerce AI Chatbot increasing checkout conversion by ~15%",
+      "Created LinkShop AI hybrid platform combining link-in-bio with full eCommerce",
+      "Designed Fonitix AI voice-based SaaS for restaurants",
+      "Designed MRIACRM System with integrated AI analytics",
+      "Launched Tesla VIP Trip premium service within 5 days"
+    ]
   },
   {
     year: "2022",
@@ -27,7 +33,11 @@ const experience = [
     company: "Twinzo 3D",
     location: "Bratislava, Slovakia",
     description: "Developed SaaS-based warehouse inventory management app for Fortune 500 clients, integrating 3D data visualization with user-centric design approach.",
-    achievements: ["Enhanced usability and adoption rates through user-centric design", "Integrated 3D data visualization for warehouse management", "Developed for Fortune 500 clients"]
+    achievements: [
+      "Enhanced usability and adoption rates through user-centric design",
+      "Integrated 3D data visualization for warehouse management",
+      "Developed for Fortune 500 clients"
+    ]
   },
   {
     year: "2013 - 2022",
@@ -35,7 +45,12 @@ const experience = [
     company: "Decodexin",
     location: "Ukraine",
     description: "Created user-centric designs and developed MVPs for SaaS systems, enabling shop owners to efficiently manage products and developed robust marketplace platforms.",
-    achievements: ["Created MVP for SaaS system as React developer", "Improved workflow automation and simplified product management", "Developed robust Marketplace platform with seamless API integration", "Enabled real-time product synchronization across network"]
+    achievements: [
+      "Created MVP for SaaS system as React developer",
+      "Improved workflow automation and simplified product management",
+      "Developed robust Marketplace platform with seamless API integration",
+      "Enabled real-time product synchronization across network"
+    ]
   },
   {
     year: "2010 - 2013",
@@ -43,11 +58,13 @@ const experience = [
     company: "Delen Web Studio",
     location: "Ukraine",
     description: "Conducted e-commerce user research and optimized WordPress interfaces based on feedback, communicating UX solutions to stakeholders.",
-    achievements: ["Conducted comprehensive e-commerce user research", "Optimized WordPress interfaces based on user feedback", "Communicated UX solutions to stakeholders ensuring business alignment"]
+    achievements: [
+      "Conducted comprehensive e-commerce user research",
+      "Optimized WordPress interfaces based on user feedback",
+      "Communicated UX solutions to stakeholders ensuring business alignment"
+    ]
   }
 ];
-
-
 
 export default function AboutPage() {
   return (
@@ -69,54 +86,46 @@ export default function AboutPage() {
           </p>
         </motion.div>
 
-        {/* Hero Section */}
-        <div className="grid lg:grid-cols-2 gap-16 items-center mb-20">
+        {/* About Section */}
+        <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
-            className="space-y-8"
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="space-y-6"
           >
-            <div className="space-y-6">
-              <h2 className="text-3xl md:text-4xl font-bold text-white">
-                Hi, I'm Danil Gorbunov
-              </h2>
-              <div className="flex items-center space-x-2 text-zinc-400">
-                <MapPin className="h-5 w-5" />
-                <span>Based in Bratislava, Slovakia</span>
-              </div>
-      </div>
+            <h2 className="text-3xl md:text-4xl font-bold text-white">
+              Hi, I'm <span className="text-primary">Danil Gorbunov</span>
+            </h2>
+            
+            <div className="flex items-center text-zinc-400 mb-6">
+              <MapPin className="h-5 w-5 mr-2" />
+              <span>Based in Bratislava, Slovakia</span>
+            </div>
 
             <div className="space-y-4 text-zinc-300 leading-relaxed">
               <p>
-                I'm a passionate Product Designer with over 10 years of experience creating 
-                digital experiences that users love. My journey combines design thinking, 
-                technical expertise, and AI innovation to solve complex problems across SaaS, e-commerce, and enterprise solutions.
+                With 12+ years of experience in product design and frontend development, 
+                I specialize in creating user-centered solutions that bridge the gap between 
+                design and technology.
               </p>
               <p>
-                I specialize in creating intuitive interfaces for AI-powered applications, 
-                data-driven dashboards, and scalable SaaS platforms. My recent work includes 
-                designing AI chatbots that increase conversion rates by 15%, voice-based restaurant solutions, and warehouse management systems for Fortune 500 clients.
+                My journey began in Ukraine, where I started as a UX Designer and gradually 
+                evolved into a full-stack product designer. Today, I lead design initiatives 
+                for AI-powered SaaS platforms, helping businesses leverage cutting-edge 
+                technology to solve real-world problems.
               </p>
               <p>
-                Based in Bratislava, I work with international clients and have experience 
-                from Ukraine to Slovakia, bringing diverse perspectives to every project. 
-                When I'm not designing, you can find me exploring new AI tools or contributing to the design community.
+                I believe in the power of design thinking, user research, and iterative 
+                development to create products that not only look great but also deliver 
+                measurable business value.
               </p>
-          </div>
+            </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
               <Button
                 size="lg"
                 className="bg-primary hover:bg-primary/90 text-black px-8 py-4"
-                onClick={() => {
-                  const link = document.createElement('a');
-                  link.href = '/Resume_Product_Designer.pdf';
-                  link.download = 'Danil_Gorbunov_Resume.pdf';
-                  document.body.appendChild(link);
-                  link.click();
-                  document.body.removeChild(link);
-                }}
               >
                 <Download className="mr-2 h-5 w-5" />
                 Download CV
@@ -151,10 +160,9 @@ export default function AboutPage() {
               </div>
             </div>
           </motion.div>
-          </div>
+        </div>
 
-
-        {/* Experience Timeline */}
+        {/* Experience - Classic Design */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -215,13 +223,10 @@ export default function AboutPage() {
                     ))}
                   </ul>
                 </div>
-                </motion.div>
-              ))}
-            </div>
+              </motion.div>
+            ))}
           </div>
         </motion.div>
-
-
       </div>
     </div>
   );
