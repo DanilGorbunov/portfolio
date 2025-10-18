@@ -1,6 +1,7 @@
 "use client"
 
 import Link from "next/link"
+import { usePathname } from "next/navigation"
 import { Frame, Menu } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger, SheetClose } from "@/components/ui/sheet"
@@ -8,9 +9,17 @@ import { useState } from "react"
 
 export function SiteHeader() {
   const [isOpen, setIsOpen] = useState(false)
+  const pathname = usePathname()
 
   const handleLinkClick = () => {
     setIsOpen(false)
+  }
+
+  const isActive = (path: string) => {
+    if (path === "/") {
+      return pathname === "/"
+    }
+    return pathname.startsWith(path)
   }
 
   return (
@@ -48,22 +57,54 @@ export function SiteHeader() {
               
               <nav className="flex flex-col gap-4 mt-8">
                 <SheetClose asChild>
-                  <Link href="/" className="text-lg font-medium text-white hover:text-primary transition-colors" onClick={handleLinkClick}>
+                  <Link 
+                    href="/" 
+                    className={`text-lg font-medium transition-colors ${
+                      isActive("/") 
+                        ? "text-primary" 
+                        : "text-white hover:text-primary"
+                    }`} 
+                    onClick={handleLinkClick}
+                  >
                     Home
                   </Link>
                 </SheetClose>
                 <SheetClose asChild>
-                  <Link href="/portfolio" className="text-lg font-medium text-white hover:text-primary transition-colors" onClick={handleLinkClick}>
+                  <Link 
+                    href="/portfolio" 
+                    className={`text-lg font-medium transition-colors ${
+                      isActive("/portfolio") 
+                        ? "text-primary" 
+                        : "text-white hover:text-primary"
+                    }`} 
+                    onClick={handleLinkClick}
+                  >
                     Portfolio
                   </Link>
                 </SheetClose>
                 <SheetClose asChild>
-                  <Link href="/about" className="text-lg font-medium text-white hover:text-primary transition-colors" onClick={handleLinkClick}>
+                  <Link 
+                    href="/about" 
+                    className={`text-lg font-medium transition-colors ${
+                      isActive("/about") 
+                        ? "text-primary" 
+                        : "text-white hover:text-primary"
+                    }`} 
+                    onClick={handleLinkClick}
+                  >
                     About
                   </Link>
                 </SheetClose>
                 <SheetClose asChild>
-                  <Link href="/contact" className="text-lg font-medium text-white hover:text-primary transition-colors" onClick={handleLinkClick}>
+                  <Link 
+                    href="/contact" 
+                    className={`text-lg font-medium transition-colors ${
+                      isActive("/contact") 
+                        ? "text-primary" 
+                        : "text-white hover:text-primary"
+                    }`} 
+                    onClick={handleLinkClick}
+                  >
                     Contact
                   </Link>
                 </SheetClose>
@@ -73,16 +114,44 @@ export function SiteHeader() {
         </div>
         {/* Desktop Menu - Only visible on medium screens and up */}
         <nav className="hidden md:flex items-center gap-6 ml-6">
-          <Link href="/" className="text-sm font-medium text-zinc-400 hover:text-white transition-colors">
+          <Link 
+            href="/" 
+            className={`text-sm font-medium transition-colors ${
+              isActive("/") 
+                ? "text-primary" 
+                : "text-zinc-400 hover:text-white"
+            }`}
+          >
             Home
           </Link>
-          <Link href="/portfolio" className="text-sm font-medium text-zinc-400 hover:text-white transition-colors">
+          <Link 
+            href="/portfolio" 
+            className={`text-sm font-medium transition-colors ${
+              isActive("/portfolio") 
+                ? "text-primary" 
+                : "text-zinc-400 hover:text-white"
+            }`}
+          >
             Portfolio
           </Link>
-          <Link href="/about" className="text-sm font-medium text-zinc-400 hover:text-white transition-colors">
+          <Link 
+            href="/about" 
+            className={`text-sm font-medium transition-colors ${
+              isActive("/about") 
+                ? "text-primary" 
+                : "text-zinc-400 hover:text-white"
+            }`}
+          >
             About
           </Link>
-          <Link href="/contact" className="text-sm font-medium text-zinc-400 hover:text-white transition-colors">
+          <Link 
+            href="/contact" 
+            className={`text-sm font-medium transition-colors ${
+              isActive("/contact") 
+                ? "text-primary" 
+                : "text-zinc-400 hover:text-white"
+            }`}
+          >
             Contact
           </Link>
         </nav>
