@@ -299,40 +299,6 @@ export default function AboutPage() {
         </motion.div>
 
 
-        {/* CTA Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="text-center bg-zinc-900 rounded-2xl p-12"
-        >
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Let's <span className="text-primary">Work Together</span>
-          </h2>
-          <p className="text-xl text-zinc-400 mb-8 max-w-2xl mx-auto">
-            Ready to bring your ideas to life? Let's discuss your next project and create something amazing together.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contact" prefetch={false}>
-              <Button
-                size="lg"
-                className="bg-primary hover:bg-primary/90 text-black px-8 py-4"
-              >
-                Get in Touch
-              </Button>
-            </Link>
-            <Link href="/portfolio" prefetch={false}>
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-zinc-700 text-white hover:bg-zinc-800 px-8 py-4"
-              >
-                View My Work
-              </Button>
-            </Link>
-          </div>
-        </motion.div>
       </div>
     </div>
   );
