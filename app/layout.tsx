@@ -35,13 +35,11 @@ export default function RootLayout({
               Skip to main content
             </a>
             <SiteHeader />
-            <main id="main-content" className="flex-1" tabIndex={-1}>{children}</main>
+            <main id="main-content" className="flex-1 relative z-10" tabIndex={-1}>{children}</main>
             <Footer />
           </div>
         </ThemeProvider>
       </body>
     </html>
   );
-}import "./globals.css";
-
-
+}
