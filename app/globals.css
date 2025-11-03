@@ -102,7 +102,7 @@
   /* Skip to main content link */
   .skip-link {
     position: absolute;
-    top: -40px;
+    top: -100px;
     left: 6px;
     background: hsl(var(--primary));
     color: hsl(var(--primary-foreground));
@@ -110,10 +110,16 @@
     text-decoration: none;
     border-radius: 4px;
     z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    clip: rect(0, 0, 0, 0);
   }
   
   .skip-link:focus {
     top: 6px;
+    opacity: 1;
+    visibility: visible;
+    clip: auto;
   }
 }
 
@@ -219,6 +225,11 @@
     border: none !important;
     box-shadow: none !important;
     outline: none !important;
+  }
+  
+  /* Completely hide skip-link on mobile */
+  .skip-link {
+    display: none !important;
   }
   
   /* Compact mobile layout */

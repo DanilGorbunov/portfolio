@@ -31,9 +31,9 @@ export default function RootLayout({
           forcedTheme="dark"
         >
           <div className="relative flex min-h-screen flex-col bg-black">
-            <a href="#main-content" className="skip-link">
+            {/* <a href="#main-content" className="skip-link">
               Skip to main content
-            </a>
+            </a> */}
             <SiteHeader />
             <main id="main-content" className="flex-1 relative z-10" tabIndex={-1}>{children}</main>
             <Footer />
