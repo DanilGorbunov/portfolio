@@ -17,20 +17,16 @@ export function SiteHeader() {
 
   const isActive = (path: string) => {
     if (path === "/") {
-      return pathname === "/"
+      return pathname === "/" || pathname === "/portfolio"
     }
     return pathname.startsWith(path)
   }
 
   return (
     <header className="sticky top-0 z-50 w-full bg-black/95 backdrop-blur supports-[backdrop-filter]:bg-black/60">
-      <div className="container flex h-16 items-center">
-        <Link href="/" className="flex items-center gap-2 mr-4">
-          <Frame className="h-6 w-6 text-primary" />
-          <span className="font-bold text-white">Danil Gorbunov</span>
-        </Link>
+      <div className="container flex h-16 items-center justify-center relative">
         {/* Mobile Menu - Only visible on small screens */}
-        <div className="md:hidden ml-auto">
+        <div className="md:hidden absolute right-0">
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
             <SheetTrigger asChild>
               <Button variant="ghost" size="icon" className="text-white">
@@ -61,19 +57,6 @@ export function SiteHeader() {
                     href="/" 
                     className={`text-lg font-medium transition-colors ${
                       isActive("/") 
-                        ? "text-primary" 
-                        : "text-white hover:text-primary"
-                    }`} 
-                    onClick={handleLinkClick}
-                  >
-                    Home
-                  </Link>
-                </SheetClose>
-                <SheetClose asChild>
-                  <Link 
-                    href="/portfolio" 
-                    className={`text-lg font-medium transition-colors ${
-                      isActive("/portfolio") 
                         ? "text-primary" 
                         : "text-white hover:text-primary"
                     }`} 
@@ -112,53 +95,50 @@ export function SiteHeader() {
             </SheetContent>
           </Sheet>
         </div>
-        {/* Desktop Menu - Only visible on medium screens and up */}
-        <nav className="hidden md:flex items-center gap-6 ml-6" role="navigation" aria-label="Main navigation">
-              <Link
-                href="/"
-                className={`text-sm font-medium transition-colors ${
-                  isActive("/")
-                    ? "text-primary"
-                    : "text-zinc-400 hover:text-white"
-                }`}
-                aria-current={isActive("/") ? "page" : undefined}
-              >
-                Home
-              </Link>
-              <Link
-                href="/portfolio"
-                className={`text-sm font-medium transition-colors ${
-                  isActive("/portfolio")
-                    ? "text-primary"
-                    : "text-zinc-400 hover:text-white"
-                }`}
-                aria-current={isActive("/portfolio") ? "page" : undefined}
-              >
-                Portfolio
-              </Link>
-              <Link
-                href="/about"
-                className={`text-sm font-medium transition-colors ${
-                  isActive("/about")
-                    ? "text-primary"
-                    : "text-zinc-400 hover:text-white"
-                }`}
-                aria-current={isActive("/about") ? "page" : undefined}
-              >
-                About
-              </Link>
-              <Link
-                href="/contact"
-                className={`text-sm font-medium transition-colors ${
-                  isActive("/contact")
-                    ? "text-primary"
-                    : "text-zinc-400 hover:text-white"
-                }`}
-                aria-current={isActive("/contact") ? "page" : undefined}
-              >
-                Contact
-              </Link>
-        </nav>
+        
+        {/* Centered Content: Logo and Desktop Menu */}
+        <div className="flex items-center gap-8">
+          <Link href="/" className="flex items-center gap-2">
+            <Frame className="h-6 w-6 text-primary" />
+            <span className="font-bold text-white">Danil Gorbunov</span>
+          </Link>
+          {/* Desktop Menu - Only visible on medium screens and up */}
+          <nav className="hidden md:flex items-center gap-6" role="navigation" aria-label="Main navigation">
+            <Link
+              href="/"
+              className={`text-sm font-medium transition-colors ${
+                isActive("/")
+                  ? "text-primary"
+                  : "text-zinc-400 hover:text-white"
+              }`}
+              aria-current={isActive("/") ? "page" : undefined}
+            >
+              Portfolio
+            </Link>
+            <Link
+              href="/about"
+              className={`text-sm font-medium transition-colors ${
+                isActive("/about")
+                  ? "text-primary"
+                  : "text-zinc-400 hover:text-white"
+              }`}
+              aria-current={isActive("/about") ? "page" : undefined}
+            >
+              About
+            </Link>
+            <Link
+              href="/contact"
+              className={`text-sm font-medium transition-colors ${
+                isActive("/contact")
+                  ? "text-primary"
+                  : "text-zinc-400 hover:text-white"
+              }`}
+              aria-current={isActive("/contact") ? "page" : undefined}
+            >
+              Contact
+            </Link>
+          </nav>
+        </div>
       </div>
     </header>
   )
