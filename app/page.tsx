@@ -20,7 +20,7 @@ export default function Portfolio() {
           className="text-center mb-16"
         >
           <p className="text-xl text-zinc-400 max-w-3xl mx-auto">
-            Product Design, UX/UI Design, Developing
+            Product Design, UX/UI Design, Developing, AI
           </p>
         </motion.div>
 
