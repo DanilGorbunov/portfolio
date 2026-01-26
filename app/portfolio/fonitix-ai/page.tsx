@@ -36,7 +36,7 @@ export default function FonitixAIProjectPage() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-red-500 to-orange-500 bg-clip-text text-transparent">
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 text-white">
               Fonitix AI
             </h1>
             <p className="text-xl text-zinc-300 mb-4 max-w-3xl mx-auto">
@@ -110,7 +110,7 @@ export default function FonitixAIProjectPage() {
             className="grid md:grid-cols-2 gap-12 items-center"
           >
             <div>
-              <h2 className="text-3xl font-bold mb-6 bg-gradient-to-r from-red-500 to-orange-500 bg-clip-text text-transparent">
+              <h2 className="text-3xl font-bold mb-6 text-white">
                 Project Overview
               </h2>
               <p className="text-lg text-zinc-300 mb-6">
@@ -121,11 +121,11 @@ export default function FonitixAIProjectPage() {
               </p>
               <div className="grid grid-cols-2 gap-4">
                 <div className="text-center p-4 bg-zinc-800 rounded-lg">
-                  <div className="text-2xl font-bold text-red-500">87%</div>
+                  <div className="text-2xl font-bold text-white">87%</div>
                   <div className="text-sm text-zinc-400">Cost Reduction</div>
                 </div>
                 <div className="text-center p-4 bg-zinc-800 rounded-lg">
-                  <div className="text-2xl font-bold text-orange-500">$125K</div>
+                  <div className="text-2xl font-bold text-white">$125K</div>
                   <div className="text-sm text-zinc-400">Projected MRR</div>
                 </div>
               </div>
@@ -134,7 +134,7 @@ export default function FonitixAIProjectPage() {
               <Card className="bg-zinc-800 border-zinc-700">
                 <CardContent className="p-6">
                   <h3 className="font-semibold mb-2 flex items-center gap-2">
-                    <Target className="w-4 h-4 text-red-500" />
+                    <Target className="w-4 h-4 text-white" />
                     Problem Statement
                   </h3>
                   <ul className="text-sm text-zinc-300 space-y-2">
@@ -149,7 +149,7 @@ export default function FonitixAIProjectPage() {
               <Card className="bg-zinc-800 border-zinc-700">
                 <CardContent className="p-6">
                   <h3 className="font-semibold mb-2 flex items-center gap-2">
-                    <Zap className="w-4 h-4 text-orange-500" />
+                    <Zap className="w-4 h-4 text-white" />
                     Solution Features
                   </h3>
                   <ul className="text-sm text-zinc-300 space-y-2">
@@ -174,7 +174,7 @@ export default function FonitixAIProjectPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-3xl font-bold mb-12 text-center bg-gradient-to-r from-red-500 to-orange-500 bg-clip-text text-transparent">
+            <h2 className="text-3xl font-bold mb-12 text-center text-white">
               Technical Architecture
             </h2>
             
@@ -182,7 +182,7 @@ export default function FonitixAIProjectPage() {
               <Card className="bg-zinc-800 border-zinc-700">
                 <CardContent className="p-6">
                   <h3 className="font-semibold mb-4 flex items-center gap-2">
-                    <Code className="w-5 h-5 text-blue-500" />
+                    <Code className="w-5 h-5 text-white" />
                     Frontend Stack
                   </h3>
                   <ul className="text-sm text-zinc-300 space-y-2">
@@ -198,7 +198,7 @@ export default function FonitixAIProjectPage() {
               <Card className="bg-zinc-800 border-zinc-700">
                 <CardContent className="p-6">
                   <h3 className="font-semibold mb-4 flex items-center gap-2">
-                    <Database className="w-5 h-5 text-green-500" />
+                    <Database className="w-5 h-5 text-white" />
                     Backend Stack
                   </h3>
                   <ul className="text-sm text-zinc-300 space-y-2">
@@ -214,7 +214,7 @@ export default function FonitixAIProjectPage() {
               <Card className="bg-zinc-800 border-zinc-700">
                 <CardContent className="p-6">
                   <h3 className="font-semibold mb-4 flex items-center gap-2">
-                    <Globe className="w-5 h-5 text-purple-500" />
+                    <Globe className="w-5 h-5 text-white" />
                     Integrations
                   </h3>
                   <ul className="text-sm text-zinc-300 space-y-2">
@@ -239,7 +239,7 @@ export default function FonitixAIProjectPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-3xl font-bold mb-12 text-center bg-gradient-to-r from-red-500 to-orange-500 bg-clip-text text-transparent">
+            <h2 className="text-3xl font-bold mb-12 text-center text-white">
               Core Features Implemented
             </h2>
             
@@ -248,7 +248,7 @@ export default function FonitixAIProjectPage() {
                 <Card className="bg-zinc-800 border-zinc-700">
                   <CardContent className="p-6">
                     <h3 className="font-semibold mb-4 flex items-center gap-2">
-                      <Users className="w-5 h-5 text-blue-500" />
+                      <Users className="w-5 h-5 text-white" />
                       Restaurant Dashboard
                     </h3>
                     <ul className="text-sm text-zinc-300 space-y-2">
@@ -264,7 +264,7 @@ export default function FonitixAIProjectPage() {
                 <Card className="bg-zinc-800 border-zinc-700">
                   <CardContent className="p-6">
                     <h3 className="font-semibold mb-4 flex items-center gap-2">
-                      <Brain className="w-5 h-5 text-green-500" />
+                      <Brain className="w-5 h-5 text-white" />
                       Menu Management System
                     </h3>
                     <ul className="text-sm text-zinc-300 space-y-2">
@@ -282,7 +282,7 @@ export default function FonitixAIProjectPage() {
                 <Card className="bg-zinc-800 border-zinc-700">
                   <CardContent className="p-6">
                     <h3 className="font-semibold mb-4 flex items-center gap-2">
-                      <Phone className="w-5 h-5 text-red-500" />
+                      <Phone className="w-5 h-5 text-white" />
                       Voice AI Integration
                     </h3>
                     <ul className="text-sm text-zinc-300 space-y-2">
@@ -298,7 +298,7 @@ export default function FonitixAIProjectPage() {
                 <Card className="bg-zinc-800 border-zinc-700">
                   <CardContent className="p-6">
                     <h3 className="font-semibold mb-4 flex items-center gap-2">
-                      <DollarSign className="w-5 h-5 text-yellow-500" />
+                      <DollarSign className="w-5 h-5 text-white" />
                       Cost Optimization
                     </h3>
                     <ul className="text-sm text-zinc-300 space-y-2">
@@ -324,14 +324,14 @@ export default function FonitixAIProjectPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-3xl font-bold mb-12 text-center bg-gradient-to-r from-red-500 to-orange-500 bg-clip-text text-transparent">
+            <h2 className="text-3xl font-bold mb-12 text-center text-white">
               Business Impact & Results
             </h2>
             
             <div className="grid md:grid-cols-2 gap-8 mb-12">
               <Card className="bg-zinc-800 border-zinc-700">
                 <CardContent className="p-6">
-                  <h3 className="font-semibold mb-4 text-green-400">For Restaurants</h3>
+                  <h3 className="font-semibold mb-4 text-white">For Restaurants</h3>
                   <div className="space-y-4">
                     <div>
                       <h4 className="font-medium text-white mb-2">💰 Cost Savings</h4>
@@ -356,7 +356,7 @@ export default function FonitixAIProjectPage() {
 
               <Card className="bg-zinc-800 border-zinc-700">
                 <CardContent className="p-6">
-                  <h3 className="font-semibold mb-4 text-blue-400">For Business</h3>
+                  <h3 className="font-semibold mb-4 text-white">For Business</h3>
                   <div className="space-y-4">
                     <div>
                       <h4 className="font-medium text-white mb-2">📊 MVP Metrics (Target)</h4>
@@ -382,16 +382,16 @@ export default function FonitixAIProjectPage() {
             </div>
 
             <div className="grid md:grid-cols-3 gap-6">
-              <div className="text-center p-6 bg-gradient-to-br from-red-500/20 to-orange-500/20 rounded-lg border border-red-500/30">
-                <div className="text-3xl font-bold text-red-500 mb-2">87%</div>
+              <div className="text-center p-6 bg-gradient-to-br from-zinc-800 to-zinc-900 rounded-lg border border-zinc-700">
+                <div className="text-3xl font-bold text-white mb-2">87%</div>
                 <div className="text-sm text-zinc-300">Cost Reduction vs Competitors</div>
               </div>
-              <div className="text-center p-6 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-lg border border-blue-500/30">
-                <div className="text-3xl font-bold text-blue-500 mb-2">4 Weeks</div>
+              <div className="text-center p-6 bg-gradient-to-br from-zinc-800 to-zinc-900 rounded-lg border border-zinc-700">
+                <div className="text-3xl font-bold text-white mb-2">4 Weeks</div>
                 <div className="text-sm text-zinc-300">MVP Development Time</div>
               </div>
-              <div className="text-center p-6 bg-gradient-to-br from-green-500/20 to-teal-500/20 rounded-lg border border-green-500/30">
-                <div className="text-3xl font-bold text-green-500 mb-2">1000+</div>
+              <div className="text-center p-6 bg-gradient-to-br from-zinc-800 to-zinc-900 rounded-lg border border-zinc-700">
+                <div className="text-3xl font-bold text-white mb-2">1000+</div>
                 <div className="text-sm text-zinc-300">Restaurants Supported</div>
               </div>
             </div>
@@ -407,14 +407,14 @@ export default function FonitixAIProjectPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-3xl font-bold mb-12 text-center bg-gradient-to-r from-red-500 to-orange-500 bg-clip-text text-transparent">
+            <h2 className="text-3xl font-bold mb-12 text-center text-white">
               Development Process
             </h2>
             
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               <Card className="bg-zinc-800 border-zinc-700">
                 <CardContent className="p-6">
-                  <div className="w-8 h-8 bg-red-500 rounded-full flex items-center justify-center text-white font-bold mb-4">1</div>
+                  <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center text-white font-bold mb-4">1</div>
                   <h3 className="font-semibold mb-3">Research & Planning</h3>
                   <ul className="text-sm text-zinc-300 space-y-1">
                     <li>• Market research</li>
@@ -427,7 +427,7 @@ export default function FonitixAIProjectPage() {
 
               <Card className="bg-zinc-800 border-zinc-700">
                 <CardContent className="p-6">
-                  <div className="w-8 h-8 bg-orange-500 rounded-full flex items-center justify-center text-white font-bold mb-4">2</div>
+                  <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center text-white font-bold mb-4">2</div>
                   <h3 className="font-semibold mb-3">MVP Core</h3>
                   <ul className="text-sm text-zinc-300 space-y-1">
                     <li>• Next.js setup</li>
@@ -440,7 +440,7 @@ export default function FonitixAIProjectPage() {
 
               <Card className="bg-zinc-800 border-zinc-700">
                 <CardContent className="p-6">
-                  <div className="w-8 h-8 bg-yellow-500 rounded-full flex items-center justify-center text-white font-bold mb-4">3</div>
+                  <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center text-white font-bold mb-4">3</div>
                   <h3 className="font-semibold mb-3">Voice Integration</h3>
                   <ul className="text-sm text-zinc-300 space-y-1">
                     <li>• Telnyx API integration</li>
@@ -453,7 +453,7 @@ export default function FonitixAIProjectPage() {
 
               <Card className="bg-zinc-800 border-zinc-700">
                 <CardContent className="p-6">
-                  <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center text-white font-bold mb-4">4</div>
+                  <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center text-white font-bold mb-4">4</div>
                   <h3 className="font-semibold mb-3">Testing & Launch</h3>
                   <ul className="text-sm text-zinc-300 space-y-1">
                     <li>• Beta testing</li>
@@ -476,14 +476,14 @@ export default function FonitixAIProjectPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-3xl font-bold mb-12 text-center bg-gradient-to-r from-red-500 to-orange-500 bg-clip-text text-transparent">
+            <h2 className="text-3xl font-bold mb-12 text-center text-white">
               Key Learnings & Challenges
             </h2>
             
             <div className="grid md:grid-cols-2 gap-8">
               <Card className="bg-zinc-800 border-zinc-700">
                 <CardContent className="p-6">
-                  <h3 className="font-semibold mb-4 text-red-400">Technical Challenges</h3>
+                  <h3 className="font-semibold mb-4 text-white">Technical Challenges</h3>
                   <div className="space-y-4">
                     <div>
                       <h4 className="font-medium text-white mb-2">Voice AI Latency</h4>
@@ -503,7 +503,7 @@ export default function FonitixAIProjectPage() {
 
               <Card className="bg-zinc-800 border-zinc-700">
                 <CardContent className="p-6">
-                  <h3 className="font-semibold mb-4 text-blue-400">Design Challenges</h3>
+                  <h3 className="font-semibold mb-4 text-white">Design Challenges</h3>
                   <div className="space-y-4">
                     <div>
                       <h4 className="font-medium text-white mb-2">Empty State UX</h4>
@@ -533,14 +533,14 @@ export default function FonitixAIProjectPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-3xl font-bold mb-12 text-center bg-gradient-to-r from-red-500 to-orange-500 bg-clip-text text-transparent">
+            <h2 className="text-3xl font-bold mb-12 text-center text-white">
               Future Roadmap
             </h2>
             
             <div className="grid md:grid-cols-2 gap-8">
               <Card className="bg-zinc-800 border-zinc-700">
                 <CardContent className="p-6">
-                  <h3 className="font-semibold mb-4 text-green-400">Short-term (3-6 months)</h3>
+                  <h3 className="font-semibold mb-4 text-white">Short-term (3-6 months)</h3>
                   <ul className="text-sm text-zinc-300 space-y-2">
                     <li>• Multi-language support (Spanish, French, Mandarin)</li>
                     <li>• Advanced analytics dashboard</li>
@@ -553,7 +553,7 @@ export default function FonitixAIProjectPage() {
 
               <Card className="bg-zinc-800 border-zinc-700">
                 <CardContent className="p-6">
-                  <h3 className="font-semibold mb-4 text-blue-400">Long-term (6-12 months)</h3>
+                  <h3 className="font-semibold mb-4 text-white">Long-term (6-12 months)</h3>
                   <ul className="text-sm text-zinc-300 space-y-2">
                     <li>• Mobile app for restaurant managers</li>
                     <li>• AI-powered menu recommendations</li>
@@ -577,7 +577,7 @@ export default function FonitixAIProjectPage() {
             transition={{ duration: 0.6 }}
             className="text-center"
           >
-            <h2 className="text-3xl font-bold mb-8 bg-gradient-to-r from-red-500 to-orange-500 bg-clip-text text-transparent">
+            <h2 className="text-3xl font-bold mb-8 text-white">
               Conclusion
             </h2>
             <p className="text-lg text-zinc-300 mb-8">
@@ -587,7 +587,7 @@ export default function FonitixAIProjectPage() {
             <div className="grid md:grid-cols-2 gap-6 mb-8">
               <Card className="bg-zinc-800 border-zinc-700">
                 <CardContent className="p-6">
-                  <h3 className="font-semibold mb-4 text-green-400">Key Achievements</h3>
+                  <h3 className="font-semibold mb-4 text-white">Key Achievements</h3>
                   <ul className="text-sm text-zinc-300 space-y-2 text-left">
                     <li>✅ Built full-stack MVP in 4 weeks</li>
                     <li>✅ Reduced operational costs by 87% vs competitors</li>
@@ -600,7 +600,7 @@ export default function FonitixAIProjectPage() {
 
               <Card className="bg-zinc-800 border-zinc-700">
                 <CardContent className="p-6">
-                  <h3 className="font-semibold mb-4 text-blue-400">Skills Demonstrated</h3>
+                  <h3 className="font-semibold mb-4 text-white">Skills Demonstrated</h3>
                   <ul className="text-sm text-zinc-300 space-y-2 text-left">
                     <li>• Full-stack development (Next.js, TypeScript)</li>
                     <li>• Real-time database architecture (Convex)</li>

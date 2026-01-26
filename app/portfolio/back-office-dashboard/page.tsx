@@ -212,7 +212,7 @@ export default function BackOfficeDashboardProject() {
               </h3>
               <ul className="space-y-3 text-zinc-400">
                 <li className="flex items-start">
-                  <Check className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
+                  <Check className="h-5 w-5 text-white mr-2 flex-shrink-0 mt-0.5" />
                   <div>
                     <span className="font-medium text-white">
                       Modern Dashboard Interface
@@ -224,7 +224,7 @@ export default function BackOfficeDashboardProject() {
                   </div>
                 </li>
                 <li className="flex items-start">
-                  <Check className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
+                  <Check className="h-5 w-5 text-white mr-2 flex-shrink-0 mt-0.5" />
                   <div>
                     <span className="font-medium text-white">
                       Advanced Search & Filtering
@@ -236,7 +236,7 @@ export default function BackOfficeDashboardProject() {
                   </div>
                 </li>
                 <li className="flex items-start">
-                  <Check className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
+                  <Check className="h-5 w-5 text-white mr-2 flex-shrink-0 mt-0.5" />
                   <div>
                     <span className="font-medium text-white">
                       Streamlined Workflows
@@ -248,7 +248,7 @@ export default function BackOfficeDashboardProject() {
                   </div>
                 </li>
                 <li className="flex items-start">
-                  <Check className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
+                  <Check className="h-5 w-5 text-white mr-2 flex-shrink-0 mt-0.5" />
                   <div>
                     <span className="font-medium text-white">
                       Enhanced Analytics

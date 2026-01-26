@@ -34,7 +34,7 @@ export default function TeslaVIPTripProjectPage() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 text-white">
               Tesla VIP Trip (AI FullStack)
             </h1>
             <p className="text-xl text-zinc-300 mb-4 max-w-3xl mx-auto">
@@ -45,22 +45,19 @@ export default function TeslaVIPTripProjectPage() {
             </p>
             
             <div className="flex flex-wrap justify-center gap-4 mb-8">
-              <Badge className="bg-yellow-500/20 text-yellow-300 border-yellow-500/30">
+              <Badge className="bg-zinc-800 text-white border-zinc-700">
                 AI-Assisted Development
               </Badge>
-              <Badge className="bg-blue-500/20 text-blue-300 border-blue-500/30">
+              <Badge className="bg-zinc-800 text-white border-zinc-700">
                 WordPress
               </Badge>
-              <Badge className="bg-purple-500/20 text-purple-300 border-purple-500/30">
+              <Badge className="bg-zinc-800 text-white border-zinc-700">
                 Lovable.dev
               </Badge>
-              <Badge className="bg-green-500/20 text-green-300 border-green-500/30">
+              <Badge className="bg-zinc-800 text-white border-zinc-700">
                 Full-Stack
               </Badge>
-              <Badge className="bg-orange-500/20 text-orange-300 border-orange-500/30">
-                PHP
-              </Badge>
-              <Badge className="bg-cyan-500/20 text-cyan-300 border-cyan-500/30">
+              <Badge className="bg-zinc-800 text-white border-zinc-700">
                 Booking System
               </Badge>
             </div>
@@ -117,7 +114,7 @@ export default function TeslaVIPTripProjectPage() {
             
             <div className="grid md:grid-cols-2 gap-8 mb-8">
               <div className="bg-zinc-800/50 p-6 rounded-xl">
-                <h3 className="text-xl font-semibold mb-4 text-yellow-400">Project Details</h3>
+                <h3 className="text-xl font-semibold mb-4 text-white">Project Details</h3>
                 <ul className="text-zinc-300 space-y-2">
                   <li><strong>Project Type:</strong> Premium Tesla Electric Vehicle Transfer Service</li>
                   <li><strong>Location:</strong> Vienna & Bratislava (Austria/Slovakia)</li>
@@ -129,7 +126,7 @@ export default function TeslaVIPTripProjectPage() {
               </div>
               
               <div className="bg-zinc-800/50 p-6 rounded-xl">
-                <h3 className="text-xl font-semibold mb-4 text-blue-400">Target Audience</h3>
+                <h3 className="text-xl font-semibold mb-4 text-white">Target Audience</h3>
                 <ul className="text-zinc-300 space-y-2">
                   <li><strong>Tourists</strong> (30-55 years old) - traveling in Vienna and Bratislava</li>
                   <li><strong>Business Clients</strong> - requiring professional corporate transfers</li>
@@ -145,8 +142,8 @@ export default function TeslaVIPTripProjectPage() {
               followed by conversion to a production-ready WordPress site with custom PHP booking system.
             </p>
             
-            <div className="bg-yellow-500/10 border border-yellow-500/30 p-4 rounded-lg">
-              <p className="text-yellow-300 text-sm">
+            <div className="bg-white/10 border border-zinc-700 p-4 rounded-lg">
+              <p className="text-zinc-400 text-sm">
                 <strong>📋 Trip Guide Available:</strong> Download our comprehensive Tesla Trip Guide PDF 
                 for detailed information about services, pricing, and booking procedures.
               </p>
@@ -166,7 +163,7 @@ export default function TeslaVIPTripProjectPage() {
             <h2 className="text-3xl font-bold mb-8">🎯 The Challenge</h2>
             
             <div className="mb-8">
-              <h3 className="text-xl font-semibold mb-4 text-red-400">Extremely Tight Timeline</h3>
+              <h3 className="text-xl font-semibold mb-4 text-white">Extremely Tight Timeline</h3>
               <p className="text-lg text-zinc-300 leading-relaxed mb-4">
                 <strong>5 days total</strong> - from concept to production-ready website. This required a revolutionary approach 
                 to development that could deliver professional quality in minimal time.
@@ -174,7 +171,7 @@ export default function TeslaVIPTripProjectPage() {
             </div>
 
             <div className="mb-8">
-              <h3 className="text-xl font-semibold mb-4 text-yellow-400">Premium Brand Requirements</h3>
+              <h3 className="text-xl font-semibold mb-4 text-white">Premium Brand Requirements</h3>
               <ul className="text-lg text-zinc-300 leading-relaxed list-disc list-inside space-y-2">
                 <li>Reflect Tesla's luxury and eco-friendliness values</li>
                 <li>Dark elegant theme with gold accent colors (#FFD24C)</li>
@@ -184,7 +181,7 @@ export default function TeslaVIPTripProjectPage() {
             </div>
 
             <div className="mb-8">
-              <h3 className="text-xl font-semibold mb-4 text-blue-400">Technical Requirements</h3>
+              <h3 className="text-xl font-semibold mb-4 text-white">Technical Requirements</h3>
               <ul className="text-lg text-zinc-300 leading-relaxed list-disc list-inside space-y-2">
                 <li>Easy online booking system for 6 core services</li>
                 <li>Multilingual support (EN, DE, RU, SK)</li>
@@ -195,7 +192,7 @@ export default function TeslaVIPTripProjectPage() {
             </div>
 
             <div className="bg-zinc-800/50 p-6 rounded-xl">
-              <h3 className="text-lg font-semibold mb-3 text-orange-400">The Innovation Opportunity</h3>
+              <h3 className="text-lg font-semibold mb-3 text-white">The Innovation Opportunity</h3>
               <p className="text-zinc-300 mb-4">
                 This project became a case study for modern AI-assisted development, proving that with the right tools 
                 and approach, developers can deliver production-quality websites in a fraction of traditional time.
@@ -217,12 +214,12 @@ export default function TeslaVIPTripProjectPage() {
             
             <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6 mb-12">
               {/* Day 1-2 */}
-              <div className="bg-gradient-to-br from-purple-600/20 to-blue-600/20 p-6 rounded-xl border border-purple-500/30">
+              <div className="bg-gradient-to-br from-zinc-800 to-zinc-900 p-6 rounded-xl border border-zinc-700">
                 <div className="text-center mb-4">
-                  <div className="w-12 h-12 bg-purple-500 rounded-full flex items-center justify-center mx-auto mb-3">
+                  <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center mx-auto mb-3">
                     <span className="text-white font-bold">1-2</span>
                   </div>
-                  <h3 className="text-lg font-semibold text-purple-300">AI-Assisted Design</h3>
+                  <h3 className="text-lg font-semibold text-zinc-400">AI-Assisted Design</h3>
                 </div>
                 <ul className="text-sm text-zinc-300 space-y-2">
                   <li>• Lovable.dev prototyping</li>
@@ -233,12 +230,12 @@ export default function TeslaVIPTripProjectPage() {
               </div>
 
               {/* Day 3 */}
-              <div className="bg-gradient-to-br from-green-600/20 to-teal-600/20 p-6 rounded-xl border border-green-500/30">
+              <div className="bg-gradient-to-br from-zinc-800 to-zinc-900 p-6 rounded-xl border border-green-500/30">
                 <div className="text-center mb-4">
-                  <div className="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-3">
+                  <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center mx-auto mb-3">
                     <span className="text-white font-bold">3</span>
                   </div>
-                  <h3 className="text-lg font-semibold text-green-300">Convert & Deploy</h3>
+                  <h3 className="text-lg font-semibold text-zinc-400">Convert & Deploy</h3>
                 </div>
                 <ul className="text-sm text-zinc-300 space-y-2">
                   <li>• React → HTML/CSS conversion</li>
@@ -249,12 +246,12 @@ export default function TeslaVIPTripProjectPage() {
               </div>
 
               {/* Day 4 */}
-              <div className="bg-gradient-to-br from-orange-600/20 to-red-600/20 p-6 rounded-xl border border-orange-500/30">
+              <div className="bg-gradient-to-br from-zinc-800 to-zinc-900 p-6 rounded-xl border border-zinc-700">
                 <div className="text-center mb-4">
-                  <div className="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center mx-auto mb-3">
+                  <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center mx-auto mb-3">
                     <span className="text-white font-bold">4</span>
                   </div>
-                  <h3 className="text-lg font-semibold text-orange-300">Elementor Integration</h3>
+                  <h3 className="text-lg font-semibold text-zinc-400">Elementor Integration</h3>
                 </div>
                 <ul className="text-sm text-zinc-300 space-y-2">
                   <li>• Custom HTML widgets</li>
@@ -265,12 +262,12 @@ export default function TeslaVIPTripProjectPage() {
               </div>
 
               {/* Day 5 */}
-              <div className="bg-gradient-to-br from-yellow-600/20 to-amber-600/20 p-6 rounded-xl border border-yellow-500/30">
+              <div className="bg-gradient-to-br from-zinc-800 to-zinc-900 p-6 rounded-xl border border-zinc-700">
                 <div className="text-center mb-4">
-                  <div className="w-12 h-12 bg-yellow-500 rounded-full flex items-center justify-center mx-auto mb-3">
+                  <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center mx-auto mb-3">
                     <span className="text-white font-bold">5</span>
                   </div>
-                  <h3 className="text-lg font-semibold text-yellow-300">PHP Booking System</h3>
+                  <h3 className="text-lg font-semibold text-zinc-400">PHP Booking System</h3>
                 </div>
                 <ul className="text-sm text-zinc-300 space-y-2">
                   <li>• Custom database tables</li>
@@ -281,12 +278,12 @@ export default function TeslaVIPTripProjectPage() {
               </div>
 
               {/* Results */}
-              <div className="bg-gradient-to-br from-cyan-600/20 to-blue-600/20 p-6 rounded-xl border border-cyan-500/30">
+              <div className="bg-gradient-to-br from-zinc-800 to-zinc-900 p-6 rounded-xl border border-cyan-500/30">
                 <div className="text-center mb-4">
-                  <div className="w-12 h-12 bg-cyan-500 rounded-full flex items-center justify-center mx-auto mb-3">
+                  <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center mx-auto mb-3">
                     <Zap className="text-white h-6 w-6" />
                   </div>
-                  <h3 className="text-lg font-semibold text-cyan-300">Results</h3>
+                  <h3 className="text-lg font-semibold text-zinc-400">Results</h3>
                 </div>
                 <ul className="text-sm text-zinc-300 space-y-2">
                   <li>• 5 days vs 2 weeks</li>
@@ -299,7 +296,7 @@ export default function TeslaVIPTripProjectPage() {
 
             <div className="text-center">
               <div className="bg-zinc-800/50 p-8 rounded-xl max-w-4xl mx-auto">
-                <h3 className="text-2xl font-bold mb-4 text-yellow-400">Total Time: 40 hours over 5 days</h3>
+                <h3 className="text-2xl font-bold mb-4 text-white">Total Time: 40 hours over 5 days</h3>
                 <p className="text-lg text-zinc-300">
                   This innovative approach reduced development time from 2 weeks to 5 days while maintaining 
                   professional quality standards and delivering a fully functional booking system.
@@ -321,7 +318,7 @@ export default function TeslaVIPTripProjectPage() {
             <h2 className="text-3xl font-bold mb-8">🛠 Technology Stack</h2>
             
             <div className="mb-8">
-              <h3 className="text-xl font-semibold mb-4 text-purple-400">AI-Assisted Development</h3>
+              <h3 className="text-xl font-semibold mb-4 text-white">AI-Assisted Development</h3>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
                 {[
                   "Lovable.dev",
@@ -341,7 +338,7 @@ export default function TeslaVIPTripProjectPage() {
             </div>
 
             <div className="mb-8">
-              <h3 className="text-xl font-semibold mb-4 text-blue-400">Frontend & CMS</h3>
+              <h3 className="text-xl font-semibold mb-4 text-white">Frontend & CMS</h3>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
                 {[
                   "React",
@@ -361,7 +358,7 @@ export default function TeslaVIPTripProjectPage() {
             </div>
 
             <div className="mb-8">
-              <h3 className="text-xl font-semibold mb-4 text-green-400">Backend & Infrastructure</h3>
+              <h3 className="text-xl font-semibold mb-4 text-white">Backend & Infrastructure</h3>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                 {[
                   "PHP 8.1",
@@ -396,7 +393,7 @@ export default function TeslaVIPTripProjectPage() {
             <div className="grid md:grid-cols-2 gap-8">
               <div className="space-y-6">
                 <div className="bg-zinc-800/50 p-6 rounded-xl">
-                  <h3 className="text-xl font-semibold mb-3 text-yellow-400">🎨 Design & UX</h3>
+                  <h3 className="text-xl font-semibold mb-3 text-white">🎨 Design & UX</h3>
                   <ul className="text-zinc-300 space-y-2">
                     <li>• Dark elegant theme with gold accents (#FFD24C)</li>
                     <li>• Full-screen Tesla hero section</li>
@@ -407,7 +404,7 @@ export default function TeslaVIPTripProjectPage() {
                 </div>
 
                 <div className="bg-zinc-800/50 p-6 rounded-xl">
-                  <h3 className="text-xl font-semibold mb-3 text-blue-400">📱 Responsive Design</h3>
+                  <h3 className="text-xl font-semibold mb-3 text-white">📱 Responsive Design</h3>
                   <ul className="text-zinc-300 space-y-2">
                     <li>• Mobile-first approach</li>
                     <li>• Automatic responsiveness from Lovable</li>
@@ -419,7 +416,7 @@ export default function TeslaVIPTripProjectPage() {
 
               <div className="space-y-6">
                 <div className="bg-zinc-800/50 p-6 rounded-xl">
-                  <h3 className="text-xl font-semibold mb-3 text-green-400">🔧 Technical Features</h3>
+                  <h3 className="text-xl font-semibold mb-3 text-white">🔧 Technical Features</h3>
                   <ul className="text-zinc-300 space-y-2">
                     <li>• 6 detailed service pages with pricing</li>
                     <li>• Online booking system with validation</li>
@@ -430,7 +427,7 @@ export default function TeslaVIPTripProjectPage() {
                 </div>
 
                 <div className="bg-zinc-800/50 p-6 rounded-xl">
-                  <h3 className="text-xl font-semibold mb-3 text-purple-400">📧 Business Features</h3>
+                  <h3 className="text-xl font-semibold mb-3 text-white">📧 Business Features</h3>
                   <ul className="text-zinc-300 space-y-2">
                     <li>• Dual email notifications (client + 2 admins)</li>
                     <li>• Admin panel for order management</li>
@@ -456,11 +453,11 @@ export default function TeslaVIPTripProjectPage() {
             
             {/* Lovable Process */}
             <div className="mb-12">
-              <h3 className="text-2xl font-semibold mb-6 text-purple-400">Days 1-2: AI-Assisted Design via Lovable</h3>
+              <h3 className="text-2xl font-semibold mb-6 text-white">Days 1-2: AI-Assisted Design via Lovable</h3>
               <div className="bg-zinc-800/50 p-8 rounded-xl">
                 <div className="grid md:grid-cols-2 gap-8">
                   <div>
-                    <h4 className="text-lg font-semibold mb-4 text-blue-300">Lovable Advantages</h4>
+                    <h4 className="text-lg font-semibold mb-4 text-zinc-400">Lovable Advantages</h4>
                     <ul className="text-zinc-300 space-y-2">
                       <li>✅ Speed: 2 days instead of 2 weeks of manual coding</li>
                       <li>✅ AI Generation: Automatic improvement suggestions</li>
@@ -470,7 +467,7 @@ export default function TeslaVIPTripProjectPage() {
                     </ul>
                   </div>
                   <div>
-                    <h4 className="text-lg font-semibold mb-4 text-green-300">Iterative Process</h4>
+                    <h4 className="text-lg font-semibold mb-4 text-zinc-400">Iterative Process</h4>
                     <ul className="text-zinc-300 space-y-2">
                       <li>Step 1: Basic prompt → Lovable generates structure</li>
                       <li>Step 2: Color refinement → AI adapts palette</li>
@@ -484,7 +481,7 @@ export default function TeslaVIPTripProjectPage() {
 
             {/* Conversion Process */}
             <div className="mb-12">
-              <h3 className="text-2xl font-semibold mb-6 text-green-400">Day 3: React → HTML Conversion</h3>
+              <h3 className="text-2xl font-semibold mb-6 text-white">Day 3: React → HTML Conversion</h3>
               <div className="bg-zinc-800/50 p-8 rounded-xl">
                 <p className="text-zinc-300 mb-4">
                   Systematic conversion from React components to WordPress-compatible HTML/CSS while preserving 
@@ -492,7 +489,7 @@ export default function TeslaVIPTripProjectPage() {
                   and inline CSS for Elementor compatibility.
                 </p>
                 <div className="bg-zinc-900/50 p-4 rounded-lg">
-                  <h4 className="text-sm font-semibold mb-2 text-yellow-400">Example Conversion:</h4>
+                  <h4 className="text-sm font-semibold mb-2 text-white">Example Conversion:</h4>
                   <p className="text-xs text-zinc-400 font-mono">
                     React JSX → HTML/CSS → Elementor Custom HTML Widget
                   </p>
@@ -502,11 +499,11 @@ export default function TeslaVIPTripProjectPage() {
 
             {/* PHP System */}
             <div className="mb-12">
-              <h3 className="text-2xl font-semibold mb-6 text-orange-400">Day 5: PHP Booking System</h3>
+              <h3 className="text-2xl font-semibold mb-6 text-white">Day 5: PHP Booking System</h3>
               <div className="bg-zinc-800/50 p-8 rounded-xl">
                 <div className="grid md:grid-cols-2 gap-8">
                   <div>
-                    <h4 className="text-lg font-semibold mb-4 text-blue-300">System Architecture</h4>
+                    <h4 className="text-lg font-semibold mb-4 text-zinc-400">System Architecture</h4>
                     <ul className="text-zinc-300 space-y-2">
                       <li>• Custom MySQL database table</li>
                       <li>• AJAX form submission</li>
@@ -516,7 +513,7 @@ export default function TeslaVIPTripProjectPage() {
                     </ul>
                   </div>
                   <div>
-                    <h4 className="text-lg font-semibold mb-4 text-green-300">Email System</h4>
+                    <h4 className="text-lg font-semibold mb-4 text-zinc-400">Email System</h4>
                     <ul className="text-zinc-300 space-y-2">
                       <li>• Client confirmation emails</li>
                       <li>• Dual admin notifications</li>
@@ -544,28 +541,28 @@ export default function TeslaVIPTripProjectPage() {
             
             <div className="space-y-8">
               <div className="bg-zinc-800/50 p-6 rounded-xl">
-                <h3 className="text-xl font-semibold mb-4 text-red-400">Challenge 1: Speed vs Quality</h3>
+                <h3 className="text-xl font-semibold mb-4 text-white">Challenge 1: Speed vs Quality</h3>
                 <p className="text-zinc-300 mb-3"><strong>Problem:</strong> 5 days - very tight timeline</p>
                 <p className="text-zinc-300 mb-3"><strong>Solution:</strong> Use Lovable to accelerate design</p>
                 <p className="text-zinc-300"><strong>Result:</strong> Professional design in 2 days instead of 2 weeks</p>
               </div>
 
               <div className="bg-zinc-800/50 p-6 rounded-xl">
-                <h3 className="text-xl font-semibold mb-4 text-yellow-400">Challenge 2: React → HTML Conversion</h3>
+                <h3 className="text-xl font-semibold mb-4 text-white">Challenge 2: React → HTML Conversion</h3>
                 <p className="text-zinc-300 mb-3"><strong>Problem:</strong> JSX components don't work in WordPress</p>
                 <p className="text-zinc-300 mb-3"><strong>Solution:</strong> Systematic conversion preserving styles</p>
                 <p className="text-zinc-300"><strong>Tools:</strong> ChatGPT for batch conversion, manual optimization</p>
               </div>
 
               <div className="bg-zinc-800/50 p-6 rounded-xl">
-                <h3 className="text-xl font-semibold mb-4 text-blue-400">Challenge 3: Elementor Integration</h3>
+                <h3 className="text-xl font-semibold mb-4 text-white">Challenge 3: Elementor Integration</h3>
                 <p className="text-zinc-300 mb-3"><strong>Problem:</strong> Initial plan was without Elementor</p>
                 <p className="text-zinc-300 mb-3"><strong>Solution:</strong> Adapt code for Custom HTML widgets</p>
                 <p className="text-zinc-300"><strong>Benefits:</strong> Client can edit content independently</p>
               </div>
 
               <div className="bg-zinc-800/50 p-6 rounded-xl">
-                <h3 className="text-xl font-semibold mb-4 text-green-400">Challenge 4: PHP Form Security</h3>
+                <h3 className="text-xl font-semibold mb-4 text-white">Challenge 4: PHP Form Security</h3>
                 <p className="text-zinc-300 mb-3"><strong>Problem:</strong> Risk of SQL injection and XSS attacks</p>
                 <p className="text-zinc-300 mb-3"><strong>Solution:</strong> Comprehensive security measures</p>
                 <p className="text-zinc-300"><strong>Implementation:</strong> sanitize_text_field(), wp_verify_nonce(), validation</p>
@@ -586,7 +583,7 @@ export default function TeslaVIPTripProjectPage() {
             <h2 className="text-3xl font-bold mb-8">🚀 Project Results</h2>
             
             <div className="mb-8">
-              <h3 className="text-xl font-semibold mb-4 text-green-400">✅ Technical Achievements</h3>
+              <h3 className="text-xl font-semibold mb-4 text-white">✅ Technical Achievements</h3>
               <div className="grid md:grid-cols-2 gap-6">
                 <ul className="text-zinc-300 space-y-2">
                   <li>• Fully functional WordPress website</li>
@@ -608,11 +605,11 @@ export default function TeslaVIPTripProjectPage() {
             </div>
 
             <div className="mb-8">
-              <h3 className="text-xl font-semibold mb-4 text-blue-400">🎨 Innovative Approach</h3>
+              <h3 className="text-xl font-semibold mb-4 text-white">🎨 Innovative Approach</h3>
               <div className="bg-zinc-800/50 p-6 rounded-xl">
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
-                    <h4 className="text-lg font-semibold mb-3 text-purple-400">AI-Assisted Design:</h4>
+                    <h4 className="text-lg font-semibold mb-3 text-white">AI-Assisted Design:</h4>
                     <ul className="text-zinc-300 space-y-2">
                       <li>• Lovable replaced 2 weeks of manual coding</li>
                       <li>• Automatic responsive layout generation</li>
@@ -620,7 +617,7 @@ export default function TeslaVIPTripProjectPage() {
                     </ul>
                   </div>
                   <div>
-                    <h4 className="text-lg font-semibold mb-3 text-orange-400">Hybrid Architecture:</h4>
+                    <h4 className="text-lg font-semibold mb-3 text-white">Hybrid Architecture:</h4>
                     <ul className="text-zinc-300 space-y-2">
                       <li>• No-code prototype → Production code</li>
                       <li>• React benefits + WordPress flexibility</li>
@@ -631,8 +628,8 @@ export default function TeslaVIPTripProjectPage() {
               </div>
             </div>
 
-            <div className="bg-gradient-to-r from-yellow-500/20 to-orange-500/20 p-8 rounded-xl border border-yellow-500/30">
-              <h3 className="text-2xl font-bold mb-4 text-yellow-400">Key Takeaways</h3>
+            <div className="bg-gradient-to-r from-zinc-800 to-zinc-900 p-8 rounded-xl border border-zinc-700">
+              <h3 className="text-2xl font-bold mb-4 text-white">Key Takeaways</h3>
               <ul className="text-lg text-zinc-300 space-y-3">
                 <li>1. <strong>No-code tools don't replace developers</strong> - they make them more efficient</li>
                 <li>2. <strong>AI-assisted design</strong> can reduce development time by 5x+</li>
@@ -661,7 +658,7 @@ export default function TeslaVIPTripProjectPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
                 size="lg"
-                className="bg-gradient-to-r from-yellow-500 to-orange-600 hover:from-yellow-600 hover:to-orange-700"
+                className="bg-gradient-to-r bg-white text-black hover:bg-zinc-200"
                 onClick={() => window.open('https://teslaviptrip.com', '_blank')}
               >
                 <ExternalLink className="mr-2 h-4 w-4" />
@@ -679,7 +676,7 @@ export default function TeslaVIPTripProjectPage() {
               <Button
                 variant="outline"
                 size="lg"
-                className="border-yellow-500/50 text-yellow-300 hover:bg-yellow-500/10"
+                className="border-zinc-700 text-zinc-400 hover:bg-white/10"
                 onClick={() => {
                   const link = document.createElement('a');
                   link.href = '/Tesla_Trip_Guide.pdf';
@@ -692,6 +689,52 @@ export default function TeslaVIPTripProjectPage() {
                 <Download className="mr-2 h-4 w-4" />
                 Download Trip Guide
               </Button>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Security Issue & Solution */}
+      <section className="py-16 bg-zinc-900/50">
+        <div className="container mx-auto px-6 max-w-4xl">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            <h2 className="text-3xl font-bold mb-6 text-white">Security Challenge & Solution</h2>
+            
+            <div className="mb-8">
+              <h3 className="text-xl font-semibold mb-4 text-white">The Problem</h3>
+              <p className="text-lg text-zinc-300 leading-relaxed mb-4">
+                After the initial launch, I encountered a critical cybersecurity issue with the PHP booking system. 
+                The PHP file had security vulnerabilities that resulted in a ban from Google Search Console, 
+                specifically triggering the "Red Screen Problem" - a warning that Google displays when it detects 
+                potential security threats on a website.
+              </p>
+              <p className="text-lg text-zinc-300 leading-relaxed">
+                This security issue not only affected the site's visibility in search results but also posed 
+                a risk to user data and the overall integrity of the booking system.
+              </p>
+            </div>
+
+            <div className="mb-8">
+              <h3 className="text-xl font-semibold mb-4 text-white">The Solution</h3>
+              <p className="text-lg text-zinc-300 leading-relaxed mb-4">
+                After several attempts to fix the PHP security vulnerabilities, I decided to completely 
+                rebuild the booking system using a more secure and modern approach:
+              </p>
+              <ul className="text-lg text-zinc-300 leading-relaxed list-disc list-inside space-y-2 mb-4">
+                <li>Migrated from PHP to React-based solution</li>
+                <li>Integrated Resend email service for secure email handling</li>
+                <li>Implemented modern security best practices</li>
+                <li>Eliminated the vulnerabilities that caused the Google Search Console ban</li>
+              </ul>
+              <p className="text-lg text-zinc-300 leading-relaxed">
+                This migration not only resolved the security issues but also improved the overall 
+                performance and maintainability of the booking system, ensuring a safer experience 
+                for users and better compliance with modern web security standards.
+              </p>
             </div>
           </motion.div>
         </div>

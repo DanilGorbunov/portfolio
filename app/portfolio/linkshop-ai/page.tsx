@@ -34,7 +34,7 @@ export default function LinkShopAIProjectPage() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 text-white">
               LinkShop AI
             </h1>
             <p className="text-xl text-zinc-300 mb-4 max-w-3xl mx-auto">
@@ -45,22 +45,22 @@ export default function LinkShopAIProjectPage() {
             </p>
             
             <div className="flex flex-wrap justify-center gap-4 mb-8">
-              <Badge className="bg-blue-500/20 text-blue-300 border-blue-500/30">
+              <Badge className="bg-zinc-800 text-white border-zinc-700">
                 AI
               </Badge>
-              <Badge className="bg-green-500/20 text-green-300 border-green-500/30">
+              <Badge className="bg-zinc-800 text-white border-zinc-700">
                 E-Commerce
               </Badge>
-              <Badge className="bg-purple-500/20 text-purple-300 border-purple-500/30">
+              <Badge className="bg-zinc-800 text-white border-zinc-700">
                 SaaS
               </Badge>
-              <Badge className="bg-orange-500/20 text-orange-300 border-orange-500/30">
+              <Badge className="bg-zinc-800 text-white border-zinc-700">
                 Linktree Alternative
               </Badge>
-              <Badge className="bg-red-500/20 text-red-300 border-red-500/30">
+              <Badge className="bg-zinc-800 text-white border-zinc-700">
                 🇺🇦 Ukrainian Market
               </Badge>
-              <Badge className="bg-cyan-500/20 text-cyan-300 border-cyan-500/30">
+              <Badge className="bg-zinc-800 text-white border-zinc-700">
                 Creator Economy
               </Badge>
             </div>
@@ -138,7 +138,7 @@ export default function LinkShopAIProjectPage() {
             <h2 className="text-3xl font-bold mb-8">The Challenge</h2>
             
             <div className="mb-8">
-              <h3 className="text-xl font-semibold mb-4 text-blue-400">Personal frustration and market pain:</h3>
+              <h3 className="text-xl font-semibold mb-4 text-white">Personal frustration and market pain:</h3>
               <ul className="text-lg text-zinc-300 leading-relaxed list-disc list-inside space-y-2">
                 <li><strong>Fragmentation of tools:</strong> content creators use Linktree for links, Shopify for the store, and various chatbots for support</li>
                 <li><strong>High fees and complexity:</strong> Shopify + payment processing + separate AI tools = $100+ per month + complicated setup</li>
@@ -147,8 +147,8 @@ export default function LinkShopAIProjectPage() {
             </div>
 
             <div className="mb-8">
-              <h3 className="text-xl font-semibold mb-4 text-red-400">🇺🇦 Critical Problem for Ukraine:</h3>
-              <h4 className="text-lg font-semibold mb-3 text-red-300">Loss of physical stores due to war and economic hardship</h4>
+              <h3 className="text-xl font-semibold mb-4 text-white">🇺🇦 Critical Problem for Ukraine:</h3>
+              <h4 className="text-lg font-semibold mb-3 text-zinc-400">Loss of physical stores due to war and economic hardship</h4>
               <ul className="text-lg text-zinc-300 leading-relaxed list-disc list-inside space-y-2">
                 <li><strong>War destruction:</strong> thousands of entrepreneurs lost their physical points of sale but kept product inventories</li>
                 <li><strong>Economic issues:</strong> store closures due to inability to pay rent, yet warehouses still hold goods</li>
@@ -158,7 +158,7 @@ export default function LinkShopAIProjectPage() {
             </div>
 
             <div className="bg-zinc-800/50 p-6 rounded-xl">
-              <h3 className="text-lg font-semibold mb-3 text-yellow-400">Real context:</h3>
+              <h3 className="text-lg font-semibold mb-3 text-white">Real context:</h3>
               <p className="text-zinc-300 mb-4">Observing Ukrainian entrepreneurs and international influencers, two critical problems emerged:</p>
               <ul className="text-zinc-300 leading-relaxed list-disc list-inside space-y-1">
                 <li><strong>For the creator economy:</strong> 90% use Linktree only for links, missing the potential of direct sales</li>
@@ -184,55 +184,55 @@ export default function LinkShopAIProjectPage() {
             </p>
             
             <div className="mb-8">
-              <h3 className="text-xl font-semibold mb-4 text-green-400">🇺🇦 Specialized Features for Ukrainian Market:</h3>
+              <h3 className="text-xl font-semibold mb-4 text-white">🇺🇦 Specialized Features for Ukrainian Market:</h3>
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="bg-zinc-800/50 p-6 rounded-xl">
-                  <h4 className="text-lg font-semibold mb-3 text-blue-400">"Clearance Mode"</h4>
+                  <h4 className="text-lg font-semibold mb-3 text-white">"Clearance Mode"</h4>
                   <p className="text-zinc-300">Fast bulk upload of discounted products to liquidate stock quickly</p>
                 </div>
                 
                 <div className="bg-zinc-800/50 p-6 rounded-xl">
-                  <h4 className="text-lg font-semibold mb-3 text-yellow-400">UAH Payments</h4>
+                  <h4 className="text-lg font-semibold mb-3 text-white">UAH Payments</h4>
                   <p className="text-zinc-300">Full support for Ukrainian hryvnia with local banks and MonoBank API</p>
                 </div>
                 
                 <div className="bg-zinc-800/50 p-6 rounded-xl">
-                  <h4 className="text-lg font-semibold mb-3 text-purple-400">Express Setup</h4>
+                  <h4 className="text-lg font-semibold mb-3 text-white">Express Setup</h4>
                   <p className="text-zinc-300">Onboarding in 5 minutes with minimal data requirements</p>
                 </div>
                 
                 <div className="bg-zinc-800/50 p-6 rounded-xl">
-                  <h4 className="text-lg font-semibold mb-3 text-orange-400">AI Translator</h4>
+                  <h4 className="text-lg font-semibold mb-3 text-white">AI Translator</h4>
                   <p className="text-zinc-300">Automatic translation into Ukrainian for international sales</p>
                 </div>
                 
                 <div className="bg-zinc-800/50 p-6 rounded-xl">
-                  <h4 className="text-lg font-semibold mb-3 text-red-400">Free Plan</h4>
+                  <h4 className="text-lg font-semibold mb-3 text-white">Free Plan</h4>
                   <p className="text-zinc-300">Extended 6-month trial for businesses affected by the war</p>
                 </div>
               </div>
             </div>
 
             <div className="mb-8">
-              <h3 className="text-xl font-semibold mb-4 text-blue-400">AI-Powered Features:</h3>
+              <h3 className="text-xl font-semibold mb-4 text-white">AI-Powered Features:</h3>
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="bg-zinc-800/50 p-6 rounded-xl">
-                  <h4 className="text-lg font-semibold mb-3 text-green-400">AI Business Assistant</h4>
+                  <h4 className="text-lg font-semibold mb-3 text-white">AI Business Assistant</h4>
                   <p className="text-zinc-300">Claude API integration for pricing analysis, inventory management, and automated business insights</p>
                 </div>
                 
                 <div className="bg-zinc-800/50 p-6 rounded-xl">
-                  <h4 className="text-lg font-semibold mb-3 text-purple-400">Real-time Database</h4>
+                  <h4 className="text-lg font-semibold mb-3 text-white">Real-time Database</h4>
                   <p className="text-zinc-300">Convex database with live synchronization and automatic schema generation</p>
                 </div>
                 
                 <div className="bg-zinc-800/50 p-6 rounded-xl">
-                  <h4 className="text-lg font-semibold mb-3 text-orange-400">Professional UI</h4>
+                  <h4 className="text-lg font-semibold mb-3 text-white">Professional UI</h4>
                   <p className="text-zinc-300">Instagram-style design with responsive layout and clean UX</p>
                 </div>
                 
                 <div className="bg-zinc-800/50 p-6 rounded-xl">
-                  <h4 className="text-lg font-semibold mb-3 text-cyan-400">Creator Economy Tools</h4>
+                  <h4 className="text-lg font-semibold mb-3 text-white">Creator Economy Tools</h4>
                   <p className="text-zinc-300">Linktree alternative with integrated e-commerce and monetization features</p>
                 </div>
               </div>
@@ -252,7 +252,7 @@ export default function LinkShopAIProjectPage() {
             <h2 className="text-3xl font-bold mb-8">Technology Stack</h2>
             
             <div className="mb-8">
-              <h3 className="text-xl font-semibold mb-4 text-blue-400">Development Tools:</h3>
+              <h3 className="text-xl font-semibold mb-4 text-white">Development Tools:</h3>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
                 {[
                   "React + Next.js",
@@ -272,7 +272,7 @@ export default function LinkShopAIProjectPage() {
             </div>
 
             <div className="mb-8">
-              <h3 className="text-xl font-semibold mb-4 text-green-400">Backend & Database:</h3>
+              <h3 className="text-xl font-semibold mb-4 text-white">Backend & Database:</h3>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
                 {[
                   "Convex Database",
@@ -292,7 +292,7 @@ export default function LinkShopAIProjectPage() {
             </div>
 
             <div className="mb-8">
-              <h3 className="text-xl font-semibold mb-4 text-purple-400">AI & Automation:</h3>
+              <h3 className="text-xl font-semibold mb-4 text-white">AI & Automation:</h3>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                 {[
                   "Claude API",
@@ -367,7 +367,7 @@ export default function LinkShopAIProjectPage() {
             <h2 className="text-3xl font-bold mb-8">Results & Impact</h2>
             
             <div className="mb-8">
-              <h3 className="text-xl font-semibold mb-4 text-green-400">✅ What Went Well:</h3>
+              <h3 className="text-xl font-semibold mb-4 text-white">✅ What Went Well:</h3>
               <ul className="text-lg text-zinc-300 leading-relaxed list-disc list-inside space-y-2">
                 <li><strong>Functional MVP:</strong> fully working product with real product data (Nike sneakers, pricing, inventory)</li>
                 <li><strong>AI Business Intelligence:</strong> Claude API successfully integrated for pricing analysis and automated insights</li>
@@ -381,7 +381,7 @@ export default function LinkShopAIProjectPage() {
             </div>
 
             <div className="mb-8">
-              <h3 className="text-xl font-semibold mb-4 text-blue-400">🚀 Current Status:</h3>
+              <h3 className="text-xl font-semibold mb-4 text-white">🚀 Current Status:</h3>
               <div className="bg-zinc-800/50 p-6 rounded-xl">
                 <ul className="text-lg text-zinc-300 leading-relaxed list-disc list-inside space-y-2">
                   <li><strong>Local Development:</strong> fully functional version works perfectly on localhost</li>
@@ -396,7 +396,7 @@ export default function LinkShopAIProjectPage() {
             </div>
 
             <div className="mb-8">
-              <h3 className="text-xl font-semibold mb-4 text-yellow-400">⚠️ Production Deployment Issues:</h3>
+              <h3 className="text-xl font-semibold mb-4 text-white">⚠️ Production Deployment Issues:</h3>
               <ul className="text-lg text-zinc-300 leading-relaxed list-disc list-inside space-y-2">
                 <li><strong>Vercel Deployment:</strong> critical Next.js + Clerk version issue, now resolved</li>
                 <li><strong>GitHub Repository:</strong> code available, production deploy now possible</li>
@@ -406,7 +406,7 @@ export default function LinkShopAIProjectPage() {
             </div>
 
             <div className="bg-zinc-800/50 p-6 rounded-xl">
-              <h3 className="text-lg font-semibold mb-3 text-purple-400">🎥 Available Evidence:</h3>
+              <h3 className="text-lg font-semibold mb-3 text-white">🎥 Available Evidence:</h3>
               <ul className="text-zinc-300 leading-relaxed list-disc list-inside space-y-1">
                 <li>Working product catalog with real Nike sneakers</li>
                 <li>AI Assistant with live pricing analysis</li>
@@ -434,7 +434,7 @@ export default function LinkShopAIProjectPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
                 size="lg"
-                className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700"
+                className="bg-white text-black hover:bg-zinc-200"
                 onClick={() => window.open('https://linkshop-3.vercel.app', '_blank')}
               >
                 <ExternalLink className="mr-2 h-4 w-4" />

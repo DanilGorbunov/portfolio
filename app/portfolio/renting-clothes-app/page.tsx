@@ -193,7 +193,7 @@ export default function RentingClothesAppProject() {
               </h3>
               <ul className="space-y-3 text-zinc-400">
                 <li className="flex items-start">
-                  <Check className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
+                  <Check className="h-5 w-5 text-white mr-2 flex-shrink-0 mt-0.5" />
                   <div>
                     <span className="font-medium text-white">
                       50% DAU Increase
@@ -202,7 +202,7 @@ export default function RentingClothesAppProject() {
                   </div>
                 </li>
                 <li className="flex items-start">
-                  <Check className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
+                  <Check className="h-5 w-5 text-white mr-2 flex-shrink-0 mt-0.5" />
                   <div>
                     <span className="font-medium text-white">
                       70% Retention Rate
@@ -211,7 +211,7 @@ export default function RentingClothesAppProject() {
                   </div>
                 </li>
                 <li className="flex items-start">
-                  <Check className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
+                  <Check className="h-5 w-5 text-white mr-2 flex-shrink-0 mt-0.5" />
                   <div>
                     <span className="font-medium text-white">
                       4.7/5 User Rating
@@ -220,7 +220,7 @@ export default function RentingClothesAppProject() {
                   </div>
                 </li>
                 <li className="flex items-start">
-                  <Check className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
+                  <Check className="h-5 w-5 text-white mr-2 flex-shrink-0 mt-0.5" />
                   <div>
                     <span className="font-medium text-white">
                       75% Rental Success

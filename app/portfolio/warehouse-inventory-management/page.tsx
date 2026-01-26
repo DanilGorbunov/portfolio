@@ -306,7 +306,7 @@ export default function WarehouseInventoryProject() {
               </h3>
               <ul className="space-y-3 text-zinc-400">
                 <li className="flex items-start">
-                  <Check className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
+                  <Check className="h-5 w-5 text-white mr-2 flex-shrink-0 mt-0.5" />
                   <div>
                     <span className="font-medium text-white">
                       Interactive 3D Visualization
@@ -318,7 +318,7 @@ export default function WarehouseInventoryProject() {
                   </div>
                 </li>
                 <li className="flex items-start">
-                  <Check className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
+                  <Check className="h-5 w-5 text-white mr-2 flex-shrink-0 mt-0.5" />
                   <div>
                     <span className="font-medium text-white">
                       Mobile Application
@@ -330,7 +330,7 @@ export default function WarehouseInventoryProject() {
                   </div>
                 </li>
                 <li className="flex items-start">
-                  <Check className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
+                  <Check className="h-5 w-5 text-white mr-2 flex-shrink-0 mt-0.5" />
                   <div>
                     <span className="font-medium text-white">
                       Real-time Analytics
@@ -342,7 +342,7 @@ export default function WarehouseInventoryProject() {
                   </div>
                 </li>
                 <li className="flex items-start">
-                  <Check className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
+                  <Check className="h-5 w-5 text-white mr-2 flex-shrink-0 mt-0.5" />
                   <div>
                     <span className="font-medium text-white">
                       Optimized Picking Routes

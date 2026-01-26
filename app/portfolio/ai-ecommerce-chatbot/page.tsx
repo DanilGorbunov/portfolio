@@ -207,21 +207,21 @@ export default function AIEcommerceProject() {
               </p>
               <ul className="space-y-3 text-zinc-400">
                 <li className="flex items-start">
-                  <X className="h-5 w-5 text-red-500 mr-2 flex-shrink-0 mt-0.5" />
+                  <X className="h-5 w-5 text-white mr-2 flex-shrink-0 mt-0.5" />
                   <span>
                     Manually adding and updating products requires multiple
                     steps.
                   </span>
                 </li>
                 <li className="flex items-start">
-                  <X className="h-5 w-5 text-red-500 mr-2 flex-shrink-0 mt-0.5" />
+                  <X className="h-5 w-5 text-white mr-2 flex-shrink-0 mt-0.5" />
                   <span>
                     Business owners struggle to analyze sales trends in real
                     time.
                   </span>
                 </li>
                 <li className="flex items-start">
-                  <X className="h-5 w-5 text-red-500 mr-2 flex-shrink-0 mt-0.5" />
+                  <X className="h-5 w-5 text-white mr-2 flex-shrink-0 mt-0.5" />
                   <span>
                     Customers drop off when sales rely only on traditional web
                     interfaces.
@@ -235,7 +235,7 @@ export default function AIEcommerceProject() {
               </h3>
               <ul className="space-y-3 text-zinc-400">
                 <li className="flex items-start">
-                  <Check className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
+                  <Check className="h-5 w-5 text-white mr-2 flex-shrink-0 mt-0.5" />
                   <div>
                     <span className="font-medium text-white">
                       AI-Powered Chatbot
@@ -247,7 +247,7 @@ export default function AIEcommerceProject() {
                   </div>
                 </li>
                 <li className="flex items-start">
-                  <Check className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
+                  <Check className="h-5 w-5 text-white mr-2 flex-shrink-0 mt-0.5" />
                   <div>
                     <span className="font-medium text-white">
                       Real-Time Inventory & Sales Insights
@@ -259,7 +259,7 @@ export default function AIEcommerceProject() {
                   </div>
                 </li>
                 <li className="flex items-start">
-                  <Check className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
+                  <Check className="h-5 w-5 text-white mr-2 flex-shrink-0 mt-0.5" />
                   <div>
                     <span className="font-medium text-white">
                       Full E-commerce Integration
@@ -268,7 +268,7 @@ export default function AIEcommerceProject() {
                   </div>
                 </li>
                 <li className="flex items-start">
-                  <Check className="h-5 w-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
+                  <Check className="h-5 w-5 text-white mr-2 flex-shrink-0 mt-0.5" />
                   <div>
                     <span className="font-medium text-white">
                       Conversational Commerce
@@ -450,67 +450,67 @@ export default function AIEcommerceProject() {
                     <tr className="border-b border-zinc-800">
                       <td className="py-3 px-4 text-white">NeroType</td>
                       <td className="py-3 px-4 text-center">
-                        <Check className="h-5 w-5 text-green-500 mx-auto" />
+                        <Check className="h-5 w-5 text-white mx-auto" />
                       </td>
                       <td className="py-3 px-4 text-center">
                         WooCommerce, Shopify
                       </td>
                       <td className="py-3 px-4 text-center">
-                        <Check className="h-5 w-5 text-green-500 mx-auto" />
+                        <Check className="h-5 w-5 text-white mx-auto" />
                       </td>
                       <td className="py-3 px-4 text-center">
-                        <Check className="h-5 w-5 text-green-500 mx-auto" />
+                        <Check className="h-5 w-5 text-white mx-auto" />
                       </td>
                       <td className="py-3 px-4 text-center">
-                        <Check className="h-5 w-5 text-green-500 mx-auto" />
+                        <Check className="h-5 w-5 text-white mx-auto" />
                       </td>
                     </tr>
                     <tr className="border-b border-zinc-800">
                       <td className="py-3 px-4 text-white">Tidio</td>
                       <td className="py-3 px-4 text-center">
-                        <Check className="h-5 w-5 text-green-500 mx-auto" />
+                        <Check className="h-5 w-5 text-white mx-auto" />
                       </td>
                       <td className="py-3 px-4 text-center">Shopify</td>
                       <td className="py-3 px-4 text-center">
-                        <Check className="h-5 w-5 text-green-500 mx-auto" />
+                        <Check className="h-5 w-5 text-white mx-auto" />
                       </td>
                       <td className="py-3 px-4 text-center">
-                        <X className="h-5 w-5 text-red-500 mx-auto" />
+                        <X className="h-5 w-5 text-white mx-auto" />
                       </td>
                       <td className="py-3 px-4 text-center">
-                        <X className="h-5 w-5 text-red-500 mx-auto" />
+                        <X className="h-5 w-5 text-white mx-auto" />
                       </td>
                     </tr>
                     <tr className="border-b border-zinc-800">
                       <td className="py-3 px-4 text-white">ZipChat</td>
                       <td className="py-3 px-4 text-center">
-                        <Check className="h-5 w-5 text-green-500 mx-auto" />
+                        <Check className="h-5 w-5 text-white mx-auto" />
                       </td>
                       <td className="py-3 px-4 text-center">Shopify</td>
                       <td className="py-3 px-4 text-center">
-                        <Check className="h-5 w-5 text-green-500 mx-auto" />
+                        <Check className="h-5 w-5 text-white mx-auto" />
                       </td>
                       <td className="py-3 px-4 text-center">
-                        <X className="h-5 w-5 text-red-500 mx-auto" />
+                        <X className="h-5 w-5 text-white mx-auto" />
                       </td>
                       <td className="py-3 px-4 text-center">
-                        <X className="h-5 w-5 text-red-500 mx-auto" />
+                        <X className="h-5 w-5 text-white mx-auto" />
                       </td>
                     </tr>
                     <tr>
                       <td className="py-3 px-4 text-white">ManyChat</td>
                       <td className="py-3 px-4 text-center">
-                        <Check className="h-5 w-5 text-green-500 mx-auto" />
+                        <Check className="h-5 w-5 text-white mx-auto" />
                       </td>
                       <td className="py-3 px-4 text-center">Shopify, Zapier</td>
                       <td className="py-3 px-4 text-center">
-                        <X className="h-5 w-5 text-red-500 mx-auto" />
+                        <X className="h-5 w-5 text-white mx-auto" />
                       </td>
                       <td className="py-3 px-4 text-center">
-                        <X className="h-5 w-5 text-red-500 mx-auto" />
+                        <X className="h-5 w-5 text-white mx-auto" />
                       </td>
                       <td className="py-3 px-4 text-center">
-                        <X className="h-5 w-5 text-red-500 mx-auto" />
+                        <X className="h-5 w-5 text-white mx-auto" />
                       </td>
                     </tr>
                   </tbody>

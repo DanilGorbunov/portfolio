@@ -3,7 +3,6 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import {
@@ -70,22 +69,6 @@ export default function AboutPage() {
   return (
     <div className="min-h-screen bg-black pt-20">
       <div className="container mx-auto px-6 max-w-7xl">
-        {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-16"
-        >
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            About <span className="text-primary">Me</span>
-          </h1>
-          <p className="text-xl text-zinc-400 max-w-3xl mx-auto">
-            Passionate about creating exceptional digital experiences through design, 
-            technology, and AI innovation.
-          </p>
-        </motion.div>
-
         {/* About Section */}
         <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">
           <motion.div
@@ -125,7 +108,7 @@ export default function AboutPage() {
             <div className="flex flex-col sm:flex-row gap-4">
               <Button
                 size="lg"
-                className="bg-primary hover:bg-primary/90 text-black px-8 py-4"
+                className="bg-black hover:bg-zinc-900 text-white border border-zinc-700 px-8 py-4"
                 onClick={() => {
                   const link = document.createElement('a');
                   link.href = '/Resume_Product_Designer.pdf';
@@ -135,18 +118,9 @@ export default function AboutPage() {
                   document.body.removeChild(link);
                 }}
               >
-                <Download className="mr-2 h-5 w-5" />
+                <Download className="mr-2 h-5 w-5 text-white" />
                 Download CV
               </Button>
-              <Link href="/contact" prefetch={false}>
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="border-zinc-700 text-white hover:bg-zinc-800 px-8 py-4"
-                >
-                  Get in Touch
-                </Button>
-              </Link>
             </div>
           </motion.div>
 

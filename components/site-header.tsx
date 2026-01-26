@@ -2,7 +2,7 @@
 
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-import { Frame, Menu } from "lucide-react"
+import { Menu } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger, SheetClose } from "@/components/ui/sheet"
 import { useState } from "react"
@@ -99,7 +99,15 @@ export function SiteHeader() {
         {/* Centered Content: Logo and Desktop Menu */}
         <div className="flex items-center gap-8">
           <Link href="/" className="flex items-center gap-2">
-            <Frame className="h-6 w-6 text-primary" />
+            <svg 
+              className="h-6 w-6" 
+              viewBox="0 0 24 16" 
+              fill="none" 
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect width="24" height="8" fill="#0057B7" />
+              <rect y="8" width="24" height="8" fill="#FFD700" />
+            </svg>
             <span className="font-bold text-white">Danil Gorbunov</span>
           </Link>
           {/* Desktop Menu - Only visible on medium screens and up */}

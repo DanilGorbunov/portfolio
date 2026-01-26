@@ -59,14 +59,14 @@ export const projects: Project[] = [
     year: "2025",
     client: "Tesla VIP Trip",
     role: "AI Full-Stack Web Developer & Designer",
-    tags: ["AI-Assisted Development", "WordPress", "Lovable.dev", "Full-Stack", "PHP", "E-Commerce", "Booking System"],
+    tags: ["AI-Assisted Development", "Lovable.dev", "Full-Stack", "E-Commerce", "Booking System"],
     content: {
       overview:
-        "Tesla VIP Trip is a premium electric vehicle transfer service operating in Vienna and Bratislava. The project showcases innovative AI-assisted development using Lovable.dev for rapid prototyping, followed by conversion to a production-ready WordPress site with custom PHP booking system.",
+        "Tesla VIP Trip is a premium electric vehicle transfer service operating in Vienna and Bratislava. The project showcases innovative AI-assisted development using Lovable.dev for rapid prototyping, followed by conversion to a production-ready website with custom booking system.",
       challenge:
         "Extremely tight timeline of 5 days to create a complete website from concept to production. The challenge was to deliver a premium, luxury brand experience that reflects Tesla's eco-friendly values while providing seamless online booking functionality for 6 core services across multiple languages (EN, DE, RU, SK).",
       solution:
-        "Implemented a revolutionary 5-day development process: Days 1-2 used Lovable.dev for AI-assisted design generation, Day 3 converted React prototype to WordPress deployment, Day 4 integrated Elementor for client editing capabilities, and Day 5 built complete PHP booking system with dual email notifications. The approach reduced development time from 2 weeks to 5 days while maintaining professional quality.",
+        "Implemented a revolutionary 5-day development process: Days 1-2 used Lovable.dev for AI-assisted design generation, Day 3 converted React prototype to deployment, Day 4 integrated client editing capabilities, and Day 5 built complete booking system with React and Resend email service. The approach reduced development time from 2 weeks to 5 days while maintaining professional quality.",
       outcome:
         "Successfully delivered a fully functional website with dark elegant theme, gold accent colors, 6 detailed service pages, online booking system with admin panel, responsive design, and multilingual support. The innovative AI-assisted approach demonstrates how modern developers can leverage AI tools to dramatically accelerate development while maintaining quality standards.",
     },
