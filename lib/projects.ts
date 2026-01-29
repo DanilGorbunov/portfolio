@@ -109,7 +109,7 @@ export const projects: Project[] = [
   {
     id: 8,
     slug: "mriacrm-crm-system",
-    title: "MRIACRM SYSTEM (AI + Classic Figma Design)",
+    title: "MRIACRM SYSTEM (Figma, AI, CRM)",
     description:
       "Comprehensive CRM platform streamlining business operations and customer management",
     thumbnail: "/images/mriacrm_cover.jpg",

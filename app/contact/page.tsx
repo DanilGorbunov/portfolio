@@ -62,19 +62,16 @@ export default function ContactPage() {
 
 
   return (
-    <div className="min-h-screen bg-black pt-20">
-      <div className="container mx-auto px-6 max-w-7xl">
+    <div className="min-h-screen bg-[#0A0A0A] pt-32">
+      <div className="container mx-auto px-6 max-w-4xl">
         {/* Header */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.4, ease: "easeOut" }}
           className="text-center mb-16"
         >
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Get in <span className="text-primary">Touch</span>
-          </h1>
-          <p className="text-xl text-zinc-400 max-w-3xl mx-auto">
+          <p className="text-lg text-[#A3A3A3] max-w-2xl mx-auto font-light leading-relaxed">
             Ready to start your next project? Let's discuss how we can bring your ideas to life 
             with exceptional design and user experience.
           </p>
@@ -83,13 +80,11 @@ export default function ContactPage() {
         <div className="max-w-4xl mx-auto">
           {/* Contact Information */}
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="bg-zinc-900 rounded-2xl p-8"
+            transition={{ duration: 0.4, delay: 0.1, ease: "easeOut" }}
+            className="bg-[#171717] border border-[#262626] rounded p-8"
           >
-              <h2 className="text-2xl font-bold text-white mb-6">Contact Information</h2>
-              
               <div className="space-y-6 flex-1">
                 {contactInfo.map((contact, index) => (
                   <motion.div
@@ -99,18 +94,18 @@ export default function ContactPage() {
                     transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
                     className="flex items-center space-x-4"
                   >
-                    <div className="bg-zinc-800 p-3 rounded-lg">
-                      <contact.icon className="h-5 w-5 text-primary" />
+                    <div className="bg-[#262626] p-3 rounded">
+                      <contact.icon className="h-5 w-5 text-[#737373]" />
                     </div>
                     <div className="flex-1">
-                      <div className="text-sm text-zinc-400">{contact.label}</div>
+                      <div className="text-xs text-[#737373] font-light uppercase tracking-wider mb-1">{contact.label}</div>
                       <div className="flex items-center space-x-2">
                         {contact.href ? (
                           <a
                             href={contact.href}
                             target={contact.href.startsWith('http') ? '_blank' : undefined}
                             rel={contact.href.startsWith('http') ? 'noopener noreferrer' : undefined}
-                            className="text-white hover:text-primary transition-colors duration-200"
+                            className="text-[#E5E5E5] hover:text-[#F5F5F5] transition-colors duration-200 font-light"
                           >
                             {contact.value}
                             {contact.href.startsWith('http') && (
@@ -118,15 +113,15 @@ export default function ContactPage() {
                             )}
                           </a>
                         ) : (
-                          <span className="text-white">{contact.value}</span>
+                          <span className="text-[#E5E5E5] font-light">{contact.value}</span>
                         )}
                         {contact.label === "Email" && (
                           <button
                             onClick={copyEmail}
-                            className="text-zinc-400 hover:text-white transition-colors duration-200"
+                            className="text-[#737373] hover:text-[#A3A3A3] transition-colors duration-200"
                           >
                             {copiedEmail ? (
-                              <CheckCircle className="h-4 w-4 text-primary" />
+                              <CheckCircle className="h-4 w-4 text-[#E5E5E5]" />
                             ) : (
                               <Copy className="h-4 w-4" />
                             )}
@@ -138,12 +133,12 @@ export default function ContactPage() {
                 ))}
               </div>
 
-              <div className="mt-8 p-4 bg-zinc-800 rounded-lg">
-                <div className="flex items-center space-x-2 text-zinc-300 mb-2">
+              <div className="mt-8 p-4 bg-[#262626] rounded border border-[#171717]">
+                <div className="flex items-center space-x-2 text-[#A3A3A3] mb-2">
                   <MessageCircle className="h-4 w-4" />
-                  <span className="font-medium">Response Time</span>
+                  <span className="font-light">Response Time</span>
                 </div>
-                <p className="text-sm text-zinc-400">
+                <p className="text-sm text-[#737373] font-light">
                   I typically respond within 24 hours. For urgent projects, 
                   please mention it in your message.
                 </p>

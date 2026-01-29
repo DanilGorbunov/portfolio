@@ -77,16 +77,16 @@ export default function AboutPage() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="space-y-6"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-white">
-              Hi, I'm <span className="text-primary">Danil Gorbunov</span>
+            <h2 className="text-3xl md:text-4xl font-normal text-[#E5E5E5] mb-2 tracking-tight">
+              Hi, I'm <span className="text-[#E5E5E5]">Danil Gorbunov</span>
             </h2>
             
-            <div className="flex items-center text-zinc-400 mb-6">
+            <div className="flex items-center text-[#737373] mb-6 font-light">
               <MapPin className="h-5 w-5 mr-2" />
               <span>Based in Bratislava, Slovakia</span>
             </div>
 
-            <div className="space-y-4 text-zinc-300 leading-relaxed">
+            <div className="space-y-5 text-[#A3A3A3] leading-relaxed text-base font-light">
               <p>
                 With 12+ years of experience in product design and frontend development, 
                 I specialize in creating user-centered solutions that bridge the gap between 
@@ -101,14 +101,14 @@ export default function AboutPage() {
               <p>
                 I believe in the power of design thinking, user research, and iterative 
                 development to create products that not only look great but also deliver 
-                measurable business value.
+                <span className="text-[#E5E5E5] font-normal"> measurable business value</span>.
               </p>
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
               <Button
                 size="lg"
-                className="bg-black hover:bg-zinc-900 text-white border border-zinc-700 px-8 py-4"
+                className="bg-[#0A0A0A] hover:bg-[#171717] text-[#E5E5E5] border border-[#262626] px-8 py-4 font-normal transition-colors duration-200"
                 onClick={() => {
                   const link = document.createElement('a');
                   link.href = '/Resume_Product_Designer.pdf';
@@ -152,8 +152,8 @@ export default function AboutPage() {
           viewport={{ once: true }}
           className="mb-20"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-16 text-center">
-            Professional <span className="text-primary">Experience</span>
+          <h2 className="text-3xl md:text-4xl font-normal text-[#E5E5E5] mb-16 text-center tracking-tight">
+            Professional Experience
           </h2>
           
           {/* Mobile Version - Cards */}
@@ -165,40 +165,39 @@ export default function AboutPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-zinc-900/50 rounded-xl p-6 border border-zinc-800/50 hover:border-primary/30 transition-all duration-300"
+                className="bg-[#171717] rounded p-6 border border-[#262626] hover:border-[#404040] transition-all duration-200"
               >
                 <div className="flex flex-col mb-4">
-                  <h3 className="text-xl font-bold text-white mb-1">
+                  <h3 className="text-xl font-normal text-[#E5E5E5] mb-1">
                     {job.title}
                   </h3>
-                  <div className="text-primary font-medium mb-2">{job.company}</div>
-                  <div className="flex items-center text-zinc-400 text-sm">
+                  <div className="text-[#A3A3A3] font-light mb-2">{job.company}</div>
+                  <div className="flex items-center text-[#737373] text-sm font-light">
                     <Calendar className="h-4 w-4 mr-1" />
                     <span>{job.year}</span>
                   </div>
                 </div>
                 
-                <div className="flex items-center text-zinc-400 text-sm mb-4">
+                <div className="flex items-center text-[#737373] text-sm mb-4 font-light">
                   <MapPin className="h-4 w-4 mr-1" />
                   <span>{job.location}</span>
                 </div>
 
-                <p className="text-zinc-300 mb-6 leading-relaxed">
+                <p className="text-[#A3A3A3] mb-6 leading-relaxed text-sm font-light">
                   {job.description}
                 </p>
 
                 <div>
-                  <h4 className="text-sm font-semibold text-white mb-3 flex items-center">
-                    <span className="w-2 h-2 bg-primary rounded-full mr-2"></span>
+                  <h4 className="text-xs font-light text-[#737373] uppercase tracking-wider mb-3">
                     Key Achievements
                   </h4>
                   <ul className="space-y-2">
                     {job.achievements.map((achievement, achievementIndex) => (
                       <li
                         key={achievementIndex}
-                        className="text-zinc-400 text-sm flex items-start space-x-3"
+                        className="text-[#A3A3A3] text-sm flex items-start space-x-3 font-light"
                       >
-                        <span className="text-primary mt-1 text-lg">•</span>
+                        <span className="text-[#525252] mt-1 text-sm">•</span>
                         <span>{achievement}</span>
                       </li>
                     ))}
@@ -277,12 +276,12 @@ export default function AboutPage() {
                       transition={{ duration: 0.5, delay: index * 0.2 + 0.5 }}
                       viewport={{ once: true }}
                     >
-                      <h3 className="text-xl font-bold text-white mb-2 group-hover:text-primary transition-colors">
+                      <h3 className="text-xl font-normal text-[#E5E5E5] mb-2 transition-colors duration-200">
                         {job.title}
                       </h3>
-                      <div className="text-primary font-medium mb-3">{job.company}</div>
+                      <div className="text-[#A3A3A3] font-light mb-3">{job.company}</div>
                       
-                      <div className="flex items-center text-zinc-400 text-sm mb-4">
+                      <div className="flex items-center text-[#737373] text-sm mb-4 font-light">
                         <MapPin className="h-4 w-4 mr-1" />
                         <span>{job.location}</span>
                       </div>
@@ -294,7 +293,7 @@ export default function AboutPage() {
                       whileInView={{ opacity: 1 }}
                       transition={{ duration: 0.5, delay: index * 0.2 + 0.6 }}
                       viewport={{ once: true }}
-                      className="text-zinc-300 mb-6 leading-relaxed"
+                      className="text-[#A3A3A3] mb-6 leading-relaxed font-light"
                     >
                       {job.description}
                     </motion.p>
@@ -306,8 +305,7 @@ export default function AboutPage() {
                       transition={{ duration: 0.5, delay: index * 0.2 + 0.7 }}
                       viewport={{ once: true }}
                     >
-                      <h4 className="text-sm font-semibold text-white mb-3 flex items-center">
-                        <span className="w-2 h-2 bg-primary rounded-full mr-2"></span>
+                      <h4 className="text-xs font-light text-[#737373] uppercase tracking-wider mb-3">
                         Key Achievements
                       </h4>
                       <ul className="space-y-2">
@@ -316,18 +314,14 @@ export default function AboutPage() {
                             key={achievementIndex}
                             initial={{ opacity: 0, x: -10 }}
                             whileInView={{ opacity: 1, x: 0 }}
-                            transition={{ duration: 0.4, delay: index * 0.2 + 0.8 + achievementIndex * 0.1 }}
+                            transition={{ duration: 0.3, delay: index * 0.2 + 0.8 + achievementIndex * 0.05 }}
                             viewport={{ once: true }}
-                            whileHover={{ x: 5 }}
-                            className="text-zinc-400 text-sm flex items-start space-x-3 group/achievement"
+                            className="text-[#A3A3A3] text-sm flex items-start space-x-3 font-light"
                           >
-                            <motion.span
-                              whileHover={{ scale: 1.2, rotate: 90 }}
-                              className="text-primary mt-1 text-lg group-hover/achievement:text-white transition-colors"
-                            >
-                              →
-                            </motion.span>
-                            <span className="group-hover/achievement:text-zinc-300 transition-colors">
+                            <span className="text-[#525252] mt-1 text-sm">
+                              •
+                            </span>
+                            <span>
                               {achievement}
                             </span>
                           </motion.li>

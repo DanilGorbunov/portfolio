@@ -30,7 +30,7 @@ export default function RootLayout({
           disableTransitionOnChange
           forcedTheme="dark"
         >
-          <div className="relative flex min-h-screen flex-col bg-black">
+          <div className="relative flex min-h-screen flex-col bg-[#0A0A0A]">
             {/* <a href="#main-content" className="skip-link">
               Skip to main content
             </a> */}

@@ -23,8 +23,8 @@ export function SiteHeader() {
   }
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-black/95 backdrop-blur supports-[backdrop-filter]:bg-black/60">
-      <div className="container flex h-16 items-center justify-center relative">
+    <header className="sticky top-0 z-50 w-full bg-[#0A0A0A]/95 backdrop-blur supports-[backdrop-filter]:bg-[#0A0A0A]/80 border-b border-[#171717]">
+      <div className="container flex h-16 items-center justify-between relative">
         {/* Mobile Menu - Only visible on small screens */}
         <div className="md:hidden absolute right-0">
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
@@ -34,7 +34,7 @@ export function SiteHeader() {
                 <span className="sr-only">Toggle menu</span>
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="bg-zinc-900 border-zinc-800 [&>button]:hidden">
+            <SheetContent side="right" className="bg-[#0A0A0A] border-[#171717] [&>button]:hidden">
               {/* Custom close button without green border */}
               <button
                 onClick={() => setIsOpen(false)}
@@ -55,23 +55,23 @@ export function SiteHeader() {
                 <SheetClose asChild>
                   <Link 
                     href="/" 
-                    className={`text-lg font-medium transition-colors ${
+                    className={`text-lg font-normal transition-colors duration-200 ${
                       isActive("/") 
-                        ? "text-primary" 
-                        : "text-white hover:text-primary"
+                        ? "text-[#E5E5E5]" 
+                        : "text-[#A3A3A3] hover:text-[#E5E5E5]"
                     }`} 
                     onClick={handleLinkClick}
                   >
-                    Portfolio
+                    Cases
                   </Link>
                 </SheetClose>
                 <SheetClose asChild>
                   <Link 
                     href="/about" 
-                    className={`text-lg font-medium transition-colors ${
+                    className={`text-lg font-normal transition-colors duration-200 ${
                       isActive("/about") 
-                        ? "text-primary" 
-                        : "text-white hover:text-primary"
+                        ? "text-[#E5E5E5]" 
+                        : "text-[#A3A3A3] hover:text-[#E5E5E5]"
                     }`} 
                     onClick={handleLinkClick}
                   >
@@ -81,10 +81,10 @@ export function SiteHeader() {
                 <SheetClose asChild>
                   <Link 
                     href="/contact" 
-                    className={`text-lg font-medium transition-colors ${
+                    className={`text-lg font-normal transition-colors duration-200 ${
                       isActive("/contact") 
-                        ? "text-primary" 
-                        : "text-white hover:text-primary"
+                        ? "text-[#E5E5E5]" 
+                        : "text-[#A3A3A3] hover:text-[#E5E5E5]"
                     }`} 
                     onClick={handleLinkClick}
                   >
@@ -96,7 +96,7 @@ export function SiteHeader() {
           </Sheet>
         </div>
         
-        {/* Centered Content: Logo and Desktop Menu */}
+        {/* Left Side: Logo and Desktop Menu */}
         <div className="flex items-center gap-8">
           <Link href="/" className="flex items-center gap-2">
             <svg 
@@ -108,27 +108,27 @@ export function SiteHeader() {
               <rect width="24" height="8" fill="#0057B7" />
               <rect y="8" width="24" height="8" fill="#FFD700" />
             </svg>
-            <span className="font-bold text-white">Danil Gorbunov</span>
+            <span className="font-normal text-[#E5E5E5]">Danil Gorbunov</span>
           </Link>
           {/* Desktop Menu - Only visible on medium screens and up */}
           <nav className="hidden md:flex items-center gap-6" role="navigation" aria-label="Main navigation">
             <Link
               href="/"
-              className={`text-sm font-medium transition-colors ${
+              className={`text-sm font-normal transition-colors duration-200 ${
                 isActive("/")
-                  ? "text-primary"
-                  : "text-zinc-400 hover:text-white"
+                  ? "text-[#E5E5E5]"
+                  : "text-[#737373] hover:text-[#A3A3A3]"
               }`}
               aria-current={isActive("/") ? "page" : undefined}
             >
-              Portfolio
+              Cases
             </Link>
             <Link
               href="/about"
-              className={`text-sm font-medium transition-colors ${
+              className={`text-sm font-normal transition-colors duration-200 ${
                 isActive("/about")
-                  ? "text-primary"
-                  : "text-zinc-400 hover:text-white"
+                  ? "text-[#E5E5E5]"
+                  : "text-[#737373] hover:text-[#A3A3A3]"
               }`}
               aria-current={isActive("/about") ? "page" : undefined}
             >
@@ -136,10 +136,10 @@ export function SiteHeader() {
             </Link>
             <Link
               href="/contact"
-              className={`text-sm font-medium transition-colors ${
+              className={`text-sm font-normal transition-colors duration-200 ${
                 isActive("/contact")
-                  ? "text-primary"
-                  : "text-zinc-400 hover:text-white"
+                  ? "text-[#E5E5E5]"
+                  : "text-[#737373] hover:text-[#A3A3A3]"
               }`}
               aria-current={isActive("/contact") ? "page" : undefined}
             >
