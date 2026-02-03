@@ -3,25 +3,25 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
-import { Separator } from "@/components/ui/separator";
 import { motion } from "framer-motion";
-import { ArrowLeft, ExternalLink, Calendar, User, Building2, Target, Zap, DollarSign, Users, Phone, Brain, Database, Globe, Code } from "lucide-react";
+import { ArrowLeft, ExternalLink, Calendar, User, Building2, Target, Zap, DollarSign, Users, Phone, Brain, Database, Globe, Code, CheckCircle2, XCircle, TrendingUp } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { SafeImage } from "@/components/safe-image";
 
 export default function FonitixAIProjectPage() {
   return (
-    <div className="min-h-screen bg-black text-white">
+    <div className="min-h-screen bg-[#0A0A0A] text-[#E5E5E5]">
       {/* Sticky Back Button */}
-      <div className="sticky top-16 z-50 bg-black/80 backdrop-blur-sm border-b border-zinc-800">
+      <div className="sticky top-16 z-50 bg-[#0A0A0A]/95 backdrop-blur-sm border-b border-[#171717]">
         <div className="container mx-auto px-6 py-4">
           <Link href="/" prefetch={false}>
             <Button
               variant="ghost"
-              className="text-white hover:bg-zinc-800"
+              className="text-[#E5E5E5] hover:bg-[#171717]"
             >
               <ArrowLeft className="mr-2 h-4 w-4" />
-              Back to Portfolio
+              Back to Cases
             </Button>
           </Link>
         </div>
@@ -29,67 +29,65 @@ export default function FonitixAIProjectPage() {
 
       {/* Hero Section */}
       <section className="py-12">
-        <div className="container mx-auto px-6 max-w-6xl">
+        <div className="container mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-16"
+            className="mb-16"
           >
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 text-white">
-              Fonitix AI
+            <h1 className="text-4xl md:text-5xl font-normal text-[#E5E5E5] mb-6 tracking-tight">
+              # Fonitix AI
             </h1>
-            <p className="text-xl text-zinc-300 mb-4 max-w-3xl mx-auto">
-              AI-powered voice agent platform for restaurants - automated phone ordering system with real-time menu management
+            <p className="text-xl md:text-2xl text-[#A3A3A3] mb-4 font-light max-w-3xl">
+              AI voice agents that answer restaurant calls 24/7 - replacing $3,000/month operators with $249/month automation
             </p>
-            <p className="text-lg text-zinc-400 mb-8 max-w-4xl mx-auto">
-              SaaS solution that transforms restaurants' phone operations with intelligent voice assistants, reducing costs by 87% while improving customer experience
+            <p className="text-base md:text-lg text-[#737373] mb-8 font-light max-w-3xl leading-relaxed">
+              Intelligent phone ordering system with real-time menu management, POS integration, and comprehensive analytics. Built to capture every call and eliminate labor costs.
             </p>
             
-            <div className="flex flex-wrap justify-center gap-3 mb-8">
-              <Badge variant="secondary" className="bg-zinc-800 text-white">
-                <Brain className="w-3 h-3 mr-1" />
-                AI Voice Technology
+            <div className="flex flex-wrap gap-3 mb-8">
+              <Badge variant="secondary" className="bg-[#171717] text-[#A3A3A3] border border-[#262626] font-normal">
+                🤖 AI Voice Technology
               </Badge>
-              <Badge variant="secondary" className="bg-zinc-800 text-white">
-                <Users className="w-3 h-3 mr-1" />
-                SaaS Platform
+              <Badge variant="secondary" className="bg-[#171717] text-[#A3A3A3] border border-[#262626] font-normal">
+                💼 SaaS Platform
               </Badge>
-              <Badge variant="secondary" className="bg-zinc-800 text-white">
-                <Code className="w-3 h-3 mr-1" />
-                Next.js & TypeScript
+              <Badge variant="secondary" className="bg-[#171717] text-[#A3A3A3] border border-[#262626] font-normal">
+                ⚡ Next.js & TypeScript
               </Badge>
-              <Badge variant="secondary" className="bg-zinc-800 text-white">
-                <Database className="w-3 h-3 mr-1" />
-                Real-time Database
+              <Badge variant="secondary" className="bg-[#171717] text-[#A3A3A3] border border-[#262626] font-normal">
+                🔄 Real-time Processing
               </Badge>
             </div>
 
-            <div className="flex flex-wrap justify-center gap-6 text-sm text-zinc-400">
+            <div className="flex flex-wrap gap-6 text-sm text-[#737373] font-light">
               <div className="flex items-center gap-2">
                 <Calendar className="w-4 h-4" />
-                <span>September - October 2025</span>
+                <span>September 2025 - Present</span>
               </div>
               <div className="flex items-center gap-2">
                 <User className="w-4 h-4" />
-                <span>Full-Stack Developer & Product Designer</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Building2 className="w-4 h-4" />
-                <span>Fonitix AI</span>
+                <span>Co-Founder & Product Designer / Full-Stack Developer</span>
               </div>
             </div>
           </motion.div>
+        </div>
+      </section>
 
+      {/* Hero Image */}
+      <section className="py-12 border-t border-[#171717]">
+        <div className="container mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="mb-16"
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="mb-12"
           >
-            <div className="relative rounded-2xl overflow-hidden">
-              <Image
-                src="/images/fonitix_cover.jpg"
+            <div className="relative rounded-lg overflow-hidden border border-[#262626]">
+              <SafeImage
+                src="/images/fonitix/fonitix_hero.png"
                 alt="Fonitix AI Dashboard"
                 width={1200}
                 height={800}
@@ -100,216 +98,331 @@ export default function FonitixAIProjectPage() {
         </div>
       </section>
 
-      {/* Project Overview */}
-      <section className="py-16 bg-zinc-900/50">
-        <div className="container mx-auto px-6 max-w-6xl">
+      {/* Visual Flow: Landing Comparison */}
+      <section className="py-12 border-t border-[#171717]">
+        <div className="container mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="grid md:grid-cols-2 gap-12 items-center"
+            viewport={{ once: true }}
+            className="mb-12"
           >
-            <div>
-              <h2 className="text-3xl font-bold mb-6 text-white">
-                Project Overview
-              </h2>
-              <p className="text-lg text-zinc-300 mb-6">
-                <strong>Fonitix AI</strong> (formerly Xanomo AI) is a revolutionary SaaS platform that allows restaurants to create AI-powered phone assistants for automated order taking. Built with modern technologies including Next.js, Convex, and OpenAI GPT-4.
-              </p>
-              <p className="text-zinc-400 mb-6">
-                The platform addresses critical pain points in the restaurant industry: missed calls during peak hours, high labor costs, human errors, and limited operating hours. Our solution reduces operational costs by 87% compared to existing alternatives.
-              </p>
-              <div className="grid grid-cols-2 gap-4">
-                <div className="text-center p-4 bg-zinc-800 rounded-lg">
-                  <div className="text-2xl font-bold text-white">87%</div>
-                  <div className="text-sm text-zinc-400">Cost Reduction</div>
-                </div>
-                <div className="text-center p-4 bg-zinc-800 rounded-lg">
-                  <div className="text-2xl font-bold text-white">$125K</div>
-                  <div className="text-sm text-zinc-400">Projected MRR</div>
-                </div>
+            <h2 className="text-2xl md:text-3xl font-normal text-[#E5E5E5] mb-4 tracking-tight">
+              The Problem: Market vs Without Fonitix
+            </h2>
+            <p className="text-[#A3A3A3] text-base font-light mb-8 max-w-3xl leading-relaxed">
+              American restaurants miss 30-40% of calls during peak hours. Each missed call represents $25-40 in lost revenue. A single restaurant loses $1,500-2,500/month from unanswered phones alone.
+            </p>
+            <div className="relative rounded-lg overflow-hidden border border-[#262626]">
+              <SafeImage
+                src="/images/fonitix/fonitix_compare.png"
+                alt="Market comparison: Traditional phone operators vs Fonitix AI"
+                width={1200}
+                height={800}
+                className="w-full h-auto object-contain"
+              />
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Pricing Section */}
+      <section className="py-12 border-t border-[#171717]">
+        <div className="container mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="mb-12"
+          >
+            <h2 className="text-2xl md:text-3xl font-normal text-[#E5E5E5] mb-4 tracking-tight">
+              Pricing & Service Plans
+            </h2>
+            <p className="text-[#A3A3A3] text-base font-light mb-8 max-w-3xl leading-relaxed">
+              Competitive pricing at $249/month - 64-91% cheaper than alternatives (Slang.ai: $795/mo, PolyAI: $1,850/mo)
+            </p>
+            <div className="relative rounded-lg overflow-hidden border border-[#262626]">
+              <SafeImage
+                src="/images/fonitix/fonitix_prices.png"
+                alt="Fonitix AI pricing plans and service options"
+                width={1200}
+                height={800}
+                className="w-full h-auto object-contain"
+              />
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Project Overview */}
+      <section className="py-12 border-t border-[#171717]">
+        <div className="container mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-2xl md:text-3xl font-normal text-[#E5E5E5] mb-8 tracking-tight">
+              Project Overview
+            </h2>
+            
+            <div className="grid md:grid-cols-2 gap-12 mb-12">
+              <div>
+                <p className="text-[#A3A3A3] text-base leading-relaxed font-light mb-6">
+                  <strong className="text-[#E5E5E5]">Fonitix AI</strong> is a SaaS platform that transforms how restaurants handle phone orders. Instead of paying $3,000/month for human operators or losing revenue from missed calls, restaurants deploy AI voice agents for just $249/month—a 92% cost reduction.
+                </p>
+                <p className="text-[#A3A3A3] text-base leading-relaxed font-light mb-6">
+                  <strong className="text-[#E5E5E5]">The Reality:</strong> American restaurants miss 30-40% of calls during peak hours. Each missed call represents $25-40 in lost revenue. A single restaurant loses $1,500-2,500/month from unanswered phones alone.
+                </p>
+                <p className="text-[#A3A3A3] text-base leading-relaxed font-light">
+                  <strong className="text-[#E5E5E5]">The Solution:</strong> Fonitix provides turnkey AI voice agents that answer every call instantly, take orders in natural conversation, process payments automatically, sync with existing POS systems, and work 24/7 without breaks or sick days.
+                </p>
+              </div>
+              <div className="space-y-4">
+                <Card className="bg-[#171717] border-[#262626]">
+                  <CardContent className="p-6">
+                    <h3 className="font-normal mb-4 flex items-center gap-2 text-[#E5E5E5]">
+                      <Target className="w-5 h-5" />
+                      First Client
+                    </h3>
+                    <p className="text-sm text-[#A3A3A3] font-light">
+                      Cafe Brie (Pompano Beach, FL) - Currently in beta testing
+                    </p>
+                  </CardContent>
+                </Card>
+                <Card className="bg-[#171717] border-[#262626]">
+                  <CardContent className="p-6">
+                    <h3 className="font-normal mb-4 flex items-center gap-2 text-[#E5E5E5]">
+                      <TrendingUp className="w-5 h-5" />
+                      Target Market
+                    </h3>
+                    <p className="text-sm text-[#A3A3A3] font-light">
+                      1M+ independent restaurants in the US
+                    </p>
+                  </CardContent>
+                </Card>
+                <Card className="bg-[#171717] border-[#262626]">
+                  <CardContent className="p-6">
+                    <h3 className="font-normal mb-4 flex items-center gap-2 text-[#E5E5E5]">
+                      <Zap className="w-5 h-5" />
+                      Competitive Advantage
+                    </h3>
+                    <p className="text-sm text-[#A3A3A3] font-light">
+                      64-91% cheaper than alternatives
+                    </p>
+                  </CardContent>
+                </Card>
               </div>
             </div>
-            <div className="grid gap-4">
-              <Card className="bg-zinc-800 border-zinc-700">
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Problem Statement */}
+      <section className="py-12 border-t border-[#171717]">
+        <div className="container mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-2xl md:text-3xl font-normal text-[#E5E5E5] mb-8 tracking-tight">
+              Problem Statement
+            </h2>
+            
+            <div className="grid md:grid-cols-2 gap-8 mb-8">
+              <Card className="bg-[#171717] border-[#262626]">
                 <CardContent className="p-6">
-                  <h3 className="font-semibold mb-2 flex items-center gap-2">
-                    <Target className="w-4 h-4 text-white" />
-                    Problem Statement
-                  </h3>
-                  <ul className="text-sm text-zinc-300 space-y-2">
-                    <li>• 30-40% of calls go unanswered during peak hours</li>
-                    <li>• $15-20/hour labor costs for phone staff</li>
-                    <li>• Human errors in order processing</li>
-                    <li>• Limited operating hours</li>
-                    <li>• Language barriers with customers</li>
+                  <h3 className="font-normal mb-4 text-[#E5E5E5]">The $3,000/Month Problem</h3>
+                  <ul className="text-sm text-[#A3A3A3] space-y-3 font-light">
+                    <li className="flex items-start gap-3">
+                      <XCircle className="w-4 h-4 mt-0.5 text-[#737373] flex-shrink-0" />
+                      <span>Hiring phone staff: $15-20/hour × 160 hours = $2,400-3,200/month</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <XCircle className="w-4 h-4 mt-0.5 text-[#737373] flex-shrink-0" />
+                      <span>Missed calls during peaks: $1,500-2,500/month in lost revenue</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <XCircle className="w-4 h-4 mt-0.5 text-[#737373] flex-shrink-0" />
+                      <span>Human errors: Wrong orders, miscommunication, language barriers</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <XCircle className="w-4 h-4 mt-0.5 text-[#737373] flex-shrink-0" />
+                      <span>Limited hours: No coverage during off-hours or breaks</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <XCircle className="w-4 h-4 mt-0.5 text-[#737373] flex-shrink-0" />
+                      <span>Scaling issues: Need more staff = multiply all costs</span>
+                    </li>
                   </ul>
                 </CardContent>
               </Card>
-              <Card className="bg-zinc-800 border-zinc-700">
+
+              <Card className="bg-[#171717] border-[#262626]">
                 <CardContent className="p-6">
-                  <h3 className="font-semibold mb-2 flex items-center gap-2">
-                    <Zap className="w-4 h-4 text-white" />
-                    Solution Features
-                  </h3>
-                  <ul className="text-sm text-zinc-300 space-y-2">
-                    <li>• 24/7 automated phone answering</li>
-                    <li>• Natural conversation ordering</li>
-                    <li>• Real-time menu management</li>
-                    <li>• Multi-call handling</li>
-                    <li>• POS system integration</li>
-                  </ul>
+                  <h3 className="font-normal mb-4 text-[#E5E5E5]">Real-World Impact</h3>
+                  <p className="text-sm text-[#A3A3A3] mb-4 font-light leading-relaxed">
+                    A typical independent restaurant handles 150-200 calls/week. At 30-40% miss rate during lunch/dinner rush, that's 60-80 missed opportunities weekly = $1,500-3,200 lost monthly.
+                  </p>
+                  <div className="mt-4 pt-4 border-t border-[#262626]">
+                    <h4 className="text-xs font-light text-[#737373] uppercase tracking-wider mb-3">
+                      Existing Solutions Fall Short
+                    </h4>
+                    <ul className="text-sm text-[#A3A3A3] space-y-2 font-light">
+                      <li>• All-in-one platforms: $795-1,850/month (too expensive)</li>
+                      <li>• Traditional IVR: Frustrating UX, low conversion</li>
+                      <li>• Human-only: High costs, limited availability</li>
+                    </ul>
+                  </div>
                 </CardContent>
               </Card>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Visual Flow: Menu Management */}
+      <section className="py-12 border-t border-[#171717]">
+        <div className="container mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="mb-12"
+          >
+            <h2 className="text-2xl md:text-3xl font-normal text-[#E5E5E5] mb-4 tracking-tight">
+              Step 1: Menu Management
+            </h2>
+            <p className="text-[#A3A3A3] text-base font-light mb-8 max-w-3xl leading-relaxed">
+              Real-time menu management system with category organization, stock management, and price updates. The AI agent uses this menu data to take accurate orders.
+            </p>
+            <div className="relative rounded-lg overflow-hidden border border-[#262626]">
+              <SafeImage
+                src="/images/fonitix/fonitix_menu.png"
+                alt="Fonitix AI menu management interface"
+                width={1200}
+                height={800}
+                className="w-full h-auto object-contain"
+              />
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Visual Flow: AI Orders */}
+      <section className="py-12 border-t border-[#171717]">
+        <div className="container mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="mb-12"
+          >
+            <h2 className="text-2xl md:text-3xl font-normal text-[#E5E5E5] mb-4 tracking-tight">
+              Step 2: AI Order Processing
+            </h2>
+            <p className="text-[#A3A3A3] text-base font-light mb-8 max-w-3xl leading-relaxed">
+              Orders from AI assistant are processed in real-time, synced with POS systems, and tracked through the dashboard. Every call is captured and converted into revenue.
+            </p>
+            <div className="relative rounded-lg overflow-hidden border border-[#262626]">
+              <SafeImage
+                src="/images/fonitix/fonitix_order.png"
+                alt="Fonitix AI order management and tracking"
+                width={1200}
+                height={800}
+                className="w-full h-auto object-contain"
+              />
             </div>
           </motion.div>
         </div>
       </section>
 
       {/* Technical Architecture */}
-      <section className="py-16">
-        <div className="container mx-auto px-6 max-w-6xl">
+      <section className="py-12 border-t border-[#171717]">
+        <div className="container mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
           >
-            <h2 className="text-3xl font-bold mb-12 text-center text-white">
+            <h2 className="text-2xl md:text-3xl font-normal text-[#E5E5E5] mb-8 tracking-tight">
               Technical Architecture
             </h2>
             
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-              <Card className="bg-zinc-800 border-zinc-700">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+              <Card className="bg-[#171717] border-[#262626]">
                 <CardContent className="p-6">
-                  <h3 className="font-semibold mb-4 flex items-center gap-2">
-                    <Code className="w-5 h-5 text-white" />
+                  <h3 className="font-normal mb-4 flex items-center gap-2 text-[#E5E5E5]">
+                    <Code className="w-5 h-5" />
                     Frontend Stack
                   </h3>
-                  <ul className="text-sm text-zinc-300 space-y-2">
-                    <li>• Next.js 14 (App Router)</li>
+                  <ul className="text-sm text-[#A3A3A3] space-y-2 font-light">
+                    <li>• Next.js 14 - App Router</li>
                     <li>• TypeScript</li>
                     <li>• Tailwind CSS</li>
                     <li>• shadcn/ui Components</li>
-                    <li>• React Hooks</li>
+                    <li>• Clerk Authentication</li>
                   </ul>
                 </CardContent>
               </Card>
 
-              <Card className="bg-zinc-800 border-zinc-700">
+              <Card className="bg-[#171717] border-[#262626]">
                 <CardContent className="p-6">
-                  <h3 className="font-semibold mb-4 flex items-center gap-2">
-                    <Database className="w-5 h-5 text-white" />
-                    Backend Stack
+                  <h3 className="font-normal mb-4 flex items-center gap-2 text-[#E5E5E5]">
+                    <Database className="w-5 h-5" />
+                    Backend & Database
                   </h3>
-                  <ul className="text-sm text-zinc-300 space-y-2">
-                    <li>• Convex (Real-time DB)</li>
-                    <li>• Clerk (Authentication)</li>
+                  <ul className="text-sm text-[#A3A3A3] space-y-2 font-light">
+                    <li>• Supabase - PostgreSQL</li>
+                    <li>• Real-time subscriptions</li>
+                    <li>• Next.js API Routes</li>
+                    <li>• Telnyx Telephony</li>
                     <li>• OpenAI GPT-4</li>
-                    <li>• ElevenLabs (Voice)</li>
-                    <li>• Telnyx API</li>
+                    <li>• Stripe Billing</li>
                   </ul>
                 </CardContent>
               </Card>
 
-              <Card className="bg-zinc-800 border-zinc-700">
+              <Card className="bg-[#171717] border-[#262626]">
                 <CardContent className="p-6">
-                  <h3 className="font-semibold mb-4 flex items-center gap-2">
-                    <Globe className="w-5 h-5 text-white" />
-                    Integrations
+                  <h3 className="font-normal mb-4 flex items-center gap-2 text-[#E5E5E5]">
+                    <Globe className="w-5 h-5" />
+                    Key Integrations
                   </h3>
-                  <ul className="text-sm text-zinc-300 space-y-2">
-                    <li>• POS Systems (Square, Toast)</li>
-                    <li>• Stripe (Payments)</li>
-                    <li>• Real-time Analytics</li>
-                    <li>• Multi-language Support</li>
-                    <li>• Webhook Handling</li>
+                  <ul className="text-sm text-[#A3A3A3] space-y-2 font-light">
+                    <li>• Clover POS</li>
+                    <li>• Webhook System</li>
+                    <li>• OAuth 2.0</li>
+                    <li>• Telnyx Voice API</li>
+                    <li>• Edge Functions</li>
                   </ul>
                 </CardContent>
               </Card>
             </div>
-          </motion.div>
-        </div>
-      </section>
 
-      {/* Key Features */}
-      <section className="py-16 bg-zinc-900/50">
-        <div className="container mx-auto px-6 max-w-6xl">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
-            <h2 className="text-3xl font-bold mb-12 text-center text-white">
-              Core Features Implemented
-            </h2>
-            
-            <div className="grid md:grid-cols-2 gap-8">
-              <div className="space-y-6">
-                <Card className="bg-zinc-800 border-zinc-700">
-                  <CardContent className="p-6">
-                    <h3 className="font-semibold mb-4 flex items-center gap-2">
-                      <Users className="w-5 h-5 text-white" />
-                      Restaurant Dashboard
-                    </h3>
-                    <ul className="text-sm text-zinc-300 space-y-2">
-                      <li>• Sidebar navigation with all features</li>
-                      <li>• Real-time metrics cards</li>
-                      <li>• Order management table</li>
-                      <li>• AI agent toggle controls</li>
-                      <li>• Phone number display</li>
-                    </ul>
-                  </CardContent>
-                </Card>
-
-                <Card className="bg-zinc-800 border-zinc-700">
-                  <CardContent className="p-6">
-                    <h3 className="font-semibold mb-4 flex items-center gap-2">
-                      <Brain className="w-5 h-5 text-white" />
-                      Menu Management System
-                    </h3>
-                    <ul className="text-sm text-zinc-300 space-y-2">
-                      <li>• Add/edit/delete menu items</li>
-                      <li>• Category organization</li>
-                      <li>• Stock management</li>
-                      <li>• Price and image upload</li>
-                      <li>• Visual card-based display</li>
-                    </ul>
-                  </CardContent>
-                </Card>
-              </div>
-
-              <div className="space-y-6">
-                <Card className="bg-zinc-800 border-zinc-700">
-                  <CardContent className="p-6">
-                    <h3 className="font-semibold mb-4 flex items-center gap-2">
-                      <Phone className="w-5 h-5 text-white" />
-                      Voice AI Integration
-                    </h3>
-                    <ul className="text-sm text-zinc-300 space-y-2">
-                      <li>• Telnyx call handling</li>
-                      <li>• OpenAI conversation processing</li>
-                      <li>• ElevenLabs voice synthesis</li>
-                      <li>• Real-time order creation</li>
-                      <li>• Restaurant notifications</li>
-                    </ul>
-                  </CardContent>
-                </Card>
-
-                <Card className="bg-zinc-800 border-zinc-700">
-                  <CardContent className="p-6">
-                    <h3 className="font-semibold mb-4 flex items-center gap-2">
-                      <DollarSign className="w-5 h-5 text-white" />
-                      Cost Optimization
-                    </h3>
-                    <ul className="text-sm text-zinc-300 space-y-2">
-                      <li>• Telnyx vs Twilio (60% savings)</li>
-                      <li>• Optimized API usage</li>
-                      <li>• Efficient voice processing</li>
-                      <li>• Scalable infrastructure</li>
-                      <li>• Competitive pricing model</li>
-                    </ul>
-                  </CardContent>
-                </Card>
+            <div className="bg-[#171717] border border-[#262626] rounded-lg p-6">
+              <h3 className="font-normal mb-4 text-[#E5E5E5]">Infrastructure Decisions</h3>
+              <div className="grid md:grid-cols-2 gap-4 text-sm text-[#A3A3A3] font-light">
+                <div>
+                  <strong className="text-[#E5E5E5]">Telnyx over Twilio:</strong> 60% cost savings ($0.004 vs $0.0085/min)
+                </div>
+                <div>
+                  <strong className="text-[#E5E5E5]">Custom AI Stack:</strong> 82% cheaper than Telnyx AI Assistants
+                </div>
+                <div>
+                  <strong className="text-[#E5E5E5]">Supabase:</strong> Real-time updates without WebSocket complexity
+                </div>
+                <div>
+                  <strong className="text-[#E5E5E5]">Edge Functions:</strong> Low-latency webhook processing
+                </div>
               </div>
             </div>
           </motion.div>
@@ -317,150 +430,108 @@ export default function FonitixAIProjectPage() {
       </section>
 
       {/* Business Impact */}
-      <section className="py-16">
-        <div className="container mx-auto px-6 max-w-6xl">
+      <section className="py-12 border-t border-[#171717]">
+        <div className="container mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
           >
-            <h2 className="text-3xl font-bold mb-12 text-center text-white">
+            <h2 className="text-2xl md:text-3xl font-normal text-[#E5E5E5] mb-8 tracking-tight">
               Business Impact & Results
             </h2>
             
-            <div className="grid md:grid-cols-2 gap-8 mb-12">
-              <Card className="bg-zinc-800 border-zinc-700">
+            <div className="mb-8">
+              <h3 className="text-xl font-normal text-[#E5E5E5] mb-4">Current Status (Beta Phase)</h3>
+              <div className="grid md:grid-cols-3 gap-4 mb-6">
+                <Card className="bg-[#171717] border-[#262626]">
+                  <CardContent className="p-6">
+                    <div className="text-2xl font-normal text-[#E5E5E5] mb-2">Cafe Brie</div>
+                    <div className="text-sm text-[#A3A3A3] font-light">First Client</div>
+                  </CardContent>
+                </Card>
+                <Card className="bg-[#171717] border-[#262626]">
+                  <CardContent className="p-6">
+                    <div className="text-2xl font-normal text-[#E5E5E5] mb-2">Jan-Feb 2025</div>
+                    <div className="text-sm text-[#A3A3A3] font-light">Testing Period</div>
+                  </CardContent>
+                </Card>
+                <Card className="bg-[#171717] border-[#262626]">
+                  <CardContent className="p-6">
+                    <div className="text-2xl font-normal text-[#E5E5E5] mb-2">Pompano Beach, FL</div>
+                    <div className="text-sm text-[#A3A3A3] font-light">Location</div>
+                  </CardContent>
+                </Card>
+              </div>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-8 mb-8">
+              <Card className="bg-[#171717] border-[#262626]">
                 <CardContent className="p-6">
-                  <h3 className="font-semibold mb-4 text-white">For Restaurants</h3>
+                  <h3 className="font-normal mb-4 text-[#E5E5E5]">For Restaurants - Cost Analysis</h3>
                   <div className="space-y-4">
                     <div>
-                      <h4 className="font-medium text-white mb-2">💰 Cost Savings</h4>
-                      <ul className="text-sm text-zinc-300 space-y-1">
-                        <li>• Labor: $2,000-3,000/month saved</li>
-                        <li>• Missed orders: $1,500/month recovered</li>
-                        <li>• Total: $3,500-4,500/month savings</li>
-                      </ul>
+                      <h4 className="font-normal text-[#E5E5E5] mb-2 text-sm">Traditional Solution</h4>
+                      <div className="text-sm text-[#A3A3A3] space-y-1 font-light">
+                        <div>Human Phone Staff: $2,400-3,200/month</div>
+                        <div>Missed Call Revenue Loss: $1,500-2,500/month</div>
+                        <div className="pt-2 border-t border-[#262626] font-normal text-[#E5E5E5]">
+                          Total: $3,900-5,700/month
+                        </div>
+                      </div>
                     </div>
                     <div>
-                      <h4 className="font-medium text-white mb-2">📞 Operational Improvements</h4>
-                      <ul className="text-sm text-zinc-300 space-y-1">
-                        <li>• 100% call answer rate</li>
-                        <li>• 0 wait time for customers</li>
-                        <li>• 24/7 availability</li>
-                        <li>• 15% increase in order value</li>
-                      </ul>
+                      <h4 className="font-normal text-[#E5E5E5] mb-2 text-sm">Fonitix AI</h4>
+                      <div className="text-sm text-[#A3A3A3] space-y-1 font-light">
+                        <div>Platform Subscription: $249/month</div>
+                        <div>Per-Minute Usage (avg 50 hrs/mo): $12/month</div>
+                        <div className="pt-2 border-t border-[#262626] font-normal text-[#E5E5E5]">
+                          Total: $261/month
+                        </div>
+                      </div>
+                    </div>
+                    <div className="pt-4 border-t border-[#262626]">
+                      <div className="text-lg font-normal text-[#E5E5E5]">
+                        ROI: $3,639-5,439 saved/month
+                      </div>
+                      <div className="text-sm text-[#A3A3A3] font-light">
+                        93-95% cost reduction
+                      </div>
                     </div>
                   </div>
                 </CardContent>
               </Card>
 
-              <Card className="bg-zinc-800 border-zinc-700">
+              <Card className="bg-[#171717] border-[#262626]">
                 <CardContent className="p-6">
-                  <h3 className="font-semibold mb-4 text-white">For Business</h3>
+                  <h3 className="font-normal mb-4 text-[#E5E5E5]">Projected Business Metrics</h3>
                   <div className="space-y-4">
                     <div>
-                      <h4 className="font-medium text-white mb-2">📊 MVP Metrics (Target)</h4>
-                      <ul className="text-sm text-zinc-300 space-y-1">
-                        <li>• 50 restaurants onboarded</li>
-                        <li>• $12,000 MRR at launch</li>
-                        <li>• 4,000+ calls handled monthly</li>
-                        <li>• 90% customer retention</li>
+                      <h4 className="font-normal text-[#E5E5E5] mb-2 text-sm">Phase 1 (Months 1-3): Validation</h4>
+                      <ul className="text-sm text-[#A3A3A3] space-y-1 font-light">
+                        <li>• 3-5 beta restaurants</li>
+                        <li>• $500-1,000 MRR</li>
+                        <li>• Gather feedback & iterate</li>
                       </ul>
                     </div>
                     <div>
-                      <h4 className="font-medium text-white mb-2">💵 Financial Projections</h4>
-                      <ul className="text-sm text-zinc-300 space-y-1">
-                        <li>• Q1: $12K MRR (50 restaurants)</li>
-                        <li>• Q2: $36K MRR (150 restaurants)</li>
-                        <li>• Q3: $75K MRR (300 restaurants)</li>
-                        <li>• Q4: $125K MRR (500 restaurants)</li>
+                      <h4 className="font-normal text-[#E5E5E5] mb-2 text-sm">Phase 2 (Months 4-6): Growth</h4>
+                      <ul className="text-sm text-[#A3A3A3] space-y-1 font-light">
+                        <li>• 15-20 paying customers</li>
+                        <li>• $3,000-5,000 MRR</li>
+                        <li>• Proven unit economics</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <h4 className="font-normal text-[#E5E5E5] mb-2 text-sm">Phase 3 (Months 7-12): Scale</h4>
+                      <ul className="text-sm text-[#A3A3A3] space-y-1 font-light">
+                        <li>• 50-100 restaurants</li>
+                        <li>• $12,000-25,000 MRR</li>
+                        <li>• Expand to new markets</li>
                       </ul>
                     </div>
                   </div>
-                </CardContent>
-              </Card>
-            </div>
-
-            <div className="grid md:grid-cols-3 gap-6">
-              <div className="text-center p-6 bg-gradient-to-br from-zinc-800 to-zinc-900 rounded-lg border border-zinc-700">
-                <div className="text-3xl font-bold text-white mb-2">87%</div>
-                <div className="text-sm text-zinc-300">Cost Reduction vs Competitors</div>
-              </div>
-              <div className="text-center p-6 bg-gradient-to-br from-zinc-800 to-zinc-900 rounded-lg border border-zinc-700">
-                <div className="text-3xl font-bold text-white mb-2">4 Weeks</div>
-                <div className="text-sm text-zinc-300">MVP Development Time</div>
-              </div>
-              <div className="text-center p-6 bg-gradient-to-br from-zinc-800 to-zinc-900 rounded-lg border border-zinc-700">
-                <div className="text-3xl font-bold text-white mb-2">1000+</div>
-                <div className="text-sm text-zinc-300">Restaurants Supported</div>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Development Process */}
-      <section className="py-16 bg-zinc-900/50">
-        <div className="container mx-auto px-6 max-w-6xl">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
-            <h2 className="text-3xl font-bold mb-12 text-center text-white">
-              Development Process
-            </h2>
-            
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              <Card className="bg-zinc-800 border-zinc-700">
-                <CardContent className="p-6">
-                  <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center text-white font-bold mb-4">1</div>
-                  <h3 className="font-semibold mb-3">Research & Planning</h3>
-                  <ul className="text-sm text-zinc-300 space-y-1">
-                    <li>• Market research</li>
-                    <li>• Technology evaluation</li>
-                    <li>• User flow mapping</li>
-                    <li>• Database schema design</li>
-                  </ul>
-                </CardContent>
-              </Card>
-
-              <Card className="bg-zinc-800 border-zinc-700">
-                <CardContent className="p-6">
-                  <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center text-white font-bold mb-4">2</div>
-                  <h3 className="font-semibold mb-3">MVP Core</h3>
-                  <ul className="text-sm text-zinc-300 space-y-1">
-                    <li>• Next.js setup</li>
-                    <li>• Authentication integration</li>
-                    <li>• Dashboard UI</li>
-                    <li>• Menu management</li>
-                  </ul>
-                </CardContent>
-              </Card>
-
-              <Card className="bg-zinc-800 border-zinc-700">
-                <CardContent className="p-6">
-                  <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center text-white font-bold mb-4">3</div>
-                  <h3 className="font-semibold mb-3">Voice Integration</h3>
-                  <ul className="text-sm text-zinc-300 space-y-1">
-                    <li>• Telnyx API integration</li>
-                    <li>• OpenAI conversation flow</li>
-                    <li>• ElevenLabs voice synthesis</li>
-                    <li>• Real-time processing</li>
-                  </ul>
-                </CardContent>
-              </Card>
-
-              <Card className="bg-zinc-800 border-zinc-700">
-                <CardContent className="p-6">
-                  <div className="w-8 h-8 bg-white rounded-full flex items-center justify-center text-white font-bold mb-4">4</div>
-                  <h3 className="font-semibold mb-3">Testing & Launch</h3>
-                  <ul className="text-sm text-zinc-300 space-y-1">
-                    <li>• Beta testing</li>
-                    <li>• Bug fixes</li>
-                    <li>• Documentation</li>
-                    <li>• Public launch</li>
-                  </ul>
                 </CardContent>
               </Card>
             </div>
@@ -469,53 +540,72 @@ export default function FonitixAIProjectPage() {
       </section>
 
       {/* Key Learnings */}
-      <section className="py-16">
-        <div className="container mx-auto px-6 max-w-6xl">
+      <section className="py-12 border-t border-[#171717]">
+        <div className="container mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
           >
-            <h2 className="text-3xl font-bold mb-12 text-center text-white">
+            <h2 className="text-2xl md:text-3xl font-normal text-[#E5E5E5] mb-8 tracking-tight">
               Key Learnings & Challenges
             </h2>
             
             <div className="grid md:grid-cols-2 gap-8">
-              <Card className="bg-zinc-800 border-zinc-700">
+              <Card className="bg-[#171717] border-[#262626]">
                 <CardContent className="p-6">
-                  <h3 className="font-semibold mb-4 text-white">Technical Challenges</h3>
+                  <h3 className="font-normal mb-4 text-[#E5E5E5]">Technical Challenges Solved</h3>
                   <div className="space-y-4">
                     <div>
-                      <h4 className="font-medium text-white mb-2">Voice AI Latency</h4>
-                      <p className="text-sm text-zinc-300">Initial latency was 2-3 seconds. Switched to WebSocket connections and optimized API calls to reduce latency to &lt;1 second.</p>
+                      <h4 className="font-normal text-[#E5E5E5] mb-2 text-sm">1. Telephony Provider Selection</h4>
+                      <p className="text-sm text-[#A3A3A3] font-light leading-relaxed">
+                        Challenge: Initial Twilio setup was 2.1× more expensive. Solution: Migrated to Telnyx, saving 60% on per-minute costs. Result: Unit economics became profitable at $249/month price point.
+                      </p>
                     </div>
                     <div>
-                      <h4 className="font-medium text-white mb-2">Menu Context Management</h4>
-                      <p className="text-sm text-zinc-300">AI struggled with complex menus. Implemented category-based context and RAG to achieve 95% accuracy in order taking.</p>
+                      <h4 className="font-normal text-[#E5E5E5] mb-2 text-sm">2. Webhook Integration Complexity</h4>
+                      <p className="text-sm text-[#A3A3A3] font-light leading-relaxed">
+                        Challenge: Telnyx webhooks weren't triggering consistently. Solution: Implemented diagnostic logging, discovered missing `call.initiated` endpoint. Result: 100% reliable call handling.
+                      </p>
                     </div>
                     <div>
-                      <h4 className="font-medium text-white mb-2">Cost Optimization</h4>
-                      <p className="text-sm text-zinc-300">Evaluated 5+ telephony providers and chose Telnyx, reducing costs by 87% compared to initial estimates.</p>
+                      <h4 className="font-normal text-[#E5E5E5] mb-2 text-sm">3. Menu Validation Critical</h4>
+                      <p className="text-sm text-[#A3A3A3] font-light leading-relaxed">
+                        Challenge: AI was accepting orders for unavailable items. Solution: Built real-time menu sync with availability checks. Result: Zero invalid orders, improved customer satisfaction.
+                      </p>
+                    </div>
+                    <div>
+                      <h4 className="font-normal text-[#E5E5E5] mb-2 text-sm">4. Cost Optimization Research</h4>
+                      <p className="text-sm text-[#A3A3A3] font-light leading-relaxed">
+                        Challenge: Initial Telnyx AI Assistant stack cost $0.08/min (too expensive). Solution: Built custom OpenAI + Telnyx integration for $0.016/min. Result: 80% cost reduction.
+                      </p>
                     </div>
                   </div>
                 </CardContent>
               </Card>
 
-              <Card className="bg-zinc-800 border-zinc-700">
+              <Card className="bg-[#171717] border-[#262626]">
                 <CardContent className="p-6">
-                  <h3 className="font-semibold mb-4 text-white">Design Challenges</h3>
+                  <h3 className="font-normal mb-4 text-[#E5E5E5]">Product & Business Learnings</h3>
                   <div className="space-y-4">
                     <div>
-                      <h4 className="font-medium text-white mb-2">Empty State UX</h4>
-                      <p className="text-sm text-zinc-300">Created guided onboarding with themed empty states to achieve 80% completion rate for menu setup.</p>
+                      <h4 className="font-normal text-[#E5E5E5] mb-2 text-sm">Pivot from Multi-Industry to Restaurant-First</h4>
+                      <p className="text-sm text-[#A3A3A3] font-light leading-relaxed">
+                        Initial vision: Voice agents for all industries. Reality: Need deep vertical focus for PMF. Decision: Master restaurants before expanding.
+                      </p>
                     </div>
                     <div>
-                      <h4 className="font-medium text-white mb-2">Real-time Updates</h4>
-                      <p className="text-sm text-zinc-300">Leveraged Convex's real-time subscriptions to achieve zero-delay order notifications in the dashboard.</p>
+                      <h4 className="font-normal text-[#E5E5E5] mb-2 text-sm">Automation is Non-Negotiable</h4>
+                      <p className="text-sm text-[#A3A3A3] font-light leading-relaxed">
+                        Manual phone setup doesn't scale. Built fully automated provisioning flow. Every step from signup to first call must be seamless.
+                      </p>
                     </div>
                     <div>
-                      <h4 className="font-medium text-white mb-2">Dark Theme Design</h4>
-                      <p className="text-sm text-zinc-300">Designed professional dark theme dashboard inspired by modern SaaS products (Vercel, Linear, Stripe).</p>
+                      <h4 className="font-normal text-[#E5E5E5] mb-2 text-sm">Beta Testing is Critical</h4>
+                      <p className="text-sm text-[#A3A3A3] font-light leading-relaxed">
+                        Cafe Brie partnership validates real-world usage. Learning actual pain points vs assumed ones. Iterating based on genuine restaurant owner feedback.
+                      </p>
                     </div>
                   </div>
                 </CardContent>
@@ -526,40 +616,69 @@ export default function FonitixAIProjectPage() {
       </section>
 
       {/* Future Roadmap */}
-      <section className="py-16 bg-zinc-900/50">
-        <div className="container mx-auto px-6 max-w-6xl">
+      <section className="py-12 border-t border-[#171717]">
+        <div className="container mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
           >
-            <h2 className="text-3xl font-bold mb-12 text-center text-white">
+            <h2 className="text-2xl md:text-3xl font-normal text-[#E5E5E5] mb-8 tracking-tight">
               Future Roadmap
             </h2>
             
-            <div className="grid md:grid-cols-2 gap-8">
-              <Card className="bg-zinc-800 border-zinc-700">
+            <div className="grid md:grid-cols-3 gap-6">
+              <Card className="bg-[#171717] border-[#262626]">
                 <CardContent className="p-6">
-                  <h3 className="font-semibold mb-4 text-white">Short-term (3-6 months)</h3>
-                  <ul className="text-sm text-zinc-300 space-y-2">
-                    <li>• Multi-language support (Spanish, French, Mandarin)</li>
-                    <li>• Advanced analytics dashboard</li>
-                    <li>• WhatsApp/SMS ordering integration</li>
-                    <li>• Voice customization (accent, tone, personality)</li>
-                    <li>• CRM integration (HubSpot, Salesforce)</li>
+                  <h3 className="font-normal mb-4 text-[#E5E5E5]">Immediate Priorities (Q1 2025)</h3>
+                  <ul className="text-sm text-[#A3A3A3] space-y-2 font-light">
+                    <li className="flex items-start gap-2">
+                      <CheckCircle2 className="w-4 h-4 mt-0.5 text-[#737373] flex-shrink-0" />
+                      <span>Complete Cafe Brie beta testing</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle2 className="w-4 h-4 mt-0.5 text-[#737373] flex-shrink-0" />
+                      <span>Finalize Clover POS integration</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle2 className="w-4 h-4 mt-0.5 text-[#737373] flex-shrink-0" />
+                      <span>Automated phone number provisioning</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="w-4 h-4 mt-0.5 text-[#737373] flex-shrink-0">🔄</span>
+                      <span>Acquire 3-5 additional beta restaurants</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="w-4 h-4 mt-0.5 text-[#737373] flex-shrink-0">🔄</span>
+                      <span>Achieve $500-1,000 MRR validation</span>
+                    </li>
                   </ul>
                 </CardContent>
               </Card>
 
-              <Card className="bg-zinc-800 border-zinc-700">
+              <Card className="bg-[#171717] border-[#262626]">
                 <CardContent className="p-6">
-                  <h3 className="font-semibold mb-4 text-white">Long-term (6-12 months)</h3>
-                  <ul className="text-sm text-zinc-300 space-y-2">
-                    <li>• Mobile app for restaurant managers</li>
-                    <li>• AI-powered menu recommendations</li>
-                    <li>• Expand to other industries (clinics, salons, hotels)</li>
-                    <li>• White-label solution for POS providers</li>
-                    <li>• Voice biometrics for order verification</li>
+                  <h3 className="font-normal mb-4 text-[#E5E5E5]">Short-term (Q2-Q3 2025)</h3>
+                  <ul className="text-sm text-[#A3A3A3] space-y-2 font-light">
+                    <li>• Multi-location support for restaurant chains</li>
+                    <li>• Spanish language support (key for US market)</li>
+                    <li>• Advanced analytics dashboard</li>
+                    <li>• Self-service onboarding</li>
+                    <li>• WhatsApp/SMS order confirmation</li>
+                  </ul>
+                </CardContent>
+              </Card>
+
+              <Card className="bg-[#171717] border-[#262626]">
+                <CardContent className="p-6">
+                  <h3 className="font-normal mb-4 text-[#E5E5E5]">Long-term Vision (2026)</h3>
+                  <ul className="text-sm text-[#A3A3A3] space-y-2 font-light">
+                    <li>• Expand to healthcare (appointment booking)</li>
+                    <li>• Home services (plumbing, HVAC scheduling)</li>
+                    <li>• E-commerce voice shopping</li>
+                    <li>• White-label platform for POS providers</li>
+                    <li>• No-code AI agent builder</li>
                   </ul>
                 </CardContent>
               </Card>
@@ -569,59 +688,69 @@ export default function FonitixAIProjectPage() {
       </section>
 
       {/* Conclusion */}
-      <section className="py-16">
-        <div className="container mx-auto px-6 max-w-4xl">
+      <section className="py-12 border-t border-[#171717]">
+        <div className="container mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-center"
+            viewport={{ once: true }}
           >
-            <h2 className="text-3xl font-bold mb-8 text-white">
+            <h2 className="text-2xl md:text-3xl font-normal text-[#E5E5E5] mb-8 tracking-tight">
               Conclusion
             </h2>
-            <p className="text-lg text-zinc-300 mb-8">
-              <strong>Fonitix AI</strong> represents a modern approach to solving real problems in the restaurant industry. By combining cutting-edge AI technology with a user-friendly SaaS interface, we're enabling small businesses to compete with enterprise-level automation.
+            <p className="text-[#A3A3A3] text-base leading-relaxed font-light mb-8 max-w-3xl">
+              <strong className="text-[#E5E5E5]">Fonitix AI</strong> started as an ambitious multi-industry platform and evolved into a laser-focused solution for restaurant phone automation. This pivot represents a crucial learning: solving one problem exceptionally well beats solving many problems adequately.
             </p>
             
-            <div className="grid md:grid-cols-2 gap-6 mb-8">
-              <Card className="bg-zinc-800 border-zinc-700">
+            <div className="grid md:grid-cols-2 gap-8 mb-8">
+              <Card className="bg-[#171717] border-[#262626]">
                 <CardContent className="p-6">
-                  <h3 className="font-semibold mb-4 text-white">Key Achievements</h3>
-                  <ul className="text-sm text-zinc-300 space-y-2 text-left">
-                    <li>✅ Built full-stack MVP in 4 weeks</li>
-                    <li>✅ Reduced operational costs by 87% vs competitors</li>
-                    <li>✅ Created scalable architecture supporting 1000+ restaurants</li>
-                    <li>✅ Designed intuitive dark-theme dashboard</li>
-                    <li>✅ Implemented real-time order processing</li>
+                  <h3 className="font-normal mb-4 text-[#E5E5E5]">Current Reality</h3>
+                  <ul className="text-sm text-[#A3A3A3] space-y-2 font-light">
+                    <li className="flex items-start gap-2">
+                      <CheckCircle2 className="w-4 h-4 mt-0.5 text-[#737373] flex-shrink-0" />
+                      <span>Functional MVP with first paying customer</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle2 className="w-4 h-4 mt-0.5 text-[#737373] flex-shrink-0" />
+                      <span>Profitable unit economics validated</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle2 className="w-4 h-4 mt-0.5 text-[#737373] flex-shrink-0" />
+                      <span>92% cheaper than traditional staffing</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <CheckCircle2 className="w-4 h-4 mt-0.5 text-[#737373] flex-shrink-0" />
+                      <span>Technical infrastructure proven</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="w-4 h-4 mt-0.5 text-[#737373] flex-shrink-0">🔄</span>
+                      <span>Beta testing in progress with Cafe Brie</span>
+                    </li>
                   </ul>
                 </CardContent>
               </Card>
 
-              <Card className="bg-zinc-800 border-zinc-700">
+              <Card className="bg-[#171717] border-[#262626]">
                 <CardContent className="p-6">
-                  <h3 className="font-semibold mb-4 text-white">Skills Demonstrated</h3>
-                  <ul className="text-sm text-zinc-300 space-y-2 text-left">
-                    <li>• Full-stack development (Next.js, TypeScript)</li>
-                    <li>• Real-time database architecture (Convex)</li>
-                    <li>• API integration (Telnyx, OpenAI, ElevenLabs)</li>
-                    <li>• UI/UX design (Tailwind CSS, dark theme)</li>
-                    <li>• Cost optimization and business analysis</li>
-                    <li>• Product strategy and pivoting</li>
+                  <h3 className="font-normal mb-4 text-[#E5E5E5]">What I Built</h3>
+                  <ul className="text-sm text-[#A3A3A3] space-y-2 font-light">
+                    <li>• Full-stack SaaS platform (Next.js, TypeScript, Supabase)</li>
+                    <li>• AI voice agent system (Telnyx + OpenAI GPT-4)</li>
+                    <li>• Real-time dashboard with menu management</li>
+                    <li>• Automated billing with Stripe</li>
+                    <li>• POS integration framework (Clover)</li>
                   </ul>
                 </CardContent>
               </Card>
             </div>
 
-            <div className="flex flex-wrap justify-center gap-4">
-              <Button 
-                variant="outline" 
-                className="border-zinc-600 text-white hover:bg-zinc-800"
-                onClick={() => window.open('https://fonitix.ai', '_blank')}
-              >
-                <ExternalLink className="w-4 h-4 mr-2" />
-                View Live Demo
-              </Button>
+            <div className="bg-[#171717] border border-[#262626] rounded-lg p-6">
+              <h3 className="font-normal mb-4 text-[#E5E5E5]">Next Steps</h3>
+              <p className="text-sm text-[#A3A3A3] font-light leading-relaxed">
+                Currently validating product-market fit with Cafe Brie while preparing to onboard 3-5 additional restaurants. Goal: Achieve $1,000 MRR and prove repeatable customer acquisition by Q2 2026.
+              </p>
             </div>
           </motion.div>
         </div>

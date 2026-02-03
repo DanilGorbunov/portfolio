@@ -28,9 +28,9 @@ const contactInfo = [
   },
   {
     icon: MessageCircle,
-    label: "Ukrainian WhatsApp/Telegram",
-    value: "+38 093 448 659",
-    href: "https://wa.me/38093448659"
+    label: "Telegram",
+    value: "38 093 448 65 59",
+    href: "https://t.me/+380934486559"
   },
   {
     icon: Linkedin,

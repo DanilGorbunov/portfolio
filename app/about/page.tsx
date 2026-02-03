@@ -4,147 +4,146 @@ import React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
 import {
   Download,
   Calendar, 
-  MapPin
+  MapPin,
+  ExternalLink
 } from "lucide-react";
 
 const experience = [
   {
-    year: "2022 - Present",
-    title: "Senior/Lead Product Designer",
-    company: "B2Stack",
-    location: "Bratislava, Slovakia",
-    description: "Leading design for AI-powered SaaS platforms and e-commerce solutions, focusing on user experience for complex data interfaces and machine learning workflows.",
+    year: "May 2022 - Present",
+    title: "Senior product designer",
+    company: "B2stack",
+    description: "Led design and delivery of AI products (E-Commerce AI Chatbot, Conversational AI), reducing AI model costs by ~32–60% and delivering measurable business impact.",
     achievements: [
-      "Designed E-Commerce AI Chatbot increasing checkout conversion by ~15%",
-      "Created LinkShop AI hybrid platform combining link-in-bio with full eCommerce",
-      "Designed Fonitix AI voice-based SaaS for restaurants",
-      "Designed MRIACRM System with integrated AI analytics",
-      "Launched Tesla VIP Trip premium service within 5 days"
+      "Adopted coding-first MVP and AI prototyping, accelerating product launches by 45–55%.",
+      "Established an AI development system, preserving ~$1.1M in investments and securing $300k+ in additional contracts.",
+      "Achieved go-to-market: 1200+ paying customers in 7 months, generating $0.9M+ in first-year revenue.",
+      "Ensured WCAG 2.2 AAA compliance for key SaaS dashboards.",
+      "Mentored designers on AI prototyping"
+    ],
+    additionalProjects: [
+      {
+        title: "Fonitix AI — AI Voice SaaS (Restaurants)",
+        description: "Built AI-voice SaaS, reduced missed calls to zero (~$3,000/month saved), optimized AI infrastructure (-45% API costs)."
+      },
+      {
+        title: "Xproid E-Commerce AI Chatbot",
+        description: "Developed main web app in 12 weeks, increased checkout conversion ~15% via automated AI interactions (FAQ, guided search, upsell)."
+      },
+      {
+        title: "Twinzo 3D – SaaS Inventory Platform",
+        description: "Built warehouse platform with real-time 3D visualization, improving adoption and efficiency."
+      },
+      {
+        title: "MRIACRM System",
+        description: "Implemented rapid prototyping for JIRA-based CRM, delivering predictive insights, reduced dev cycle from 5–6 months to ~3 months."
+      },
+      {
+        title: "Educational Literacy Platform (Valor Software)",
+        description: "Created design system (200+ components) for multi-role educational platform, enabling personalized, accessible learning and successful pilot launch."
+      }
     ]
   },
   {
-    year: "2022",
-    title: "Frontend Developer (Flutter)",
-    company: "Twinzo 3D",
-    location: "Bratislava, Slovakia",
-    description: "Developed SaaS-based warehouse inventory management app for Fortune 500 clients, integrating 3D data visualization with user-centric design approach.",
+    year: "May 2013 - Feb 2022",
+    title: "Lead product designer",
+    company: "Decodexin (Krasiva)",
+    description: "Led team to design and launch a scalable marketplace platform, securing $30k+ early investment.",
     achievements: [
-      "Enhanced usability and adoption rates through user-centric design",
-      "Integrated 3D data visualization for warehouse management",
-      "Developed for Fortune 500 clients"
-    ]
-  },
-  {
-    year: "2013 - 2022",
-    title: "Product Designer & Frontend Developer",
-    company: "Decodexin",
-    location: "Ukraine",
-    description: "Created user-centric designs and developed MVPs for SaaS systems, enabling shop owners to efficiently manage products and developed robust marketplace platforms.",
-    achievements: [
-      "Created MVP for SaaS system as React developer",
-      "Improved workflow automation and simplified product management",
-      "Developed robust Marketplace platform with seamless API integration",
-      "Enabled real-time product synchronization across network"
+      "Delivered WordPress-MVP SaaS, enabling store owners to update products directly; scaled to hundreds of stores with real-time API sync.",
+      "Achieved +18–20% sales and ~$70k annual savings per client.",
+      "Optimized workflows with collaborative prototyping & agile practices, boosting team productivity ~25-30%."
     ]
   },
   {
     year: "2010 - 2013",
-    title: "UX Designer",
-    company: "Delen Web Studio",
-    location: "Ukraine",
-    description: "Conducted e-commerce user research and optimized WordPress interfaces based on feedback, communicating UX solutions to stakeholders.",
+    title: "UX/UI Designer",
+    company: "Delen Studio",
+    description: "Led brand launches, website design, and digital marketing campaigns for global clients.",
     achievements: [
-      "Conducted comprehensive e-commerce user research",
-      "Optimized WordPress interfaces based on user feedback",
-      "Communicated UX solutions to stakeholders ensuring business alignment"
+      "Conducted UX research, optimized WordPress interfaces, and implemented UX solutions aligned with business goals."
     ]
   }
 ];
 
+const skills = {
+  "Design & Prototyping": ["Figma", "Adobe", "AI Tools"],
+  "Methods & Frameworks": ["Design Thinking", "Agile & Scrum", "Lean Design", "Systems Thinking"],
+  "UX/UI & Research": ["User Research", "Usability Testing", "Information Architecture"],
+  "Technical": ["React", "Flutter", "PHP", "Python", "Wordpress", "Supabase", "Git", "AI/ML tools", "Cursor"],
+  "Collaboration": ["Storytelling", "Presentation", "Workshop", "Mentorship", "Ecommerce"]
+};
+
+const education = [
+  "MSc User Experience Design – Caledonian University, Glasgow, Scotland",
+  "MSc Computer Science – Shipbuilding University, Mykolaiv, Ukraine",
+  "IT STEP Academy (C++, C#)",
+  "BeetRoot (HTML, CSS, JS, React, PHP Backend)"
+];
+
+const languages = [
+  { name: "English", level: "B2" },
+  { name: "Ukrainian", level: "Native" },
+  { name: "Russian", level: "Native" },
+  { name: "Slovak", level: "Beginner" }
+];
+
+const achievements = [
+  "Marathon finisher · 42km, 2025",
+  "QA Open Conference · Globallogic, 1st place in PM in team work, 2022",
+  "Golden Byte Startup battle, 2018",
+  "Black belt Hapkido: mentoring of martial art & meditation, 2017 - Present",
+  "Lecturer / Mentor: Led AI workshops for beginners to lead designers; mentored developers and guided startup projects including onyxcoach.com, 2023 - Present"
+];
+
 export default function AboutPage() {
   return (
-    <div className="min-h-screen bg-black pt-20">
-      <div className="container mx-auto px-6 max-w-7xl">
-        {/* About Section */}
-        <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="space-y-6"
-          >
-            <h2 className="text-3xl md:text-4xl font-normal text-[#E5E5E5] mb-2 tracking-tight">
-              Hi, I'm <span className="text-[#E5E5E5]">Danil Gorbunov</span>
+    <div className="min-h-screen bg-[#0A0A0A] pt-20">
+      <div className="container mx-auto px-6">
+        {/* Header Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="mb-16"
+        >
+          <h1 className="text-4xl md:text-5xl font-normal text-[#E5E5E5] mb-4 tracking-tight">
+            Danil Gorbunov
+          </h1>
+          <div className="text-[#A3A3A3] text-base font-light mb-6 space-y-1">
+            <p>+380 93 448 6559 • danilgorbunov@gmail.com • linkedin.com/in/danilgorbunov/ • Portfolio</p>
+          </div>
+          
+          <div className="mb-8">
+            <h2 className="text-2xl md:text-3xl font-normal text-[#E5E5E5] mb-4 tracking-tight">
+              SENIOR PRODUCT DESIGNER, FULLSTACK AI DEVELOPER
             </h2>
-            
-            <div className="flex items-center text-[#737373] mb-6 font-light">
-              <MapPin className="h-5 w-5 mr-2" />
-              <span>Based in Bratislava, Slovakia</span>
-            </div>
+            <p className="text-[#A3A3A3] text-base leading-relaxed font-light max-w-3xl">
+              Product Designer with 10+ years in digital products and intelligent systems. Skilled in strategic design, agile methods, and accessibility. Delivers full-stack products from prototype to production using AI tools, with proven, real-world results. Mentor and community builder, creating user-focused, high-impact experiences
+            </p>
+          </div>
 
-            <div className="space-y-5 text-[#A3A3A3] leading-relaxed text-base font-light">
-              <p>
-                With 12+ years of experience in product design and frontend development, 
-                I specialize in creating user-centered solutions that bridge the gap between 
-                design and technology.
-              </p>
-              <p>
-                My journey began in Ukraine, where I started as a UX Designer and gradually 
-                evolved into a full-stack product designer. Today, I lead design initiatives 
-                for AI-powered SaaS platforms, helping businesses leverage cutting-edge 
-                technology to solve real-world problems.
-              </p>
-              <p>
-                I believe in the power of design thinking, user research, and iterative 
-                development to create products that not only look great but also deliver 
-                <span className="text-[#E5E5E5] font-normal"> measurable business value</span>.
-              </p>
-            </div>
-
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button
-                size="lg"
-                className="bg-[#0A0A0A] hover:bg-[#171717] text-[#E5E5E5] border border-[#262626] px-8 py-4 font-normal transition-colors duration-200"
-                onClick={() => {
-                  const link = document.createElement('a');
-                  link.href = '/Resume_Product_Designer.pdf';
-                  link.download = 'Danil_Gorbunov_Resume.pdf';
-                  document.body.appendChild(link);
-                  link.click();
-                  document.body.removeChild(link);
-                }}
-              >
-                <Download className="mr-2 h-5 w-5 text-white" />
-                Download CV
-              </Button>
-            </div>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="relative"
+          <Button
+            size="lg"
+            className="bg-[#0A0A0A] hover:bg-[#171717] text-[#E5E5E5] border border-[#262626] px-8 py-4 font-normal transition-colors duration-200"
+            onClick={() => {
+              const link = document.createElement('a');
+              link.href = '/Prod_Design_Danil Gorbunov.pdf';
+              link.download = 'Prod_Design_Danil Gorbunov.pdf';
+              document.body.appendChild(link);
+              link.click();
+              document.body.removeChild(link);
+            }}
           >
-            <div className="relative w-full max-w-sm mx-auto">
-              <div className="relative bg-zinc-800 rounded-full shadow-2xl overflow-hidden">
-                <Image
-                  src="/images/my_photo.jpg"
-                  alt="Professional portrait of Danil Gorbunov, a senior product designer and developer specializing in AI-powered SaaS solutions, based in Bratislava, Slovakia"
-                  width={300}
-                  height={300}
-                  className="w-full h-auto object-cover aspect-square grayscale"
-                />
-              </div>
-            </div>
-          </motion.div>
-        </div>
+            <Download className="mr-2 h-5 w-5 text-white" />
+            Download CV
+          </Button>
+        </motion.div>
 
-        {/* Experience - Timeline for Desktop, Cards for Mobile */}
+        {/* Experience Section */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -152,12 +151,11 @@ export default function AboutPage() {
           viewport={{ once: true }}
           className="mb-20"
         >
-          <h2 className="text-3xl md:text-4xl font-normal text-[#E5E5E5] mb-16 text-center tracking-tight">
-            Professional Experience
+          <h2 className="text-3xl md:text-4xl font-normal text-[#E5E5E5] mb-12 tracking-tight">
+            EXPERIENCE
           </h2>
           
-          {/* Mobile Version - Cards */}
-          <div className="block lg:hidden space-y-8">
+          <div className="space-y-12">
             {experience.map((job, index) => (
               <motion.div
                 key={job.title}
@@ -165,173 +163,171 @@ export default function AboutPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-[#171717] rounded p-6 border border-[#262626] hover:border-[#404040] transition-all duration-200"
+                className="border-b border-[#262626] pb-12 last:border-b-0 last:pb-0"
               >
-                <div className="flex flex-col mb-4">
-                  <h3 className="text-xl font-normal text-[#E5E5E5] mb-1">
-                    {job.title}
+                <div className="mb-4">
+                  <h3 className="text-xl md:text-2xl font-normal text-[#E5E5E5] mb-1">
+                    {job.title} at {job.company}
                   </h3>
-                  <div className="text-[#A3A3A3] font-light mb-2">{job.company}</div>
-                  <div className="flex items-center text-[#737373] text-sm font-light">
-                    <Calendar className="h-4 w-4 mr-1" />
-                    <span>{job.year}</span>
+                  <div className="text-[#737373] text-sm font-light mb-4">
+                    {job.year}
                   </div>
                 </div>
                 
-                <div className="flex items-center text-[#737373] text-sm mb-4 font-light">
-                  <MapPin className="h-4 w-4 mr-1" />
-                  <span>{job.location}</span>
-                </div>
-
-                <p className="text-[#A3A3A3] mb-6 leading-relaxed text-sm font-light">
+                <p className="text-[#A3A3A3] mb-6 leading-relaxed text-base font-light">
                   {job.description}
                 </p>
 
-                <div>
-                  <h4 className="text-xs font-light text-[#737373] uppercase tracking-wider mb-3">
-                    Key Achievements
-                  </h4>
-                  <ul className="space-y-2">
-                    {job.achievements.map((achievement, achievementIndex) => (
-                      <li
-                        key={achievementIndex}
-                        className="text-[#A3A3A3] text-sm flex items-start space-x-3 font-light"
-                      >
-                        <span className="text-[#525252] mt-1 text-sm">•</span>
-                        <span>{achievement}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+                <ul className="space-y-3 mb-6">
+                  {job.achievements.map((achievement, achievementIndex) => (
+                    <li
+                      key={achievementIndex}
+                      className="text-[#A3A3A3] text-base flex items-start space-x-3 font-light"
+                    >
+                      <span className="text-[#525252] mt-1 text-sm">•</span>
+                      <span>{achievement}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                {job.additionalProjects && (
+                  <div className="mt-8 pt-8 border-t border-[#262626]">
+                    <h4 className="text-sm font-light text-[#737373] uppercase tracking-wider mb-4">
+                      Additional Projects (Contract / Part-time)
+                    </h4>
+                    <div className="space-y-6">
+                      {job.additionalProjects.map((project, projectIndex) => (
+                        <div key={projectIndex} className="mb-4">
+                          <h5 className="text-base font-normal text-[#E5E5E5] mb-2">
+                            {project.title}
+                          </h5>
+                          <p className="text-[#A3A3A3] text-sm leading-relaxed font-light">
+                            {project.description}
+                          </p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
               </motion.div>
             ))}
           </div>
+        </motion.div>
 
-          {/* Desktop Version - Timeline */}
-          <div className="hidden lg:block relative">
-            {/* Timeline Line */}
-            <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary via-zinc-600 to-zinc-800"></div>
-            
-            <div className="space-y-12">
-              {experience.map((job, index) => (
-                <motion.div
-                  key={job.title}
-                  initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.2, type: "spring", stiffness: 100 }}
-                  viewport={{ once: true }}
-                  className={`relative flex items-start ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'} gap-8`}
-                >
-                  {/* Timeline Dot */}
-                  <motion.div
-                    initial={{ scale: 0 }}
-                    whileInView={{ scale: 1 }}
-                    transition={{ duration: 0.6, delay: index * 0.2 + 0.3, type: "spring", stiffness: 200 }}
-                    viewport={{ once: true }}
-                    className="relative z-10 flex-shrink-0 w-16 h-16 bg-gradient-to-br from-primary to-primary/80 rounded-full flex items-center justify-center shadow-lg shadow-primary/25"
-                  >
-                    <motion.div
-                      whileHover={{ scale: 1.1, rotate: 5 }}
-                      className="w-8 h-8 bg-white rounded-full flex items-center justify-center"
-                    >
-                      <span className="text-xs font-bold text-black">{index + 1}</span>
-                    </motion.div>
-                    
-                    {/* Pulse Animation */}
-                    <motion.div
-                      animate={{ scale: [1, 1.3, 1], opacity: [0.5, 0, 0.5] }}
-                      transition={{ duration: 2, repeat: Infinity, delay: index * 0.5 }}
-                      className="absolute inset-0 bg-primary rounded-full"
-                    />
-                  </motion.div>
+        {/* Skills Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="mb-20"
+        >
+          <h2 className="text-3xl md:text-4xl font-normal text-[#E5E5E5] mb-12 tracking-tight">
+            SKILLS
+          </h2>
+          
+          <div className="grid md:grid-cols-2 gap-8">
+            {Object.entries(skills).map(([category, items], index) => (
+              <motion.div
+                key={category}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="mb-6"
+              >
+                <h3 className="text-base font-normal text-[#E5E5E5] mb-3">
+                  {category}:
+                </h3>
+                <p className="text-[#A3A3A3] text-sm font-light leading-relaxed">
+                  {items.join(", ")}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
 
-                  {/* Content Card */}
-                  <motion.div
-                    whileHover={{ 
-                      scale: 1.02, 
-                      y: -5,
-                      boxShadow: "0 20px 40px rgba(0, 0, 0, 0.3)"
-                    }}
-                    transition={{ duration: 0.3, type: "spring", stiffness: 300 }}
-                    className={`flex-1 max-w-lg bg-gradient-to-br from-zinc-900 to-zinc-800 rounded-2xl p-8 border border-zinc-700/50 hover:border-primary/30 transition-all duration-300 ${
-                      index % 2 === 0 ? 'ml-8' : 'mr-8'
-                    }`}
-                  >
-                    {/* Year Badge */}
-                    <motion.div
-                      initial={{ opacity: 0, y: -10 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.5, delay: index * 0.2 + 0.4 }}
-                      viewport={{ once: true }}
-                      className="inline-flex items-center px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium mb-4"
-                    >
-                      <Calendar className="h-3 w-3 mr-1" />
-                      {job.year}
-                    </motion.div>
+        {/* Education Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="mb-20"
+        >
+          <h2 className="text-3xl md:text-4xl font-normal text-[#E5E5E5] mb-12 tracking-tight">
+            EDUCATION
+          </h2>
+          
+          <div className="space-y-3">
+            {education.map((edu, index) => (
+              <motion.p
+                key={index}
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4, delay: index * 0.05 }}
+                viewport={{ once: true }}
+                className="text-[#A3A3A3] text-base font-light"
+              >
+                {edu}
+              </motion.p>
+            ))}
+          </div>
+        </motion.div>
 
-                    {/* Title and Company */}
-                    <motion.div
-                      initial={{ opacity: 0, y: 10 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.5, delay: index * 0.2 + 0.5 }}
-                      viewport={{ once: true }}
-                    >
-                      <h3 className="text-xl font-normal text-[#E5E5E5] mb-2 transition-colors duration-200">
-                        {job.title}
-                      </h3>
-                      <div className="text-[#A3A3A3] font-light mb-3">{job.company}</div>
-                      
-                      <div className="flex items-center text-[#737373] text-sm mb-4 font-light">
-                        <MapPin className="h-4 w-4 mr-1" />
-                        <span>{job.location}</span>
-                      </div>
-                    </motion.div>
+        {/* Languages Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="mb-20"
+        >
+          <h2 className="text-3xl md:text-4xl font-normal text-[#E5E5E5] mb-12 tracking-tight">
+            LANGUAGES
+          </h2>
+          
+          <div className="space-y-2">
+            {languages.map((lang, index) => (
+              <motion.p
+                key={index}
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4, delay: index * 0.05 }}
+                viewport={{ once: true }}
+                className="text-[#A3A3A3] text-base font-light"
+              >
+                {lang.name} - {lang.level}
+              </motion.p>
+            ))}
+          </div>
+        </motion.div>
 
-                    {/* Description */}
-                    <motion.p
-                      initial={{ opacity: 0 }}
-                      whileInView={{ opacity: 1 }}
-                      transition={{ duration: 0.5, delay: index * 0.2 + 0.6 }}
-                      viewport={{ once: true }}
-                      className="text-[#A3A3A3] mb-6 leading-relaxed font-light"
-                    >
-                      {job.description}
-                    </motion.p>
-
-                    {/* Achievements */}
-                    <motion.div
-                      initial={{ opacity: 0, y: 10 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.5, delay: index * 0.2 + 0.7 }}
-                      viewport={{ once: true }}
-                    >
-                      <h4 className="text-xs font-light text-[#737373] uppercase tracking-wider mb-3">
-                        Key Achievements
-                      </h4>
-                      <ul className="space-y-2">
-                        {job.achievements.map((achievement, achievementIndex) => (
-                          <motion.li
-                            key={achievementIndex}
-                            initial={{ opacity: 0, x: -10 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            transition={{ duration: 0.3, delay: index * 0.2 + 0.8 + achievementIndex * 0.05 }}
-                            viewport={{ once: true }}
-                            className="text-[#A3A3A3] text-sm flex items-start space-x-3 font-light"
-                          >
-                            <span className="text-[#525252] mt-1 text-sm">
-                              •
-                            </span>
-                            <span>
-                              {achievement}
-                            </span>
-                          </motion.li>
-                        ))}
-                      </ul>
-                    </motion.div>
-                  </motion.div>
-                </motion.div>
-              ))}
-            </div>
+        {/* Achievements & Lectures Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="mb-20"
+        >
+          <h2 className="text-3xl md:text-4xl font-normal text-[#E5E5E5] mb-12 tracking-tight">
+            ACHIEVEMENTS & LECTURES
+          </h2>
+          
+          <div className="space-y-3">
+            {achievements.map((achievement, index) => (
+              <motion.p
+                key={index}
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.4, delay: index * 0.05 }}
+                viewport={{ once: true }}
+                className="text-[#A3A3A3] text-base font-light"
+              >
+                {achievement}
+              </motion.p>
+            ))}
           </div>
         </motion.div>
       </div>

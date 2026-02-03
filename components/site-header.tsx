@@ -91,6 +91,17 @@ export function SiteHeader() {
                     Contact
                   </Link>
                 </SheetClose>
+                <SheetClose asChild>
+                  <a 
+                    href="https://docs.google.com/document/d/1WwxpZTSp-hC8xkBv4D9ibtW9oBvNtgGF87YHIqPSgEE/edit?usp=sharing" 
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-lg font-normal transition-colors duration-200 text-[#A3A3A3] hover:text-[#E5E5E5]"
+                    onClick={handleLinkClick}
+                  >
+                    CV
+                  </a>
+                </SheetClose>
               </nav>
             </SheetContent>
           </Sheet>
@@ -145,6 +156,14 @@ export function SiteHeader() {
             >
               Contact
             </Link>
+            <a
+              href="https://docs.google.com/document/d/1WwxpZTSp-hC8xkBv4D9ibtW9oBvNtgGF87YHIqPSgEE/edit?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm font-normal transition-colors duration-200 text-[#737373] hover:text-[#A3A3A3]"
+            >
+              CV
+            </a>
           </nav>
         </div>
       </div>

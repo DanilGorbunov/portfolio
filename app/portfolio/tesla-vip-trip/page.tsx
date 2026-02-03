@@ -10,16 +10,16 @@ import { ExternalLink, Calendar, User, Building, Clock, Zap, Download } from "lu
 
 export default function TeslaVIPTripProjectPage() {
   return (
-    <div className="min-h-screen bg-black text-white">
+    <div className="min-h-screen bg-[#0A0A0A] text-[#E5E5E5]">
       {/* Sticky Back Button */}
-      <div className="sticky top-16 z-50 bg-black/80 backdrop-blur-sm border-b border-zinc-800">
+      <div className="sticky top-16 z-50 bg-[#0A0A0A]/95 backdrop-blur-sm border-b border-[#171717]">
         <div className="container mx-auto px-6 py-4">
           <Link href="/" prefetch={false}>
             <Button
               variant="ghost"
-              className="text-white hover:bg-zinc-800"
+              className="text-[#E5E5E5] hover:bg-[#171717]"
             >
-              ← Back to Portfolio
+              ← Back to Cases
             </Button>
           </Link>
         </div>
@@ -27,42 +27,42 @@ export default function TeslaVIPTripProjectPage() {
 
       {/* Hero Section */}
       <section className="py-12">
-        <div className="container mx-auto px-6 max-w-6xl">
+        <div className="container mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-16"
+            className="mb-16"
           >
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 text-white">
+            <h1 className="text-4xl md:text-5xl font-normal mb-6 text-[#E5E5E5] tracking-tight">
               Tesla VIP Trip (AI FullStack)
             </h1>
-            <p className="text-xl text-zinc-300 mb-4 max-w-3xl mx-auto">
+            <p className="text-xl md:text-2xl text-[#A3A3A3] mb-4 max-w-3xl font-light">
               Premium Tesla electric vehicle transfer service - AI-assisted development from no-code prototype to production in 5 days
             </p>
-            <p className="text-lg text-zinc-400 mb-8 max-w-4xl mx-auto">
+            <p className="text-base md:text-lg text-[#737373] mb-8 max-w-3xl font-light leading-relaxed">
               Revolutionary 5-day development process using Lovable.dev for rapid prototyping, followed by WordPress deployment with custom PHP booking system
             </p>
             
-            <div className="flex flex-wrap justify-center gap-4 mb-8">
-              <Badge className="bg-zinc-800 text-white border-zinc-700">
+            <div className="flex flex-wrap gap-3 mb-8">
+              <Badge className="bg-[#171717] text-[#A3A3A3] border border-[#262626] font-normal">
                 AI-Assisted Development
               </Badge>
-              <Badge className="bg-zinc-800 text-white border-zinc-700">
+              <Badge className="bg-[#171717] text-[#A3A3A3] border border-[#262626] font-normal">
                 WordPress
               </Badge>
-              <Badge className="bg-zinc-800 text-white border-zinc-700">
+              <Badge className="bg-[#171717] text-[#A3A3A3] border border-[#262626] font-normal">
                 Lovable.dev
               </Badge>
-              <Badge className="bg-zinc-800 text-white border-zinc-700">
+              <Badge className="bg-[#171717] text-[#A3A3A3] border border-[#262626] font-normal">
                 Full-Stack
               </Badge>
-              <Badge className="bg-zinc-800 text-white border-zinc-700">
+              <Badge className="bg-[#171717] text-[#A3A3A3] border border-[#262626] font-normal">
                 Booking System
               </Badge>
             </div>
 
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-8 text-sm text-zinc-400">
+            <div className="flex flex-wrap gap-6 text-sm text-[#737373] font-light">
               <div className="flex items-center gap-2">
                 <Calendar className="h-4 w-4" />
                 <span>2025</span>

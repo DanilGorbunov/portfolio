@@ -39,10 +39,13 @@ export default function Portfolio() {
             className="max-w-3xl"
           >
             <h1 className="text-2xl md:text-3xl font-normal text-[#E5E5E5] leading-normal tracking-tight">
-              <div className="h-8 md:h-9">Product Designer (UX/UI)</div>
-              <div className="h-8 md:h-9">Developer (AI)</div>
+              <div className="h-8 md:h-9">Product Designer</div>
+              <div className="h-8 md:h-9">Full-Stack Builder (AI)</div>
               <div className="h-8 md:h-9">Mentor</div>
             </h1>
+            <p className="mt-6 text-base md:text-lg text-[#A3A3A3] leading-relaxed font-light max-w-[448px]">
+              Specialized in e-commerce, rapid prototyping, and building AI products
+            </p>
           </motion.div>
         </section>
 

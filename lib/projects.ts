@@ -24,28 +24,60 @@ export const projects: Project[] = [
     slug: "fonitix-ai",
     title: "Fonitix AI (SaaS Voice Platform)",
     description:
-      "AI-powered voice agent platform for restaurants - automated phone ordering system with real-time menu management and POS integration",
-    thumbnail: "/images/fonitix_cover.jpg",
-    fullImage: "/images/fonitix_cover.jpg",
-    year: "2025",
+      "AI voice agents that answer restaurant calls 24/7 - replacing $3,000/month operators with $249/month automation",
+    thumbnail: "/images/fonitix/fonitix_hero.png",
+    fullImage: "/images/fonitix/fonitix_hero.png",
+    year: "2024-2025",
     client: "Fonitix AI",
-    role: "Full-Stack Developer & Product Designer",
-    tags: ["AI", "Voice Technology", "SaaS", "Restaurant Tech", "Next.js", "OpenAI", "Telnyx", "Convex"],
+    role: "Co-Founder & Product Designer / Full-Stack Developer",
+    tags: ["AI", "Voice Technology", "SaaS", "Restaurant Tech", "Next.js", "OpenAI", "Telnyx", "Supabase"],
     content: {
       overview:
-        "Fonitix AI is an intelligent voice agent platform that allows restaurants to create AI-powered phone assistants for automated order taking. Built as a SaaS solution with dark theme dashboard, real-time menu management, and seamless POS integration using modern tech stack including Next.js, Convex, and OpenAI GPT-4.",
+        "Fonitix AI is a SaaS platform that transforms how restaurants handle phone orders. Instead of paying $3,000/month for human operators or losing revenue from missed calls, restaurants deploy AI voice agents for just $249/month—a 92% cost reduction. Built with Next.js 14, Supabase, Telnyx telephony, and OpenAI GPT-4, the platform handles everything from automated phone provisioning to real-time order tracking.",
       challenge:
-        "Restaurants lose thousands monthly due to missed calls (30-40% go unanswered), high staff costs ($15-20/hour), human errors, limited hours, and language barriers. Average restaurant loses $50,000-100,000 annually in missed orders and labor costs. Existing solutions like Retell AI cost $450/month vs our $60/month target.",
+        "The $3,000/Month Problem: Hiring phone staff costs $2,400-3,200/month, missed calls during peaks cost $1,500-2,500/month in lost revenue, plus human errors, limited hours, and scaling issues. A typical independent restaurant handles 150-200 calls/week. At 30-40% miss rate during lunch/dinner rush, that's 60-80 missed opportunities weekly = $1,500-3,200 lost monthly. Existing solutions like Slang.ai ($795/mo) and PolyAI ($1,850/mo) are too expensive.",
       solution:
-        "Developed comprehensive SaaS platform with 5-minute setup, real-time menu management system, AI-powered conversation flow using GPT-4, Telnyx telephony integration (87% cost savings vs Twilio), ElevenLabs voice synthesis, and Convex real-time database. Features include dark theme dashboard, order tracking, analytics, and multi-restaurant support.",
+        "Developed turnkey AI voice agents that answer every call instantly (zero wait time), take orders in natural conversation, process payments automatically, sync with existing POS systems (Clover), and work 24/7 without breaks. Built comprehensive SaaS platform with real-time menu management, automated phone provisioning, Telnyx telephony integration (60% cost savings vs Twilio), custom OpenAI + Telnyx integration (80% cheaper than Telnyx AI Assistants), and Supabase real-time database.",
       outcome:
-        "Built full-stack MVP in 4 weeks with 87% cost reduction vs competitors. Created scalable architecture supporting 1000+ restaurants with projected $125K MRR by year-end. Delivered intuitive dark-theme dashboard, real-time order processing, and comprehensive menu management system. Successfully demonstrated modern SaaS development with AI integration and cost optimization.",
+        "First client: Cafe Brie (Pompano Beach, FL) - Currently in beta testing. ROI: $3,639-5,439 saved per month = 93-95% cost reduction. Built full-stack MVP with profitable unit economics validated at $249/month price point. Technical infrastructure proven with 100% reliable call handling, zero invalid orders, and 80% cost reduction on AI processing. Currently validating product-market fit while preparing to onboard 3-5 additional restaurants.",
     },
     images: [
-      "/images/fonitix_cover.jpg",
-      "/placeholder.svg?height=600&width=800&text=Menu+Management+System",
-      "/placeholder.svg?height=600&width=800&text=Order+Processing+Interface",
-      "/placeholder.svg?height=600&width=800&text=AI+Voice+Configuration",
+      "/images/fonitix/fonitix_hero.png",
+      "/images/fonitix/fonitix_compare.png",
+      "/images/fonitix/fonitix_prices.png",
+      "/images/fonitix/fonitix_menu.png",
+      "/images/fonitix/fonitix_order.png",
+    ],
+  },
+  {
+    id: 12,
+    slug: "xproid",
+    title: "Xproid (AI E-Commerce Platform)",
+    description:
+      "AI-powered e-commerce platform enabling store owners to manage their business through natural conversation and customers to checkout via chat in 60 seconds",
+    thumbnail: "/images/xproid/xproid_main.png",
+    fullImage: "/images/xproid/xproid_main.png",
+    year: "2024-2025",
+    client: "Xproid",
+    role: "Full-Stack Builder & Product Designer",
+    tags: ["AI", "E-Commerce", "SaaS", "Next.js", "TypeScript", "Supabase", "Claude AI", "Conversational Interface"],
+    content: {
+      overview:
+        "Xproid is AI-powered e-commerce platform that replaces traditional dashboards with conversational interface. Store owners manage their entire business through natural language commands while customers complete purchases through 60-second chat conversation instead of traditional checkout forms. Built complete platform in 12 weeks using AI-first development approach.",
+      challenge:
+        "Traditional e-commerce platforms require weeks of setup, technical knowledge, and complex dashboard navigation. Customers abandon 70% of carts due to lengthy checkout forms. Store owners struggle with inventory management, multi-platform synchronization, and time-consuming product updates.",
+      solution:
+        "Xproid enables instant store creation through Instagram-style templates. Store owners add products by typing 'add iPhone $999' or change prices with 'update all electronics +10%'. Customers complete purchases through conversational checkout across Instagram, Telegram, WhatsApp, reducing friction from 5 minutes to 60 seconds. Built hybrid AI architecture reducing costs by 80% while maintaining full functionality.",
+      outcome:
+        "Built complete platform in 12 weeks with 60-second store creation, 80% AI cost reduction, and 400+ platform features. Implemented conversational checkout system reducing completion time from 5 minutes to 60 seconds with 40% improvement in conversion rates. Created scalable architecture supporting unlimited stores and products with real-time synchronization across multiple platforms.",
+    },
+    images: [
+      "/images/xproid/xproid_main.png",
+      "/images/xproid/xproid_tips.png",
+      "/images/xproid/xproid_feed.png",
+      "/images/xproid/add_product_voice.png",
+      "/images/xproid/xproid_public_page.png",
+      "/images/xproid/xproid_orders.png",
     ],
   },
   {
