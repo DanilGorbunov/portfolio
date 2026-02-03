@@ -195,10 +195,27 @@ export default function XproidProjectPage() {
             <p className="text-[#A3A3A3] text-base font-light mb-8 max-w-3xl leading-relaxed">
               The platform provides intelligent tips and suggestions to help store owners optimize their business operations, improve product listings, and increase sales through AI-generated insights.
             </p>
-            <div className="relative rounded-lg overflow-hidden border border-[#262626]">
+            <div className="relative rounded-lg overflow-hidden border border-[#262626] mb-8">
               <SafeImage
                 src="/images/xproid/xproid_tips.png"
                 alt="Xproid AI tips and guidance interface"
+                width={1200}
+                height={800}
+                className="w-full h-auto object-contain"
+              />
+            </div>
+            <div className="mb-6">
+              <h3 className="text-xl md:text-2xl font-normal text-[#E5E5E5] mb-4 tracking-tight">
+                Explore & Discover
+              </h3>
+              <p className="text-[#A3A3A3] text-base font-light mb-6 max-w-3xl leading-relaxed">
+                The explore feature helps you discover new opportunities, trending products, and market insights. AI analyzes market trends and competitor data to provide actionable recommendations for your store.
+              </p>
+            </div>
+            <div className="relative rounded-lg overflow-hidden border border-[#262626]">
+              <SafeImage
+                src="/images/xproid/xproid_explore.png"
+                alt="Xproid explore and discovery interface"
                 width={1200}
                 height={800}
                 className="w-full h-auto object-contain"
