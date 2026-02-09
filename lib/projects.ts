@@ -16,6 +16,7 @@ export interface Project {
     outcome: string;
   };
   images: string[];
+  website?: string;
 }
 
 export const projects: Project[] = [
@@ -30,6 +31,7 @@ export const projects: Project[] = [
     year: "2024-2025",
     client: "Fonitix AI",
     role: "Co-Founder & Product Designer / Full-Stack Developer",
+    website: "https://fonitix.ai/",
     tags: ["AI", "Voice Technology", "SaaS", "Restaurant Tech", "Next.js", "OpenAI", "Telnyx", "Supabase"],
     content: {
       overview:
@@ -350,30 +352,53 @@ export const projects: Project[] = [
   {
     id: 7,
     slug: "hotel-aggregator-booking-app",
-    title: "Hotel Aggregator Booking App",
+    title: "Hotel Booking App",
     description:
-      "Modern hotel booking platform that aggregates multiple providers and offers seamless reservation experience.",
+      "UX/UI design case study for a modern hotel booking platform that aggregates multiple providers and offers seamless reservation experience with transparent pricing and unified policies.",
     thumbnail: "/images/hoteller_cover.jpg",
     fullImage: "/images/hoteller_cover.jpg",
     year: "2022",
     client: "Hoteller",
     role: "UX/UI Designer",
-    tags: ["Travel", "Booking Platform", "Mobile App", "Aggregator"],
+    website: "https://www.behance.net/gallery/210264069/Hotel-Booking-App",
+    tags: ["Travel", "Booking Platform", "Mobile App", "Aggregator", "UX Design", "Case Study"],
     content: {
       overview:
-        "Designed a comprehensive hotel booking platform that aggregates multiple providers, offering users a seamless way to compare and book accommodations worldwide.",
+        "A comprehensive UX/UI design case study for a hotel booking platform that aggregates multiple providers, offering users a seamless way to compare and book accommodations worldwide. This project demonstrates a complete design process from research and user analysis to wireframes, prototyping, and final UI design. The solution focuses on creating an intuitive mobile experience that simplifies the complex process of finding and reserving hotels across different booking platforms while maintaining transparency and user trust.",
       challenge:
-        "Travelers needed a unified platform to compare hotel offerings across different providers, with transparent pricing and real-time availability, while dealing with complex booking processes and varied cancellation policies.",
+        "Travelers faced significant challenges when booking hotels: fragmented information across multiple platforms requiring users to check multiple websites, inconsistent pricing transparency with hidden fees and unclear cancellation policies, complex booking processes with lengthy forms and unclear steps, difficulty comparing options effectively across different providers, lack of trust due to unclear pricing and policy differences, and time-consuming research process to find the best deals. Users needed a unified solution that could aggregate data from multiple providers while maintaining clarity, trust, and ease of use.",
       solution:
-        "Created an intuitive mobile app that aggregates multiple booking providers, featuring smart search filters, price comparison tools, interactive maps, and a streamlined booking process with unified cancellation policies.",
+        "Designed a comprehensive mobile app solution following a user-centered design process. The project included: extensive user research and persona development to understand traveler needs and pain points, user journey mapping to identify key touchpoints and opportunities, wireframing and prototyping for iterative design refinement, smart search filters with location-based recommendations and date flexibility, comprehensive price comparison tools with transparent fee breakdowns showing all costs upfront, interactive maps for visual hotel selection with real-time availability, streamlined booking process with step-by-step guidance and progress indicators, unified cancellation policies clearly displayed for each option, personalized recommendations based on user preferences and booking history, and clean, modern UI design with intuitive navigation and visual hierarchy.",
       outcome:
-        "The platform achieved a 65% increase in booking completions, 45% higher user retention rates, and became a preferred choice for travelers with its transparent pricing and unified booking experience.",
+        "The design solution achieved significant improvements in user experience and business metrics: 65% increase in booking completions through streamlined user flows and reduced friction, 45% higher user retention rates due to improved usability and trust-building features, enhanced user trust through transparent pricing and unified policy display, positive user feedback on the intuitive interface and comparison features, reduced booking abandonment through clear progress indicators and simplified forms, improved user satisfaction with the visual design and interaction patterns. The platform became a preferred choice for travelers seeking a unified booking experience that saves time while providing comprehensive information.",
     },
 
     images: [
       "/images/hoteller_cover.jpg",
-      "/placeholder.svg?height=600&width=800",
-      "/placeholder.svg?height=600&width=800",
+      "/images/hotteller/Page 3.jpg",
+      "/images/hotteller/Page 7.jpg",
+      "/images/hotteller/page_6.jpg",
+      "/images/hotteller/page_6 1.jpg",
+      "/images/hotteller/page_6 2.jpg",
+      "/images/hotteller/page_8.jpg",
+      "/images/hotteller/page_9.jpg",
+      "/images/hotteller/page_10 1.jpg",
+      "/images/hotteller/Page 15.jpg",
+      "/images/hotteller/page_15.jpg",
+      "/images/hotteller/page_15 1.jpg",
+      "/images/hotteller/page_15 2.jpg",
+      "/images/hotteller/Page 16.jpg",
+      "/images/hotteller/page_17.jpg",
+      "/images/hotteller/Page17 1.jpg",
+      "/images/hotteller/Page17 2.jpg",
+      "/images/hotteller/Page 20.jpg",
+      "/images/hotteller/Page 25.jpg",
+      "/images/hotteller/Frame_11.jpg",
+      "/images/hotteller/Group-4-1.png",
+      "/images/hotteller/Group-6.png",
+      "/images/hotteller/Screen-Shot-2024-04-10-at-9.38.57-AM.png",
+      "/images/hotteller/Screen-Shot-2024-04-30-at-10.40.02-AM.png",
+      "/images/hotteller/Screen-Shot-2024-04-30-at-10.41.23-AM-copy.png",
     ],
   },
 ];

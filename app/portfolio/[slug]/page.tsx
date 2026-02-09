@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, ExternalLink } from "lucide-react";
 import { projects } from "@/lib/projects";
 import { notFound } from "next/navigation";
 import { SafeImage } from "@/components/safe-image";
@@ -45,6 +45,20 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
           <span>{project.client}</span>
           <span>•</span>
           <span>{project.role}</span>
+          {project.website && (
+            <>
+              <span>•</span>
+              <a
+                href={project.website}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#737373] hover:text-[#E5E5E5] transition-colors duration-200 inline-flex items-center gap-1"
+              >
+                Visit Site
+                <ExternalLink className="w-3 h-3" />
+              </a>
+            </>
+          )}
         </div>
       </div>
 
@@ -57,6 +71,36 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
           loading="lazy"
         />
       </div>
+
+      {/* Video Section - Only for Invoicing App */}
+      {project.slug === "invoicing-app-improving" && (
+        <div className="mb-16">
+          <h2 className="text-2xl md:text-3xl font-normal text-[#E5E5E5] mb-6 tracking-tight">
+            Project Video
+          </h2>
+          <div className="relative rounded-lg overflow-hidden border border-[#262626] bg-[#0A0A0A] aspect-video">
+            <iframe
+              src="https://www.youtube.com/embed/XVkP2R5aBvA"
+              title="Invoicing App Improving Project Video"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              className="w-full h-full"
+            />
+          </div>
+          <div className="mt-4">
+            <a
+              href="https://www.youtube.com/watch?v=XVkP2R5aBvA&feature=youtu.be"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-[#737373] hover:text-[#A3A3A3] transition-colors duration-200 text-sm font-light"
+            >
+              Watch on YouTube
+              <ExternalLink className="w-3 h-3" />
+            </a>
+          </div>
+        </div>
+      )}
+
       {/* Content */}
       <div className="mb-16 space-y-12">
         <div>
@@ -150,6 +194,21 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
                 loading="lazy"
               />
             </div>
+          </div>
+        )}
+
+        {project.slug === "hotel-aggregator-booking-app" && project.images && (
+          <div className="space-y-6">
+            {project.images.slice(1).map((image, index) => (
+              <div key={index} className="overflow-hidden rounded border border-[#171717] bg-[#0A0A0A]">
+                <SafeImage
+                  src={image}
+                  alt={`${project.title} - Image ${index + 1}`}
+                  className="w-full h-auto object-cover"
+                  loading="lazy"
+                />
+              </div>
+            ))}
           </div>
         )}
       </div>

@@ -71,6 +71,18 @@ export default function FonitixAIProjectPage() {
                 <span>Co-Founder & Product Designer / Full-Stack Developer</span>
               </div>
             </div>
+
+            <div className="mt-8">
+              <a
+                href="https://fonitix.ai/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-[#E5E5E5] hover:text-[#A3A3A3] transition-colors duration-200 text-base font-light"
+              >
+                Visit Fonitix AI Website
+                <ExternalLink className="w-4 h-4" />
+              </a>
+            </div>
           </motion.div>
         </div>
       </section>
@@ -93,6 +105,43 @@ export default function FonitixAIProjectPage() {
                 height={800}
                 className="w-full h-auto object-contain"
               />
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Video Section */}
+      <section className="py-12 border-t border-[#171717]">
+        <div className="container mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="mb-12"
+          >
+            <h2 className="text-2xl md:text-3xl font-normal text-[#E5E5E5] mb-6 tracking-tight">
+              Project Video
+            </h2>
+            <div className="relative rounded-lg overflow-hidden border border-[#262626] bg-[#0A0A0A] aspect-video">
+              <iframe
+                src="https://www.youtube.com/embed/Qr6dlXhVwVs"
+                title="Fonitix AI Project Video"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="w-full h-full"
+              />
+            </div>
+            <div className="mt-4">
+              <a
+                href="https://www.youtube.com/watch?v=Qr6dlXhVwVs&feature=youtu.be"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-[#737373] hover:text-[#A3A3A3] transition-colors duration-200 text-sm font-light"
+              >
+                Watch on YouTube
+                <ExternalLink className="w-3 h-3" />
+              </a>
             </div>
           </motion.div>
         </div>
@@ -631,7 +680,7 @@ export default function FonitixAIProjectPage() {
             <div className="grid md:grid-cols-3 gap-6">
               <Card className="bg-[#171717] border-[#262626]">
                 <CardContent className="p-6">
-                  <h3 className="font-normal mb-4 text-[#E5E5E5]">Immediate Priorities (Q1 2025)</h3>
+                  <h3 className="font-normal mb-4 text-[#E5E5E5]">Immediate Priorities (Q2 2026)</h3>
                   <ul className="text-sm text-[#A3A3A3] space-y-2 font-light">
                     <li className="flex items-start gap-2">
                       <CheckCircle2 className="w-4 h-4 mt-0.5 text-[#737373] flex-shrink-0" />
@@ -659,7 +708,7 @@ export default function FonitixAIProjectPage() {
 
               <Card className="bg-[#171717] border-[#262626]">
                 <CardContent className="p-6">
-                  <h3 className="font-normal mb-4 text-[#E5E5E5]">Short-term (Q2-Q3 2025)</h3>
+                  <h3 className="font-normal mb-4 text-[#E5E5E5]">Short-term (Q3 2026)</h3>
                   <ul className="text-sm text-[#A3A3A3] space-y-2 font-light">
                     <li>• Multi-location support for restaurant chains</li>
                     <li>• Spanish language support (key for US market)</li>
@@ -751,6 +800,18 @@ export default function FonitixAIProjectPage() {
               <p className="text-sm text-[#A3A3A3] font-light leading-relaxed">
                 Currently validating product-market fit with Cafe Brie while preparing to onboard 3-5 additional restaurants. Goal: Achieve $1,000 MRR and prove repeatable customer acquisition by Q2 2026.
               </p>
+            </div>
+
+            <div className="mt-12 pt-8 border-t border-[#262626]">
+              <a
+                href="https://fonitix.ai/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-[#E5E5E5] hover:text-[#A3A3A3] transition-colors duration-200 text-base font-light"
+              >
+                Visit Fonitix AI Website
+                <ExternalLink className="w-4 h-4" />
+              </a>
             </div>
           </motion.div>
         </div>

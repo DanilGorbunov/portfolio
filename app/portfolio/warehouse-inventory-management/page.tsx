@@ -371,9 +371,9 @@ export default function WarehouseInventoryProject() {
               rel="noopener noreferrer"
               className="inline-flex items-center"
             >
-              <Button className="bg-primary hover:bg-primary/90 text-black">
+              <Button className="bg-zinc-300 hover:bg-zinc-400 text-black">
                 SAAS Twizo 3D solution
-                <ExternalLink className="ml-2 h-4 w-4" />
+                <ExternalLink className="ml-2 h-4 w-4 text-black" />
               </Button>
             </a>
           </div>

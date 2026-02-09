@@ -2,22 +2,27 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import {
   Download,
-  Calendar, 
-  MapPin,
-  ExternalLink
+  Briefcase,
+  GraduationCap,
+  Award,
+  Code,
+  Users
 } from "lucide-react";
 
-const experience = [
+// Timeline items with dates for sorting
+const timelineItems = [
   {
-    year: "May 2022 - Present",
-    title: "Senior product designer",
-    company: "B2stack",
+    id: "present",
+    type: "work",
+    year: "2025",
+    date: "2025-05",
+    title: "Senior Product Designer",
+    subtitle: "B2stack",
     description: "Led design and delivery of AI products (E-Commerce AI Chatbot, Conversational AI), reducing AI model costs by ~32–60% and delivering measurable business impact.",
-    achievements: [
+    details: [
       "Adopted coding-first MVP and AI prototyping, accelerating product launches by 45–55%.",
       "Established an AI development system, preserving ~$1.1M in investments and securing $300k+ in additional contracts.",
       "Achieved go-to-market: 1200+ paying customers in 7 months, generating $0.9M+ in first-year revenue.",
@@ -48,26 +53,116 @@ const experience = [
     ]
   },
   {
-    year: "May 2013 - Feb 2022",
-    title: "Lead product designer",
-    company: "Decodexin (Krasiva)",
+    id: "mentor-2023",
+    type: "achievement",
+    year: "2023",
+    date: "2023-01",
+    title: "Lecturer / Mentor",
+    subtitle: "AI Workshops & Startup Guidance",
+    description: "Led AI workshops for beginners to lead designers; mentored developers and guided startup projects including onyxcoach.com"
+  },
+  {
+    id: "work-2022",
+    type: "work",
+    year: "2022",
+    date: "2022-05",
+    title: "Senior Product Designer",
+    subtitle: "B2stack",
+    description: "Started role at B2stack, focusing on AI product design and development."
+  },
+  {
+    id: "achievement-2022",
+    type: "achievement",
+    year: "2022",
+    date: "2022-06",
+    title: "QA Open Conference",
+    subtitle: "Globallogic",
+    description: "1st place in PM in team work"
+  },
+  {
+    id: "work-2013",
+    type: "work",
+    year: "2013",
+    date: "2013-05",
+    title: "Lead Product Designer",
+    subtitle: "Decodexin (Krasiva)",
     description: "Led team to design and launch a scalable marketplace platform, securing $30k+ early investment.",
-    achievements: [
+    details: [
       "Delivered WordPress-MVP SaaS, enabling store owners to update products directly; scaled to hundreds of stores with real-time API sync.",
       "Achieved +18–20% sales and ~$70k annual savings per client.",
       "Optimized workflows with collaborative prototyping & agile practices, boosting team productivity ~25-30%."
     ]
   },
   {
-    year: "2010 - 2013",
+    id: "achievement-2018",
+    type: "achievement",
+    year: "2018",
+    date: "2018-01",
+    title: "Golden Byte Startup Battle",
+    subtitle: "Winner",
+    description: "Competed and won in startup battle competition"
+  },
+  {
+    id: "achievement-2017",
+    type: "achievement",
+    year: "2017",
+    date: "2017-01",
+    title: "Black Belt Hapkido",
+    subtitle: "Martial Arts & Meditation",
+    description: "Achieved black belt and began mentoring martial art & meditation, continuing to present"
+  },
+  {
+    id: "work-2010",
+    type: "work",
+    year: "2010",
+    date: "2010-01",
     title: "UX/UI Designer",
-    company: "Delen Studio",
+    subtitle: "Delen Studio",
     description: "Led brand launches, website design, and digital marketing campaigns for global clients.",
-    achievements: [
+    details: [
       "Conducted UX research, optimized WordPress interfaces, and implemented UX solutions aligned with business goals."
     ]
+  },
+  {
+    id: "edu-msc-ux",
+    type: "education",
+    year: "2010",
+    date: "2010-09",
+    title: "MSc User Experience Design",
+    subtitle: "Caledonian University, Glasgow, Scotland",
+    description: "Master's degree in User Experience Design"
+  },
+  {
+    id: "edu-msc-cs",
+    type: "education",
+    year: "2010",
+    date: "2010-09",
+    title: "MSc Computer Science",
+    subtitle: "Shipbuilding University, Mykolaiv, Ukraine",
+    description: "Master's degree in Computer Science"
+  },
+  {
+    id: "edu-step",
+    type: "education",
+    year: "2008",
+    date: "2008-01",
+    title: "IT STEP Academy",
+    subtitle: "C++, C#",
+    description: "Technical training in programming languages"
+  },
+  {
+    id: "edu-beetroot",
+    type: "education",
+    year: "2007",
+    date: "2007-01",
+    title: "BeetRoot Academy",
+    subtitle: "HTML, CSS, JS, React, PHP Backend",
+    description: "Full-stack web development training"
   }
-];
+].sort((a, b) => {
+  // Sort by date descending (newest first)
+  return b.date.localeCompare(a.date);
+});
 
 const skills = {
   "Design & Prototyping": ["Figma", "Adobe", "AI Tools"],
@@ -77,13 +172,6 @@ const skills = {
   "Collaboration": ["Storytelling", "Presentation", "Workshop", "Mentorship", "Ecommerce"]
 };
 
-const education = [
-  "MSc User Experience Design – Caledonian University, Glasgow, Scotland",
-  "MSc Computer Science – Shipbuilding University, Mykolaiv, Ukraine",
-  "IT STEP Academy (C++, C#)",
-  "BeetRoot (HTML, CSS, JS, React, PHP Backend)"
-];
-
 const languages = [
   { name: "English", level: "B2" },
   { name: "Ukrainian", level: "Native" },
@@ -91,18 +179,36 @@ const languages = [
   { name: "Slovak", level: "Beginner" }
 ];
 
-const achievements = [
-  "Marathon finisher · 42km, 2025",
-  "QA Open Conference · Globallogic, 1st place in PM in team work, 2022",
-  "Golden Byte Startup battle, 2018",
-  "Black belt Hapkido: mentoring of martial art & meditation, 2017 - Present",
-  "Lecturer / Mentor: Led AI workshops for beginners to lead designers; mentored developers and guided startup projects including onyxcoach.com, 2023 - Present"
-];
+const getIcon = (type: string) => {
+  switch (type) {
+    case "work":
+      return <Briefcase className="w-5 h-5" />;
+    case "education":
+      return <GraduationCap className="w-5 h-5" />;
+    case "achievement":
+      return <Award className="w-5 h-5" />;
+    default:
+      return <Code className="w-5 h-5" />;
+  }
+};
+
+const getTypeColor = (type: string) => {
+  switch (type) {
+    case "work":
+      return "border-[#3B82F6] bg-[#1E3A5F]/20";
+    case "education":
+      return "border-[#10B981] bg-[#064E3B]/20";
+    case "achievement":
+      return "border-[#F59E0B] bg-[#78350F]/20";
+    default:
+      return "border-[#737373] bg-[#262626]";
+  }
+};
 
 export default function AboutPage() {
   return (
     <div className="min-h-screen bg-[#0A0A0A] pt-20">
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto px-6 pb-20">
         {/* Header Section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -113,9 +219,6 @@ export default function AboutPage() {
           <h1 className="text-4xl md:text-5xl font-normal text-[#E5E5E5] mb-4 tracking-tight">
             Danil Gorbunov
           </h1>
-          <div className="text-[#A3A3A3] text-base font-light mb-6 space-y-1">
-            <p>+380 93 448 6559 • danilgorbunov@gmail.com • linkedin.com/in/danilgorbunov/ • Portfolio</p>
-          </div>
           
           <div className="mb-8">
             <h2 className="text-2xl md:text-3xl font-normal text-[#E5E5E5] mb-4 tracking-tight">
@@ -143,191 +246,158 @@ export default function AboutPage() {
           </Button>
         </motion.div>
 
-        {/* Experience Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="mb-20"
-        >
-          <h2 className="text-3xl md:text-4xl font-normal text-[#E5E5E5] mb-12 tracking-tight">
-            EXPERIENCE
-          </h2>
+        {/* Timeline Section */}
+        <div className="relative max-w-2xl">
+          {/* Vertical Timeline Line - Desktop */}
+          <div className="hidden md:block absolute left-8 top-0 bottom-0 w-0.5 bg-[#262626]" />
           
-          <div className="space-y-12">
-            {experience.map((job, index) => (
+          {/* Timeline Items */}
+          <div className="space-y-12 md:space-y-16">
+            {timelineItems.map((item, index) => (
               <motion.div
-                key={job.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                key={item.id}
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="border-b border-[#262626] pb-12 last:border-b-0 last:pb-0"
+                viewport={{ once: true, margin: "-100px" }}
+                className="relative"
               >
-                <div className="mb-4">
-                  <h3 className="text-xl md:text-2xl font-normal text-[#E5E5E5] mb-1">
-                    {job.title} at {job.company}
-                  </h3>
-                  <div className="text-[#737373] text-sm font-light mb-4">
-                    {job.year}
+                {/* Timeline Node - Desktop */}
+                <div className="hidden md:flex absolute left-0 top-6 items-center justify-center w-16 h-16">
+                  <div className={`absolute w-4 h-4 rounded-full border-2 ${getTypeColor(item.type).split(' ')[0]} bg-[#0A0A0A] z-10`} />
+                  <div className={`absolute w-12 h-12 rounded-full border ${getTypeColor(item.type)} opacity-50`} />
+                </div>
+
+                {/* Timeline Node - Mobile */}
+                <div className="md:hidden flex items-center mb-4">
+                  <div className={`w-3 h-3 rounded-full border-2 ${getTypeColor(item.type).split(' ')[0]} bg-[#0A0A0A] mr-3`} />
+                  <span className="text-[#737373] text-sm font-light">{item.year}</span>
+                </div>
+
+                {/* Content Card */}
+                <div className={`md:ml-24 ${index % 2 === 0 ? 'md:mr-0' : 'md:mr-0'}`}>
+                  <div className="bg-[#0F0F0F] border border-[#262626] rounded-lg p-6 md:p-6 hover:border-[#404040] transition-colors duration-300">
+                    {/* Header */}
+                    <div className="flex items-start justify-between mb-4">
+                      <div className="flex-1">
+                        <div className="flex items-center gap-3 mb-2">
+                          <div className={`p-2 rounded-lg ${getTypeColor(item.type)}`}>
+                            {getIcon(item.type)}
+                          </div>
+                          <div>
+                            <h3 className="text-xl md:text-2xl font-normal text-[#E5E5E5] mb-1">
+                              {item.title}
+                            </h3>
+                            <p className="text-[#A3A3A3] text-sm font-light">
+                              {item.subtitle}
+                            </p>
+                          </div>
+                        </div>
+                        <div className="text-[#737373] text-xs font-light mt-2 md:ml-14">
+                          {item.year}
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Description */}
+                    <p className="text-[#A3A3A3] text-base leading-relaxed font-light mb-4 md:ml-14">
+                      {item.description}
+                    </p>
+
+                    {/* Details List */}
+                    {item.details && (
+                      <ul className="space-y-2 mt-4 md:ml-14">
+                        {item.details.map((detail, detailIndex) => (
+                          <li
+                            key={detailIndex}
+                            className="text-[#A3A3A3] text-sm flex items-start space-x-3 font-light"
+                          >
+                            <span className="text-[#525252] mt-1.5 text-xs">•</span>
+                            <span>{detail}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+
+                    {/* Additional Projects */}
+                    {item.additionalProjects && (
+                      <div className="mt-6 pt-6 border-t border-[#262626] md:ml-14">
+                        <h4 className="text-xs font-light text-[#737373] uppercase tracking-wider mb-4">
+                          Additional Projects (Contract / Part-time)
+                        </h4>
+                        <div className="space-y-4">
+                          {item.additionalProjects.map((project, projectIndex) => (
+                            <div key={projectIndex} className="mb-4">
+                              <h5 className="text-base font-normal text-[#E5E5E5] mb-2">
+                                {project.title}
+                              </h5>
+                              <p className="text-[#A3A3A3] text-sm leading-relaxed font-light">
+                                {project.description}
+                              </p>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    )}
                   </div>
                 </div>
-                
-                <p className="text-[#A3A3A3] mb-6 leading-relaxed text-base font-light">
-                  {job.description}
-                </p>
-
-                <ul className="space-y-3 mb-6">
-                  {job.achievements.map((achievement, achievementIndex) => (
-                    <li
-                      key={achievementIndex}
-                      className="text-[#A3A3A3] text-base flex items-start space-x-3 font-light"
-                    >
-                      <span className="text-[#525252] mt-1 text-sm">•</span>
-                      <span>{achievement}</span>
-                    </li>
-                  ))}
-                </ul>
-
-                {job.additionalProjects && (
-                  <div className="mt-8 pt-8 border-t border-[#262626]">
-                    <h4 className="text-sm font-light text-[#737373] uppercase tracking-wider mb-4">
-                      Additional Projects (Contract / Part-time)
-                    </h4>
-                    <div className="space-y-6">
-                      {job.additionalProjects.map((project, projectIndex) => (
-                        <div key={projectIndex} className="mb-4">
-                          <h5 className="text-base font-normal text-[#E5E5E5] mb-2">
-                            {project.title}
-                          </h5>
-                          <p className="text-[#A3A3A3] text-sm leading-relaxed font-light">
-                            {project.description}
-                          </p>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                )}
               </motion.div>
             ))}
           </div>
-        </motion.div>
+        </div>
 
-        {/* Skills Section */}
+        {/* Skills & Languages Section */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="mb-20"
+          className="mt-20 grid md:grid-cols-2 gap-12"
         >
-          <h2 className="text-3xl md:text-4xl font-normal text-[#E5E5E5] mb-12 tracking-tight">
-            SKILLS
-          </h2>
-          
-          <div className="grid md:grid-cols-2 gap-8">
-            {Object.entries(skills).map(([category, items], index) => (
-              <motion.div
-                key={category}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="mb-6"
-              >
-                <h3 className="text-base font-normal text-[#E5E5E5] mb-3">
-                  {category}:
-                </h3>
-                <p className="text-[#A3A3A3] text-sm font-light leading-relaxed">
-                  {items.join(", ")}
-                </p>
-              </motion.div>
-            ))}
+          {/* Skills */}
+          <div>
+            <h2 className="text-2xl md:text-3xl font-normal text-[#E5E5E5] mb-8 tracking-tight">
+              SKILLS
+            </h2>
+            <div className="space-y-6">
+              {Object.entries(skills).map(([category, items], index) => (
+                <motion.div
+                  key={category}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.4, delay: index * 0.05 }}
+                  viewport={{ once: true }}
+                >
+                  <h3 className="text-base font-normal text-[#E5E5E5] mb-2">
+                    {category}
+                  </h3>
+                  <p className="text-[#A3A3A3] text-sm font-light leading-relaxed">
+                    {items.join(", ")}
+                  </p>
+                </motion.div>
+              ))}
+            </div>
           </div>
-        </motion.div>
 
-        {/* Education Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="mb-20"
-        >
-          <h2 className="text-3xl md:text-4xl font-normal text-[#E5E5E5] mb-12 tracking-tight">
-            EDUCATION
-          </h2>
-          
-          <div className="space-y-3">
-            {education.map((edu, index) => (
-              <motion.p
-                key={index}
-                initial={{ opacity: 0, y: 10 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: index * 0.05 }}
-                viewport={{ once: true }}
-                className="text-[#A3A3A3] text-base font-light"
-              >
-                {edu}
-              </motion.p>
-            ))}
-          </div>
-        </motion.div>
-
-        {/* Languages Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="mb-20"
-        >
-          <h2 className="text-3xl md:text-4xl font-normal text-[#E5E5E5] mb-12 tracking-tight">
-            LANGUAGES
-          </h2>
-          
-          <div className="space-y-2">
-            {languages.map((lang, index) => (
-              <motion.p
-                key={index}
-                initial={{ opacity: 0, y: 10 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: index * 0.05 }}
-                viewport={{ once: true }}
-                className="text-[#A3A3A3] text-base font-light"
-              >
-                {lang.name} - {lang.level}
-              </motion.p>
-            ))}
-          </div>
-        </motion.div>
-
-        {/* Achievements & Lectures Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="mb-20"
-        >
-          <h2 className="text-3xl md:text-4xl font-normal text-[#E5E5E5] mb-12 tracking-tight">
-            ACHIEVEMENTS & LECTURES
-          </h2>
-          
-          <div className="space-y-3">
-            {achievements.map((achievement, index) => (
-              <motion.p
-                key={index}
-                initial={{ opacity: 0, y: 10 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4, delay: index * 0.05 }}
-                viewport={{ once: true }}
-                className="text-[#A3A3A3] text-base font-light"
-              >
-                {achievement}
-              </motion.p>
-            ))}
+          {/* Languages */}
+          <div>
+            <h2 className="text-2xl md:text-3xl font-normal text-[#E5E5E5] mb-8 tracking-tight">
+              LANGUAGES
+            </h2>
+            <div className="space-y-3">
+              {languages.map((lang, index) => (
+                <motion.p
+                  key={index}
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.4, delay: index * 0.05 }}
+                  viewport={{ once: true }}
+                  className="text-[#A3A3A3] text-base font-light"
+                >
+                  {lang.name} - {lang.level}
+                </motion.p>
+              ))}
+            </div>
           </div>
         </motion.div>
       </div>

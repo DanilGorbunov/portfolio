@@ -176,6 +176,36 @@ export default function DeliveryAppProject() {
           </div>
         </motion.div>
 
+        {/* Video Section */}
+        <motion.div
+          variants={fadeInUp}
+          className="mb-12"
+        >
+          <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">
+            Project Video
+          </h2>
+          <div className="relative rounded-lg overflow-hidden border border-zinc-800 bg-zinc-900 aspect-video">
+            <iframe
+              src="https://www.youtube.com/embed/fOjSCUKGWDM"
+              title="FoodCore Project Video"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              className="w-full h-full"
+            />
+          </div>
+          <div className="mt-4">
+            <a
+              href="https://www.youtube.com/watch?v=fOjSCUKGWDM&feature=youtu.be"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-zinc-400 hover:text-zinc-200 transition-colors duration-200 text-sm"
+            >
+              Watch on YouTube
+              <ExternalLink className="w-3 h-3" />
+            </a>
+          </div>
+        </motion.div>
+
         <motion.div
           variants={fadeInUp}
           className="mb-12 grid grid-cols-1 gap-6 md:grid-cols-3"
