@@ -200,13 +200,66 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
         {project.slug === "hotel-aggregator-booking-app" && project.images && (
           <div className="space-y-6">
             {project.images.slice(1).map((image, index) => (
-              <div key={index} className="overflow-hidden rounded border border-[#171717] bg-[#0A0A0A]">
-                <SafeImage
-                  src={image}
-                  alt={`${project.title} - Image ${index + 1}`}
-                  className="w-full h-auto object-cover"
-                  loading="lazy"
-                />
+              <div key={index}>
+                <div className="overflow-hidden rounded border border-[#171717] bg-[#0A0A0A]">
+                  <SafeImage
+                    src={image}
+                    alt={`${project.title} - Image ${index + 1}`}
+                    className="w-full h-auto object-cover"
+                    loading="lazy"
+                  />
+                </div>
+                {image === "/images/hotteller/research.jpg" && (
+                  <div className="mt-6">
+                    <h2 className="text-2xl md:text-3xl font-normal text-[#E5E5E5] mb-6 tracking-tight">
+                      User Testing / Competitors pain points
+                    </h2>
+                    <div className="relative rounded-lg overflow-hidden border border-[#262626] bg-[#0A0A0A] aspect-video">
+                      <iframe
+                        src="https://www.youtube.com/embed/CtftJSHK7HU"
+                        title="Hotel Booking App Project Video"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                        className="w-full h-full"
+                      />
+                    </div>
+                    <div className="mt-4">
+                      <a
+                        href="https://www.youtube.com/watch?v=CtftJSHK7HU"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 text-[#737373] hover:text-[#A3A3A3] transition-colors duration-200 text-sm font-light"
+                      >
+                        Watch on YouTube
+                        <ExternalLink className="w-3 h-3" />
+                      </a>
+                    </div>
+                  </div>
+                )}
+                {image === "/images/hotteller/page_17.jpg" && (
+                  <div className="mt-6">
+                    <div className="relative rounded-lg overflow-hidden border border-[#262626] bg-[#0A0A0A] aspect-video">
+                      <iframe
+                        src="https://www.youtube.com/embed/B-MG6c-tmmU"
+                        title="Hotel Booking App Video"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                        className="w-full h-full"
+                      />
+                    </div>
+                    <div className="mt-4">
+                      <a
+                        href="https://www.youtube.com/shorts/B-MG6c-tmmU"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 text-[#737373] hover:text-[#A3A3A3] transition-colors duration-200 text-sm font-light"
+                      >
+                        Watch on YouTube
+                        <ExternalLink className="w-3 h-3" />
+                      </a>
+                    </div>
+                  </div>
+                )}
               </div>
             ))}
           </div>
