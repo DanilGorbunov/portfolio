@@ -29,8 +29,8 @@ const contactInfo = [
   {
     icon: MessageCircle,
     label: "Telegram",
-    value: "38 093 448 65 59",
-    href: "https://t.me/+380934486559"
+    value: "@dan_gorbunov",
+    href: "https://t.me/dan_gorbunov"
   },
   {
     icon: Linkedin,

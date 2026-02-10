@@ -102,6 +102,17 @@ export function SiteHeader() {
                     CV
                   </a>
                 </SheetClose>
+                <SheetClose asChild>
+                  <a 
+                    href="https://t.me/+380934486559" 
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-lg font-normal transition-colors duration-200 text-[#E5E5E5] hover:text-[#F5F5F5] bg-[#262626] hover:bg-[#404040] px-4 py-2 rounded-lg"
+                    onClick={handleLinkClick}
+                  >
+                    Schedule a Call
+                  </a>
+                </SheetClose>
               </nav>
             </SheetContent>
           </Sheet>
@@ -163,6 +174,14 @@ export function SiteHeader() {
               className="text-sm font-normal transition-colors duration-200 text-[#737373] hover:text-[#A3A3A3]"
             >
               CV
+            </a>
+            <a
+              href="https://t.me/+380934486559"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-sm font-normal transition-colors duration-200 text-[#E5E5E5] hover:text-[#F5F5F5] bg-[#262626] hover:bg-[#404040] px-4 py-2 rounded-lg"
+            >
+              Schedule a Call
             </a>
           </nav>
         </div>
