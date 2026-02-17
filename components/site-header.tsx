@@ -80,6 +80,19 @@ export function SiteHeader() {
                 </SheetClose>
                 <SheetClose asChild>
                   <Link 
+                    href="/blog" 
+                    className={`text-lg font-normal transition-colors duration-200 ${
+                      isActive("/blog") 
+                        ? "text-[#E5E5E5]" 
+                        : "text-[#A3A3A3] hover:text-[#E5E5E5]"
+                    }`} 
+                    onClick={handleLinkClick}
+                  >
+                    Blog
+                  </Link>
+                </SheetClose>
+                <SheetClose asChild>
+                  <Link 
                     href="/contact" 
                     className={`text-lg font-normal transition-colors duration-200 ${
                       isActive("/contact") 
@@ -155,6 +168,17 @@ export function SiteHeader() {
               aria-current={isActive("/about") ? "page" : undefined}
             >
               About
+            </Link>
+            <Link
+              href="/blog"
+              className={`text-sm font-normal transition-colors duration-200 ${
+                isActive("/blog")
+                  ? "text-[#E5E5E5]"
+                  : "text-[#737373] hover:text-[#A3A3A3]"
+              }`}
+              aria-current={isActive("/blog") ? "page" : undefined}
+            >
+              Blog
             </Link>
             <Link
               href="/contact"

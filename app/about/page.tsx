@@ -19,27 +19,55 @@ const timelineItems = [
   {
     id: "present",
     type: "work",
-    year: "2025",
-    date: "2025-05",
+    year: "2022",
+    date: "2022-05",
     title: "Senior Product Designer",
     subtitle: "B2stack",
-    description: "Led design and delivery of AI products (E-Commerce AI Chatbot, Conversational AI), reducing AI model costs by ~32–60% and delivering measurable business impact.",
+    description: "Owned end-to-end AI product lifecycle (discovery → architecture → validation → GTM → revenue). Defined AI roadmap aligned with monetization and scalability strategy.",
     details: [
-      "Adopted coding-first MVP and AI prototyping, accelerating product launches by 45–55%.",
-      "Established an AI development system, preserving ~$1.1M in investments and securing $300k+ in additional contracts.",
-      "Achieved go-to-market: 1200+ paying customers in 7 months, generating $0.9M+ in first-year revenue.",
-      "Ensured WCAG 2.2 AAA compliance for key SaaS dashboards.",
-      "Mentored designers on AI prototyping"
+      "Reduced AI infrastructure costs by 32–60%, improving unit economics and extending runway",
+      "Implemented AI-first MVP framework, accelerating product releases by 45–55%",
+      "Contributed to go-to-market execution, reaching 1200+ paying customers within 7 months",
+      "Increased onboarding completion by 18% and reduced churn through conversational UX optimization",
+      "Led cross-functional teams across product, AI engineering, and marketing",
+      "Mentored 4 designers, reducing internal prototyping time by ~35%"
+    ],
+    additionalProjects: [
+      {
+        title: "Fonitix AI – AI Voice SaaS (Restaurant Industry)",
+        description: "Designed AI call system using Telecommunication API + OpenAI API. Built backend logic in Python (FastAPI). Implemented token-level cost optimization (-43% AI API costs). Reduced missed calls to zero (~$3,000/month saved per location). Delivered production-ready solution within 10 weeks.",
+        website: "https://fonitix.ai/"
+      },
+      {
+        title: "Xproid – E-commerce AI Chatbot",
+        description: "Architected conversational AI using OpenAI API. Led UX and technical architecture (React frontend + backend integrations). Increased checkout conversion by ~15%. Delivered validated product within 12 weeks.",
+        website: "https://xproid.com/"
+      },
+      {
+        title: "Twinzo 3D – SaaS Inventory Platform",
+        description: "Rapidly onboarded into 3D warehouse domain. Designed real-time inventory visualization workflows. Improved internal adoption and operational efficiency. Delivered MVP within 12 weeks.",
+        website: "https://www.twinzo.com/"
+      },
+      {
+        title: "MRIACRM – Predictive CRM System",
+        description: "Conducted stakeholder workshops and requirement discovery. Built JIRA-integrated UX/UI/AI First prototype for predictive insights. Reduced development cycle from 5–6 months to ~3 months via early validation.",
+        website: "https://mriacrm.com/"
+      },
+      {
+        title: "Educational Literacy Platform (Valor Software, NDA)",
+        description: "Designed and implemented scalable design system (200+ components). Enabled multi-role SaaS architecture. Accelerated feature rollout by ~30%. Supported successful enterprise pilot launch.",
+        website: "https://valor-software.com/"
+      }
     ]
   },
   {
-    id: "mentor-2023",
+    id: "lectures",
     type: "achievement",
-    year: "2023",
+    year: "",
     date: "2023-01",
-    title: "Lecturer / Mentor",
-    subtitle: "AI Workshops & Startup Guidance",
-    description: "Led AI workshops for beginners to lead designers; mentored developers and guided startup projects including onyxcoach.com"
+    title: "Lectures",
+    subtitle: "AI Workshops & Mentorship",
+    description: "Led AI workshops (2023–Present); mentored designers and developers; guided startup initiatives."
   },
   {
     id: "achievement-2022",
@@ -51,53 +79,17 @@ const timelineItems = [
     description: "1st place in PM in team work"
   },
   {
-    id: "additional-projects",
-    type: "work",
-    year: "",
-    date: "2014-01",
-    title: "Additional Projects",
-    subtitle: "Contract / Part-time",
-    description: "",
-    additionalProjects: [
-      {
-        title: "Fonitix AI — AI Voice SaaS (Restaurants)",
-        description: "Built AI-voice SaaS, reduced missed calls to zero (~$3,000/month saved), optimized AI infrastructure (-45% API costs).",
-        website: "https://fonitix.ai/"
-      },
-      {
-        title: "Xproid E-Commerce AI Chatbot",
-        description: "Developed main web app in 12 weeks, increased checkout conversion ~15% via automated AI interactions (FAQ, guided search, upsell).",
-        website: "https://xproid.com/"
-      },
-      {
-        title: "Twinzo 3D – SaaS Inventory Platform",
-        description: "Built warehouse platform with real-time 3D visualization, improving adoption and efficiency.",
-        website: "https://www.twinzo.com/"
-      },
-      {
-        title: "MRIACRM System",
-        description: "Implemented rapid prototyping for JIRA-based CRM, delivering predictive insights, reduced dev cycle from 5–6 months to ~3 months.",
-        website: "https://mriacrm.com/"
-      },
-      {
-        title: "Educational Literacy Platform (Valor Software)",
-        description: "Created design system (200+ components) for multi-role educational platform, enabling personalized, accessible learning and successful pilot launch.",
-        website: "https://valor-software.com/"
-      }
-    ]
-  },
-  {
     id: "work-2013",
     type: "work",
     year: "2013",
     date: "2013-05",
     title: "Lead Product Designer",
     subtitle: "Decodexin (Krasiva)",
-    description: "Led team to design and launch a scalable marketplace platform, securing $30k+ early investment.",
+    description: "Led design and launch of scalable marketplace platform. Secured $30k+ early-stage investment.",
     details: [
-      "Delivered WordPress-MVP SaaS, enabling store owners to update products directly; scaled to hundreds of stores with real-time API sync.",
-      "Achieved +18–20% sales and ~$70k annual savings per client.",
-      "Optimized workflows with collaborative prototyping & agile practices, boosting team productivity ~25-30%."
+      "Increased client sales by 18–20%",
+      "Generated ~$70k annual operational savings per client",
+      "Improved team productivity by 25–30% via collaborative prototyping"
     ]
   },
   {
@@ -125,10 +117,8 @@ const timelineItems = [
     date: "2010-01",
     title: "UX/UI Designer",
     subtitle: "Delen Studio",
-    description: "Led brand launches, website design, and digital marketing campaigns for global clients.",
-    details: [
-      "Conducted UX research, optimized WordPress interfaces, and implemented UX solutions aligned with business goals."
-    ]
+    description: "Led brand launches and digital campaigns for international clients. Conducted UX research and conversion optimization. Delivered business-aligned WordPress solutions.",
+    details: []
   },
   {
     id: "edu-msc-ux",
@@ -207,15 +197,12 @@ const timelineItems = [
 });
 
 const skills = {
-  "Design & Prototyping": ["Figma", "Adobe", "AI Tools"],
-  "Methods & Frameworks": ["Design Thinking", "Agile & Scrum", "Lean Design", "Systems Thinking"],
-  "UX/UI & Research": ["User Research", "Usability Testing", "Information Architecture"],
-  "Technical": ["HTML", "CSS", "JS", "React", "Flutter", "PHP", "Python", "Wordpress", "Supabase", "Git", "AI/ML tools", "Cursor"],
-  "Collaboration": ["Storytelling", "Presentation", "Workshop", "Mentorship", "E-commerce"]
+  "Core Competencies": ["Product Ownership", "AI-Driven Product Strategy", "Revenue Optimization", "Hypothesis Validation", "Stakeholder Leadership", "Scalable Design Systems"],
+  "Technical Skills": ["LLM Integration (OpenAI API, Claude API)", "Prompt Engineering & Cost Optimization", "RAG Systems", "Embeddings", "Python (FastAPI)", "React", "Next.js", "Supabase", "SQL", "Stripe Integration", "Voice AI APIs", "Git", "Cursor IDE"]
 };
 
 const languages = [
-  { name: "English", level: "B2" },
+  { name: "English", level: "Professional working proficiency" },
   { name: "Ukrainian", level: "Native" },
   { name: "Russian", level: "Native" },
   { name: "Slovak", level: "Beginner" }
@@ -322,13 +309,10 @@ export default function AboutPage() {
                 Danil Gorbunov
               </h1>
               <h2 className="text-lg md:text-xl font-normal text-[#E5E5E5] mb-4 tracking-tight">
-                SENIOR PRODUCT DESIGNER
-              </h2>
-              <h2 className="text-lg md:text-xl font-normal text-[#E5E5E5] mb-4 tracking-tight">
-                FULLSTACK AI DEVELOPER
+                Senior Product Designer | AI-Driven Product & Systems Builder
               </h2>
               <p className="text-[#A3A3A3] text-base leading-relaxed font-light">
-                Product Designer with 10+ years in digital products and intelligent systems. Skilled in strategic design, agile methods, and accessibility. Delivers full-stack products from prototype to production using AI tools, with proven, real-world results. Mentor and community builder, creating user-focused, high-impact experiences
+                Product leader with 10+ years of experience building SaaS & AI-powered SaaS products from concept to revenue. Specialize in fast validation, AI-first MVP strategy, and scalable product systems that improve unit economics and accelerate go-to-market. Reduced AI infrastructure costs by 32–60%, accelerated releases by 45–55%, and contributed to reaching 1200+ paying customers within 7 months.
               </p>
             </div>
           </div>
@@ -492,7 +476,7 @@ export default function AboutPage() {
                 {/* Timeline Node - Mobile */}
                 <div className="md:hidden flex items-center mb-4">
                   <div className={`w-3 h-3 rounded-full border-2 ${getTypeColor(item.type).split(' ')[0]} bg-[#0A0A0A] mr-3`} />
-                  {!["mentor-2023", "achievement-2022", "achievement-2018", "achievement-2017", "edu-msc-ux", "edu-msc-cs", "edu-step", "edu-beetroot", "skills", "languages", "additional-projects"].includes(item.id) && (
+                  {!["lectures", "achievement-2022", "achievement-2018", "achievement-2017", "edu-msc-ux", "edu-msc-cs", "edu-step", "edu-beetroot", "skills", "languages"].includes(item.id) && (
                     <span className="text-[#737373] text-sm font-light">{item.year}</span>
                   )}
                 </div>
@@ -516,7 +500,7 @@ export default function AboutPage() {
                             </p>
                           </div>
                         </div>
-                        {!["mentor-2023", "achievement-2022", "achievement-2018", "achievement-2017", "edu-msc-ux", "edu-msc-cs", "edu-step", "edu-beetroot", "skills", "languages", "additional-projects"].includes(item.id) && (
+                        {!["lectures", "achievement-2022", "achievement-2018", "achievement-2017", "edu-msc-ux", "edu-msc-cs", "edu-step", "edu-beetroot", "skills", "languages"].includes(item.id) && (
                           <div className="text-[#737373] text-xs font-light mt-2 md:ml-14">
                             {item.year}
                           </div>
@@ -548,7 +532,7 @@ export default function AboutPage() {
                     {item.additionalProjects && (
                       <div className="mt-6 pt-6 border-t border-[#262626] md:ml-14">
                         <h4 className="text-xs font-light text-[#737373] uppercase tracking-wider mb-4">
-                          Additional Projects (Contract / Part-time)
+                          Last Projects
                         </h4>
                         <div className="space-y-4">
                           {item.additionalProjects.map((project, projectIndex) => (
