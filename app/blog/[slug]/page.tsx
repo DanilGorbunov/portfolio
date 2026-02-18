@@ -4,6 +4,230 @@ import { notFound } from "next/navigation";
 import { SafeImage } from "@/components/safe-image";
 
 const blogPosts: { [key: string]: any } = {
+  "designer-with-ai-full-cycle": {
+    title: "Що може робити дизайнер, який використовує AI — від ідеї до живого продукту",
+    date: "2025-01-30",
+    readTime: "10 min read",
+    content: `Нещодавно, після того як саме AI обмеження прямо на співбесіді в Cieden не дали мені отримати позицію я пройшов весь цикл розробки: від концепції до задеплоєного SaaS з реальним клієнтом.
+
+Є думка, що дизайнер малює, а розробник будує. Я покажу, як це виглядає, коли одна людина з AI-інструментами проходить весь шлях. На прикладі реального SaaS, який зараз працює з живим клієнтом.
+
+Продукт і стек
+
+AI-платформа для автоматизації телефонних замовлень у ресторанах. Клієнт дзвонить — відповідає AI-агент, приймає замовлення, передає на кухню. Без людини. 24/7.
+
+Frontend: Next.js 14 + TypeScript + Tailwind
+Auth/DB: Supabase (PostgreSQL + RLS + Realtime)
+Телефонія: Telnyx (SIP + number provisioning)
+STT: Deepgram Nova-2
+AI: OpenAI GPT-4o (function calling)
+TTS: Google Cloud WaveNet
+Білінг: Stripe (subscriptions + usage metering)
+Деплой: Vercel Edge Functions
+Dev: Cursor AI + Claude
+
+Бізнес-логіка перед макетами
+
+Оператор на телефоні — $3,000/міс. AI-агент — $249/міс. Собівартість одного 3-хвилинного дзвінка — ≈$.... Це не дизайн-рішення, але воно визначає продукт і ціну. AI допоміг порівняти 6 провайдерів і побудувати фінансову модель до першого екрану.
+
+Реєстрація як автоматизований пайплайн
+
+Від реєстрації до живого номера — менше 5 хвилин:
+
+Supabase Auth створює user
+ → PostgreSQL trigger: restaurant + ai_agent + billing_account
+ → Edge Function → Telnyx API: купує номер, конфігурує webhook
+ → Stripe API: створює customer, підв'язує до акаунту
+ → Клієнт у дашборді — номер вже є, агент живий
+
+Якщо будь-який крок падає — транзакція робить повний rollback. Ніяких "частково налаштованих" станів.
+
+Пайплайн дзвінка
+
+Дзвінок → Telnyx webhook
+ → Deepgram WebSocket (realtime STT)
+ → GPT-4o mini: get_menu() / add_to_order() / confirm_order()
+ → Google TTS → аудіо назад у дзвінок
+ → INSERT orders → Realtime → дашборд оновлюється
+ → Stripe metering: usage event за хвилини
+
+Латентність між словом клієнта і відповіддю — менше 1200мс.
+
+База даних
+
+Row Level Security на рівні Postgres — кожен ресторан бачить тільки свої дані без жодної перевірки в коді. Realtime-підписки: нове замовлення → дашборд оновлюється в момент, поки клієнт ще говорить.
+
+Що далі — субдомени як продукт
+
+Будь-який бізнес реєструється і отримує свій URL: ось мій тестовий url
+
+fonitix.ai/cafe-zubrd
+
+Жива сторінка з меню і AI-агентом. QR-код на вході — клієнт одразу всередині. Маршрутизація через Next.js Dynamic Routes + Edge middleware: slug → restaurant_id без звернення до бази на кожен запит.
+
+Як Instagram для ідентичності. Але для локального бізнесу з вбудованим AI.
+
+Підсумок
+
+Один дизайнер. AI-інструменти. Повний цикл — від дослідження і unit-економіки до бази даних, телефонії, AI-пайплайну, білінгу і деплою.
+Планка входу змінилась. Дизайнер може значно більше.
+
+Тренуйтеся... Нижче як зазвичай даю лайфхаки`,
+    images: [
+      "/images/fonitix/fonitix_flow1.png",
+      "/images/fonitix/fonitix_flow2.png",
+      "/images/fonitix/fonitix_flow3.png",
+      "/images/fonitix/fonitix_flow4.png",
+      "/images/fonitix/fonitix_flow5.png"
+    ]
+  },
+  "5-things-to-build-saas": {
+    title: "5 речей, які дозволили мені як дизайнеру збудувати повноцінний SaaS",
+    date: "2025-01-30",
+    readTime: "5 min read",
+    content: `Нещодавно, після того як саме AI обмеження прямо на співбесіді в Cieden не дали мені отримати позицію я пройшов весь цикл розробки: від концепції до задеплоєного SaaS з реальним клієнтом.
+
+Є думка, що дизайнер малює, а розробник будує. Я покажу, як це виглядає, коли одна людина з AI-інструментами проходить весь шлях. На прикладі реального SaaS, який зараз працює з живим клієнтом.
+
+Продукт і стек
+
+AI-платформа для автоматизації телефонних замовлень у ресторанах. Клієнт дзвонить — відповідає AI-агент, приймає замовлення, передає на кухню. Без людини. 24/7.
+
+Frontend: Next.js 14 + TypeScript + Tailwind
+Auth/DB: Supabase (PostgreSQL + RLS + Realtime)
+Телефонія: Telnyx (SIP + number provisioning)
+STT: Deepgram Nova-2
+AI: OpenAI GPT-4o (function calling)
+TTS: Google Cloud WaveNet
+Білінг: Stripe (subscriptions + usage metering)
+Деплой: Vercel Edge Functions
+Dev: Cursor AI + Claude
+
+Бізнес-логіка перед макетами
+
+Оператор на телефоні — $3,000/міс. AI-агент — $249/міс. Собівартість одного 3-хвилинного дзвінка — ≈$.... Це не дизайн-рішення, але воно визначає продукт і ціну. AI допоміг порівняти 6 провайдерів і побудувати фінансову модель до першого екрану.
+
+Реєстрація як автоматизований пайплайн
+
+Від реєстрації до живого номера — менше 5 хвилин:
+
+Supabase Auth створює user
+ → PostgreSQL trigger: restaurant + ai_agent + billing_account
+ → Edge Function → Telnyx API: купує номер, конфігурує webhook
+ → Stripe API: створює customer, підв'язує до акаунту
+ → Клієнт у дашборді — номер вже є, агент живий
+
+Якщо будь-який крок падає — транзакція робить повний rollback. Ніяких "частково налаштованих" станів.
+
+Пайплайн дзвінка
+
+Дзвінок → Telnyx webhook
+ → Deepgram WebSocket (realtime STT)
+ → GPT-4o mini: get_menu() / add_to_order() / confirm_order()
+ → Google TTS → аудіо назад у дзвінок
+ → INSERT orders → Realtime → дашборд оновлюється
+ → Stripe metering: usage event за хвилини
+
+Латентність між словом клієнта і відповіддю — менше 1200мс.
+
+База даних
+
+Row Level Security на рівні Postgres — кожен ресторан бачить тільки свої дані без жодної перевірки в коді. Realtime-підписки: нове замовлення → дашборд оновлюється в момент, поки клієнт ще говорить.
+
+Що далі — субдомени як продукт
+
+Будь-який бізнес реєструється і отримує свій URL: ось мій тестовий url
+
+fonitix.ai/cafe-zubrd
+
+Жива сторінка з меню і AI-агентом. QR-код на вході — клієнт одразу всередині. Маршрутизація через Next.js Dynamic Routes + Edge middleware: slug → restaurant_id без звернення до бази на кожен запит.
+
+Як Instagram для ідентичності. Але для локального бізнесу з вбудованим AI.
+
+Підсумок
+
+Один дизайнер. AI-інструменти. Повний цикл — від дослідження і unit-економіки до бази даних, телефонії, AI-пайплайну, білінгу і деплою.
+Планка входу змінилась. Дизайнер може значно більше.
+
+Тренуйтеся... Нижче як зазвичай даю лайфхаки
+
+---
+
+Найчастіше питали: "з чого починати?" Відповідаю.
+
+1. Спочатку один "бог-промпт" — до будь-якого коду
+
+Перед першим екраном пишеш Claude:
+
+Я будую SaaS для [що робить].
+Користувач: [хто].
+Головна дія: [одна дія].
+Стек: Next.js 14, Supabase, TypeScript.
+Спроектуй схему бази даних, 
+основні API routes і auth flow.
+
+AI дає архітектуру. Ти одразу бачиш де складність — ще до того як написав рядок коду.
+
+2. Схема бази — найважливіший артефакт
+
+Якщо схема правильна — все інше будується швидко. Якщо ні — переробляєш все.
+
+Ось мій продукт: [2 речення].
+Створи Supabase schema з таблицями, 
+зв'язками і Row Level Security.
+Поясни кожне рішення одним реченням.
+
+RLS на рівні Postgres — це коли не треба писати WHERE user_id = auth.uid() в кожному запиті. База сама захищає дані.
+
+3. Автоматизація онбордингу — через тригери, не через код
+
+Найбільша помилка: робити все через API calls у коді. Падає один — все зламано.
+
+Правильно: PostgreSQL trigger який при створенні user автоматично створює всі пов'язані записи в одній транзакції. Або все, або rollback. Ніяких "наполовину зареєстрованих" користувачів.
+
+Напиши PostgreSQL function і trigger:
+при INSERT у таблицю users —
+автоматично створити записи 
+у restaurants, ai_agents, billing_accounts.
+З rollback якщо щось падає.
+
+4. Один компонент за раз — не весь продукт
+
+Не "зроби дашборд". А:
+
+Зроби компонент OrderCard.
+Props: order_id, customer_name, 
+items[], total, status.
+Dark theme, Tailwind, TypeScript.
+Statuses: new / preparing / ready — 
+різні кольори.
+
+Бачиш результат за 2 хвилини. Правиш. Йдеш далі.
+
+5. Коли застряг — баг-репорт замість питання
+
+Не питай "чому не працює". Пиши:
+
+Очікую: після реєстрації 
+створюється запис у restaurants.
+Отримую: запис не створюється, 
+статус 500.
+Код: [код]
+Помилка: [повний error log]
+
+Чим точніший опис — тим швидше рішення. AI не екстрасенс.
+
+Головне
+
+AI не замінює розуміння продукту. Але різко знижує вартість помилки — спробувати, зламати і переробити тепер коштує годину, не тиждень.`,
+    images: [
+      "/images/fonitix/fonitix_flow1.png",
+      "/images/fonitix/fonitix_flow2.png",
+      "/images/fonitix/fonitix_flow3.png",
+      "/images/fonitix/fonitix_flow4.png",
+      "/images/fonitix/fonitix_flow5.png"
+    ]
+  },
   "ai-idea-stress-tests": {
     title: "AI Idea Stress Tests: 10 Prompts to Validate Before You Build",
     date: "2025-01-29",
@@ -387,59 +611,98 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           
           <article className="prose prose-invert max-w-none">
             <div className="space-y-12 md:space-y-16">
-              {/* Introduction Section */}
-              <div className="relative">
-                <div className="hidden md:flex absolute left-0 top-6 items-center justify-center w-16 h-16">
-                  <div className="absolute w-4 h-4 rounded-full border-2 border-[#737373] bg-[#0A0A0A] z-10" />
-                  <div className="absolute w-12 h-12 rounded-full border border-[#737373] opacity-50" />
-                </div>
-                <div className="md:ml-24">
-                  <div className="bg-[#0F0F0F] border border-[#262626] rounded-lg p-6 md:p-8">
-                    <div className="text-[#A3A3A3] text-base leading-relaxed font-light space-y-4 whitespace-pre-line">
-                      {post.content.split('---')[0].trim()}
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Image Section */}
-              <div className="relative">
-                <div className="hidden md:flex absolute left-0 top-6 items-center justify-center w-16 h-16">
-                  <div className="absolute w-4 h-4 rounded-full border-2 border-[#737373] bg-[#0A0A0A] z-10" />
-                  <div className="absolute w-12 h-12 rounded-full border border-[#737373] opacity-50" />
-                </div>
-                <div className="md:ml-24">
-                  <div className="bg-[#0F0F0F] border border-[#262626] rounded-lg p-6 md:p-8 overflow-hidden">
-                    <SafeImage
-                      src="/images/ai_post.png"
-                      alt="AI Resume Tool Interface"
-                      className="w-full h-auto object-cover rounded"
-                      loading="lazy"
-                    />
-                  </div>
-                </div>
-              </div>
-
-              {/* Main Content Sections */}
-              {post.content.split('---').slice(1).map((section: string, index: number) => {
-                if (!section.trim()) return null;
+              {/* Content Sections */}
+              {(() => {
+                const hasSeparator = post.content.includes('---');
+                const sections = hasSeparator ? post.content.split('---') : [post.content];
+                const introduction = sections[0]?.trim() || '';
+                const mainSections = hasSeparator ? sections.slice(1) : [];
+                const hasImages = post.images && post.images.length > 0;
                 
                 return (
-                  <div key={index} className="relative">
-                    <div className="hidden md:flex absolute left-0 top-6 items-center justify-center w-16 h-16">
-                      <div className="absolute w-4 h-4 rounded-full border-2 border-[#737373] bg-[#0A0A0A] z-10" />
-                      <div className="absolute w-12 h-12 rounded-full border border-[#737373] opacity-50" />
-                    </div>
-                    <div className="md:ml-24">
-                      <div className="bg-[#0F0F0F] border border-[#262626] rounded-lg p-6 md:p-8 hover:border-[#404040] transition-colors duration-300">
-                        <div className="text-[#A3A3A3] text-base leading-relaxed font-light space-y-4 whitespace-pre-line">
-                          {section.trim()}
+                  <>
+                    {/* Introduction Section */}
+                    {introduction && (
+                      <div className="relative">
+                        <div className="hidden md:flex absolute left-0 top-6 items-center justify-center w-16 h-16">
+                          <div className="absolute w-4 h-4 rounded-full border-2 border-[#737373] bg-[#0A0A0A] z-10" />
+                          <div className="absolute w-12 h-12 rounded-full border border-[#737373] opacity-50" />
+                        </div>
+                        <div className="md:ml-24">
+                          <div className="bg-[#0F0F0F] border border-[#262626] rounded-lg p-6 md:p-8">
+                            <div className="text-[#A3A3A3] text-base leading-relaxed font-light space-y-4 whitespace-pre-line">
+                              {introduction}
+                            </div>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                  </div>
+                    )}
+
+                    {/* Image Section */}
+                    {hasImages && (
+                      post.images.map((image: string, imgIndex: number) => (
+                        <div key={imgIndex} className="relative">
+                          <div className="hidden md:flex absolute left-0 top-6 items-center justify-center w-16 h-16">
+                            <div className="absolute w-4 h-4 rounded-full border-2 border-[#737373] bg-[#0A0A0A] z-10" />
+                            <div className="absolute w-12 h-12 rounded-full border border-[#737373] opacity-50" />
+                          </div>
+                          <div className="md:ml-24">
+                            <div className="bg-[#0F0F0F] border border-[#262626] rounded-lg p-6 md:p-8 overflow-hidden">
+                              <SafeImage
+                                src={image}
+                                alt={`${post.title} - Image ${imgIndex + 1}`}
+                                className="w-full h-auto object-cover rounded"
+                                loading="lazy"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      ))
+                    )}
+
+                    {/* Default image for posts with separator but no images */}
+                    {!hasImages && hasSeparator && (
+                      <div className="relative">
+                        <div className="hidden md:flex absolute left-0 top-6 items-center justify-center w-16 h-16">
+                          <div className="absolute w-4 h-4 rounded-full border-2 border-[#737373] bg-[#0A0A0A] z-10" />
+                          <div className="absolute w-12 h-12 rounded-full border border-[#737373] opacity-50" />
+                        </div>
+                        <div className="md:ml-24">
+                          <div className="bg-[#0F0F0F] border border-[#262626] rounded-lg p-6 md:p-8 overflow-hidden">
+                            <SafeImage
+                              src="/images/ai_post.png"
+                              alt="AI Resume Tool Interface"
+                              className="w-full h-auto object-cover rounded"
+                              loading="lazy"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    )}
+
+                    {/* Main Content Sections */}
+                    {mainSections.map((section: string, index: number) => {
+                      if (!section.trim()) return null;
+                      
+                      return (
+                        <div key={index} className="relative">
+                          <div className="hidden md:flex absolute left-0 top-6 items-center justify-center w-16 h-16">
+                            <div className="absolute w-4 h-4 rounded-full border-2 border-[#737373] bg-[#0A0A0A] z-10" />
+                            <div className="absolute w-12 h-12 rounded-full border border-[#737373] opacity-50" />
+                          </div>
+                          <div className="md:ml-24">
+                            <div className="bg-[#0F0F0F] border border-[#262626] rounded-lg p-6 md:p-8 hover:border-[#404040] transition-colors duration-300">
+                              <div className="text-[#A3A3A3] text-base leading-relaxed font-light space-y-4 whitespace-pre-line">
+                                {section.trim()}
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </>
                 );
-              })}
+              })()}
             </div>
           </article>
         </div>

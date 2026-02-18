@@ -6,6 +6,22 @@ import { ArrowRight } from "lucide-react";
 
 const blogPosts = [
   {
+    id: "designer-with-ai-full-cycle",
+    slug: "designer-with-ai-full-cycle",
+    title: "Що може робити дизайнер, який використовує AI — від ідеї до живого продукту",
+    excerpt: "Як один дизайнер з AI-інструментами проходить весь шлях від концепції до задеплоєного SaaS з реальним клієнтом.",
+    date: "2025-01-30",
+    readTime: "10 min read"
+  },
+  {
+    id: "5-things-to-build-saas",
+    slug: "5-things-to-build-saas",
+    title: "5 речей, які дозволили мені як дизайнеру збудувати повноцінний SaaS",
+    excerpt: "З чого починати? 5 практичних кроків для дизайнера, який хоче побудувати SaaS продукт.",
+    date: "2025-01-30",
+    readTime: "5 min read"
+  },
+  {
     id: "ai-idea-stress-tests",
     slug: "ai-idea-stress-tests",
     title: "AI Idea Stress Tests: 10 Prompts to Validate Before You Build",
