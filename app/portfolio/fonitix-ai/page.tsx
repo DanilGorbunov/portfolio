@@ -110,43 +110,6 @@ export default function FonitixAIProjectPage() {
         </div>
       </section>
 
-      {/* Video Section */}
-      <section className="py-12 border-t border-[#171717]">
-        <div className="container mx-auto px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="mb-12"
-          >
-            <h2 className="text-2xl md:text-3xl font-normal text-[#E5E5E5] mb-6 tracking-tight">
-              Project Video
-            </h2>
-            <div className="relative rounded-lg overflow-hidden border border-[#262626] bg-[#0A0A0A] aspect-video">
-              <iframe
-                src="https://www.youtube.com/embed/Qr6dlXhVwVs"
-                title="Fonitix AI Project Video"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                className="w-full h-full"
-              />
-            </div>
-            <div className="mt-4">
-              <a
-                href="https://www.youtube.com/watch?v=Qr6dlXhVwVs&feature=youtu.be"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-[#737373] hover:text-[#A3A3A3] transition-colors duration-200 text-sm font-light"
-              >
-                Watch on YouTube
-                <ExternalLink className="w-3 h-3" />
-              </a>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
       {/* Visual Flow: Landing Comparison */}
       <section className="py-12 border-t border-[#171717]">
         <div className="container mx-auto px-6">
@@ -811,6 +774,43 @@ export default function FonitixAIProjectPage() {
               >
                 Visit Fonitix AI Website
                 <ExternalLink className="w-4 h-4" />
+              </a>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Project Video */}
+      <section className="py-12 border-t border-[#171717]">
+        <div className="container mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="mb-12"
+          >
+            <h2 className="text-2xl md:text-3xl font-normal text-[#E5E5E5] mb-6 tracking-tight">
+              Project Video
+            </h2>
+            <div className="relative rounded-lg overflow-hidden border border-[#262626] bg-[#0A0A0A] aspect-video">
+              <iframe
+                src="https://www.youtube.com/embed/Qr6dlXhVwVs"
+                title="Fonitix AI Project Video"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="w-full h-full"
+              />
+            </div>
+            <div className="mt-4">
+              <a
+                href="https://www.youtube.com/watch?v=Qr6dlXhVwVs&feature=youtu.be"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-[#737373] hover:text-[#A3A3A3] transition-colors duration-200 text-sm font-light"
+              >
+                Watch on YouTube
+                <ExternalLink className="w-3 h-3" />
               </a>
             </div>
           </motion.div>

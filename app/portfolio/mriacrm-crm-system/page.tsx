@@ -111,6 +111,41 @@ export default function MRIACRMProjectPage() {
         </div>
       </section>
 
+      {/* Project Video */}
+      <section className="py-12 border-t border-zinc-800">
+        <div className="container mx-auto px-6 max-w-6xl">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="space-y-6"
+          >
+            <h2 className="text-2xl md:text-3xl font-normal">
+              Project Video
+            </h2>
+            <div className="relative rounded-lg overflow-hidden border border-zinc-700 bg-zinc-900 aspect-video">
+              <iframe
+                src="https://www.youtube.com/embed/fJcPRjzowRw"
+                title="MRIACRM Project Video"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="w-full h-full"
+              />
+            </div>
+            <a
+              href="https://www.youtube.com/watch?v=fJcPRjzowRw"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-zinc-400 hover:text-white transition-colors duration-200 text-sm"
+            >
+              Watch on YouTube
+              <ExternalLink className="w-3 h-3" />
+            </a>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Project Images */}
       <section className="py-16 bg-zinc-900/30">
         <div className="container mx-auto px-6 max-w-6xl">

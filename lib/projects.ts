@@ -52,152 +52,6 @@ export const projects: Project[] = [
     ],
   },
   {
-    id: 12,
-    slug: "xproid",
-    title: "Xproid (AI E-Commerce Platform)",
-    description:
-      "AI-powered e-commerce platform enabling store owners to manage their business through natural conversation and customers to checkout via chat in 60 seconds",
-    thumbnail: "/images/xproid/xproid_main.png",
-    fullImage: "/images/xproid/xproid_main.png",
-    year: "2024-2025",
-    client: "Xproid",
-    role: "Full-Stack Builder & Product Designer",
-    tags: ["AI", "E-Commerce", "SaaS", "Next.js", "TypeScript", "Supabase", "Claude AI", "Conversational Interface"],
-    content: {
-      overview:
-        "Xproid is AI-powered e-commerce platform that replaces traditional dashboards with conversational interface. Store owners manage their entire business through natural language commands while customers complete purchases through 60-second chat conversation instead of traditional checkout forms. Built complete platform in 12 weeks using AI-first development approach.",
-      challenge:
-        "Traditional e-commerce platforms require weeks of setup, technical knowledge, and complex dashboard navigation. Customers abandon 70% of carts due to lengthy checkout forms. Store owners struggle with inventory management, multi-platform synchronization, and time-consuming product updates.",
-      solution:
-        "Xproid enables instant store creation through Instagram-style templates. Store owners add products by typing 'add iPhone $999' or change prices with 'update all electronics +10%'. Customers complete purchases through conversational checkout across Instagram, Telegram, WhatsApp, reducing friction from 5 minutes to 60 seconds. Built hybrid AI architecture reducing costs by 80% while maintaining full functionality.",
-      outcome:
-        "Built complete platform in 12 weeks with 60-second store creation, 80% AI cost reduction, and 400+ platform features. Implemented conversational checkout system reducing completion time from 5 minutes to 60 seconds with 40% improvement in conversion rates. Created scalable architecture supporting unlimited stores and products with real-time synchronization across multiple platforms.",
-    },
-    images: [
-      "/images/xproid/xproid_main.png",
-      "/images/xproid/xproid_tips.png",
-      "/images/xproid/xproid_feed.png",
-      "/images/xproid/add_product_voice.png",
-      "/images/xproid/xproid_public_page.png",
-      "/images/xproid/xproid_orders.png",
-    ],
-  },
-  {
-    id: 10,
-    slug: "tesla-vip-trip",
-    title: "Tesla VIP Trip (AI FullStack)",
-    description:
-      "Premium Tesla electric vehicle transfer service website built with AI-assisted development - from no-code prototype to production in 5 days",
-    thumbnail: "/images/teslaviptrip_cover.jpg",
-    fullImage: "/images/teslaviptrip_cover.jpg",
-    year: "2025",
-    client: "Tesla VIP Trip",
-    role: "AI Full-Stack Web Developer & Designer",
-    tags: ["AI-Assisted Development", "Lovable.dev", "Full-Stack", "E-Commerce", "Booking System"],
-    content: {
-      overview:
-        "Tesla VIP Trip is a premium electric vehicle transfer service operating in Vienna and Bratislava. The project showcases innovative AI-assisted development using Lovable.dev for rapid prototyping, followed by conversion to a production-ready website with custom booking system.",
-      challenge:
-        "Extremely tight timeline of 5 days to create a complete website from concept to production. The challenge was to deliver a premium, luxury brand experience that reflects Tesla's eco-friendly values while providing seamless online booking functionality for 6 core services across multiple languages (EN, DE, RU, SK).",
-      solution:
-        "Implemented a revolutionary 5-day development process: Days 1-2 used Lovable.dev for AI-assisted design generation, Day 3 converted React prototype to deployment, Day 4 integrated client editing capabilities, and Day 5 built complete booking system with React and Resend email service. The approach reduced development time from 2 weeks to 5 days while maintaining professional quality.",
-      outcome:
-        "Successfully delivered a fully functional website with dark elegant theme, gold accent colors, 6 detailed service pages, online booking system with admin panel, responsive design, and multilingual support. The innovative AI-assisted approach demonstrates how modern developers can leverage AI tools to dramatically accelerate development while maintaining quality standards.",
-    },
-    images: [
-      "/images/teslaviptrip_cover.jpg",
-      "/placeholder.svg?height=600&width=800&text=Tesla+Services+Section",
-      "/placeholder.svg?height=600&width=800&text=Booking+System",
-      "/placeholder.svg?height=600&width=800&text=Admin+Dashboard",
-    ],
-  },
-  {
-    id: 9,
-    slug: "linkshop-ai",
-    title: "LinkShop AI",
-    description:
-      "AI-powered platform 'from Linktree to E-commerce' - integrated SAAS combining personal link pages with full online store and AI assistant for business automation",
-    thumbnail: "/images/linkshop_cover.jpg",
-    fullImage: "/images/linkshop_cover.jpg",
-    year: "2025",
-    client: "LinkShop",
-    role: "Lead Product Designer, UX/UI Designer, Full-Stack Developer",
-    tags: ["AI", "E-Commerce", "SaaS", "Linktree Alternative", "Ukrainian Market", "Creator Economy"],
-    content: {
-      overview:
-        "LinkShop is an integrated SAAS platform that revolutionarily combines the creation of personal link pages (similar to Linktree) with a full-fledged online store and an AI assistant for business process automation. The platform targets content creators, influencers, and Ukrainian entrepreneurs who lost their physical stores due to war or economic difficulties but still have product inventories to quickly move online.",
-      challenge:
-        "Fragmentation of tools: content creators use Linktree for links, Shopify for the store, and various chatbots for support. High fees and complexity: Shopify + payment processing + separate AI tools = $100+ per month + complicated setup. Critical problem for Ukraine: thousands of entrepreneurs lost their physical points of sale due to war but kept product inventories, needing urgent migration online without technical knowledge or large investments.",
-      solution:
-        "Created an AI-first platform that transforms a simple link page into an AI-supported automated business tool allowing anyone to create a full online store in just 10 minutes. Features include: 'Clearance Mode' for fast bulk upload of discounted products, UAH payments with local banks and MonoBank API, Express setup with 5-minute onboarding, AI translator for automatic Ukrainian translation, and extended 6-month free trial for businesses affected by war.",
-      outcome:
-        "Delivered a fully functional MVP with real product data (Nike sneakers, pricing, inventory), AI Business Intelligence with Claude API integration for pricing analysis and automated insights, real-time architecture with Convex database, and professional Instagram-style UI. The platform successfully addresses the critical need for Ukrainian businesses to quickly move online while providing content creators with monetization tools.",
-    },
-    images: [
-      "/images/linkshop_cover.jpg",
-      "/images/linkshop1.jpg",
-      "/images/linkshop2.jpg",
-      "/images/linkshop3.jpg",
-    ],
-  },
-  {
-    id: 8,
-    slug: "mriacrm-crm-system",
-    title: "MRIACRM SYSTEM (Figma, AI, CRM)",
-    description:
-      "Comprehensive CRM platform streamlining business operations and customer management",
-    thumbnail: "/images/mriacrm_cover.jpg",
-    fullImage: "/images/mriacrm_cover.jpg",
-    year: "2025",
-    client: "MRIACRM",
-    role: "Lead Product Designer, UX/UI Designer",
-    tags: ["CRM", "Business Management", "SaaS", "Dashboard", "E-Commerce"],
-    content: {
-      overview:
-        "Mria CRM is a comprehensive customer relationship management solution built exclusively for Jira Cloud using Atlassian's Forge technology. It seamlessly integrates with Jira to simplify sales pipelines, enhance collaboration, and align teams by unifying customer and project management workflows.",
-      challenge:
-        "Sales teams needed a CRM that works natively within Jira Cloud, eliminating the need for external tools and data silos. The challenge was creating a solution that provides full CRM functionality while maintaining seamless integration with existing Jira workflows and ensuring top-tier security and scalability.",
-      solution:
-        "Built a complete CRM solution using Atlassian's Forge platform featuring contact & company management, lead & deal tracking, activity logging, Gmail & calendar integration, role-based access control, and comprehensive reporting. The system includes product modules, sales dashboards, and real-time collaboration tools all within the Jira environment.",
-      outcome:
-        "Delivered the first fully-featured CRM built exclusively for Jira Cloud, providing teams with native integration, enhanced security through Forge technology, and scalable architecture. The solution eliminates external tool dependencies while offering comprehensive sales management capabilities directly within Jira workflows.",
-    },
-    images: [
-      "/images/mriacrm_cover.jpg",
-      "/images/mriacrm1.jpg",
-      "/images/mriacrm2.jpg",
-      "/images/mriacrm3.jpg",
-    ],
-  },
-  {
-    id: 1,
-    slug: "ai-ecommerce-chatbot",
-    title: "E-Commerce AI Chatbot",
-    description:
-      "SaaS chatbot automating customer engagement and increasing conversions by 15%",
-    thumbnail: "/images/dashboard-chatbot.jpg",
-    fullImage: "/images/dashboard-chatbot.jpg",
-    year: "2024-2025",
-    client: "B2Stack",
-    role: "UX/UI Designer, Product Designer",
-    tags: ["AI", "E-Commerce", "SAAS", "Dashboard"],
-    content: {
-      overview:
-        "Created a SAAS project with an AI e-commerce chatbot, featuring a comprehensive dashboard for metrics, usage tracking, and bot configuration.",
-      challenge:
-        "Businesses needed a solution to automate customer interactions and streamline the checkout process while maintaining a personalized shopping experience, with powerful analytics and configuration tools.",
-      solution:
-        "Designed an intuitive dashboard interface with real-time metrics, cash flow tracking, and bot configuration options. Implemented AI-driven checkout flows that could understand customer intent and guide them through the purchasing process.",
-      outcome:
-        "Increased conversions by 15%, improved customer retention, and significantly reduced support requests. The dashboard enabled businesses to track key metrics and optimize their chatbot performance in real-time.",
-    },
-    images: [
-      "/images/dashboard-chatbot.jpg",
-      "/placeholder.svg?height=600&width=800",
-      "/placeholder.svg?height=600&width=800",
-    ],
-  },
-  {
     id: 2,
     slug: "warehouse-inventory-management",
     title: "3D Warehouse Inventory Management",
@@ -231,31 +85,63 @@ export const projects: Project[] = [
     ],
   },
   {
-    id: 3,
-    slug: "b2c-b2b-delivery-app",
-    title: "B2C/B2B Delivery App",
+    id: 8,
+    slug: "mriacrm-crm-system",
+    title: "MRIACRM SYSTEM (Figma, AI, CRM)",
     description:
-      "B2B/B2C delivery platform connecting businesses with real-time tracking",
-    thumbnail: "/images/foodcore.jpg",
-    fullImage: "/images/foodcore.jpg",
-    year: "2020-2022",
-    client: "FoodCore",
-    role: "Lead Product Designer, UX Researcher",
-    tags: ["Mobile App", "Delivery Platform", "UX/UI Design"],
+      "Comprehensive CRM platform streamlining business operations and customer management",
+    thumbnail: "/images/mriacrm_cover.jpg",
+    fullImage: "/images/mriacrm_cover.jpg",
+    year: "2025",
+    client: "MRIACRM",
+    role: "Lead Product Designer, UX/UI Designer",
+    tags: ["CRM", "Business Management", "SaaS", "Dashboard", "E-Commerce"],
     content: {
       overview:
-        "Designed a comprehensive B2C/B2B delivery platform that connects businesses and consumers with real-time order tracking, multiple payment options, and an intuitive interface for both customers and delivery partners.",
+        "Mria CRM is a comprehensive customer relationship management solution built exclusively for Jira Cloud using Atlassian's Forge technology. It seamlessly integrates with Jira to simplify sales pipelines, enhance collaboration, and align teams by unifying customer and project management workflows.",
       challenge:
-        "The delivery market needed a solution that could serve both business clients and individual consumers while providing a seamless experience for delivery drivers. Existing platforms were either too consumer-focused or too business-oriented, creating inefficiencies.",
+        "Sales teams needed a CRM that works natively within Jira Cloud, eliminating the need for external tools and data silos. The challenge was creating a solution that provides full CRM functionality while maintaining seamless integration with existing Jira workflows and ensuring top-tier security and scalability.",
       solution:
-        "Created a dual-interface platform with specialized flows for B2B and B2C users, while maintaining a consistent experience. Implemented real-time tracking, optimized route planning, and a flexible payment system that accommodated both business accounts and individual transactions.",
+        "Built a complete CRM solution using Atlassian's Forge platform featuring contact & company management, lead & deal tracking, activity logging, Gmail & calendar integration, role-based access control, and comprehensive reporting. The system includes product modules, sales dashboards, and real-time collaboration tools all within the Jira environment.",
       outcome:
-        "The platform successfully bridged the gap between business and consumer delivery needs, resulting in 40% faster delivery times, 35% increase in driver satisfaction, and a 28% growth in business client retention.",
+        "Delivered the first fully-featured CRM built exclusively for Jira Cloud, providing teams with native integration, enhanced security through Forge technology, and scalable architecture. The solution eliminates external tool dependencies while offering comprehensive sales management capabilities directly within Jira workflows.",
     },
     images: [
-      "/images/foodcore.jpg",
-      "/placeholder.svg?height=600&width=800",
-      "/placeholder.svg?height=600&width=800",
+      "/images/mriacrm_cover.jpg",
+      "/images/mriacrm1.jpg",
+      "/images/mriacrm2.jpg",
+      "/images/mriacrm3.jpg",
+    ],
+  },
+  {
+    id: 12,
+    slug: "xproid",
+    title: "Xproid (AI E-Commerce Platform)",
+    description:
+      "AI-powered e-commerce platform enabling store owners to manage their business through natural conversation and customers to checkout via chat in 60 seconds",
+    thumbnail: "/images/xproid/xproid_main.png",
+    fullImage: "/images/xproid/xproid_main.png",
+    year: "2024-2025",
+    client: "Xproid",
+    role: "Full-Stack Builder & Product Designer",
+    tags: ["AI", "E-Commerce", "SaaS", "Next.js", "TypeScript", "Supabase", "Claude AI", "Conversational Interface"],
+    content: {
+      overview:
+        "Xproid is AI-powered e-commerce platform that replaces traditional dashboards with conversational interface. Store owners manage their entire business through natural language commands while customers complete purchases through 60-second chat conversation instead of traditional checkout forms. Built complete platform in 12 weeks using AI-first development approach.",
+      challenge:
+        "Traditional e-commerce platforms require weeks of setup, technical knowledge, and complex dashboard navigation. Customers abandon 70% of carts due to lengthy checkout forms. Store owners struggle with inventory management, multi-platform synchronization, and time-consuming product updates.",
+      solution:
+        "Xproid enables instant store creation through Instagram-style templates. Store owners add products by typing 'add iPhone $999' or change prices with 'update all electronics +10%'. Customers complete purchases through conversational checkout across Instagram, Telegram, WhatsApp, reducing friction from 5 minutes to 60 seconds. Built hybrid AI architecture reducing costs by 80% while maintaining full functionality.",
+      outcome:
+        "Built complete platform in 12 weeks with 60-second store creation, 80% AI cost reduction, and 400+ platform features. Implemented conversational checkout system reducing completion time from 5 minutes to 60 seconds with 40% improvement in conversion rates. Created scalable architecture supporting unlimited stores and products with real-time synchronization across multiple platforms.",
+    },
+    images: [
+      "/images/xproid/xproid_main.png",
+      "/images/xproid/xproid_tips.png",
+      "/images/xproid/xproid_feed.png",
+      "/images/xproid/add_product_voice.png",
+      "/images/xproid/xproid_public_page.png",
+      "/images/xproid/xproid_orders.png",
     ],
   },
   {
@@ -282,7 +168,62 @@ export const projects: Project[] = [
     },
     images: [
       "/images/invoice_cover.jpg",
-
+      "/placeholder.svg?height=600&width=800",
+      "/placeholder.svg?height=600&width=800",
+    ],
+  },
+  {
+    id: 1,
+    slug: "ai-ecommerce-chatbot",
+    title: "E-Commerce AI Chatbot",
+    description:
+      "SaaS chatbot automating customer engagement and increasing conversions by 15%",
+    thumbnail: "/images/chatbot_cover2.jpg",
+    fullImage: "/images/chatbot_cover2.jpg",
+    year: "2024-2025",
+    client: "B2Stack",
+    role: "UX/UI Designer, Product Designer",
+    tags: ["AI", "E-Commerce", "SAAS", "Dashboard"],
+    content: {
+      overview:
+        "Created a SAAS project with an AI e-commerce chatbot, featuring a comprehensive dashboard for metrics, usage tracking, and bot configuration.",
+      challenge:
+        "Businesses needed a solution to automate customer interactions and streamline the checkout process while maintaining a personalized shopping experience, with powerful analytics and configuration tools.",
+      solution:
+        "Designed an intuitive dashboard interface with real-time metrics, cash flow tracking, and bot configuration options. Implemented AI-driven checkout flows that could understand customer intent and guide them through the purchasing process.",
+      outcome:
+        "Increased conversions by 15%, improved customer retention, and significantly reduced support requests. The dashboard enabled businesses to track key metrics and optimize their chatbot performance in real-time.",
+    },
+    images: [
+      "/images/dashboard-chatbot.jpg",
+      "/placeholder.svg?height=600&width=800",
+      "/placeholder.svg?height=600&width=800",
+    ],
+  },
+  {
+    id: 3,
+    slug: "b2c-b2b-delivery-app",
+    title: "B2C/B2B Delivery App",
+    description:
+      "B2B/B2C delivery platform connecting businesses with real-time tracking",
+    thumbnail: "/images/foodcore.jpg",
+    fullImage: "/images/foodcore.jpg",
+    year: "2020-2022",
+    client: "FoodCore",
+    role: "Lead Product Designer, UX Researcher",
+    tags: ["Mobile App", "Delivery Platform", "UX/UI Design"],
+    content: {
+      overview:
+        "Designed a comprehensive B2C/B2B delivery platform that connects businesses and consumers with real-time order tracking, multiple payment options, and an intuitive interface for both customers and delivery partners.",
+      challenge:
+        "The delivery market needed a solution that could serve both business clients and individual consumers while providing a seamless experience for delivery drivers. Existing platforms were either too consumer-focused or too business-oriented, creating inefficiencies.",
+      solution:
+        "Created a dual-interface platform with specialized flows for B2B and B2C users, while maintaining a consistent experience. Implemented real-time tracking, optimized route planning, and a flexible payment system that accommodated both business accounts and individual transactions.",
+      outcome:
+        "The platform successfully bridged the gap between business and consumer delivery needs, resulting in 40% faster delivery times, 35% increase in driver satisfaction, and a 28% growth in business client retention.",
+    },
+    images: [
+      "/images/foodcore.jpg",
       "/placeholder.svg?height=600&width=800",
       "/placeholder.svg?height=600&width=800",
     ],
@@ -319,6 +260,35 @@ export const projects: Project[] = [
       "/images/chat10.jpg",
       "/placeholder.svg?height=600&width=800",
       "/placeholder.svg?height=600&width=800",
+    ],
+  },
+  {
+    id: 10,
+    slug: "tesla-vip-trip",
+    title: "Tesla VIP Trip (AI FullStack)",
+    description:
+      "Premium Tesla electric vehicle transfer service website built with AI-assisted development - from no-code prototype to production in 5 days",
+    thumbnail: "/images/teslaviptrip_cover.jpg",
+    fullImage: "/images/teslaviptrip_cover.jpg",
+    year: "2025",
+    client: "Tesla VIP Trip",
+    role: "AI Full-Stack Web Developer & Designer",
+    tags: ["AI-Assisted Development", "Lovable.dev", "Full-Stack", "E-Commerce", "Booking System"],
+    content: {
+      overview:
+        "Tesla VIP Trip is a premium electric vehicle transfer service operating in Vienna and Bratislava. The project showcases innovative AI-assisted development using Lovable.dev for rapid prototyping, followed by conversion to a production-ready website with custom booking system.",
+      challenge:
+        "Extremely tight timeline of 5 days to create a complete website from concept to production. The challenge was to deliver a premium, luxury brand experience that reflects Tesla's eco-friendly values while providing seamless online booking functionality for 6 core services across multiple languages (EN, DE, RU, SK).",
+      solution:
+        "Implemented a revolutionary 5-day development process: Days 1-2 used Lovable.dev for AI-assisted design generation, Day 3 converted React prototype to deployment, Day 4 integrated client editing capabilities, and Day 5 built complete booking system with React and Resend email service. The approach reduced development time from 2 weeks to 5 days while maintaining professional quality.",
+      outcome:
+        "Successfully delivered a fully functional website with dark elegant theme, gold accent colors, 6 detailed service pages, online booking system with admin panel, responsive design, and multilingual support. The innovative AI-assisted approach demonstrates how modern developers can leverage AI tools to dramatically accelerate development while maintaining quality standards.",
+    },
+    images: [
+      "/images/teslaviptrip_cover.jpg",
+      "/placeholder.svg?height=600&width=800&text=Tesla+Services+Section",
+      "/placeholder.svg?height=600&width=800&text=Booking+System",
+      "/placeholder.svg?height=600&width=800&text=Admin+Dashboard",
     ],
   },
   {

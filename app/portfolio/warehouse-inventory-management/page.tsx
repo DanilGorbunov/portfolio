@@ -229,6 +229,36 @@ export default function WarehouseInventoryProject() {
         </motion.div>
       </motion.div>
 
+      {/* Project Video */}
+      <motion.div
+        initial="hidden"
+        animate={isInView ? "visible" : "hidden"}
+        variants={staggerContainer}
+        className="mb-16"
+      >
+        <motion.div variants={fadeInUp} className="space-y-6">
+          <h2 className="text-3xl font-bold text-white">Project Video</h2>
+          <div className="relative rounded-lg overflow-hidden border border-zinc-700 bg-zinc-900 aspect-video">
+            <iframe
+              src="https://www.youtube.com/embed/XPsCax4ADKY"
+              title="Laps 3D Warehouse Inventory Management - Project Video"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              className="w-full h-full"
+            />
+          </div>
+          <a
+            href="https://www.youtube.com/watch?v=XPsCax4ADKY"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 text-zinc-400 hover:text-white transition-colors duration-200 text-sm"
+          >
+            Watch on YouTube
+            <ExternalLink className="w-3 h-3" />
+          </a>
+        </motion.div>
+      </motion.div>
+
       <motion.div
         initial="hidden"
         animate={isInView ? "visible" : "hidden"}
