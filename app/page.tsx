@@ -50,7 +50,7 @@ export default function Portfolio() {
         </section>
 
         {/* Case Studies Section */}
-        <section className="pb-24">
+        <section className="pt-8 md:pt-16 pb-24">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
             {sortedProjects.map((project, index) => (
               <motion.div
@@ -69,8 +69,10 @@ export default function Portfolio() {
                       <SafeImage
                         src={project.thumbnail || project.fullImage || "/placeholder.svg"}
                         alt={project.title}
-                        className={`w-full h-full object-cover group-hover:opacity-90 transition-opacity duration-200 ${
-                          project.slug === "b2c-b2b-delivery-app" ? "object-top" : "object-center"
+                        className={`w-full h-full group-hover:opacity-90 transition-opacity duration-200 ${
+                          project.slug === "b2c-b2b-delivery-app"
+                            ? "object-cover object-top"
+                            : "object-cover object-center"
                         }`}
                         loading="lazy"
                       />

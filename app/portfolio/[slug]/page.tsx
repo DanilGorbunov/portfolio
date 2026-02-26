@@ -30,7 +30,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
         </div>
       </div>
 
-      <div className="container px-6 py-16 md:py-24 max-w-4xl">
+      <div className={`container px-6 py-16 md:py-24 ${project.slug === "invoicing-app-improving" ? "max-w-5xl" : "max-w-4xl"}`}>
       {/* Header */}
       <div className="mb-12 space-y-4">
         <h1 className="text-4xl md:text-5xl font-normal tracking-tight text-[#E5E5E5]">
@@ -63,11 +63,11 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
       </div>
 
       {/* Main Image */}
-      <div className="mb-16 overflow-hidden rounded border border-[#171717] bg-[#0A0A0A]">
+      <div className="mb-16 overflow-hidden rounded-lg border border-[#171717] bg-[#0A0A0A]">
         <SafeImage
           src={project.fullImage || "/placeholder.svg"}
           alt={project.title}
-          className="w-full h-auto object-cover"
+          className="w-full h-auto min-h-0 object-contain object-top"
           loading="lazy"
         />
       </div>
@@ -130,67 +130,67 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
         
         {project.slug === "invoicing-app-improving" && (
           <div className="space-y-6">
-            <div className="overflow-hidden rounded border border-[#171717] bg-[#0A0A0A]">
+            <div className="overflow-hidden rounded-lg border border-[#171717] bg-[#0A0A0A]">
               <SafeImage
                 src="/images/1_about_project.jpg"
                 alt={`${project.title} - About Project`}
-                className="w-full h-auto object-cover"
+                className="w-full h-auto object-contain object-top"
                 loading="lazy"
               />
             </div>
-            <div className="overflow-hidden rounded border border-[#171717] bg-[#0A0A0A]">
+            <div className="overflow-hidden rounded-lg border border-[#171717] bg-[#0A0A0A]">
               <SafeImage
                 src="/images/invoice21.png"
                 alt={`${project.title} - Invoice`}
-                className="w-full h-auto object-cover"
+                className="w-full h-auto object-contain object-top"
                 loading="lazy"
               />
             </div>
-            <div className="overflow-hidden rounded border border-[#171717] bg-[#0A0A0A] aspect-video">
+            <div className="overflow-hidden rounded-lg border border-[#171717] bg-[#0A0A0A]">
               <SafeImage
                 src="/images/invoice31.gif"
                 alt={`${project.title} - Animation 1`}
-                className="w-full h-full object-cover"
+                className="w-full h-auto object-contain object-top"
                 loading="lazy"
               />
             </div>
-            <div className="overflow-hidden rounded border border-[#171717] bg-[#0A0A0A] aspect-video">
+            <div className="overflow-hidden rounded-lg border border-[#171717] bg-[#0A0A0A]">
               <SafeImage
                 src="/images/invoice32.gif"
                 alt={`${project.title} - Animation 2`}
-                className="w-full h-full object-cover"
+                className="w-full h-auto object-contain object-top"
                 loading="lazy"
               />
             </div>
-            <div className="overflow-hidden rounded border border-[#171717] bg-[#0A0A0A] aspect-video">
+            <div className="overflow-hidden rounded-lg border border-[#171717] bg-[#0A0A0A]">
               <SafeImage
                 src="/images/invoice33.gif"
                 alt={`${project.title} - Animation 3`}
-                className="w-full h-full object-cover"
+                className="w-full h-auto object-contain object-top"
                 loading="lazy"
               />
             </div>
-            <div className="overflow-hidden rounded border border-[#171717] bg-[#0A0A0A]">
+            <div className="overflow-hidden rounded-lg border border-[#171717] bg-[#0A0A0A]">
               <SafeImage
                 src="/images/invoice34.jpg"
                 alt={`${project.title} - Screenshot 1`}
-                className="w-full h-auto object-cover"
+                className="w-full h-auto object-contain object-top"
                 loading="lazy"
               />
             </div>
-            <div className="overflow-hidden rounded border border-[#171717] bg-[#0A0A0A]">
+            <div className="overflow-hidden rounded-lg border border-[#171717] bg-[#0A0A0A]">
               <SafeImage
                 src="/images/invoice35.jpg"
                 alt={`${project.title} - Screenshot 2`}
-                className="w-full h-auto object-cover"
+                className="w-full h-auto object-contain object-top"
                 loading="lazy"
               />
             </div>
-            <div className="overflow-hidden rounded border border-[#171717] bg-[#0A0A0A]">
+            <div className="overflow-hidden rounded-lg border border-[#171717] bg-[#0A0A0A]">
               <SafeImage
                 src="/images/invoice36.jpg"
                 alt={`${project.title} - Screenshot 3`}
-                className="w-full h-auto object-cover"
+                className="w-full h-auto object-contain object-top"
                 loading="lazy"
               />
             </div>
