@@ -2,7 +2,6 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { Button } from "@/components/ui/button";
 import { SafeImage } from "@/components/safe-image";
 import {
   Download,
@@ -317,21 +316,14 @@ export default function AboutPage() {
             </div>
           </div>
 
-          <Button
-            size="lg"
-            className="bg-[#0A0A0A] hover:bg-[#171717] text-[#E5E5E5] border border-[#262626] px-8 py-4 font-normal transition-colors duration-200"
-            onClick={() => {
-              const link = document.createElement('a');
-              link.href = '/Prod_Design_Danil Gorbunov.pdf';
-              link.download = 'Prod_Design_Danil Gorbunov.pdf';
-              document.body.appendChild(link);
-              link.click();
-              document.body.removeChild(link);
-            }}
+          <a
+            href="/api/cv"
+            download="Prod_Design_Danil_Gorbunov.pdf"
+            className="inline-flex items-center justify-center rounded-md bg-[#0A0A0A] hover:bg-[#171717] text-[#E5E5E5] border border-[#262626] px-8 py-4 font-normal transition-colors duration-200 text-base h-12 cursor-pointer"
           >
             <Download className="mr-2 h-5 w-5 text-white" />
             Download CV
-          </Button>
+          </a>
         </motion.div>
 
         {/* Timeline Section */}

@@ -64,11 +64,15 @@ export default function FonitixAIProjectPage() {
             <div className="flex flex-wrap gap-6 text-sm text-[#737373] font-light">
               <div className="flex items-center gap-2">
                 <Calendar className="w-4 h-4" />
-                <span>September 2025 - Present</span>
+                <span>Redesign Jan–Feb 2025</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <Calendar className="w-4 h-4" />
+                <span>Testing Period Jan–Feb 2026</span>
               </div>
               <div className="flex items-center gap-2">
                 <User className="w-4 h-4" />
-                <span>Co-Founder & Product Designer / Full-Stack Developer</span>
+                <span>Co-Founder, Lead Product Designer & AI Developer</span>
               </div>
             </div>
 
@@ -465,7 +469,7 @@ export default function FonitixAIProjectPage() {
                 </Card>
                 <Card className="bg-[#171717] border-[#262626]">
                   <CardContent className="p-6">
-                    <div className="text-2xl font-normal text-[#E5E5E5] mb-2">Jan-Feb 2025</div>
+                    <div className="text-2xl font-normal text-[#E5E5E5] mb-2">Jan–Feb 2026</div>
                     <div className="text-sm text-[#A3A3A3] font-light">Testing Period</div>
                   </CardContent>
                 </Card>
@@ -590,7 +594,7 @@ export default function FonitixAIProjectPage() {
                     <div>
                       <h4 className="font-normal text-[#E5E5E5] mb-2 text-sm">4. Cost Optimization Research</h4>
                       <p className="text-sm text-[#A3A3A3] font-light leading-relaxed">
-                        Challenge: Initial Telnyx AI Assistant stack cost $0.08/min (too expensive). Solution: Built custom OpenAI + Telnyx integration for $0.016/min. Result: 80% cost reduction.
+                        Challenge: Initial Telnyx AI Assistant stack cost too expensive. Solution: Built custom OpenAI + Telnyx integration. Result: 80% cost reduction.
                       </p>
                     </div>
                   </div>
